@@ -1,0 +1,6 @@
+framework module Pods_Khaier_App_Khaier_AppUITests {
+  umbrella header "Pods-Khaier_App-Khaier_AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

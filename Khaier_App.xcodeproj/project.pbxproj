@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */; };
+		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
+		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
+		FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B4298544E00084FE76 /* AppDelegate.swift */; };
+		FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */; };
+		FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */; };
+		FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0C0298544E30084FE76 /* Assets.xcassets */; };
+		FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0C2298544E30084FE76 /* LaunchScreen.storyboard */; };
+		FCD6D0CF298544E40084FE76 /* Khaier_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0CE298544E40084FE76 /* Khaier_AppTests.swift */; };
+		FCD6D0D9298544E40084FE76 /* Khaier_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0D8298544E40084FE76 /* Khaier_AppUITests.swift */; };
+		FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */; };
+		FCD6D0EF298546730084FE76 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */; };
+		FCD6D0F0298546730084FE76 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCD6D0CB298544E40084FE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCD6D0A9298544E00084FE76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD6D0B0298544E00084FE76;
+			remoteInfo = Khaier_App;
+		};
+		FCD6D0D5298544E40084FE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCD6D0A9298544E00084FE76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD6D0B0298544E00084FE76;
+			remoteInfo = Khaier_App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076A07A6793A5601D7B5F360 /* Pods-Khaier_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App.debug.xcconfig"; path = "Target Support Files/Pods-Khaier_App/Pods-Khaier_App.debug.xcconfig"; sourceTree = "<group>"; };
+		221D6DCD8A07AB678A59B08B /* Pods-Khaier_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App/Pods-Khaier_App.release.xcconfig"; sourceTree = "<group>"; };
+		262D15C71708518FC81A3F11 /* Pods-Khaier_App-Khaier_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_App_Khaier_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		766610B33DD3EAECC4D9A1BF /* Pods-Khaier_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FCD6D0B1298544E00084FE76 /* Khaier_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khaier_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD6D0B4298544E00084FE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FCD6D0BE298544E00084FE76 /* Khaier_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Khaier_App.xcdatamodel; sourceTree = "<group>"; };
+		FCD6D0C0298544E30084FE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCD6D0C3298544E30084FE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCD6D0C5298544E30084FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD6D0CA298544E40084FE76 /* Khaier_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Khaier_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD6D0CE298544E40084FE76 /* Khaier_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppTests.swift; sourceTree = "<group>"; };
+		FCD6D0D4298544E40084FE76 /* Khaier_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Khaier_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD6D0D8298544E40084FE76 /* Khaier_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITests.swift; sourceTree = "<group>"; };
+		FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCD6D0AE298544E00084FE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0C7298544E40084FE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0D1298544E40084FE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31C880C4737E702C7691616A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				076A07A6793A5601D7B5F360 /* Pods-Khaier_App.debug.xcconfig */,
+				221D6DCD8A07AB678A59B08B /* Pods-Khaier_App.release.xcconfig */,
+				262D15C71708518FC81A3F11 /* Pods-Khaier_App-Khaier_AppUITests.debug.xcconfig */,
+				9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */,
+				766610B33DD3EAECC4D9A1BF /* Pods-Khaier_AppTests.debug.xcconfig */,
+				E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		61F36350B45ADB116B7696F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */,
+				34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */,
+				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCD6D0A8298544E00084FE76 = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0B3298544E00084FE76 /* Khaier_App */,
+				FCD6D0CD298544E40084FE76 /* Khaier_AppTests */,
+				FCD6D0D7298544E40084FE76 /* Khaier_AppUITests */,
+				FCD6D0B2298544E00084FE76 /* Products */,
+				31C880C4737E702C7691616A /* Pods */,
+				61F36350B45ADB116B7696F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCD6D0B2298544E00084FE76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0B1298544E00084FE76 /* Khaier_App.app */,
+				FCD6D0CA298544E40084FE76 /* Khaier_AppTests.xctest */,
+				FCD6D0D4298544E40084FE76 /* Khaier_AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0F1298546E50084FE76 /* Extention */,
+				FCD6D0EB2985462D0084FE76 /* View Controller */,
+				FCD6D0EA298546220084FE76 /* Model */,
+				FCD6D0E9298545EC0084FE76 /* Configration */,
+				FCD6D0E8298545C90084FE76 /* Resource */,
+				FCD6D0E7298545BE0084FE76 /* Core */,
+				FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */,
+			);
+			path = Khaier_App;
+			sourceTree = "<group>";
+		};
+		FCD6D0CD298544E40084FE76 /* Khaier_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0CE298544E40084FE76 /* Khaier_AppTests.swift */,
+			);
+			path = Khaier_AppTests;
+			sourceTree = "<group>";
+		};
+		FCD6D0D7298544E40084FE76 /* Khaier_AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0D8298544E40084FE76 /* Khaier_AppUITests.swift */,
+				FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */,
+			);
+			path = Khaier_AppUITests;
+			sourceTree = "<group>";
+		};
+		FCD6D0E7298545BE0084FE76 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0B4298544E00084FE76 /* AppDelegate.swift */,
+				FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FCD6D0E8298545C90084FE76 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0C0298544E30084FE76 /* Assets.xcassets */,
+				FCD6D0C2298544E30084FE76 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FCD6D0E9298545EC0084FE76 /* Configration */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0C5298544E30084FE76 /* Info.plist */,
+			);
+			path = Configration;
+			sourceTree = "<group>";
+		};
+		FCD6D0EA298546220084FE76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCD6D0EB2985462D0084FE76 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0EC298546450084FE76 /* Welcome */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		FCD6D0EC298546450084FE76 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */,
+				FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		FCD6D0F1298546E50084FE76 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCD6D0B0298544E00084FE76 /* Khaier_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD6D0DE298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_App" */;
+			buildPhases = (
+				4DBB949457F40EF3721FCCAE /* [CP] Check Pods Manifest.lock */,
+				FCD6D0AD298544E00084FE76 /* Sources */,
+				FCD6D0AE298544E00084FE76 /* Frameworks */,
+				FCD6D0AF298544E00084FE76 /* Resources */,
+				CF18D77A8F0A2C376A616897 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Khaier_App;
+			productName = Khaier_App;
+			productReference = FCD6D0B1298544E00084FE76 /* Khaier_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCD6D0C9298544E40084FE76 /* Khaier_AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD6D0E1298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_AppTests" */;
+			buildPhases = (
+				D45DC75CA7685623331031BF /* [CP] Check Pods Manifest.lock */,
+				FCD6D0C6298544E40084FE76 /* Sources */,
+				FCD6D0C7298544E40084FE76 /* Frameworks */,
+				FCD6D0C8298544E40084FE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCD6D0CC298544E40084FE76 /* PBXTargetDependency */,
+			);
+			name = Khaier_AppTests;
+			productName = Khaier_AppTests;
+			productReference = FCD6D0CA298544E40084FE76 /* Khaier_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCD6D0D3298544E40084FE76 /* Khaier_AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD6D0E4298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_AppUITests" */;
+			buildPhases = (
+				F05F8169BA26C4BFFBC58490 /* [CP] Check Pods Manifest.lock */,
+				FCD6D0D0298544E40084FE76 /* Sources */,
+				FCD6D0D1298544E40084FE76 /* Frameworks */,
+				FCD6D0D2298544E40084FE76 /* Resources */,
+				1359842B96E16B3EE5965E17 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCD6D0D6298544E40084FE76 /* PBXTargetDependency */,
+			);
+			name = Khaier_AppUITests;
+			productName = Khaier_AppUITests;
+			productReference = FCD6D0D4298544E40084FE76 /* Khaier_AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCD6D0A9298544E00084FE76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FCD6D0B0298544E00084FE76 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FCD6D0C9298544E40084FE76 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FCD6D0B0298544E00084FE76;
+					};
+					FCD6D0D3298544E40084FE76 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FCD6D0B0298544E00084FE76;
+					};
+				};
+			};
+			buildConfigurationList = FCD6D0AC298544E00084FE76 /* Build configuration list for PBXProject "Khaier_App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCD6D0A8298544E00084FE76;
+			productRefGroup = FCD6D0B2298544E00084FE76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCD6D0B0298544E00084FE76 /* Khaier_App */,
+				FCD6D0C9298544E40084FE76 /* Khaier_AppTests */,
+				FCD6D0D3298544E40084FE76 /* Khaier_AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCD6D0AF298544E00084FE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
+				FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */,
+				FCD6D0F0298546730084FE76 /* WelcomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0C8298544E40084FE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0D2298544E40084FE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1359842B96E16B3EE5965E17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DBB949457F40EF3721FCCAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Khaier_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF18D77A8F0A2C376A616897 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Khaier_App/Pods-Khaier_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Khaier_App/Pods-Khaier_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Khaier_App/Pods-Khaier_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D45DC75CA7685623331031BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Khaier_AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05F8169BA26C4BFFBC58490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Khaier_App-Khaier_AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCD6D0AD298544E00084FE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD6D0EF298546730084FE76 /* WelcomeViewController.swift in Sources */,
+				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
+				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
+				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0C6298544E40084FE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD6D0CF298544E40084FE76 /* Khaier_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD6D0D0298544E40084FE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */,
+				FCD6D0D9298544E40084FE76 /* Khaier_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCD6D0CC298544E40084FE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCD6D0B0298544E00084FE76 /* Khaier_App */;
+			targetProxy = FCD6D0CB298544E40084FE76 /* PBXContainerItemProxy */;
+		};
+		FCD6D0D6298544E40084FE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCD6D0B0298544E00084FE76 /* Khaier_App */;
+			targetProxy = FCD6D0D5298544E40084FE76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCD6D0C2298544E30084FE76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCD6D0C3298544E30084FE76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCD6D0DC298544E40084FE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCD6D0DD298544E40084FE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCD6D0DF298544E40084FE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 076A07A6793A5601D7B5F360 /* Pods-Khaier_App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCD6D0E0298544E40084FE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221D6DCD8A07AB678A59B08B /* Pods-Khaier_App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCD6D0E2298544E40084FE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 766610B33DD3EAECC4D9A1BF /* Pods-Khaier_AppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Khaier_App.app/Khaier_App";
+			};
+			name = Debug;
+		};
+		FCD6D0E3298544E40084FE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Khaier_App.app/Khaier_App";
+			};
+			name = Release;
+		};
+		FCD6D0E5298544E40084FE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 262D15C71708518FC81A3F11 /* Pods-Khaier_App-Khaier_AppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Khaier_App;
+			};
+			name = Debug;
+		};
+		FCD6D0E6298544E40084FE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFAXTV4L6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Khaier_App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCD6D0AC298544E00084FE76 /* Build configuration list for PBXProject "Khaier_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD6D0DC298544E40084FE76 /* Debug */,
+				FCD6D0DD298544E40084FE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD6D0DE298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD6D0DF298544E40084FE76 /* Debug */,
+				FCD6D0E0298544E40084FE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD6D0E1298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD6D0E2298544E40084FE76 /* Debug */,
+				FCD6D0E3298544E40084FE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD6D0E4298544E40084FE76 /* Build configuration list for PBXNativeTarget "Khaier_AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD6D0E5298544E40084FE76 /* Debug */,
+				FCD6D0E6298544E40084FE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCD6D0BE298544E00084FE76 /* Khaier_App.xcdatamodel */,
+			);
+			currentVersion = FCD6D0BE298544E00084FE76 /* Khaier_App.xcdatamodel */;
+			path = Khaier_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCD6D0A9298544E00084FE76 /* Project object */;
+}
