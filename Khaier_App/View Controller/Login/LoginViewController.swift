@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  LoginViewController.swift
 //  Khaier_App
 //
 //  Created by Donia Elshenawy on 28/01/2023.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class LoginViewController: UIViewController {
+    
+    static let identifier = "LoginViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()

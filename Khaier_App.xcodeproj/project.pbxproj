@@ -10,6 +10,16 @@
 		A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */; };
 		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
+		FC671D9B29854FB000236031 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIViewExtension.swift */; };
+		FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9C29854FED00236031 /* UIImageViewExtension.swift */; };
+		FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9E2985503600236031 /* UIViewControllerExtension.swift */; };
+		FC671DA12985507D00236031 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA02985507D00236031 /* Utilities.swift */; };
+		FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA4298564AF00236031 /* OnboardingViewController.swift */; };
+		FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC671DA5298564AF00236031 /* OnboardingViewController.xib */; };
+		FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA92985819000236031 /* OnboardingCollectionViewCell.swift */; };
+		FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC671DAA2985819000236031 /* OnboardingCollectionViewCell.xib */; };
+		FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DB02985840E00236031 /* OnboardingModel.swift */; };
+		FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DB22985897600236031 /* OnboardingVC + Extension.swift */; };
 		FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B4298544E00084FE76 /* AppDelegate.swift */; };
 		FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */; };
 		FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */; };
@@ -18,8 +28,8 @@
 		FCD6D0CF298544E40084FE76 /* Khaier_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0CE298544E40084FE76 /* Khaier_AppTests.swift */; };
 		FCD6D0D9298544E40084FE76 /* Khaier_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0D8298544E40084FE76 /* Khaier_AppUITests.swift */; };
 		FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */; };
-		FCD6D0EF298546730084FE76 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */; };
-		FCD6D0F0298546730084FE76 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */; };
+		FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0ED298546730084FE76 /* LoginViewController.swift */; };
+		FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0EE298546730084FE76 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,16 @@
 		9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC671D9A29854FB000236031 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FC671D9C29854FED00236031 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		FC671D9E2985503600236031 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FC671DA02985507D00236031 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		FC671DA4298564AF00236031 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FC671DA5298564AF00236031 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		FC671DA92985819000236031 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC671DAA2985819000236031 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC671DB02985840E00236031 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		FC671DB22985897600236031 /* OnboardingVC + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingVC + Extension.swift"; sourceTree = "<group>"; };
 		FCD6D0B1298544E00084FE76 /* Khaier_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khaier_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6D0B4298544E00084FE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +81,8 @@
 		FCD6D0D4298544E40084FE76 /* Khaier_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Khaier_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6D0D8298544E40084FE76 /* Khaier_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITests.swift; sourceTree = "<group>"; };
 		FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		FCD6D0ED298546730084FE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FCD6D0EE298546730084FE76 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +123,6 @@
 				766610B33DD3EAECC4D9A1BF /* Pods-Khaier_AppTests.debug.xcconfig */,
 				E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,6 +134,42 @@
 				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC671DA22985509000236031 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC671DA02985507D00236031 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FC671DA32985645000236031 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FC671DA4298564AF00236031 /* OnboardingViewController.swift */,
+				FC671DA5298564AF00236031 /* OnboardingViewController.xib */,
+				FC671DB22985897600236031 /* OnboardingVC + Extension.swift */,
+				FC671DA82985815500236031 /* OnboardingCollectionView */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FC671DA82985815500236031 /* OnboardingCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FC671DA92985819000236031 /* OnboardingCollectionViewCell.swift */,
+				FC671DAA2985819000236031 /* OnboardingCollectionViewCell.xib */,
+			);
+			path = OnboardingCollectionView;
+			sourceTree = "<group>";
+		};
+		FC671DAE298583EA00236031 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FC671DB02985840E00236031 /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		FCD6D0A8298544E00084FE76 = {
@@ -142,6 +197,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FC671DA22985509000236031 /* Utilities */,
 				FCD6D0F1298546E50084FE76 /* Extention */,
 				FCD6D0EB2985462D0084FE76 /* View Controller */,
 				FCD6D0EA298546220084FE76 /* Model */,
@@ -199,6 +255,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC671DAE298583EA00236031 /* Onboarding */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,23 +263,27 @@
 		FCD6D0EB2985462D0084FE76 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FCD6D0EC298546450084FE76 /* Welcome */,
+				FC671DA32985645000236031 /* Onboarding */,
+				FCD6D0EC298546450084FE76 /* Login */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		FCD6D0EC298546450084FE76 /* Welcome */ = {
+		FCD6D0EC298546450084FE76 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FCD6D0ED298546730084FE76 /* WelcomeViewController.swift */,
-				FCD6D0EE298546730084FE76 /* WelcomeViewController.xib */,
+				FCD6D0ED298546730084FE76 /* LoginViewController.swift */,
+				FCD6D0EE298546730084FE76 /* LoginViewController.xib */,
 			);
-			path = Welcome;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		FCD6D0F1298546E50084FE76 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				FC671D9A29854FB000236031 /* UIViewExtension.swift */,
+				FC671D9C29854FED00236031 /* UIImageViewExtension.swift */,
+				FC671D9E2985503600236031 /* UIViewControllerExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -338,7 +399,9 @@
 			files = (
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
 				FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */,
-				FCD6D0F0298546730084FE76 /* WelcomeViewController.xib in Resources */,
+				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
+				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
+				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,9 +529,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD6D0EF298546730084FE76 /* WelcomeViewController.swift in Sources */,
+				FC671D9B29854FB000236031 /* UIViewExtension.swift in Sources */,
+				FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */,
+				FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */,
+				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
+				FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */,
+				FC671DA12985507D00236031 /* Utilities.swift in Sources */,
+				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
+				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
+				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
