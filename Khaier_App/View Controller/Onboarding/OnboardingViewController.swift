@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var onboardingCollectionView: UICollectionView!
     @IBOutlet weak var previousBtnOutlet: UIButton!
+    @IBOutlet weak var nextBtnOutlet: UIButton!
+    @IBOutlet weak var progressView: MBCircularProgressBarView!
     
     var onBoardingArray: [OnboardingModel] = []
     var currentPage = 0 {
@@ -26,6 +29,8 @@ class OnboardingViewController: UIViewController {
         setCollectionView()
         setDataOfonBoardingArray()
         previousBtnOutlet.isHidden = true
+        self.progressView.value = 25
+        nextBtnOutlet.borderColor = UIColor.white.cgColor
     }
     
     func setDataOfonBoardingArray(){
@@ -45,6 +50,7 @@ class OnboardingViewController: UIViewController {
             let indexPath = IndexPath(item: currentPage, section: 0)
             onboardingCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             previousBtnOutlet.isHidden = false
+            createNextProgressBar()
         }
     }
     
@@ -58,6 +64,7 @@ class OnboardingViewController: UIViewController {
             onboardingCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             previousBtnOutlet.isHidden = false
             checkCurrentPage()
+            createPreviousProgressBar()
         }
     }
     
@@ -71,6 +78,19 @@ class OnboardingViewController: UIViewController {
             previousBtnOutlet.isHidden = true
         } else {
             previousBtnOutlet.isHidden = false
+            createNextProgressBar()
+        }
+    }
+    
+    func createNextProgressBar(){
+        UIView.animate(withDuration: 1.0) { [self] in
+            self.progressView.value += 25
+        }
+    }
+    
+    func createPreviousProgressBar(){
+        UIView.animate(withDuration: 1.0) { [self] in
+            self.progressView.value -= 25
         }
     }
     

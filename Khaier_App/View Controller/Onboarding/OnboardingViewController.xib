@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
+                <outlet property="nextBtnOutlet" destination="pKv-s1-HRP" id="oOY-G5-EIA"/>
                 <outlet property="onboardingCollectionView" destination="Zaf-sr-ky4" id="ZZp-ln-S7Y"/>
                 <outlet property="pageControl" destination="YuG-qv-ziB" id="mL8-Sh-UyB"/>
                 <outlet property="previousBtnOutlet" destination="lJe-mB-ZY1" id="Tec-0x-tj7"/>
+                <outlet property="progressView" destination="Q3N-Ss-Oej" id="pfM-8Z-t9g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -75,25 +77,70 @@
                                     <color key="pageIndicatorTintColor" red="0.15676230490000001" green="0.4759721979" blue="0.50454218699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="currentPageIndicatorTintColor" red="0.94969898460000002" green="0.6110628843" blue="0.17252615090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </pageControl>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKv-s1-HRP">
-                                    <rect key="frame" x="346" y="646" width="60" height="60"/>
-                                    <color key="backgroundColor" red="0.1567623048513406" green="0.47597219794133055" blue="0.50454218700678655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-Ss-Oej" customClass="MBCircularProgressBarView">
+                                    <rect key="frame" x="294" y="626" width="100" height="100"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKv-s1-HRP">
+                                            <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                            <color key="backgroundColor" red="0.1567623048513406" green="0.47597219794133055" blue="0.50454218700678655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="tXh-VI-aHB"/>
+                                                <constraint firstAttribute="width" constant="60" id="znI-vg-UXy"/>
+                                            </constraints>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="arrow.forward" catalog="system"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="nextBtn:" destination="-1" eventType="touchUpInside" id="4SB-YZ-52S"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="60" id="My4-Ar-iWS"/>
-                                        <constraint firstAttribute="height" constant="60" id="kDT-QI-BY0"/>
+                                        <constraint firstItem="pKv-s1-HRP" firstAttribute="leading" secondItem="Q3N-Ss-Oej" secondAttribute="leading" constant="20" symbolic="YES" id="4JU-i1-a1e"/>
+                                        <constraint firstAttribute="height" constant="100" id="Lcw-En-bZD"/>
+                                        <constraint firstAttribute="bottom" secondItem="pKv-s1-HRP" secondAttribute="bottom" constant="20" symbolic="YES" id="N3c-yU-m7L"/>
+                                        <constraint firstItem="pKv-s1-HRP" firstAttribute="top" secondItem="Q3N-Ss-Oej" secondAttribute="top" constant="20" symbolic="YES" id="fFz-41-PfL"/>
+                                        <constraint firstAttribute="width" constant="100" id="rIF-JM-Nhx"/>
+                                        <constraint firstAttribute="trailing" secondItem="pKv-s1-HRP" secondAttribute="trailing" constant="20" symbolic="YES" id="vPD-Zj-go8"/>
                                     </constraints>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="arrow.forward" catalog="system"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                            <real key="value" value="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                            <real key="value" value="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                            <color key="value" systemColor="systemRedColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
                                             <real key="value" value="30"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="nextBtn:" destination="-1" eventType="touchUpInside" id="4SB-YZ-52S"/>
-                                    </connections>
-                                </button>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -102,13 +149,13 @@
                                 <constraint firstItem="Zaf-sr-ky4" firstAttribute="top" secondItem="aqc-4P-y9T" secondAttribute="top" constant="70" id="6Kv-00-Jt9"/>
                                 <constraint firstItem="lJe-mB-ZY1" firstAttribute="leading" secondItem="aqc-4P-y9T" secondAttribute="leading" constant="20" id="9Kl-HO-kU0"/>
                                 <constraint firstAttribute="height" constant="896" id="G07-kk-cgV"/>
+                                <constraint firstItem="Q3N-Ss-Oej" firstAttribute="centerY" secondItem="lJe-mB-ZY1" secondAttribute="centerY" id="G7z-0f-JXu"/>
                                 <constraint firstItem="YuG-qv-ziB" firstAttribute="top" secondItem="Zaf-sr-ky4" secondAttribute="bottom" constant="40" id="Hyf-Uc-gpt"/>
                                 <constraint firstItem="lJe-mB-ZY1" firstAttribute="top" secondItem="YuG-qv-ziB" secondAttribute="bottom" constant="60" id="MRE-qe-eYO"/>
-                                <constraint firstItem="pKv-s1-HRP" firstAttribute="centerY" secondItem="lJe-mB-ZY1" secondAttribute="centerY" id="ReT-Fr-i1J"/>
-                                <constraint firstAttribute="trailing" secondItem="pKv-s1-HRP" secondAttribute="trailing" constant="20" id="RxP-8B-V3m"/>
                                 <constraint firstAttribute="trailing" secondItem="YuG-qv-ziB" secondAttribute="trailing" constant="20" id="Trm-4J-qMv"/>
                                 <constraint firstAttribute="trailing" secondItem="Zaf-sr-ky4" secondAttribute="trailing" id="lQU-s1-WcT"/>
                                 <constraint firstAttribute="trailing" secondItem="GWQ-KL-Rfi" secondAttribute="trailing" constant="20" id="v9L-UZ-l07"/>
+                                <constraint firstAttribute="trailing" secondItem="Q3N-Ss-Oej" secondAttribute="trailing" constant="20" id="vjJ-Sm-jGr"/>
                                 <constraint firstItem="GWQ-KL-Rfi" firstAttribute="top" secondItem="aqc-4P-y9T" secondAttribute="top" constant="-20" id="zpO-or-J4y"/>
                             </constraints>
                         </view>
@@ -141,6 +188,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
