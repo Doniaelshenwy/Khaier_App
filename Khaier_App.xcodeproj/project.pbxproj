@@ -20,6 +20,33 @@
 		FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC671DAA2985819000236031 /* OnboardingCollectionViewCell.xib */; };
 		FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DB02985840E00236031 /* OnboardingModel.swift */; };
 		FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DB22985897600236031 /* OnboardingVC + Extension.swift */; };
+		FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB88299128AF008E404A /* IBMPlexSansArabic-Thin.ttf */; };
+		FC69EB90299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB88299128AF008E404A /* IBMPlexSansArabic-Thin.ttf */; };
+		FC69EB91299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB88299128AF008E404A /* IBMPlexSansArabic-Thin.ttf */; };
+		FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB89299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf */; };
+		FC69EB93299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB89299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf */; };
+		FC69EB94299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB89299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf */; };
+		FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8A299128AF008E404A /* IBMPlexSansArabic-Light.ttf */; };
+		FC69EB96299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8A299128AF008E404A /* IBMPlexSansArabic-Light.ttf */; };
+		FC69EB97299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8A299128AF008E404A /* IBMPlexSansArabic-Light.ttf */; };
+		FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8B299128AF008E404A /* IBMPlexSansArabic-Regular.ttf */; };
+		FC69EB99299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8B299128AF008E404A /* IBMPlexSansArabic-Regular.ttf */; };
+		FC69EB9A299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8B299128AF008E404A /* IBMPlexSansArabic-Regular.ttf */; };
+		FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf */; };
+		FC69EB9C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf */; };
+		FC69EB9D299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf */; };
+		FC69EB9E299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8D299128AF008E404A /* IBMPlexSansArabic-Bold.ttf */; };
+		FC69EB9F299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8D299128AF008E404A /* IBMPlexSansArabic-Bold.ttf */; };
+		FC69EBA0299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8D299128AF008E404A /* IBMPlexSansArabic-Bold.ttf */; };
+		FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */; };
+		FC69EBA2299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */; };
+		FC69EBA3299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */; };
+		FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69EBA529913550008E404A /* SignUpViewController.swift */; };
+		FC69EBA829913551008E404A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69EBA529913550008E404A /* SignUpViewController.swift */; };
+		FC69EBA929913551008E404A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69EBA529913550008E404A /* SignUpViewController.swift */; };
+		FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
+		FC69EBAB29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
+		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B4298544E00084FE76 /* AppDelegate.swift */; };
 		FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */; };
 		FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */; };
@@ -69,6 +96,15 @@
 		FC671DAA2985819000236031 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC671DB02985840E00236031 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		FC671DB22985897600236031 /* OnboardingVC + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingVC + Extension.swift"; sourceTree = "<group>"; };
+		FC69EB88299128AF008E404A /* IBMPlexSansArabic-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Thin.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Thin.ttf"; sourceTree = "<group>"; };
+		FC69EB89299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-SemiBold.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-SemiBold.ttf"; sourceTree = "<group>"; };
+		FC69EB8A299128AF008E404A /* IBMPlexSansArabic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Light.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Light.ttf"; sourceTree = "<group>"; };
+		FC69EB8B299128AF008E404A /* IBMPlexSansArabic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Regular.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Regular.ttf"; sourceTree = "<group>"; };
+		FC69EB8C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-ExtraLight.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FC69EB8D299128AF008E404A /* IBMPlexSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Bold.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Bold.ttf"; sourceTree = "<group>"; };
+		FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Medium.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Medium.ttf"; sourceTree = "<group>"; };
+		FC69EBA529913550008E404A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FCD6D0B1298544E00084FE76 /* Khaier_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khaier_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6D0B4298544E00084FE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +208,29 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		FC69EB872991283A008E404A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FC69EB8D299128AF008E404A /* IBMPlexSansArabic-Bold.ttf */,
+				FC69EB8C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf */,
+				FC69EB8A299128AF008E404A /* IBMPlexSansArabic-Light.ttf */,
+				FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */,
+				FC69EB8B299128AF008E404A /* IBMPlexSansArabic-Regular.ttf */,
+				FC69EB89299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf */,
+				FC69EB88299128AF008E404A /* IBMPlexSansArabic-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FC69EBA429913522008E404A /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				FC69EBA529913550008E404A /* SignUpViewController.swift */,
+				FC69EBA629913550008E404A /* SignUpViewController.xib */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
 		FCD6D0A8298544E00084FE76 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +256,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FC69EB872991283A008E404A /* Fonts */,
 				FC671DA22985509000236031 /* Utilities */,
 				FCD6D0F1298546E50084FE76 /* Extention */,
 				FCD6D0EB2985462D0084FE76 /* View Controller */,
@@ -265,6 +325,7 @@
 			children = (
 				FC671DA32985645000236031 /* Onboarding */,
 				FCD6D0EC298546450084FE76 /* Login */,
+				FC69EBA429913522008E404A /* Sign Up */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -398,9 +459,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
+				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
+				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
+				FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */,
 				FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */,
+				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
+				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
+				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
 				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
+				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
+				FC69EB9E299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +478,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC69EB99299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
+				FC69EB93299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
+				FC69EB90299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
+				FC69EB96299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
+				FC69EBA2299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
+				FC69EB9F299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
+				FC69EBAB29913551008E404A /* SignUpViewController.xib in Resources */,
+				FC69EB9C299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +493,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC69EB9A299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
+				FC69EB94299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
+				FC69EB91299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
+				FC69EB97299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
+				FC69EBA3299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
+				FC69EBA0299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
+				FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */,
+				FC69EB9D299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +625,7 @@
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
+				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC69EBA829913551008E404A /* SignUpViewController.swift in Sources */,
 				FCD6D0CF298544E40084FE76 /* Khaier_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC69EBA929913551008E404A /* SignUpViewController.swift in Sources */,
 				FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */,
 				FCD6D0D9298544E40084FE76 /* Khaier_AppUITests.swift in Sources */,
 			);

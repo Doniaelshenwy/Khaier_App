@@ -17,6 +17,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        changeFontOfLabel()
         
     }
     
@@ -24,5 +25,10 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         onBoardingImage.image = UIImage(named: slide.image)
         descriptionLabel.text = slide.description
         titleLabel.text = slide.title
+    }
+    
+    func changeFontOfLabel(){
+        titleLabel.font = UIFont(name: "IBMPlexSansArabic-Medium", size: 20)
+        descriptionLabel.font = UIFont(name: "IBMPlexSansArabic-Regular", size: 16)
     }
 }

@@ -10,3 +10,5 @@ import UIKit
 
 typealias CollectionViewConfig = UICollectionViewDelegate & UICollectionViewDataSource
 typealias TableViewConfig = UITableViewDelegate & UITableViewDataSource
+
+//family = IBM Plex Sans Arabic - name = ["IBMPlexSansArabic-Regular", "IBMPlexSansArabic-Thin", "IBMPlexSansArabic-ExtraLight", "IBMPlexSansArabic-Light", "IBMPlexSansArabic-Medium", "IBMPlexSansArabic-SemiBold", "IBMPlexSansArabic-Bold"]

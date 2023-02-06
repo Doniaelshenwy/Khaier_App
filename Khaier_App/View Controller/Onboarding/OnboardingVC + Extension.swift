@@ -21,7 +21,7 @@ extension OnboardingViewController: CollectionViewConfig{
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
-        currentPage = Int(scrollView.contentOffset.x / width)
+        currentPage = Int(round(scrollView.contentOffset.x / width))
     }
     
     func setCollectionView(){

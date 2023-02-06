@@ -10,22 +10,44 @@ import UIKit
 class LoginViewController: UIViewController {
     
     static let identifier = "LoginViewController"
-
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var googleLoginBtnOutlet: UIButton!
+    @IBOutlet weak var facebookLoginBtnOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeBorderColor()
+        removeBorder()
+    }
+    
+    func changeBorderColor(){
+        phoneTextField.layer.borderColor = UIColor(named: "disapleColor")?.cgColor
+        passwordView.layer.borderColor = UIColor(named: "disapleColor")?.cgColor
+        googleLoginBtnOutlet.layer.borderColor = UIColor(named: "disapleColor")?.cgColor
+        facebookLoginBtnOutlet.layer.borderColor = UIColor(named: "disapleColor")?.cgColor
 
-        // Do any additional setup after loading the view.
+    }
+    
+    func removeBorder(){
+        passwordTextField.borderStyle = .none
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func rememberMeBtn(_ sender: UIButton) {
     }
-    */
-
+    @IBAction func showHidenPasswordBtn(_ sender: Any) {
+    }
+    
+    @IBAction func forgetPasswordBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func loginBtn(_ sender: Any) {
+    }
+    
+    @IBAction func signUpBtn(_ sender: Any) {
+    }
+    
+    
 }
