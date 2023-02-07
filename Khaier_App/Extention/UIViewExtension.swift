@@ -27,14 +27,21 @@ extension UIView{
         }
     }
     
-    @IBInspectable var borderColor : CGColor{
-        get{
-            return self.borderColor
+    @IBInspectable var borderColor: UIColor? {
+            get {
+                if let color = layer.borderColor {
+                    return UIColor(cgColor: color)
+                }
+                return nil
+            }
+            set {
+                if let color = newValue {
+                    layer.borderColor = color.cgColor
+                } else {
+                    layer.borderColor = nil
+                }
+            }
         }
-        set{
-            self.layer.borderColor = newValue
-        }
-    }
     
     @IBInspectable var shadowOffest : CGSize{
         get{

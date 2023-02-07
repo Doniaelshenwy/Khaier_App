@@ -8,6 +8,7 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
+    static let identifier = "OnboardingViewController"
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var onboardingCollectionView: UICollectionView!
@@ -24,7 +25,6 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
-        loginBtnOutlet.layer.borderColor = UIColor(named: "AppColor")?.cgColor
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -42,12 +42,12 @@ class OnboardingViewController: UIViewController {
     
     func moveToLoginVC(){
         let vc = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
-        pushAnyViewController(vc: vc)
+        push(vc: vc)
     }
     
     func moveToSignUpVC(){
         let vc = LoginViewController(nibName: SignUpViewController.identifier, bundle: nil)
-        pushAnyViewController(vc: vc)
+        push(vc: vc)
     }
     
     @IBAction func signUpBtn(_ sender: UIButton) {
