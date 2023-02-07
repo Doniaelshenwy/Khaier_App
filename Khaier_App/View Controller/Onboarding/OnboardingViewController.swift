@@ -16,7 +16,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var signUpBtnOutlet: UIButton!
     
     var onBoardingArray: [OnboardingModel] = []
-    var currentPage = 0 {
+    var currentPage = 2 {
         didSet{
             pageControl.currentPage = currentPage
         }
@@ -41,12 +41,12 @@ class OnboardingViewController: UIViewController {
     }
     
     func moveToLoginVC(){
-        let vc = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
+        let vc = LoginViewController()
         push(vc: vc)
     }
     
     func moveToSignUpVC(){
-        let vc = LoginViewController(nibName: SignUpViewController.identifier, bundle: nil)
+        let vc = SignUpViewController()
         push(vc: vc)
     }
     

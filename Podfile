@@ -6,8 +6,9 @@ target 'Khaier_App' do
   use_frameworks!
   pod 'Alamofire'
   pod 'Kingfisher'
-  pod "MBCircularProgressBar"
-  pod 'KDCircularProgress'
+  pod 'ProgressHUD'
+  pod 'IQKeyboardManagerSwift'
+
 
   # Pods for Khaier_App
 

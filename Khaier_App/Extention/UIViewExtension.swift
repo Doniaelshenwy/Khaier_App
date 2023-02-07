@@ -60,4 +60,8 @@ extension UIView{
             self.layer.shadowRadius = newValue
         }
     }
+    
+    func applyRTL(){
+        self.semanticContentAttribute = .forceRightToLeft
+    }
 }

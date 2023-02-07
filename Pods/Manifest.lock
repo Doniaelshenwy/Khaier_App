@@ -1,28 +1,28 @@
 PODS:
   - Alamofire (5.4.4)
-  - KDCircularProgress (1.5.4)
+  - IQKeyboardManagerSwift (6.5.11)
   - Kingfisher (7.3.2)
-  - MBCircularProgressBar (0.3.5)
+  - ProgressHUD (13.6.2)
 
 DEPENDENCIES:
   - Alamofire
-  - KDCircularProgress
+  - IQKeyboardManagerSwift
   - Kingfisher
-  - MBCircularProgressBar
+  - ProgressHUD
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - KDCircularProgress
+    - IQKeyboardManagerSwift
     - Kingfisher
-    - MBCircularProgressBar
+    - ProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  KDCircularProgress: 98200c6b8e85d22bc04eb644721d3b1e12b0686b
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
-  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
 
-PODFILE CHECKSUM: 014f0f68d5711f751cdd45534ec3cb46dd18f352
+PODFILE CHECKSUM: bb6dc58a34e6e5e5474cebb4a3db6291fd402a92
 
 COCOAPODS: 1.11.3

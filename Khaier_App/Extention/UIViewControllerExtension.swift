@@ -29,6 +29,33 @@ extension UIViewController{
         view.layer.borderColor = UIColor(named: "AppColor")?.cgColor
     }
     
+    func setRedColorTF(_ textField: UITextField){
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    func setRedColorView(_ view: UIView){
+        view.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    func hideLabel(heightConstrain: NSLayoutConstraint, v: UIView, repeatLabel: UILabel){
+        heightConstrain.constant = 0
+        UIView.animate(withDuration: 0.6) {
+            v.layoutIfNeeded()
+            repeatLabel.alpha = 0
+        } completion: { _ in
+            repeatLabel.isHidden = true
+        }
+    }
+    
+    func showLabel(heightConstrain: NSLayoutConstraint, v: UIView, repeatLabel: UILabel){
+        repeatLabel.isHidden = false
+        heightConstrain.constant = 20
+        UIView.animate(withDuration: 0.6) {
+            v.layoutIfNeeded()
+            repeatLabel.alpha = 1
+        }
+    }
+    
 //    
 //    func createNavigationController(title: String){
 //        navigationItem.title = title
