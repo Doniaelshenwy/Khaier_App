@@ -25,18 +25,15 @@ class SignUpViewController: UIViewController {
         push(vc: vc)
     }
     
-    func moveToOTPVC(){
-        let vc = OTPViewController()
-        push(vc: vc)
-    }
-    
     func checkPhoneTF(){
         guard let phone = phoneTextField.text, phone != "" else {
             setRedColorTF(phoneTextField)
             showLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: enterPhoneLabel)
             return
         }
-        moveToOTPVC()
+        let vc = OTPViewController()
+        vc.phone = phone
+        push(vc: vc)
     }
    
     @IBAction func loginBtn(_ sender: Any) {
