@@ -115,18 +115,20 @@ extension LoginViewController : UITextFieldDelegate{
         checkPasswordView()
     }
     
-    func checkPhoneTF(){
-        if phoneTextField.text == ""{
+    func checkPhoneTF() {
+        if phoneTextField.text == "" {
             setGrayColorTF(phoneTextField)
+            hideLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: repeatPhoneLabel)
         } else {
             setAppColorTF(phoneTextField)
+            hideLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: repeatPhoneLabel)
         }
     }
     
-    func checkPasswordView(){
-        if passwordTextField.text == ""{
+    func checkPasswordView() {
+        if passwordTextField.text == "" {
             setGrayColorView(passwordView)
-            hideLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: repeatPhoneLabel)
+            hideLabel(heightConstrain: passwordErrorHeightConstrain, v: view, repeatLabel: repeatPasswordLabel)
         } else {
             setAppColorView(passwordView)
             hideLabel(heightConstrain: passwordErrorHeightConstrain, v: view, repeatLabel: repeatPasswordLabel)

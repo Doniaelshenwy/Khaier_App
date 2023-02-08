@@ -12,6 +12,8 @@
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
 		FC27ABEC2991AA7A00E92AC2 /* UIButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */; };
 		FC27ABEE2991BE5C00E92AC2 /* UITextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */; };
+		FC4ADA00299310E5006B9F70 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */; };
+		FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */; };
 		FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */; };
 		FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */; };
 		FC671D9B29854FB000236031 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIViewExtension.swift */; };
@@ -92,6 +94,8 @@
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtention.swift; sourceTree = "<group>"; };
 		FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtention.swift; sourceTree = "<group>"; };
+		FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
 		FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		FC671D9A29854FB000236031 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -178,6 +182,15 @@
 				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC4AD9FD299310BF006B9F70 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */,
+				FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */,
+			);
+			path = OTP;
 			sourceTree = "<group>";
 		};
 		FC606883299286F700BB7978 /* Forget Password */ = {
@@ -340,10 +353,11 @@
 		FCD6D0EB2985462D0084FE76 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FC606883299286F700BB7978 /* Forget Password */,
+				FC4AD9FD299310BF006B9F70 /* OTP */,
 				FC671DA32985645000236031 /* Onboarding */,
 				FCD6D0EC298546450084FE76 /* Login */,
 				FC69EBA429913522008E404A /* Sign Up */,
+				FC606883299286F700BB7978 /* Forget Password */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -487,6 +501,7 @@
 				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
+				FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */,
 				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
 				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
 				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
@@ -649,6 +664,7 @@
 				FC27ABEC2991AA7A00E92AC2 /* UIButtonExtention.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
+				FC4ADA00299310E5006B9F70 /* OTPViewController.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 			);
