@@ -27,7 +27,7 @@
                 <outlet property="numberThreeTextField" destination="X0G-eR-nJP" id="uVD-Zg-cu7"/>
                 <outlet property="numberTwoTextField" destination="Sms-Fx-TNL" id="wlT-kf-lyG"/>
                 <outlet property="phoneLabel" destination="HnV-JH-6rS" id="If8-Ec-7c2"/>
-                <outlet property="repeatSendCodeLabel" destination="7Fa-Gx-vr2" id="9xP-GA-xuS"/>
+                <outlet property="repeatSendCodeBtnConstrain" destination="hbx-S4-7Kb" id="AWo-Va-KNl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -283,20 +283,21 @@
                                         <action selector="continueBtn:" destination="-1" eventType="touchUpInside" id="FKz-qt-yoY"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اعادة ارسال الكود" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fa-Gx-vr2">
-                                    <rect key="frame" x="141.33333333333334" y="712" width="92.333333333333343" height="21"/>
-                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
-                                    <color key="textColor" name="AppColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbx-S4-7Kb">
+                                    <rect key="frame" x="128.66666666666666" y="712" width="117.66666666666666" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="اعادة ارسال الكود"/>
+                                    <connections>
+                                        <action selector="repeatSendCodeBtn:" destination="-1" eventType="touchUpInside" id="17a-ey-WXb"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" name="WhiteColor"/>
                             <constraints>
+                                <constraint firstItem="hbx-S4-7Kb" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="0T5-R9-hUF"/>
                                 <constraint firstItem="Hwi-3n-lD7" firstAttribute="top" secondItem="ECA-ic-qFB" secondAttribute="bottom" constant="16" id="7OG-CW-qt0"/>
-                                <constraint firstItem="7Fa-Gx-vr2" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="AHd-wg-vr1"/>
                                 <constraint firstItem="Z7v-Ud-V2y" firstAttribute="top" secondItem="v42-0r-5EU" secondAttribute="top" constant="38.5" id="EhX-68-kzF"/>
                                 <constraint firstItem="BbC-Xd-7Rb" firstAttribute="top" secondItem="v42-0r-5EU" secondAttribute="top" constant="156" id="Erj-vp-F3R"/>
-                                <constraint firstItem="7Fa-Gx-vr2" firstAttribute="top" secondItem="Ann-Oc-ndb" secondAttribute="bottom" constant="28" id="Ext-FU-7zq"/>
                                 <constraint firstItem="Ann-Oc-ndb" firstAttribute="leading" secondItem="v42-0r-5EU" secondAttribute="leading" constant="16" id="IKK-qH-NC5"/>
                                 <constraint firstAttribute="trailing" secondItem="C9p-H9-dY0" secondAttribute="trailing" constant="16" id="LWR-DY-8fQ"/>
                                 <constraint firstItem="ECA-ic-qFB" firstAttribute="top" secondItem="C9p-H9-dY0" secondAttribute="bottom" constant="8" id="Oum-8k-1ho"/>
@@ -309,6 +310,7 @@
                                 <constraint firstAttribute="trailing" secondItem="mjR-el-pkY" secondAttribute="trailing" constant="16" id="rlM-i7-7Yu"/>
                                 <constraint firstAttribute="trailing" secondItem="ECA-ic-qFB" secondAttribute="trailing" constant="16" id="tvJ-Ny-Aad"/>
                                 <constraint firstItem="BbC-Xd-7Rb" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="uvk-D3-4Y6"/>
+                                <constraint firstItem="hbx-S4-7Kb" firstAttribute="top" secondItem="Ann-Oc-ndb" secondAttribute="bottom" constant="28" id="uxL-iE-CnT"/>
                                 <constraint firstItem="Hwi-3n-lD7" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="wq3-LC-J8j"/>
                                 <constraint firstItem="C9p-H9-dY0" firstAttribute="top" secondItem="BbC-Xd-7Rb" secondAttribute="bottom" constant="32" id="x13-8M-VhF"/>
                             </constraints>

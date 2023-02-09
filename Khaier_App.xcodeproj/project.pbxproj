@@ -16,7 +16,7 @@
 		FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */; };
 		FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */; };
 		FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */; };
-		FC671D9B29854FB000236031 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIViewExtension.swift */; };
+		FC671D9B29854FB000236031 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIView+Extension.swift */; };
 		FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9C29854FED00236031 /* UIImageViewExtension.swift */; };
 		FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9E2985503600236031 /* UIViewControllerExtension.swift */; };
 		FC671DA12985507D00236031 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA02985507D00236031 /* Utilities.swift */; };
@@ -53,8 +53,6 @@
 		FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAB29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
-		FC9B54DF299336ED0035F33A /* CompleteSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B54DD299336ED0035F33A /* CompleteSignUpViewController.swift */; };
-		FC9B54E0299336ED0035F33A /* CompleteSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B54DE299336ED0035F33A /* CompleteSignUpViewController.xib */; };
 		FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B4298544E00084FE76 /* AppDelegate.swift */; };
 		FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */; };
 		FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */; };
@@ -65,6 +63,11 @@
 		FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */; };
 		FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0ED298546730084FE76 /* LoginViewController.swift */; };
 		FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0EE298546730084FE76 /* LoginViewController.xib */; };
+		FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC96F2993E01B00E355F1 /* AuthManger.swift */; };
+		FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */; };
+		FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */; };
+		FCDEC97B29944C9300E355F1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC97A29944C9300E355F1 /* StringExtension.swift */; };
+		FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCDEC98029945B9300E355F1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +103,7 @@
 		FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
 		FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
-		FC671D9A29854FB000236031 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FC671D9A29854FB000236031 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FC671D9C29854FED00236031 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		FC671D9E2985503600236031 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FC671DA02985507D00236031 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -119,8 +122,6 @@
 		FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Medium.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Medium.ttf"; sourceTree = "<group>"; };
 		FC69EBA529913550008E404A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		FC9B54DD299336ED0035F33A /* CompleteSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpViewController.swift; sourceTree = "<group>"; };
-		FC9B54DE299336ED0035F33A /* CompleteSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompleteSignUpViewController.xib; sourceTree = "<group>"; };
 		FCD6D0B1298544E00084FE76 /* Khaier_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khaier_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6D0B4298544E00084FE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +136,11 @@
 		FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCD6D0ED298546730084FE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FCD6D0EE298546730084FE76 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FCDEC96F2993E01B00E355F1 /* AuthManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManger.swift; sourceTree = "<group>"; };
+		FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		FCDEC97A29944C9300E355F1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FCDEC98029945B9300E355F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,13 +271,13 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
-		FC9B54DC299336B90035F33A /* CompleteSignUp */ = {
+		FC9B54DC299336B90035F33A /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
-				FC9B54DD299336ED0035F33A /* CompleteSignUpViewController.swift */,
-				FC9B54DE299336ED0035F33A /* CompleteSignUpViewController.xib */,
+				FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */,
+				FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */,
 			);
-			path = CompleteSignUp;
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		FCD6D0A8298544E00084FE76 = {
@@ -299,6 +305,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FCDEC96D2993DFDD00E355F1 /* Constants */,
 				FC69EB872991283A008E404A /* Fonts */,
 				FC671DA22985509000236031 /* Utilities */,
 				FCD6D0F1298546E50084FE76 /* Extention */,
@@ -334,6 +341,7 @@
 			children = (
 				FCD6D0B4298544E00084FE76 /* AppDelegate.swift */,
 				FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */,
+				FCDEC98029945B9300E355F1 /* GoogleService-Info.plist */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -370,7 +378,7 @@
 				FCD6D0EC298546450084FE76 /* Login */,
 				FC69EBA429913522008E404A /* Sign Up */,
 				FC4AD9FD299310BF006B9F70 /* OTP */,
-				FC9B54DC299336B90035F33A /* CompleteSignUp */,
+				FC9B54DC299336B90035F33A /* CreateAccount */,
 				FC606883299286F700BB7978 /* Forget Password */,
 			);
 			path = "View Controller";
@@ -388,13 +396,22 @@
 		FCD6D0F1298546E50084FE76 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				FC671D9A29854FB000236031 /* UIViewExtension.swift */,
+				FC671D9A29854FB000236031 /* UIView+Extension.swift */,
 				FC671D9C29854FED00236031 /* UIImageViewExtension.swift */,
 				FC671D9E2985503600236031 /* UIViewControllerExtension.swift */,
 				FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */,
 				FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */,
+				FCDEC97A29944C9300E355F1 /* StringExtension.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		FCDEC96D2993DFDD00E355F1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FCDEC96F2993E01B00E355F1 /* AuthManger.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */,
 				FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */,
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
@@ -517,10 +535,10 @@
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
 				FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */,
 				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
+				FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */,
 				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
 				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
 				FC69EB9E299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
-				FC9B54E0299336ED0035F33A /* CompleteSignUpViewController.xib in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,17 +683,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC671D9B29854FB000236031 /* UIViewExtension.swift in Sources */,
-				FC9B54DF299336ED0035F33A /* CompleteSignUpViewController.swift in Sources */,
+				FC671D9B29854FB000236031 /* UIView+Extension.swift in Sources */,
 				FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */,
 				FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */,
+				FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */,
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
+				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,
 				FC27ABEE2991BE5C00E92AC2 /* UITextFieldExtention.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
 				FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */,
 				FC671DA12985507D00236031 /* Utilities.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
+				FCDEC97B29944C9300E355F1 /* StringExtension.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC27ABEC2991AA7A00E92AC2 /* UIButtonExtention.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
