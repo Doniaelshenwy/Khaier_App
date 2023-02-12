@@ -81,7 +81,7 @@ class OTPForgetPasswordViewController: UIViewController {
     }
     
     func repeatCallSendCode(){
-        let number = "+٢\(phone)"
+        let number = "+٢\(phone.convertedDigitsToLocale(Locale(identifier: "AR")))"
         AuthManager.shared.startAuth(phoneNumber: number) { [weak self] state in
             switch state{
             case true:
@@ -101,8 +101,8 @@ class OTPForgetPasswordViewController: UIViewController {
     
     @IBAction func continueBtn(_ sender: Any) {
         let code = isEmptyCodeInTextField().convertedDigitsToLocale(Locale(identifier: "EN"))
-        callVerifyCode(code: code)
-       // moveToResetPasswordVC()
+       // callVerifyCode(code: code)   // fireBase
+        moveToResetPasswordVC()        // test
     }
     
     

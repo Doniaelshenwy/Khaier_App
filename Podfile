@@ -9,6 +9,7 @@ target 'Khaier_App' do
   pod 'ProgressHUD'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Auth'
+  pod 'DropDown'
 
 
   # Pods for Khaier_App

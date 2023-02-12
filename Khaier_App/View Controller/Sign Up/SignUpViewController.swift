@@ -45,8 +45,8 @@ class SignUpViewController: UIViewController {
             checkTextFieldIsEmpty(textField: phoneTextField, height: phoneErrorHeightConstrain, label: enterPhoneLabel)
             return
         }
-        callSendCode(phone: phone) // when firebase send code
-        //moveToOTPSignUPVC(phone: phone) // test
+        //callSendCode(phone: phone) // when firebase send code
+        moveToOTPSignUPVC(phone: phone) // test
     }
    
     @IBAction func loginBtn(_ sender: Any) {

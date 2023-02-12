@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.4)
+  - DropDown (2.3.13)
   - Firebase/Auth (9.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 9.3.0)
@@ -54,6 +55,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - DropDown
   - Firebase/Auth
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -62,6 +64,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DropDown
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -78,6 +81,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: ef75abb1cdbc746d5a38f4e26c422c807b189b8c
   FirebaseAuth: 9ebc3577fe0acf9092df21ac314024b70aebf21e
   FirebaseCore: c088995ece701a021a48a1348ea0174877de2a6a
@@ -92,6 +96,6 @@ SPEC CHECKSUMS:
   ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: e9084d34643ece58a33d33d2f65464fc511e9606
+PODFILE CHECKSUM: 5e39b9847ec8af78180e2304579dcae1d72b09d7
 
 COCOAPODS: 1.11.3
