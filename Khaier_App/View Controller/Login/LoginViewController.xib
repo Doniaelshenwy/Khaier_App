@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
+                <outlet property="checkRemeberBoxBtnConstrain" destination="4kL-Mn-woU" id="glW-6u-EHj"/>
                 <outlet property="facebookLoginBtnOutlet" destination="XeM-te-lL1" id="03u-HG-X7t"/>
                 <outlet property="googleLoginBtnOutlet" destination="XdF-ml-3d9" id="QMU-ZD-Bae"/>
                 <outlet property="passwordErrorHeightConstrain" destination="cyr-KH-G2v" id="lrD-2h-6Xk"/>
@@ -45,6 +46,7 @@
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="vwR-Se-zQ3">
                                     <rect key="frame" x="0.0" y="-50" width="163" height="199"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="163" id="2T1-Y2-IwX"/>
                                         <constraint firstAttribute="height" constant="199" id="iMH-at-QHe"/>
@@ -52,6 +54,7 @@
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="IKF-VT-pxA">
                                     <rect key="frame" x="319" y="38.666666666666664" width="40" height="39.999999999999993"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="FKh-XH-E5U"/>
                                         <constraint firstAttribute="width" constant="40" id="QhV-x1-Rs9"/>
@@ -59,24 +62,28 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="اهلا بك" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-84-5S7">
                                     <rect key="frame" x="283" y="110.66666666666667" width="76" height="30.000000000000014"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="20"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل الدخول للمتابعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8Z-uO-oIV">
                                     <rect key="frame" x="216.66666666666663" y="148.66666666666666" width="142.33333333333337" height="24"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <color key="textColor" name="GrayColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhW-DY-tca">
                                     <rect key="frame" x="302.33333333333331" y="196.66666666666666" width="56.666666666666686" height="21"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-UB-DHw">
                                     <rect key="frame" x="16" y="225.66666666666666" width="343" height="47.999999999999972"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="aIT-T1-8wO"/>
                                     </constraints>
@@ -117,7 +124,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="EUk-oh-yB7" secondAttribute="bottom" constant="12" id="AXn-uz-P52"/>
                                         <constraint firstAttribute="bottom" secondItem="PQL-Nf-9EZ" secondAttribute="bottom" id="Q0O-H0-P2k"/>
@@ -141,7 +148,8 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kL-Mn-woU">
-                                    <rect key="frame" x="339" y="421" width="16" height="16"/>
+                                    <rect key="frame" x="339" y="425" width="16" height="16"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="blT-5c-Pzh"/>
                                         <constraint firstAttribute="width" constant="16" id="kLM-ah-BvS"/>
@@ -158,13 +166,14 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تذكرني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-74-b09">
-                                    <rect key="frame" x="298.66666666666669" y="418.66666666666669" width="30.333333333333314" height="21"/>
+                                    <rect key="frame" x="298.66666666666669" y="422.66666666666669" width="30.333333333333314" height="21"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="fBf-Mg-GVj">
-                                    <rect key="frame" x="8" y="411.66666666666669" width="175" height="35"/>
+                                    <rect key="frame" x="8" y="415.66666666666669" width="175" height="35"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdK-fN-f3t">
                                             <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="35"/>
@@ -183,6 +192,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="TdK-fN-f3t" secondAttribute="bottom" id="C30-GU-yfE"/>
                                         <constraint firstItem="TdK-fN-f3t" firstAttribute="top" secondItem="fBf-Mg-GVj" secondAttribute="top" id="Ins-jL-3GC"/>
@@ -194,12 +204,12 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-Id-y0r">
-                                    <rect key="frame" x="16" y="497.66666666666674" width="343" height="48"/>
+                                    <rect key="frame" x="16" y="501.66666666666674" width="343" height="48"/>
                                     <color key="backgroundColor" name="AppColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="Df9-8s-bKI"/>
                                     </constraints>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" name="WhiteColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="تسجيل دخول">
                                         <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
@@ -214,7 +224,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omd-gy-C32">
-                                    <rect key="frame" x="75.333333333333329" y="570" width="99.999999999999986" height="1"/>
+                                    <rect key="frame" x="75.333333333333329" y="574" width="99.999999999999986" height="1"/>
                                     <color key="backgroundColor" name="LineColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="8mg-hk-KLJ"/>
@@ -222,7 +232,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أو" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Om-uR-ILu">
-                                    <rect key="frame" x="183.33333333333334" y="561.66666666666663" width="8.3333333333333428" height="18"/>
+                                    <rect key="frame" x="183.33333333333334" y="565.66666666666663" width="8.3333333333333428" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="18" id="8KB-fw-jnC"/>
                                         <constraint firstAttribute="width" constant="8.3300000000000001" id="QX1-sY-VOg"/>
@@ -232,7 +242,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtf-xM-WNz">
-                                    <rect key="frame" x="199.66666666666666" y="570" width="99.999999999999972" height="1"/>
+                                    <rect key="frame" x="199.66666666666666" y="574" width="99.999999999999972" height="1"/>
                                     <color key="backgroundColor" name="LineColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="ZNl-Zh-Rdg"/>
@@ -240,7 +250,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdF-ml-3d9">
-                                    <rect key="frame" x="16" y="595.66666666666663" width="343" height="40"/>
+                                    <rect key="frame" x="16" y="599.66666666666663" width="343" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="pv8-Py-B2n"/>
@@ -261,9 +271,12 @@
                                             <color key="value" name="disapleColor"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="testRestBtn:" destination="-1" eventType="touchUpInside" id="Zfi-QA-zW4"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeM-te-lL1">
-                                    <rect key="frame" x="16" y="643.66666666666663" width="343" height="40"/>
+                                    <rect key="frame" x="16" y="647.66666666666663" width="343" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="pRr-lI-WM5"/>
@@ -286,10 +299,11 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="Yxu-um-bUr">
-                                    <rect key="frame" x="93" y="723.66666666666663" width="189" height="35"/>
+                                    <rect key="frame" x="93" y="727.66666666666663" width="189" height="35"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QC-kx-EgN">
                                             <rect key="frame" x="0.0" y="0.0" width="102" height="35"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="102" id="IwV-dY-Q5A"/>
                                             </constraints>
@@ -303,6 +317,8 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ليس لديك حساب؟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exQ-Ec-B2C">
                                             <rect key="frame" x="87" y="0.0" width="102" height="35"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
+                                            <color key="tintColor" name="BlackColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="102" id="0oa-Wm-dDn"/>
                                             </constraints>
@@ -311,9 +327,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال كلمة المرور" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOv-eG-Fxb">
-                                    <rect key="frame" x="243.33333333333334" y="390.66666666666669" width="111.66666666666666" height="20"/>
+                                    <rect key="frame" x="243.33333333333334" y="394.66666666666669" width="111.66666666666666" height="20"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="cyr-KH-G2v"/>
                                     </constraints>
@@ -323,6 +341,7 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال رقم الهاتف " textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHq-5y-GBa">
                                     <rect key="frame" x="235" y="281.66666666666669" width="124" height="20"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="9rR-Dt-RmI"/>
                                     </constraints>
@@ -332,6 +351,7 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-lX-YK7">
                                     <rect key="frame" x="311.33333333333331" y="309.66666666666669" width="47.666666666666686" height="21"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
@@ -377,7 +397,7 @@
                                 <constraint firstAttribute="trailing" secondItem="4kL-Mn-woU" secondAttribute="trailing" constant="20" id="mud-iQ-EWT"/>
                                 <constraint firstItem="xtf-xM-WNz" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="qNr-MH-njf"/>
                                 <constraint firstAttribute="trailing" secondItem="TS6-Id-y0r" secondAttribute="trailing" constant="16" id="rFt-Nb-KFK"/>
-                                <constraint firstItem="TOv-eG-Fxb" firstAttribute="top" secondItem="s4L-ls-E5X" secondAttribute="bottom" constant="4" id="tkX-xF-poY"/>
+                                <constraint firstItem="TOv-eG-Fxb" firstAttribute="top" secondItem="s4L-ls-E5X" secondAttribute="bottom" constant="8" id="tkX-xF-poY"/>
                                 <constraint firstItem="XeM-te-lL1" firstAttribute="top" secondItem="XdF-ml-3d9" secondAttribute="bottom" constant="8" id="tkb-FG-ZZA"/>
                                 <constraint firstItem="TS6-Id-y0r" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="tlz-vK-EPZ"/>
                                 <constraint firstItem="xfq-lX-YK7" firstAttribute="top" secondItem="XHq-5y-GBa" secondAttribute="bottom" constant="8" id="uN7-oI-qW2"/>
@@ -418,22 +438,22 @@
         <image name="check" width="18" height="18"/>
         <image name="eye-off" width="24" height="24"/>
         <namedColor name="AppColor">
-            <color red="0.098039215686274508" green="0.37254901960784315" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BlackColor">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayColor">
-            <color red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.56099998950958252" green="0.56099998950958252" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LineColor">
-            <color red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70599997043609619" green="0.70599997043609619" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="disapleColor">
-            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

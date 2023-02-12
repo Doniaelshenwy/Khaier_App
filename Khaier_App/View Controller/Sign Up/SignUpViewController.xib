@@ -38,6 +38,7 @@
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="W7j-ZS-EnI">
                                     <rect key="frame" x="0.0" y="-50" width="163" height="199"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="163" id="Zj5-jj-Zy4"/>
                                         <constraint firstAttribute="height" constant="199" id="vfB-X1-Wlw"/>
@@ -45,6 +46,7 @@
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1MJ-bM-A9j">
                                     <rect key="frame" x="319" y="38.666666666666664" width="40" height="39.999999999999993"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="faX-AK-A6D"/>
                                         <constraint firstAttribute="height" constant="40" id="kv8-KE-4Y6"/>
@@ -52,12 +54,14 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انشاء حساب جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rJ-uy-U7M">
                                     <rect key="frame" x="215.33333333333337" y="110.66666666666667" width="143.66666666666663" height="30.000000000000014"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="20"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انشئ حساب جديد للمتابعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSK-rh-mnU">
                                     <rect key="frame" x="199.66666666666663" y="148.66666666666666" width="159.33333333333337" height="24"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <color key="textColor" name="GrayColor"/>
                                     <nil key="highlightedColor"/>
@@ -117,6 +121,7 @@
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال رقم الهاتف " textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-7L-LAs">
                                     <rect key="frame" x="235" y="281.66666666666669" width="124" height="20"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="oEb-HZ-nQd"/>
                                     </constraints>
@@ -130,7 +135,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="0yC-S9-EWC"/>
                                     </constraints>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" name="WhiteColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="ارسل الكود">
                                         <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
@@ -154,6 +159,7 @@
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أو" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-cj-qy4">
                                     <rect key="frame" x="183.33333333333334" y="413.66666666666669" width="8.3333333333333428" height="18"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="18" id="eGd-la-gSR"/>
                                         <constraint firstAttribute="width" constant="8.3300000000000001" id="reo-Qn-63j"/>
@@ -221,6 +227,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG9-nr-CvE">
                                             <rect key="frame" x="0.0" y="0.0" width="111" height="35"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="111" id="1Mp-U5-E19"/>
                                             </constraints>
@@ -234,6 +241,7 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لديك حساب بالفعل؟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ob-sy-bwA">
                                             <rect key="frame" x="96" y="0.0" width="111" height="35"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="111" id="eS0-t8-B8g"/>
                                             </constraints>
@@ -244,7 +252,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="WhiteColor"/>
                             <constraints>
                                 <constraint firstItem="841-5V-qvf" firstAttribute="leading" secondItem="5Zd-cj-qy4" secondAttribute="trailing" constant="8" id="0Se-AC-MG4"/>
                                 <constraint firstAttribute="trailing" secondItem="iK0-7L-LAs" secondAttribute="trailing" constant="16" id="37K-e1-JY2"/>
@@ -306,22 +314,22 @@
         <image name="Login" width="163" height="199"/>
         <image name="Logo" width="172" height="172"/>
         <namedColor name="AppColor">
-            <color red="0.098039215686274508" green="0.37254901960784315" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BlackColor">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayColor">
-            <color red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.56099998950958252" green="0.56099998950958252" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LineColor">
-            <color red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70599997043609619" green="0.70599997043609619" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="disapleColor">
-            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

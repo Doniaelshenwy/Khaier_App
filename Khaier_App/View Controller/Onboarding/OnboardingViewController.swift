@@ -8,7 +8,6 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-    static let identifier = "OnboardingViewController"
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var onboardingCollectionView: UICollectionView!
@@ -34,20 +33,10 @@ class OnboardingViewController: UIViewController {
     
     func setDataOfonBoardingArray(){
         onBoardingArray = [
-            OnboardingModel(image: "1stOnboarding", description: "خير وسيط بين الجمعيات خير وسيط بين الجمعيات خير وسيط بين الجمعيات", title: "خير وسيط بين الجمعيات "),
-            OnboardingModel(image: "2ndOnboarding", description: "خير وسيط بين الجمعيات خير وسيط بين الجمعيات خير وسيط بين الجمعيات", title: "خير وسيط بين الجمعيات"),
-            OnboardingModel(image: "3rdOnboarding", description: "خير وسيط بين الجمعيات خير وسيط بين الجمعيات خير وسيط بين الجمعيات", title: "خير وسيط بين الجمعيات")
+            OnboardingModel(image: "1stOnboarding", description: "ساهم بفعل الخير بالتبرع من خلالنا", title: "كن خَـــيِّـــرْ "),
+            OnboardingModel(image: "2ndOnboarding", description: "تقدر تتبرع من خلال الابلكيشن اونلاين لتوفير وقتك و مجهودك", title: "أتبرع أونلاين"),
+            OnboardingModel(image: "3rdOnboarding", description: " أتبرع من مكانك و المندوب هياخد التبرع من باب بيتك", title: "تبرعك هيوصل اينما كنت")
         ]
-    }
-    
-    func moveToLoginVC(){
-        let vc = LoginViewController()
-        push(vc: vc)
-    }
-    
-    func moveToSignUpVC(){
-        let vc = SignUpViewController()
-        push(vc: vc)
     }
     
     @IBAction func signUpBtn(_ sender: UIButton) {

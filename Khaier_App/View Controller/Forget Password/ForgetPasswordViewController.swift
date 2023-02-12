@@ -9,21 +9,48 @@ import UIKit
 
 class ForgetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var repeatEnterPhoneLabel: UILabel!
+    @IBOutlet weak var repeatEnterPhoneLabelConstrain: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        phoneTextField.delegate = self
+        isHiddeninvalidLabel(for: [repeatEnterPhoneLabel])
+        setZeroHeightLabel(for: [repeatEnterPhoneLabelConstrain])
+    }
+    
+    func moveToOTPForgetPasswordVC(phone: String){
+        let vc = OTPForgetPasswordViewController()
+        vc.phone = phone
+        push(vc: vc)
+    }
+    
+    func callSendCode(phone: String){
+        let number = "+2\(phone)"
+        AuthManager.shared.startAuth(phoneNumber: number) { [weak self] state in
+            switch state{
+            case true:
+                self?.moveToOTPForgetPasswordVC(phone: phone)
+            case false:
+                ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: " رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
+            }
+        }
+    }
+    
+    func checkPhoneTF(){
+        guard let phone = phoneTextField.text, phone != "" else {
+            checkTextFieldIsEmpty(textField: phoneTextField, height: repeatEnterPhoneLabelConstrain, label: repeatEnterPhoneLabel)
+            return
+        }
+        //moveToOTPForgetPasswordVC(phone: phone)    // test
+        callSendCode(phone: phone)   // use firebase
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendCodeBtn(_ sender: Any) {
+        checkPhoneTF()
     }
-    */
-
+    
 }
+
+

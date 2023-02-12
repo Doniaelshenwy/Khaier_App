@@ -10,15 +10,27 @@
 		A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */; };
 		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
-		FC27ABEC2991AA7A00E92AC2 /* UIButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */; };
-		FC27ABEE2991BE5C00E92AC2 /* UITextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */; };
-		FC4ADA00299310E5006B9F70 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */; };
-		FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */; };
+		FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */; };
+		FC1931C12998547700736EF9 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C02998547700736EF9 /* SecureTextField.swift */; };
+		FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */; };
+		FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C42998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift */; };
+		FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C62998662000736EF9 /* OTPSignUPVC+Extension.swift */; };
+		FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C829986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift */; };
+		FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931CA2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift */; };
+		FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */; };
+		FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */; };
+		FC349C552999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */; };
+		FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */; };
+		FC34AB9D2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34AB9B2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib */; };
+		FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34AB9E299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift */; };
+		FC34ABA12999442A00B2B7C2 /* OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34ABA02999442A00B2B7C2 /* OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift */; };
+		FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */; };
+		FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */; };
 		FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */; };
 		FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */; };
 		FC671D9B29854FB000236031 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIView+Extension.swift */; };
-		FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9C29854FED00236031 /* UIImageViewExtension.swift */; };
-		FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9E2985503600236031 /* UIViewControllerExtension.swift */; };
+		FC671D9D29854FED00236031 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9C29854FED00236031 /* UIImageView+Extension.swift */; };
+		FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9E2985503600236031 /* UIViewController+Extension.swift */; };
 		FC671DA12985507D00236031 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA02985507D00236031 /* Utilities.swift */; };
 		FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671DA4298564AF00236031 /* OnboardingViewController.swift */; };
 		FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC671DA5298564AF00236031 /* OnboardingViewController.xib */; };
@@ -53,6 +65,9 @@
 		FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAB29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
+		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
+		FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC629972996E970001406CE /* ResetPasswordViewController.swift */; };
+		FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC629982996E970001406CE /* ResetPasswordViewController.xib */; };
 		FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B4298544E00084FE76 /* AppDelegate.swift */; };
 		FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */; };
 		FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0BD298544E00084FE76 /* Khaier_App.xcdatamodeld */; };
@@ -66,7 +81,7 @@
 		FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC96F2993E01B00E355F1 /* AuthManger.swift */; };
 		FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */; };
 		FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */; };
-		FCDEC97B29944C9300E355F1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC97A29944C9300E355F1 /* StringExtension.swift */; };
+		FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC97A29944C9300E355F1 /* String+Extension.swift */; };
 		FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCDEC98029945B9300E355F1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -97,15 +112,27 @@
 		9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtention.swift; sourceTree = "<group>"; };
-		FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtention.swift; sourceTree = "<group>"; };
-		FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
-		FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC1931C02998547700736EF9 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
+		FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUPVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC1931C42998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPSignUpVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC1931C62998662000736EF9 /* OTPSignUPVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPSignUPVC+Extension.swift"; sourceTree = "<group>"; };
+		FC1931C829986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgetPasswordVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC1931CA2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResetPasswordVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
+		FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
+		FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		FC34AB9B2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		FC34AB9E299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPForgetPasswordVC+Extension.swift"; sourceTree = "<group>"; };
+		FC34ABA02999442A00B2B7C2 /* OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUPViewController.swift; sourceTree = "<group>"; };
+		FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPSignUPViewController.xib; sourceTree = "<group>"; };
 		FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		FC671D9A29854FB000236031 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		FC671D9C29854FED00236031 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		FC671D9E2985503600236031 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FC671D9C29854FED00236031 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FC671D9E2985503600236031 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FC671DA02985507D00236031 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FC671DA4298564AF00236031 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FC671DA5298564AF00236031 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +149,9 @@
 		FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Medium.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Medium.ttf"; sourceTree = "<group>"; };
 		FC69EBA529913550008E404A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		FCC629972996E970001406CE /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		FCC629982996E970001406CE /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		FCD6D0B1298544E00084FE76 /* Khaier_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khaier_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6D0B4298544E00084FE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6D0B6298544E00084FE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,7 +169,7 @@
 		FCDEC96F2993E01B00E355F1 /* AuthManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManger.swift; sourceTree = "<group>"; };
 		FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
-		FCDEC97A29944C9300E355F1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FCDEC97A29944C9300E355F1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FCDEC98029945B9300E355F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,13 +224,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FC4AD9FD299310BF006B9F70 /* OTP */ = {
+		FC34AB99299940E600B2B7C2 /* OTP Forget Password */ = {
 			isa = PBXGroup;
 			children = (
-				FC4AD9FE299310E5006B9F70 /* OTPViewController.swift */,
-				FC4AD9FF299310E5006B9F70 /* OTPViewController.xib */,
+				FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */,
+				FC34AB9B2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib */,
+				FC34AB9E299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift */,
+				FC34ABA02999442A00B2B7C2 /* OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift */,
 			);
-			path = OTP;
+			path = "OTP Forget Password";
+			sourceTree = "<group>";
+		};
+		FC4AD9FD299310BF006B9F70 /* OTP SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */,
+				FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */,
+				FC1931C62998662000736EF9 /* OTPSignUPVC+Extension.swift */,
+				FC1931C42998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift */,
+			);
+			path = "OTP SignUp";
 			sourceTree = "<group>";
 		};
 		FC606883299286F700BB7978 /* Forget Password */ = {
@@ -208,6 +251,7 @@
 			children = (
 				FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */,
 				FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */,
+				FC1931C829986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = "Forget Password";
 			sourceTree = "<group>";
@@ -267,6 +311,7 @@
 			children = (
 				FC69EBA529913550008E404A /* SignUpViewController.swift */,
 				FC69EBA629913550008E404A /* SignUpViewController.xib */,
+				FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -276,8 +321,19 @@
 			children = (
 				FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */,
 				FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */,
+				FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		FCC629962996E8F3001406CE /* Reset Password */ = {
+			isa = PBXGroup;
+			children = (
+				FCC629972996E970001406CE /* ResetPasswordViewController.swift */,
+				FCC629982996E970001406CE /* ResetPasswordViewController.xib */,
+				FC1931CA2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift */,
+			);
+			path = "Reset Password";
 			sourceTree = "<group>";
 		};
 		FCD6D0A8298544E00084FE76 = {
@@ -377,9 +433,11 @@
 				FC671DA32985645000236031 /* Onboarding */,
 				FCD6D0EC298546450084FE76 /* Login */,
 				FC69EBA429913522008E404A /* Sign Up */,
-				FC4AD9FD299310BF006B9F70 /* OTP */,
+				FC4AD9FD299310BF006B9F70 /* OTP SignUp */,
 				FC9B54DC299336B90035F33A /* CreateAccount */,
 				FC606883299286F700BB7978 /* Forget Password */,
+				FC34AB99299940E600B2B7C2 /* OTP Forget Password */,
+				FCC629962996E8F3001406CE /* Reset Password */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -389,6 +447,7 @@
 			children = (
 				FCD6D0ED298546730084FE76 /* LoginViewController.swift */,
 				FCD6D0EE298546730084FE76 /* LoginViewController.xib */,
+				FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -397,11 +456,11 @@
 			isa = PBXGroup;
 			children = (
 				FC671D9A29854FB000236031 /* UIView+Extension.swift */,
-				FC671D9C29854FED00236031 /* UIImageViewExtension.swift */,
-				FC671D9E2985503600236031 /* UIViewControllerExtension.swift */,
-				FC27ABEB2991AA7A00E92AC2 /* UIButtonExtention.swift */,
-				FC27ABED2991BE5C00E92AC2 /* UITextFieldExtention.swift */,
-				FCDEC97A29944C9300E355F1 /* StringExtension.swift */,
+				FC671D9C29854FED00236031 /* UIImageView+Extension.swift */,
+				FC671D9E2985503600236031 /* UIViewController+Extension.swift */,
+				FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */,
+				FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */,
+				FCDEC97A29944C9300E355F1 /* String+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -410,6 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				FCDEC96F2993E01B00E355F1 /* AuthManger.swift */,
+				FC9B6409299524F40026326B /* ProgressHUD.swift */,
+				FC1931C02998547700736EF9 /* SecureTextField.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -528,12 +589,14 @@
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
+				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
 				FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */,
 				FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */,
+				FC34AB9D2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib in Resources */,
 				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
-				FC4ADA01299310E5006B9F70 /* OTPViewController.xib in Resources */,
+				FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */,
 				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
 				FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */,
 				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
@@ -683,26 +746,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC349C552999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC1931C12998547700736EF9 /* SecureTextField.swift in Sources */,
+				FC34ABA12999442A00B2B7C2 /* OTPForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC671D9B29854FB000236031 /* UIView+Extension.swift in Sources */,
 				FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */,
-				FC671D9D29854FED00236031 /* UIImageViewExtension.swift in Sources */,
+				FC671D9D29854FED00236031 /* UIImageView+Extension.swift in Sources */,
+				FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */,
 				FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */,
+				FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */,
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,
-				FC27ABEE2991BE5C00E92AC2 /* UITextFieldExtention.swift in Sources */,
+				FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
-				FC671D9F2985503600236031 /* UIViewControllerExtension.swift in Sources */,
+				FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */,
 				FC671DA12985507D00236031 /* Utilities.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
-				FCDEC97B29944C9300E355F1 /* StringExtension.swift in Sources */,
+				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
-				FC27ABEC2991AA7A00E92AC2 /* UIButtonExtention.swift in Sources */,
+				FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */,
+				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,
+				FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
-				FC4ADA00299310E5006B9F70 /* OTPViewController.swift in Sources */,
+				FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
+				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
+				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +955,7 @@
 				DEVELOPMENT_TEAM = JFAXTV4L6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Khaier;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -888,7 +965,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Donia.Khaier-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -907,6 +984,7 @@
 				DEVELOPMENT_TEAM = JFAXTV4L6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Khaier;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -916,7 +994,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Donia.Khaier-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Donia.Khaier-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -8,7 +8,6 @@
 import UIKit
 import FirebaseAuth
 import FirebaseCore
-import ProgressHUD
 
 class SignUpViewController: UIViewController {
     
@@ -18,42 +17,36 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        enterPhoneLabel.isHidden = true
-        phoneErrorHeightConstrain.constant = 0
+        setZeroHeightLabel(for: [phoneErrorHeightConstrain])
+        isHiddeninvalidLabel(for: [enterPhoneLabel])
         phoneTextField.delegate = self
     }
     
-    func moveToLoginVC(){
-        let vc = LoginViewController()
-        push(vc: vc)
-    }
-    
-    func moveToOTPVC(phone: String){
-        let vc = OTPViewController()
+    func moveToOTPSignUPVC(phone: String){
+        let vc = OTPSignUPViewController()
         vc.phone = phone
         push(vc: vc)
     }
     
     func callSendCode(phone: String){
-        let number = "+٢\(phone)"
+        let number = "+2\(phone.convertedDigitsToLocale(Locale(identifier: "EN")))"
         AuthManager.shared.startAuth(phoneNumber: number) { [weak self] state in
             switch state{
             case true:
-                self?.moveToOTPVC(phone: phone)
+                self?.moveToOTPSignUPVC(phone: phone)
             case false:
-                ProgressHUD.showFailed(" رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
+                ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: " رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
             }
         }
     }
     
     func checkPhoneTF(){
         guard let phone = phoneTextField.text, phone != "" else {
-            setRedColorTF(phoneTextField)
-            showLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: enterPhoneLabel)
+            checkTextFieldIsEmpty(textField: phoneTextField, height: phoneErrorHeightConstrain, label: enterPhoneLabel)
             return
         }
         callSendCode(phone: phone) // when firebase send code
-        //moveToOTPVC(phone: phone)
+        //moveToOTPSignUPVC(phone: phone) // test
     }
    
     @IBAction func loginBtn(_ sender: Any) {
@@ -64,18 +57,4 @@ class SignUpViewController: UIViewController {
     }
 }
 
-extension SignUpViewController: UITextFieldDelegate{
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        changePhoneTF()
-    }
-    
-    func changePhoneTF(){
-        if phoneTextField.text == ""{
-            setGrayColorTF(phoneTextField)
-            hideLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: enterPhoneLabel)
-        } else {
-            setAppColorTF(phoneTextField)
-            hideLabel(heightConstrain: phoneErrorHeightConstrain, v: view, repeatLabel: enterPhoneLabel)
-        }
-    }
-}
+
