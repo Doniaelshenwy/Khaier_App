@@ -121,6 +121,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="aqc-4P-y9T" secondAttribute="trailing" id="FE8-4u-04F"/>
                         <constraint firstItem="aqc-4P-y9T" firstAttribute="top" secondItem="yLp-s5-DAr" secondAttribute="top" id="Mah-Av-axO"/>

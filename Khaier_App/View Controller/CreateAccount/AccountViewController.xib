@@ -573,6 +573,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstItem="JkS-Vh-xe2" firstAttribute="leading" secondItem="ZkB-ET-fWO" secondAttribute="leading" id="8Dx-tB-X2C"/>
                         <constraint firstItem="JkS-Vh-xe2" firstAttribute="width" secondItem="ZkB-ET-fWO" secondAttribute="width" id="VJN-Fa-2jL"/>

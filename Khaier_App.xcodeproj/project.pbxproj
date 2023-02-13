@@ -66,6 +66,8 @@
 		FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAB29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
+		FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A7118299A76D600A638D0 /* SplashViewController.swift */; };
+		FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6A7119299A76D600A638D0 /* SplashViewController.xib */; };
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
 		FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC629972996E970001406CE /* ResetPasswordViewController.swift */; };
 		FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC629982996E970001406CE /* ResetPasswordViewController.xib */; };
@@ -151,6 +153,8 @@
 		FC69EB8E299128AF008E404A /* IBMPlexSansArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansArabic-Medium.ttf"; path = "../../../Khaier data/font/IBMPlexSansArabic-Medium.ttf"; sourceTree = "<group>"; };
 		FC69EBA529913550008E404A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		FC6A7118299A76D600A638D0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FC6A7119299A76D600A638D0 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		FCC629972996E970001406CE /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FCC629982996E970001406CE /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -318,6 +322,15 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		FC6A711C299A76DF00A638D0 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A7118299A76D600A638D0 /* SplashViewController.swift */,
+				FC6A7119299A76D600A638D0 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FC9B54DC299336B90035F33A /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +445,7 @@
 		FCD6D0EB2985462D0084FE76 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FC6A711C299A76DF00A638D0 /* Splash */,
 				FC671DA32985645000236031 /* Onboarding */,
 				FCD6D0EC298546450084FE76 /* Login */,
 				FC69EBA429913522008E404A /* Sign Up */,
@@ -590,6 +604,7 @@
 				FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */,
 				FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */,
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
+				FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
 				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
@@ -768,6 +783,7 @@
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
+				FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */,
 				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,

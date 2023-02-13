@@ -43,8 +43,8 @@ class ForgetPasswordViewController: UIViewController {
             checkTextFieldIsEmpty(textField: phoneTextField, height: repeatEnterPhoneLabelConstrain, label: repeatEnterPhoneLabel)
             return
         }
-        //moveToOTPForgetPasswordVC(phone: phone)    // test
-        callSendCode(phone: phone)   // use firebase
+        moveToOTPForgetPasswordVC(phone: phone)    // test
+        //callSendCode(phone: phone)   // use firebase
     }
 
     @IBAction func sendCodeBtn(_ sender: Any) {

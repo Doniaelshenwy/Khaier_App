@@ -410,6 +410,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstItem="T4K-hs-kgG" firstAttribute="width" secondItem="8uE-0o-Lfc" secondAttribute="width" id="7V7-tA-dla"/>
                         <constraint firstItem="T4K-hs-kgG" firstAttribute="top" secondItem="8uE-0o-Lfc" secondAttribute="top" id="BgB-qr-J6i"/>

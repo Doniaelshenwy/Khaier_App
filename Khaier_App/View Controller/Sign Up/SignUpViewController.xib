@@ -288,6 +288,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstItem="XQu-If-92Y" firstAttribute="leading" secondItem="SBB-rh-7j2" secondAttribute="leading" id="EMh-fn-NCV"/>
                         <constraint firstAttribute="bottom" secondItem="XQu-If-92Y" secondAttribute="bottom" id="Ig0-zl-P6N"/>

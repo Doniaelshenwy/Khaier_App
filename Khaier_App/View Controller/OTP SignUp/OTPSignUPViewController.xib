@@ -336,6 +336,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstItem="Ycy-Ba-69J" firstAttribute="leading" secondItem="Izb-Yb-PsH" secondAttribute="leading" id="2lD-pf-h7K"/>
                         <constraint firstItem="v42-0r-5EU" firstAttribute="top" secondItem="Izb-Yb-PsH" secondAttribute="top" id="5EB-FY-G3F"/>

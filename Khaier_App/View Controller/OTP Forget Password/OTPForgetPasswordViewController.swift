@@ -101,8 +101,8 @@ class OTPForgetPasswordViewController: UIViewController {
     
     @IBAction func continueBtn(_ sender: Any) {
         let code = isEmptyCodeInTextField().convertedDigitsToLocale(Locale(identifier: "EN"))
-        callVerifyCode(code: code)   // fireBase
-       // moveToResetPasswordVC()        // test
+        //callVerifyCode(code: code)   // fireBase
+       moveToResetPasswordVC()        // test
     }
     
     
