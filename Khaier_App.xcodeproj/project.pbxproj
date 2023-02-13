@@ -20,6 +20,7 @@
 		FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */; };
 		FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */; };
 		FC349C552999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */; };
+		FC349C592999A1F90006265B /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC349C582999A1F90006265B /* DropDownList.swift */; };
 		FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */; };
 		FC34AB9D2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34AB9B2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib */; };
 		FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34AB9E299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift */; };
@@ -122,6 +123,7 @@
 		FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
 		FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FC349C582999A1F90006265B /* DropDownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 		FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC34AB9B2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		FC34AB9E299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPForgetPasswordVC+Extension.swift"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				FCDEC96F2993E01B00E355F1 /* AuthManger.swift */,
 				FC9B6409299524F40026326B /* ProgressHUD.swift */,
+				FC349C582999A1F90006265B /* DropDownList.swift */,
 				FC1931C02998547700736EF9 /* SecureTextField.swift */,
 			);
 			path = Constants;
@@ -774,6 +777,7 @@
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
 				FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,

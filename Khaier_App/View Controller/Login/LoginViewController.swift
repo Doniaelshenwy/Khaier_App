@@ -83,10 +83,6 @@ class LoginViewController: UIViewController {
         moveToSignUpVC()
     }
     
-    @IBAction func testRestBtn(_ sender: Any) {
-        let vc = ResetPasswordViewController()
-        push(vc: vc)
-    }
 }
 
 

@@ -21,7 +21,7 @@
             <connections>
                 <outlet property="checkRemeberBoxBtnConstrain" destination="4kL-Mn-woU" id="glW-6u-EHj"/>
                 <outlet property="facebookLoginBtnOutlet" destination="XeM-te-lL1" id="03u-HG-X7t"/>
-                <outlet property="googleLoginBtnOutlet" destination="XdF-ml-3d9" id="QMU-ZD-Bae"/>
+                <outlet property="googleLoginBtnOutlet" destination="XdF-ml-3d9" id="Vqr-IR-HQj"/>
                 <outlet property="passwordErrorHeightConstrain" destination="cyr-KH-G2v" id="lrD-2h-6Xk"/>
                 <outlet property="passwordTextField" destination="PQL-Nf-9EZ" id="LKV-mP-zkD"/>
                 <outlet property="passwordView" destination="s4L-ls-E5X" id="pde-ge-0ie"/>
@@ -148,7 +148,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kL-Mn-woU">
-                                    <rect key="frame" x="339" y="425" width="16" height="16"/>
+                                    <rect key="frame" x="339" y="424.66666666666669" width="16" height="16"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="blT-5c-Pzh"/>
@@ -168,6 +168,9 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تذكرني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-74-b09">
                                     <rect key="frame" x="298.66666666666669" y="422.66666666666669" width="30.333333333333314" height="21"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30.329999999999998" id="jb8-RY-JoE"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
@@ -271,9 +274,6 @@
                                             <color key="value" name="disapleColor"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="testRestBtn:" destination="-1" eventType="touchUpInside" id="Zfi-QA-zW4"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeM-te-lL1">
                                     <rect key="frame" x="16" y="647.66666666666663" width="343" height="40"/>
@@ -378,6 +378,7 @@
                                 <constraint firstItem="omd-gy-C32" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="MWf-Lh-iae"/>
                                 <constraint firstItem="fBf-Mg-GVj" firstAttribute="centerY" secondItem="RP8-74-b09" secondAttribute="centerY" id="N8r-mb-zQY"/>
                                 <constraint firstItem="Yxu-um-bUr" firstAttribute="top" secondItem="XeM-te-lL1" secondAttribute="bottom" constant="40" id="OHX-6u-hi4"/>
+                                <constraint firstItem="4kL-Mn-woU" firstAttribute="top" secondItem="TOv-eG-Fxb" secondAttribute="bottom" constant="10.33" id="PkG-ee-GIP"/>
                                 <constraint firstAttribute="trailing" secondItem="s4L-ls-E5X" secondAttribute="trailing" constant="16" id="Q1u-Uo-LRm"/>
                                 <constraint firstItem="XHq-5y-GBa" firstAttribute="top" secondItem="Zf6-UB-DHw" secondAttribute="bottom" constant="8" id="QrF-7o-nUM"/>
                                 <constraint firstAttribute="trailing" secondItem="TOv-eG-Fxb" secondAttribute="trailing" constant="20" id="RKU-A2-cW0"/>
@@ -391,7 +392,6 @@
                                 <constraint firstAttribute="trailing" secondItem="XeM-te-lL1" secondAttribute="trailing" constant="16" id="d7b-az-7kK"/>
                                 <constraint firstItem="XeM-te-lL1" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="dmc-dn-uGU"/>
                                 <constraint firstItem="XdF-ml-3d9" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="eaO-xM-f0H"/>
-                                <constraint firstItem="4kL-Mn-woU" firstAttribute="centerY" secondItem="RP8-74-b09" secondAttribute="centerY" id="f4m-iY-u4a"/>
                                 <constraint firstItem="1Om-uR-ILu" firstAttribute="leading" secondItem="omd-gy-C32" secondAttribute="trailing" constant="8" id="hNo-Zg-jdp"/>
                                 <constraint firstAttribute="height" constant="812" id="i8w-Ai-qkv"/>
                                 <constraint firstAttribute="trailing" secondItem="4kL-Mn-woU" secondAttribute="trailing" constant="20" id="mud-iQ-EWT"/>

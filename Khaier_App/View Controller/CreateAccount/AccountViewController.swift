@@ -55,8 +55,10 @@ class AccountViewController: UIViewController {
         confirmPasswordSecureTextField?.checkPasswordVisiable(visable: &confirmPasswordVisable)
     }
     @IBAction func cityView(_ sender: Any) {
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم اختيار مدينة")
+        DropDownList.shared.data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+        DropDownList.shared.setupDropDownList(view: addressView, label: cityLabel)
         checkAddressView(cityLabel: cityLabel, view: addressView, label: addressInvalidLabel, height: addressInvalidConstrain)
+        DropDownList.shared.showDropDownList()
     }
     
     @IBAction func checkBtn(_ sender: Any) {
@@ -72,7 +74,7 @@ class AccountViewController: UIViewController {
             checkTextFieldIsEmpty(textField: nameTextField, height: nameInvalidHeightConstrain, label: nameInvalidLabel)
             return
         }
-        guard let address = cityLabel.text, address != "" else {
+        guard let address = cityLabel.text, address != "اختر المدينة و المنطقة" else {
             checkViewIsEmpty(view: addressView, height: addressInvalidConstrain, label: addressInvalidLabel)
             return
         }

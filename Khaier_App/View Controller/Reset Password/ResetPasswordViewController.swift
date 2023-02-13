@@ -59,7 +59,7 @@ class ResetPasswordViewController: UIViewController {
     
     @IBAction func repeatSetPasswordBtn(_ sender: Any) {
        checkTextField()
-        moveToLoginVC()
+       // moveToLoginVC()
     }
 }
 

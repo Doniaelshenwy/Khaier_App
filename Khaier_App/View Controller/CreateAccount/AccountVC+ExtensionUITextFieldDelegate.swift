@@ -23,7 +23,7 @@ extension AccountViewController: UITextFieldDelegate {
     }
     
     func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {
-        if cityLabel.text == "" {
+        if cityLabel.text == "اختر المدينة و المنطقة" {
             setGrayColorView(view)
             hideLabel(heightConstrain: height, repeatLabel: label)
         } else {
