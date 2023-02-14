@@ -147,24 +147,6 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kL-Mn-woU">
-                                    <rect key="frame" x="339" y="424.66666666666669" width="16" height="16"/>
-                                    <color key="backgroundColor" name="WhiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="16" id="blT-5c-Pzh"/>
-                                        <constraint firstAttribute="width" constant="16" id="kLM-ah-BvS"/>
-                                    </constraints>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Button" image="check"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                                            <real key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="rememberMeBtn:" destination="-1" eventType="touchUpInside" id="8K0-Rn-izn"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تذكرني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-74-b09">
                                     <rect key="frame" x="298.66666666666669" y="422.66666666666669" width="30.333333333333314" height="21"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
@@ -356,6 +338,35 @@
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc0-fh-JB1">
+                                    <rect key="frame" x="338" y="425.66666666666669" width="18" height="17.666666666666686"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kL-Mn-woU">
+                                            <rect key="frame" x="0.0" y="0.0" width="18" height="17.666666666666668"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="check"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="check"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="rememberMeBtn:" destination="-1" eventType="touchUpInside" id="8K0-Rn-izn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" name="WhiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4kL-Mn-woU" secondAttribute="trailing" id="JrA-TU-7nk"/>
+                                        <constraint firstItem="4kL-Mn-woU" firstAttribute="top" secondItem="dc0-fh-JB1" secondAttribute="top" id="Sz8-Ea-GuT"/>
+                                        <constraint firstAttribute="height" constant="17.699999999999999" id="afS-EA-VsP"/>
+                                        <constraint firstAttribute="bottom" secondItem="4kL-Mn-woU" secondAttribute="bottom" id="eBp-hP-vKc"/>
+                                        <constraint firstItem="4kL-Mn-woU" firstAttribute="leading" secondItem="dc0-fh-JB1" secondAttribute="leading" id="f5V-E8-wJj"/>
+                                        <constraint firstAttribute="width" constant="17.699999999999999" id="fJV-OE-9s3"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" name="WhiteColor"/>
                             <color key="tintColor" name="AppColor"/>
@@ -364,6 +375,7 @@
                                 <constraint firstAttribute="trailing" secondItem="HjP-84-5S7" secondAttribute="trailing" constant="16" id="1JY-5r-ipB"/>
                                 <constraint firstAttribute="trailing" secondItem="P8Z-uO-oIV" secondAttribute="trailing" constant="16" id="268-Pr-8OX"/>
                                 <constraint firstItem="HjP-84-5S7" firstAttribute="top" secondItem="IKF-VT-pxA" secondAttribute="bottom" constant="32" id="2yw-aO-OH5"/>
+                                <constraint firstAttribute="trailing" secondItem="dc0-fh-JB1" secondAttribute="trailing" constant="19.149999999999999" id="30C-vd-0rZ"/>
                                 <constraint firstItem="s4L-ls-E5X" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="5jk-Fy-oKL"/>
                                 <constraint firstItem="1Om-uR-ILu" firstAttribute="centerX" secondItem="T4K-hs-kgG" secondAttribute="centerX" id="8pm-Qm-eSa"/>
                                 <constraint firstAttribute="trailing" secondItem="ZhW-DY-tca" secondAttribute="trailing" constant="16" id="9fc-6F-fvf"/>
@@ -372,13 +384,12 @@
                                 <constraint firstAttribute="trailing" secondItem="IKF-VT-pxA" secondAttribute="trailing" constant="16" id="FtC-uW-wI7"/>
                                 <constraint firstAttribute="trailing" secondItem="Zf6-UB-DHw" secondAttribute="trailing" constant="16" id="GOl-aU-yE5"/>
                                 <constraint firstItem="vwR-Se-zQ3" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" id="Gmi-vy-ugJ"/>
-                                <constraint firstItem="4kL-Mn-woU" firstAttribute="leading" secondItem="RP8-74-b09" secondAttribute="trailing" constant="10" id="IZ4-3Q-JFg"/>
                                 <constraint firstAttribute="trailing" secondItem="xfq-lX-YK7" secondAttribute="trailing" constant="16" id="Jm0-XS-sEh"/>
                                 <constraint firstItem="fBf-Mg-GVj" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="8" id="Lhy-wO-FHh"/>
                                 <constraint firstItem="omd-gy-C32" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="MWf-Lh-iae"/>
+                                <constraint firstItem="dc0-fh-JB1" firstAttribute="top" secondItem="TOv-eG-Fxb" secondAttribute="bottom" constant="11.15" id="Mo9-wy-bsB"/>
                                 <constraint firstItem="fBf-Mg-GVj" firstAttribute="centerY" secondItem="RP8-74-b09" secondAttribute="centerY" id="N8r-mb-zQY"/>
                                 <constraint firstItem="Yxu-um-bUr" firstAttribute="top" secondItem="XeM-te-lL1" secondAttribute="bottom" constant="40" id="OHX-6u-hi4"/>
-                                <constraint firstItem="4kL-Mn-woU" firstAttribute="top" secondItem="TOv-eG-Fxb" secondAttribute="bottom" constant="10.33" id="PkG-ee-GIP"/>
                                 <constraint firstAttribute="trailing" secondItem="s4L-ls-E5X" secondAttribute="trailing" constant="16" id="Q1u-Uo-LRm"/>
                                 <constraint firstItem="XHq-5y-GBa" firstAttribute="top" secondItem="Zf6-UB-DHw" secondAttribute="bottom" constant="8" id="QrF-7o-nUM"/>
                                 <constraint firstAttribute="trailing" secondItem="TOv-eG-Fxb" secondAttribute="trailing" constant="20" id="RKU-A2-cW0"/>
@@ -394,7 +405,7 @@
                                 <constraint firstItem="XdF-ml-3d9" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="eaO-xM-f0H"/>
                                 <constraint firstItem="1Om-uR-ILu" firstAttribute="leading" secondItem="omd-gy-C32" secondAttribute="trailing" constant="8" id="hNo-Zg-jdp"/>
                                 <constraint firstAttribute="height" constant="812" id="i8w-Ai-qkv"/>
-                                <constraint firstAttribute="trailing" secondItem="4kL-Mn-woU" secondAttribute="trailing" constant="20" id="mud-iQ-EWT"/>
+                                <constraint firstItem="dc0-fh-JB1" firstAttribute="leading" secondItem="RP8-74-b09" secondAttribute="trailing" constant="9" id="nLH-6w-XNQ"/>
                                 <constraint firstItem="xtf-xM-WNz" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="qNr-MH-njf"/>
                                 <constraint firstAttribute="trailing" secondItem="TS6-Id-y0r" secondAttribute="trailing" constant="16" id="rFt-Nb-KFK"/>
                                 <constraint firstItem="TOv-eG-Fxb" firstAttribute="top" secondItem="s4L-ls-E5X" secondAttribute="bottom" constant="8" id="tkX-xF-poY"/>

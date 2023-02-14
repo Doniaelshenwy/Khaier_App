@@ -68,6 +68,7 @@
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A7118299A76D600A638D0 /* SplashViewController.swift */; };
 		FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6A7119299A76D600A638D0 /* SplashViewController.xib */; };
+		FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98F2CE299BDB09002A4E8B /* TabBarController.swift */; };
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
 		FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC629972996E970001406CE /* ResetPasswordViewController.swift */; };
 		FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC629982996E970001406CE /* ResetPasswordViewController.xib */; };
@@ -155,6 +156,7 @@
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FC6A7118299A76D600A638D0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FC6A7119299A76D600A638D0 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		FC98F2CE299BDB09002A4E8B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		FCC629972996E970001406CE /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FCC629982996E970001406CE /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -331,6 +333,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		FC98F2CD299BDAED002A4E8B /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FC98F2CE299BDB09002A4E8B /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		FC9B54DC299336B90035F33A /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +386,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FC98F2CD299BDAED002A4E8B /* TabBarController */,
 				FCDEC96D2993DFDD00E355F1 /* Constants */,
 				FC69EB872991283A008E404A /* Fonts */,
 				FC671DA22985509000236031 /* Utilities */,
@@ -785,6 +796,7 @@
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
+				FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */,
 				FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */,
 				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,
 				FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
