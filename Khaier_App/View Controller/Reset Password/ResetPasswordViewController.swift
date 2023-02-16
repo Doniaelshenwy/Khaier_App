@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
-
+class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
+    
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var confirmPasswordView: UIView!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -37,6 +37,11 @@ class ResetPasswordViewController: UIViewController {
         
     }
     
+    func moveToChangePasswordVC(){
+        let vc = ChangePasswordViewController(delegate: self)
+        present(vc, animated: true, completion: nil)
+    }
+    
     func checkTextField(){
         guard let password = passwordTextField.text, password != "" else {
             checkViewIsEmpty(view: passwordView, height: passwordErrorHeightConstrain, label: passwordErrorLabel)
@@ -46,7 +51,8 @@ class ResetPasswordViewController: UIViewController {
             checkViewIsEmpty(view: confirmPasswordView, height: passwordConfirmHeightConstrain, label: passwordConfirmLabel)
             return
         }
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغير رقم المرور")
+        moveToChangePasswordVC()
+//        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغير رقم المرور")
     }
 
     @IBAction func showHiddenPasswordBtn(_ sender: Any) {
@@ -60,6 +66,11 @@ class ResetPasswordViewController: UIViewController {
     @IBAction func repeatSetPasswordBtn(_ sender: Any) {
        checkTextField()
     }
+    
+    func movetoLoginVCFromChangePassword() {
+        moveToLoginVC()
+    }
 }
+
 
 

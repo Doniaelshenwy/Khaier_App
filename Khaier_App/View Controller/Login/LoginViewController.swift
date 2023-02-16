@@ -42,11 +42,17 @@ class LoginViewController: UIViewController {
         push(vc: vc)
     }
     
+    func moveToHomeVC(){
+        let vc = TabBarController(nibName: "TabBarController", bundle: nil)
+        push(vc: vc)
+    }
+    
     func checkPhonePassword(phone: String, password: String){
         let convertPhoneArabic = phone.convertedDigitsToLocale(Locale(identifier: "AR"))
         let convertPasswordArabic = password.convertedDigitsToLocale(Locale(identifier: "AR"))
         if convertPhoneArabic == "٠١٠١٩٤٣٤٣٤٥" && convertPasswordArabic == "١٢٣"{
             ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
+            moveToHomeVC()
             if isRemember{
                 UserDefaults.standard.set(isRemember, forKey: "isEnter")
             }
@@ -84,8 +90,5 @@ class LoginViewController: UIViewController {
     }
     
 }
-
-
-
 
 

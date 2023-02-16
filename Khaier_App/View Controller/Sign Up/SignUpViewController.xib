@@ -231,6 +231,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="111" id="1Mp-U5-E19"/>
                                             </constraints>
+                                            <color key="tintColor" name="AppColor"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="تسجيل دخول">
                                                 <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
