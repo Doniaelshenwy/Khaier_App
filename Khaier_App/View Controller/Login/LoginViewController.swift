@@ -62,8 +62,6 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func rememberMeBtn(_ sender: UIButton) {
-//        isRemember.toggle()
-//        isRemember ? sender.setImage("fillCheck") : sender.setImage("check")
         checkBoxIsAccept(isRemember: &isRemember, button: checkRemeberBoxBtnConstrain)
     }
     
