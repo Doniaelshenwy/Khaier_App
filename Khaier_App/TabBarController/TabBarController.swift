@@ -46,7 +46,7 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.layer.cornerRadius = 20
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-      
+        tabBar.applyRTL()
 
 
         
