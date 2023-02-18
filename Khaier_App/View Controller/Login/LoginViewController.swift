@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         isHiddeninvalidLabel(for: [repeatPhoneLabel, repeatPasswordLabel])
         setZeroHeightLabel(for: [phoneErrorHeightConstrain, passwordErrorHeightConstrain])
         secureTextFiled = SecureTextField(button: showHidenPasswordBtnOutlet, textField: passwordTextField)

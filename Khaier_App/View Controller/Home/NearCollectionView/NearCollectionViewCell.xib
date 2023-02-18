@@ -54,6 +54,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                        <connections>
+                                            <action selector="saveCharityButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jS4-Mq-f2n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,6 +171,12 @@
                 <constraint firstItem="dCW-m0-bO0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="icl-Ke-I9V"/>
             </constraints>
             <size key="customSize" width="220" height="244"/>
+            <connections>
+                <outlet property="addressLabel" destination="j27-RC-yuq" id="HHI-0g-U7n"/>
+                <outlet property="descriptionLabel" destination="eOl-QY-JHs" id="xUM-Rm-lyJ"/>
+                <outlet property="image" destination="KVf-SN-B1P" id="jNb-c5-0yr"/>
+                <outlet property="title" destination="6SV-dc-Ual" id="52S-K9-94l"/>
+            </connections>
             <point key="canvasLocation" x="260.86956521739131" y="124.55357142857142"/>
         </collectionViewCell>
     </objects>

@@ -12,7 +12,7 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var animateImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
         animate()
        
     }
@@ -23,7 +23,7 @@ class SplashViewController: UIViewController {
     }
 
     func animate(){
-        UIView.animate(withDuration: 1, delay: 1, options: []) {
+        UIView.animate(withDuration: 1, delay: 0.5, options: []) {
             let scaleTransform = CGAffineTransform(scaleX: 0.23255, y: 0.23255)
             let translateTransform = CGAffineTransform(translationX: 173, y: -340.33)
             self.animateImage.transform = scaleTransform.concatenating(translateTransform)

@@ -34,6 +34,101 @@
             endingLineNumber = "12"
             landmarkName = "TabBarController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "096164F7-BA0F-4303-8E82-F62B98AF9B8F - 96d3ca0f6d8a218"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Khaier_App.TabBarController.profileViewController.getter : Khaier_App.ProfileViewController"
+                  moduleName = "Khaier_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/TabBarController/TabBarController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "096164F7-BA0F-4303-8E82-F62B98AF9B8F - f133dcd23a91c572"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Khaier_App.TabBarController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Khaier_App.TabBarController"
+                  moduleName = "Khaier_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/TabBarController/TabBarController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "096164F7-BA0F-4303-8E82-F62B98AF9B8F - cee815a8d85c716c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Khaier_App.TabBarController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Khaier_App.TabBarController&gt;"
+                  moduleName = "Khaier_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/TabBarController/TabBarController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC2ED1A3-715D-47C9-8AEC-01D3554273F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Khaier_App/View Controller/Splash/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "animate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74C74E9C-8ADE-4118-9009-67063CAFF49C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Khaier_App/View Controller/Splash/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "animate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "520A769C-1C0B-4AD5-BD0B-1C0CC77FFD98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Khaier_App/View Controller/Splash/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "animate()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

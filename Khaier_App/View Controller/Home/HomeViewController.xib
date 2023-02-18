@@ -19,6 +19,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
+                <outlet property="helloNameLabel" destination="KiH-w2-YbR" id="UGG-fi-eGD"/>
+                <outlet property="nearCollectionView" destination="FHr-wt-xGF" id="jLL-PX-y9X"/>
+                <outlet property="priorityCollectionView" destination="fja-TI-FC3" id="zSM-k9-ELc"/>
+                <outlet property="titleLabel" destination="qpA-YS-VJp" id="NVs-KQ-1Rj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,14 +38,14 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اهلا روان عادل 👋" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiH-w2-YbR">
-                                    <rect key="frame" x="231.33333333333334" y="28" width="126.33333333333334" height="27"/>
+                                    <rect key="frame" x="231.33333333333334" y="23" width="126.33333333333334" height="27"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="6.5" translatesAutoresizingMaskIntoConstraints="NO" id="VBX-zL-9xh">
-                                    <rect key="frame" x="185" y="63" width="171.66666666666663" height="24"/>
+                                    <rect key="frame" x="185" y="58" width="171.66666666666663" height="24"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المنصورة، الدقهلية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpA-YS-VJp">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="24"/>
@@ -64,12 +68,15 @@
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abb-eA-LCf">
-                                    <rect key="frame" x="16" y="37.666666666666664" width="40" height="39.999999999999993"/>
+                                    <rect key="frame" x="16" y="32.666666666666664" width="40" height="39.999999999999993"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dti-TG-FPd">
                                             <rect key="frame" x="0.33333333333333215" y="3.6666666666666714" width="39.333333333333343" height="32.666666666666664"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                            <connections>
+                                                <action selector="bookmarkDonationBtn:" destination="-1" eventType="touchUpInside" id="bUu-bZ-0OB"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="Light"/>
@@ -80,21 +87,57 @@
                                         <constraint firstAttribute="width" constant="40" id="oFZ-94-MgQ"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-pY-wHk">
-                                    <rect key="frame" x="16" y="111" width="343" height="40"/>
-                                    <color key="backgroundColor" name="PrimaryColor"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-pY-wHk" customClass="UIControl">
+                                    <rect key="frame" x="16" y="106" width="343" height="44"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="iSA-YH-wB3">
+                                            <rect key="frame" x="309" y="10" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Uc0-zu-PrL"/>
+                                                <constraint firstAttribute="height" constant="24" id="UdJ-p7-4hS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="البحث عن التبرعات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uic-Sf-u4k">
+                                            <rect key="frame" x="16" y="10" width="283" height="24"/>
+                                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                            <color key="textColor" name="disapleColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="G81-oo-61d"/>
+                                        <constraint firstItem="iSA-YH-wB3" firstAttribute="top" secondItem="mfw-pY-wHk" secondAttribute="top" constant="10" id="9wx-BQ-OHa"/>
+                                        <constraint firstAttribute="height" constant="44" id="G81-oo-61d"/>
+                                        <constraint firstItem="Uic-Sf-u4k" firstAttribute="top" secondItem="mfw-pY-wHk" secondAttribute="top" constant="10" id="Jpu-gC-EZH"/>
+                                        <constraint firstItem="Uic-Sf-u4k" firstAttribute="leading" secondItem="mfw-pY-wHk" secondAttribute="leading" constant="16" id="bGQ-Sq-WS4"/>
+                                        <constraint firstAttribute="bottom" secondItem="iSA-YH-wB3" secondAttribute="bottom" constant="10" id="beY-dQ-jmA"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uic-Sf-u4k" secondAttribute="bottom" constant="10" id="d8h-Sy-3qW"/>
+                                        <constraint firstItem="iSA-YH-wB3" firstAttribute="leading" secondItem="Uic-Sf-u4k" secondAttribute="trailing" constant="10" id="gz9-Y8-Fo9"/>
+                                        <constraint firstAttribute="trailing" secondItem="iSA-YH-wB3" secondAttribute="trailing" constant="10" id="oIj-pK-E7a"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="disapleColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="searchView:" destination="-1" eventType="touchUpInside" id="hXs-ze-M9n"/>
+                                    </connections>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أقسام التبرعات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hak-d2-jn7">
-                                    <rect key="frame" x="267.33333333333331" y="175" width="91.666666666666686" height="24"/>
+                                    <rect key="frame" x="267.33333333333331" y="174" width="91.666666666666686" height="24"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="18.329999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-my-Blx">
-                                    <rect key="frame" x="16" y="215" width="343" height="97"/>
+                                    <rect key="frame" x="16" y="214" width="343" height="97"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-57-n7e" customClass="UIControl">
                                             <rect key="frame" x="0.0" y="0.0" width="72" height="97"/>
@@ -105,7 +148,7 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1C-8B-Dfd">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1C-8B-Dfd" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medecine" translatesAutoresizingMaskIntoConstraints="NO" id="UaS-I7-fix">
@@ -121,6 +164,14 @@
                                                         <constraint firstItem="UaS-I7-fix" firstAttribute="centerX" secondItem="B1C-8B-Dfd" secondAttribute="centerX" id="7ul-bs-VKF"/>
                                                         <constraint firstItem="UaS-I7-fix" firstAttribute="centerY" secondItem="B1C-8B-Dfd" secondAttribute="centerY" id="k51-Qn-DUq"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="medecineView:" destination="-1" eventType="touchUpInside" id="Xz6-ro-32g"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" name="WhiteColor"/>
@@ -145,7 +196,7 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBE-3G-BHb">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBE-3G-BHb" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="fbu-3Z-yYm">
@@ -161,6 +212,11 @@
                                                         <constraint firstItem="fbu-3Z-yYm" firstAttribute="centerX" secondItem="RBE-3G-BHb" secondAttribute="centerX" id="E68-yT-DfQ"/>
                                                         <constraint firstItem="fbu-3Z-yYm" firstAttribute="centerY" secondItem="RBE-3G-BHb" secondAttribute="centerY" id="ie6-OI-Yn9"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" name="WhiteColor"/>
@@ -175,6 +231,9 @@
                                                 <constraint firstItem="RBE-3G-BHb" firstAttribute="top" secondItem="zaw-pb-dNy" secondAttribute="top" id="l6k-Mr-PlF"/>
                                                 <constraint firstItem="35W-Ig-Ugi" firstAttribute="top" secondItem="RBE-3G-BHb" secondAttribute="bottom" constant="4" id="t6U-HK-fHs"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="foodView:" destination="-1" eventType="touchUpInside" id="sqB-a8-HxG"/>
+                                            </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yop-WC-TbE" customClass="UIControl">
                                             <rect key="frame" x="180.66666666666666" y="0.0" width="72" height="97"/>
@@ -185,7 +244,7 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-E1-9aB">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-E1-9aB" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloth" translatesAutoresizingMaskIntoConstraints="NO" id="IDd-iU-5c9">
@@ -201,6 +260,11 @@
                                                         <constraint firstItem="IDd-iU-5c9" firstAttribute="centerY" secondItem="l2t-E1-9aB" secondAttribute="centerY" id="4bQ-zS-iV9"/>
                                                         <constraint firstItem="IDd-iU-5c9" firstAttribute="centerX" secondItem="l2t-E1-9aB" secondAttribute="centerX" id="qWV-fH-PrZ"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" name="WhiteColor"/>
@@ -215,6 +279,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="pjP-Vo-ASN" secondAttribute="bottom" id="q8x-VK-him"/>
                                                 <constraint firstAttribute="height" constant="97" id="rqx-A5-Znm"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="clothesView:" destination="-1" eventType="touchUpInside" id="Aiz-O7-jJR"/>
+                                            </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6T-cO-msf" customClass="UIControl">
                                             <rect key="frame" x="271" y="0.0" width="72" height="97"/>
@@ -225,7 +292,7 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-hp-wLh">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-hp-wLh" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ALL" translatesAutoresizingMaskIntoConstraints="NO" id="3UW-Le-4Zv">
@@ -241,6 +308,11 @@
                                                         <constraint firstItem="3UW-Le-4Zv" firstAttribute="centerX" secondItem="EhM-hp-wLh" secondAttribute="centerX" id="I4c-65-MeJ"/>
                                                         <constraint firstItem="3UW-Le-4Zv" firstAttribute="centerY" secondItem="EhM-hp-wLh" secondAttribute="centerY" id="c7B-dJ-nWC"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" name="WhiteColor"/>
@@ -255,22 +327,25 @@
                                                 <constraint firstAttribute="width" constant="72" id="ouu-y0-AQo"/>
                                                 <constraint firstAttribute="height" constant="97" id="t1U-kB-0Dt"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="allView:" destination="-1" eventType="touchUpInside" id="Kjf-Jy-gkl"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاكثر اولوية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cei-Sj-hNX">
-                                    <rect key="frame" x="292" y="336" width="67" height="24"/>
+                                    <rect key="frame" x="292" y="335" width="67" height="24"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fja-TI-FC3">
-                                    <rect key="frame" x="16" y="376" width="343" height="268"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fja-TI-FC3">
+                                    <rect key="frame" x="16" y="375" width="343" height="268"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="268" id="sWB-YD-gOh"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oyE-mS-kQG">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oyE-mS-kQG">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -278,18 +353,18 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الأقرب لك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwD-4R-U36">
-                                    <rect key="frame" x="297" y="668" width="62" height="24"/>
+                                    <rect key="frame" x="297" y="667" width="62" height="24"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-wt-xGF">
-                                    <rect key="frame" x="16" y="708" width="343" height="244"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-wt-xGF">
+                                    <rect key="frame" x="16" y="707" width="343" height="244"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="244" id="cjC-HA-HAI"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W1o-ww-puW">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W1o-ww-puW">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -300,7 +375,7 @@
                             <color key="backgroundColor" name="WhiteColor"/>
                             <constraints>
                                 <constraint firstItem="mwD-4R-U36" firstAttribute="top" secondItem="fja-TI-FC3" secondAttribute="bottom" constant="24" id="0Qt-eH-g9e"/>
-                                <constraint firstItem="KiH-w2-YbR" firstAttribute="top" secondItem="5I1-ok-T9D" secondAttribute="topMargin" constant="20" id="2iO-yi-1AW"/>
+                                <constraint firstItem="KiH-w2-YbR" firstAttribute="top" secondItem="5I1-ok-T9D" secondAttribute="topMargin" constant="15" id="2iO-yi-1AW"/>
                                 <constraint firstAttribute="height" constant="1000" id="4XK-9W-qeW"/>
                                 <constraint firstItem="fja-TI-FC3" firstAttribute="top" secondItem="cei-Sj-hNX" secondAttribute="bottom" constant="16" id="7oY-js-ym3"/>
                                 <constraint firstItem="U1q-my-Blx" firstAttribute="top" secondItem="hak-d2-jn7" secondAttribute="bottom" constant="16" id="EOn-73-4qf"/>
@@ -354,6 +429,7 @@
         <image name="location" width="20" height="20"/>
         <image name="medecine" width="40" height="38.666667938232422"/>
         <image name="save" width="15.333333015441895" height="18.666666030883789"/>
+        <image name="search" width="24" height="24"/>
         <namedColor name="AllColor">
             <color red="0.95294117647058818" green="0.94117647058823528" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -372,11 +448,11 @@
         <namedColor name="Light">
             <color red="0.8901960784313725" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="PrimaryColor">
-            <color red="0.6940000057220459" green="0.76499998569488525" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="WhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="disapleColor">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="medicineColor">
             <color red="0.8784313725490196" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -18,15 +18,15 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         tabBar.tintColor = UIColor(named: "AppColor")
         
-//        tabBar.layer.borderColor = UIColor(named: "borderTabBar")?.cgColor
-//        tabBar.layer.backgroundColor = UIColor.white.cgColor
+       // tabBar.layer.borderColor = UIColor(named: "borderTabBar")?.cgColor
+        tabBar.layer.backgroundColor = UIColor.white.cgColor
 //        tabBar.layer.shadowColor = UIColor.red.cgColor
 //        tabBar.layer.borderWidth = 1
 //        tabBar.layer.cornerRadius = 20
 //        tabBar.layer.shadowRadius = 40
-        //tabBar.layer.shadowOpacity = 0.3
-        //tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-      //  tabBar.layer.masksToBounds = true
+//        tabBar.layer.shadowOpacity = 0.3
+//        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        tabBar.layer.masksToBounds = true
         
     //  tabBar.layer.masksToBounds = true
 //        tabBar.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
@@ -35,7 +35,7 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
 //        tabBar.layer.shadowRadius = 20
        
        
-        tabBar.layer.masksToBounds = true
+//        tabBar.layer.masksToBounds = true
 //        tabBar.layer.cornerRadius = tabBar.frame.height/2
 //        tabBar.layer.shadowColor = UIColor.black.cgColor
 //        tabBar.layer.shadowPath = UIBezierPath(roundedRect: tabBar.bounds, cornerRadius: tabBar.layer.cornerRadius).cgPath
@@ -43,9 +43,37 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
 //        tabBar.layer.shadowOpacity = 1
 //        tabBar.layer.shadowRadius = 1.0
         
-        tabBar.layer.cornerRadius = 20
-        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        tabBar.layer.cornerRadius = 20
+//        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
+//        let shadowSize : CGFloat = 2.0
+//
+//               let shadowPath = UIBezierPath(roundedRect: CGRect(x: -shadowSize / 2,   y: -shadowSize / 2, width: self.tabBar.frame.size.width, height: self.tabBar.frame.size.height), cornerRadius : 20)
+//
+//               self.tabBar.layer.masksToBounds = false
+//               self.tabBar.layer.shadowColor = UIColor.black.cgColor
+//               self.tabBar.layer.shadowOffset = CGSize.zero//(width: self.vRadius.frame.size.width, height: self.vRadius.frame.size.height)
+//               self.tabBar.layer.shadowOpacity = 0.5
+//               self.tabBar.layer.shadowPath = shadowPath.cgPath
+//               self.tabBar.layer.cornerRadius = 20
+        
+        // To round the corners
+      
+        tabBar.layer.cornerRadius = 40
+        tabBar.layer.borderWidth = 1
+        tabBar.clipsToBounds = true
+        // To provide the shadow
+        
+        tabBar.layer.borderColor = UIColor(named: "borderTabBar")?.cgColor
+        tabBar.layer.shadowRadius = 20
+        tabBar.layer.shadowOpacity = 1.0
+        tabBar.layer.shadowOffset = CGSize(width: 3, height: 3)
+        tabBar.layer.shadowColor = UIColor(named: "AppColor")?.cgColor
+        tabBar.layer.masksToBounds = false
+       
+      
+
+       
         tabBar.applyRTL()
 
 
@@ -53,6 +81,21 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         setTabBar()
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.hidesBottomBarWhenPushed = true
+    }
+    
+    
+    
+    
+    override func viewDidLayoutSubviews() {
+        var tabFrame = tabBar.frame
+        tabFrame.size.height = 100
+        tabFrame.origin.y = view.frame.size.height - 100
+        tabBar.frame = tabFrame
+        
+    }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         SimpleAnnimationWhenSelectItem(item)
     }
@@ -104,3 +147,5 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         propertyAnimator.startAnimation()
     }
 }
+
+

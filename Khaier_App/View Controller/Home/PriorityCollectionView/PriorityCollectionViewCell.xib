@@ -29,7 +29,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lc5-hE-yUB">
                         <rect key="frame" x="0.0" y="0.0" width="220" height="268"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priority" translatesAutoresizingMaskIntoConstraints="NO" id="WUb-fi-v9d">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casePriority" translatesAutoresizingMaskIntoConstraints="NO" id="WUb-fi-v9d">
                                 <rect key="frame" x="12" y="12" width="196" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="FHT-kR-xMF"/>
@@ -51,6 +51,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                        <connections>
+                                            <action selector="saveCaseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="p6W-eb-hyx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,17 +70,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعد سارة في العلاج.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caX-Xs-ya9">
-                                <rect key="frame" x="108.5" y="120" width="99.5" height="18"/>
+                                <rect key="frame" x="108.5" y="120" width="99.5" height="24"/>
                                 <color key="backgroundColor" name="WhiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="88c-2H-467"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="IBMPlexSansArabic-SemiBold" family="IBM Plex Sans Arabic" pointSize="12"/>
                                 <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-I6-eD4">
-                                <rect key="frame" x="12" y="120" width="45" height="18"/>
+                                <rect key="frame" x="12" y="121" width="45" height="22"/>
                                 <color key="backgroundColor" name="WhiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="IbK-MX-N01"/>
+                                    <constraint firstAttribute="height" constant="22" id="Y91-sZ-SDr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
                                 <color key="textColor" name="AppColor"/>
@@ -95,7 +102,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jb7-Zo-mxK">
-                                <rect key="frame" x="66" y="146" width="142" height="24"/>
+                                <rect key="frame" x="66" y="152" width="142" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="من هدفنا " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CX-bg-BhY">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="24"/>
@@ -121,11 +128,11 @@
                                 </constraints>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TFO-np-2EV">
-                                <rect key="frame" x="12" y="174" width="196" height="4"/>
+                                <rect key="frame" x="12" y="180" width="196" height="4"/>
                                 <color key="tintColor" name="Secondary"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="متبقي 11 يوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iX-gv-XmC">
-                                <rect key="frame" x="12" y="182" width="196" height="24"/>
+                                <rect key="frame" x="12" y="188" width="196" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="NGm-3u-K9s"/>
                                 </constraints>
@@ -134,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-fX-KRW">
-                                <rect key="frame" x="12" y="214" width="196" height="40"/>
+                                <rect key="frame" x="12" y="220" width="196" height="40"/>
                                 <color key="backgroundColor" name="AppColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UXv-cw-Hw0"/>
@@ -147,6 +154,9 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="donateNowButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lt3-Sa-MmI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="WhiteColor"/>
@@ -194,11 +204,19 @@
                 <constraint firstItem="Lc5-hE-yUB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lab-OU-cnU"/>
             </constraints>
             <size key="customSize" width="220" height="268"/>
+            <connections>
+                <outlet property="accessRatio" destination="tA3-ep-xPr" id="SQa-2R-00P"/>
+                <outlet property="imageCase" destination="WUb-fi-v9d" id="i7U-uZ-lro"/>
+                <outlet property="progressView" destination="TFO-np-2EV" id="u3k-gU-wTJ"/>
+                <outlet property="remainDaysLabel" destination="5iX-gv-XmC" id="2Gz-GP-Xig"/>
+                <outlet property="titleCaseLabel" destination="caX-Xs-ya9" id="tp4-xa-D6r"/>
+                <outlet property="typeDonationLabel" destination="jS2-I6-eD4" id="wC7-LU-X1l"/>
+            </connections>
             <point key="canvasLocation" x="305.79710144927537" y="132.58928571428572"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="priority" width="196" height="100"/>
+        <image name="casePriority" width="196" height="100"/>
         <image name="save" width="15" height="19"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
