@@ -79,28 +79,6 @@
                                 <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-I6-eD4">
-                                <rect key="frame" x="12" y="121" width="45" height="22"/>
-                                <color key="backgroundColor" name="WhiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="IbK-MX-N01"/>
-                                    <constraint firstAttribute="height" constant="22" id="Y91-sZ-SDr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
-                                <color key="textColor" name="AppColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="AppColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jb7-Zo-mxK">
                                 <rect key="frame" x="66" y="152" width="142" height="24"/>
                                 <subviews>
@@ -158,24 +136,67 @@
                                     <action selector="donateNowButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lt3-Sa-MmI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeY-Fx-YB7">
+                                <rect key="frame" x="12" y="120" width="43" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-I6-eD4">
+                                        <rect key="frame" x="10" y="0.0" width="23" height="24"/>
+                                        <color key="backgroundColor" name="WhiteColor"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
+                                        <color key="textColor" name="AppColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="AppColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jS2-I6-eD4" secondAttribute="bottom" id="8oP-He-5no"/>
+                                    <constraint firstAttribute="height" constant="24" id="KRa-2d-vPj"/>
+                                    <constraint firstAttribute="trailing" secondItem="jS2-I6-eD4" secondAttribute="trailing" constant="10" id="beS-CI-heP"/>
+                                    <constraint firstItem="jS2-I6-eD4" firstAttribute="top" secondItem="NeY-Fx-YB7" secondAttribute="top" id="uBF-pT-ERC"/>
+                                    <constraint firstItem="jS2-I6-eD4" firstAttribute="leading" secondItem="NeY-Fx-YB7" secondAttribute="leading" constant="10" id="ujb-1X-bHw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="WhiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Jb7-Zo-mxK" secondAttribute="trailing" constant="12" id="4VG-JE-fvM"/>
                             <constraint firstItem="Vmj-fX-KRW" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="12" id="9M0-BB-s2x"/>
                             <constraint firstItem="5iX-gv-XmC" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="12" id="9dQ-ix-vOh"/>
+                            <constraint firstItem="NeY-Fx-YB7" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="12" id="CI9-Hr-4rj"/>
                             <constraint firstItem="WUb-fi-v9d" firstAttribute="top" secondItem="Lc5-hE-yUB" secondAttribute="top" constant="12" id="EyI-Eb-gyW"/>
+                            <constraint firstItem="NeY-Fx-YB7" firstAttribute="centerY" secondItem="caX-Xs-ya9" secondAttribute="centerY" id="F3W-8U-CWL"/>
                             <constraint firstItem="Vmj-fX-KRW" firstAttribute="top" secondItem="5iX-gv-XmC" secondAttribute="bottom" constant="8" id="FKY-Ng-FCe"/>
                             <constraint firstAttribute="trailing" secondItem="caX-Xs-ya9" secondAttribute="trailing" constant="12" id="Mks-k3-tR2"/>
                             <constraint firstAttribute="trailing" secondItem="TFO-np-2EV" secondAttribute="trailing" constant="12" id="PiS-hE-FL1"/>
                             <constraint firstItem="caX-Xs-ya9" firstAttribute="top" secondItem="WUb-fi-v9d" secondAttribute="bottom" constant="8" id="WPk-th-AS5"/>
                             <constraint firstItem="TFO-np-2EV" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="12" id="iEK-Tz-SG9"/>
                             <constraint firstItem="CAi-Q3-fVI" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="20" id="lN5-9j-Ky9"/>
-                            <constraint firstItem="jS2-I6-eD4" firstAttribute="leading" secondItem="Lc5-hE-yUB" secondAttribute="leading" constant="12" id="lUQ-FU-jlN"/>
+                            <constraint firstItem="caX-Xs-ya9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NeY-Fx-YB7" secondAttribute="trailing" constant="30" id="lfU-Bs-z8j"/>
                             <constraint firstItem="CAi-Q3-fVI" firstAttribute="top" secondItem="Lc5-hE-yUB" secondAttribute="top" constant="20" id="oHh-fs-3eQ"/>
                             <constraint firstItem="5iX-gv-XmC" firstAttribute="top" secondItem="TFO-np-2EV" secondAttribute="bottom" constant="4" id="opO-uj-BLu"/>
                             <constraint firstAttribute="trailing" secondItem="Vmj-fX-KRW" secondAttribute="trailing" constant="12" id="q2l-OG-hHd"/>
-                            <constraint firstItem="jS2-I6-eD4" firstAttribute="centerY" secondItem="caX-Xs-ya9" secondAttribute="centerY" id="qKH-rb-htd"/>
                             <constraint firstAttribute="trailing" secondItem="5iX-gv-XmC" secondAttribute="trailing" constant="12" id="sdl-6V-g5I"/>
                             <constraint firstItem="Jb7-Zo-mxK" firstAttribute="top" secondItem="caX-Xs-ya9" secondAttribute="bottom" constant="8" id="tVj-zx-O8L"/>
                             <constraint firstAttribute="trailing" secondItem="WUb-fi-v9d" secondAttribute="trailing" constant="12" id="uKT-B9-I1Z"/>

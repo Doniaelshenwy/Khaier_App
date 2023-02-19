@@ -41,7 +41,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB2-8H-rHv" customClass="UIControl">
-                                <rect key="frame" x="222" y="20" width="28" height="28"/>
+                                <rect key="frame" x="222" y="23" width="28" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-ys-mU9">
                                         <rect key="frame" x="7.5" y="5.5" width="13.5" height="17"/>
@@ -142,16 +142,30 @@
                                     <action selector="donateNowButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="las-KS-FD8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVS-sz-0fF">
-                                <rect key="frame" x="12" y="13" width="45" height="22"/>
-                                <color key="backgroundColor" name="WhiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAd-tr-3Af">
+                                <rect key="frame" x="12" y="13" width="43" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVS-sz-0fF">
+                                        <rect key="frame" x="10" y="0.0" width="23" height="22"/>
+                                        <color key="backgroundColor" name="WhiteColor"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
+                                        <color key="textColor" name="AppColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="AppColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="GEg-qV-YL5"/>
-                                    <constraint firstAttribute="height" constant="22" id="qWO-1e-OZ3"/>
+                                    <constraint firstAttribute="height" constant="22" id="Dqc-X4-aDp"/>
+                                    <constraint firstAttribute="trailing" secondItem="WVS-sz-0fF" secondAttribute="trailing" constant="10" id="J6E-90-9LW"/>
+                                    <constraint firstItem="WVS-sz-0fF" firstAttribute="leading" secondItem="QAd-tr-3Af" secondAttribute="leading" constant="10" id="PHc-AR-l6o"/>
+                                    <constraint firstItem="WVS-sz-0fF" firstAttribute="top" secondItem="QAd-tr-3Af" secondAttribute="top" id="iHy-nA-3JT"/>
+                                    <constraint firstAttribute="bottom" secondItem="WVS-sz-0fF" secondAttribute="bottom" id="nJj-WL-x3G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
-                                <color key="textColor" name="AppColor"/>
-                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1.5"/>
@@ -163,21 +177,22 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </label>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="WhiteColor"/>
                         <constraints>
                             <constraint firstItem="1Tb-z7-aqJ" firstAttribute="leading" secondItem="0ST-22-9QF" secondAttribute="leading" constant="12" id="2LF-fB-PmM"/>
+                            <constraint firstItem="QAd-tr-3Af" firstAttribute="centerY" secondItem="ghV-JF-fiZ" secondAttribute="centerY" id="4Sx-fo-tLF"/>
                             <constraint firstItem="saf-ut-gO8" firstAttribute="top" secondItem="1Tb-z7-aqJ" secondAttribute="bottom" constant="8" id="A0f-10-hmP"/>
                             <constraint firstItem="Djh-H6-aHy" firstAttribute="leading" secondItem="1Tb-z7-aqJ" secondAttribute="trailing" constant="8" id="ACZ-I6-cKy"/>
+                            <constraint firstItem="QAd-tr-3Af" firstAttribute="leading" secondItem="0ST-22-9QF" secondAttribute="leading" constant="12" id="ATZ-D1-sOo"/>
                             <constraint firstItem="1Tb-z7-aqJ" firstAttribute="top" secondItem="jhU-c6-eW1" secondAttribute="bottom" constant="4" id="DfX-5a-ncX"/>
-                            <constraint firstItem="WVS-sz-0fF" firstAttribute="centerY" secondItem="ghV-JF-fiZ" secondAttribute="centerY" id="DqG-MD-Phe"/>
                             <constraint firstAttribute="bottom" secondItem="Djh-H6-aHy" secondAttribute="bottom" constant="14" id="LXJ-jX-M6c"/>
                             <constraint firstItem="Djh-H6-aHy" firstAttribute="leading" secondItem="hgg-gC-udm" secondAttribute="trailing" constant="8" id="OCL-t4-20q"/>
-                            <constraint firstItem="WVS-sz-0fF" firstAttribute="leading" secondItem="0ST-22-9QF" secondAttribute="leading" constant="12" id="Tv1-gD-vWn"/>
                             <constraint firstItem="hgg-gC-udm" firstAttribute="top" secondItem="ghV-JF-fiZ" secondAttribute="bottom" constant="8" id="U5H-P9-VoB"/>
                             <constraint firstAttribute="trailing" secondItem="Djh-H6-aHy" secondAttribute="trailing" constant="12" id="Ugp-E4-TO9"/>
-                            <constraint firstItem="aB2-8H-rHv" firstAttribute="top" secondItem="0ST-22-9QF" secondAttribute="top" constant="20" id="Xmm-5K-BLp"/>
+                            <constraint firstItem="ghV-JF-fiZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QAd-tr-3Af" secondAttribute="trailing" constant="30" id="UxW-7E-mqX"/>
+                            <constraint firstItem="aB2-8H-rHv" firstAttribute="top" secondItem="0ST-22-9QF" secondAttribute="top" constant="23" id="Xmm-5K-BLp"/>
                             <constraint firstAttribute="trailing" secondItem="aB2-8H-rHv" secondAttribute="trailing" constant="92.790000000000006" id="fBJ-lm-QLT"/>
                             <constraint firstItem="jhU-c6-eW1" firstAttribute="leading" secondItem="0ST-22-9QF" secondAttribute="leading" constant="12" id="hSQ-Cm-5k1"/>
                             <constraint firstItem="ghV-JF-fiZ" firstAttribute="top" secondItem="0ST-22-9QF" secondAttribute="top" constant="12" id="jLS-H3-sSa"/>
@@ -186,7 +201,6 @@
                             <constraint firstItem="saf-ut-gO8" firstAttribute="leading" secondItem="0ST-22-9QF" secondAttribute="leading" constant="12" id="stU-cp-kSU"/>
                             <constraint firstItem="jhU-c6-eW1" firstAttribute="top" secondItem="hgg-gC-udm" secondAttribute="bottom" constant="4" id="wrn-0f-m6a"/>
                             <constraint firstItem="Djh-H6-aHy" firstAttribute="top" secondItem="0ST-22-9QF" secondAttribute="top" constant="12" id="xek-5n-ez0"/>
-                            <constraint firstAttribute="bottom" secondItem="saf-ut-gO8" secondAttribute="bottom" constant="8" id="z03-Ya-SVd"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">

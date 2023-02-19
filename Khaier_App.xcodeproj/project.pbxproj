@@ -110,8 +110,8 @@
 		FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6F0C829A13BC400DBBBF0 /* SearchViewController.swift */; };
 		FCF6F0CB29A13BC400DBBBF0 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF6F0C929A13BC400DBBBF0 /* SearchViewController.xib */; };
 		FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6F0CC29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift */; };
-		FCF6F0D129A158DA00DBBBF0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6F0CF29A158DA00DBBBF0 /* SearchTableViewCell.swift */; };
-		FCF6F0D229A158DA00DBBBF0 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF6F0D029A158DA00DBBBF0 /* SearchTableViewCell.xib */; };
+		FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA5EB829A2DF3B0045B9AB /* FilterAddressViewController.swift */; };
+		FCFA5EBB29A2DF3B0045B9AB /* FilterAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFA5EB929A2DF3B0045B9AB /* FilterAddressViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,8 +227,8 @@
 		FCF6F0C829A13BC400DBBBF0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FCF6F0C929A13BC400DBBBF0 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		FCF6F0CC29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+ExtensionCollectionView.swift"; sourceTree = "<group>"; };
-		FCF6F0CF29A158DA00DBBBF0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		FCF6F0D029A158DA00DBBBF0 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		FCFA5EB829A2DF3B0045B9AB /* FilterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAddressViewController.swift; sourceTree = "<group>"; };
+		FCFA5EB929A2DF3B0045B9AB /* FilterAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterAddressViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +594,7 @@
 				FC926008299D123E00B6EB4F /* Change Password */,
 				FC926010299D5CA700B6EB4F /* Home */,
 				FCF6F0C729A13B7700DBBBF0 /* Search */,
+				FCFA5EBC29A2DF430045B9AB /* Filter Address */,
 				FC926017299D5DC600B6EB4F /* Profile */,
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
@@ -658,12 +659,19 @@
 		FCF6F0CE29A158B100DBBBF0 /* SearchTableView */ = {
 			isa = PBXGroup;
 			children = (
-				FCF6F0CF29A158DA00DBBBF0 /* SearchTableViewCell.swift */,
-				FCF6F0D029A158DA00DBBBF0 /* SearchTableViewCell.xib */,
 				FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */,
 				FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */,
 			);
 			path = SearchTableView;
+			sourceTree = "<group>";
+		};
+		FCFA5EBC29A2DF430045B9AB /* Filter Address */ = {
+			isa = PBXGroup;
+			children = (
+				FCFA5EB829A2DF3B0045B9AB /* FilterAddressViewController.swift */,
+				FCFA5EB929A2DF3B0045B9AB /* FilterAddressViewController.xib */,
+			);
+			path = "Filter Address";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,7 +789,6 @@
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
 				FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
-				FCF6F0D229A158DA00DBBBF0 /* SearchTableViewCell.xib in Resources */,
 				FCF6F0CB29A13BC400DBBBF0 /* SearchViewController.xib in Resources */,
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
 				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
@@ -803,6 +810,7 @@
 				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
 				FC69EB9E299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
 				FC92601F299D603900B6EB4F /* NotificationViewController.xib in Resources */,
+				FCFA5EBB29A2DF3B0045B9AB /* FilterAddressViewController.xib in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
 			);
@@ -964,11 +972,11 @@
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
 				FCC0334F299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift in Sources */,
+				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
 				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,
 				FCE415EB299FB5D8003A991D /* NearModel.swift in Sources */,
 				FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */,
 				FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */,
-				FCF6F0D129A158DA00DBBBF0 /* SearchTableViewCell.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
 				FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */,

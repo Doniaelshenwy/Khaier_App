@@ -38,7 +38,7 @@ extension SearchViewController: CollectionViewConfig{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.identifierCell, for: indexPath) as! SearchCollectionViewCell
-      //  cell.setSearchData(search: searchArray[indexPath.row])
+         cell.setSearchData(search: searchArray[indexPath.row])
         return cell
     }
     
@@ -46,14 +46,27 @@ extension SearchViewController: CollectionViewConfig{
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
         searchCollectionView.register(UINib(nibName: SearchCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: SearchCollectionViewCell.identifierCell)
+         //   setUPVertical()
       
     }
+    
+//    func setUPVertical(){
+//        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+//
+//        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+//        let verticalGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.54)), subitem: item, count: 2)
+//
+//
+//        let section = NSCollectionLayoutSection(group: verticalGroup)
+//        let layout = UICollectionViewCompositionalLayout(section: section)
+//        searchCollectionView.collectionViewLayout = layout
+//    }
     
     
 }
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 343, height: 160)
+        return CGSize(width: view.bounds.width + 16, height: 160)
     }
 }

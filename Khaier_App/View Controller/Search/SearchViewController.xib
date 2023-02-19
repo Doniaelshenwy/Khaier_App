@@ -19,6 +19,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
+                <outlet property="filterButtonConstrain" destination="uHb-Rg-QPu" id="oyV-T7-Ca4"/>
+                <outlet property="resultSearchHeightLabelConstrain" destination="4Vo-At-C0m" id="Z0X-rU-dUm"/>
                 <outlet property="resultSearchLabel" destination="vYb-xv-yDO" id="4nY-rf-cZu"/>
                 <outlet property="searchCollectionView" destination="Jye-Bs-99Q" id="Gu8-pr-MS2"/>
                 <outlet property="searchTextField" destination="YS9-Xs-OCM" id="WHy-vI-eUc"/>
@@ -98,12 +100,26 @@
                                 <action selector="emptySearchTextField:" destination="-1" eventType="touchUpInside" id="Qdg-6g-Zov"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-Rg-QPu">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="kyb-Sw-X39"/>
+                                <constraint firstAttribute="height" constant="44" id="pTL-My-Z8O"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="filter"/>
+                            <connections>
+                                <action selector="filterAddressButton:" destination="-1" eventType="touchUpInside" id="A6A-kK-PYu"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" name="Light"/>
                     <constraints>
                         <constraint firstItem="I1p-A8-c6j" firstAttribute="centerX" secondItem="s5a-SC-cXF" secondAttribute="centerX" id="C1E-7K-ZLn"/>
                         <constraint firstItem="I1p-A8-c6j" firstAttribute="centerY" secondItem="s5a-SC-cXF" secondAttribute="centerY" id="IXz-HH-PtN"/>
                         <constraint firstAttribute="width" constant="44" id="XNF-hG-Z8U"/>
+                        <constraint firstItem="uHb-Rg-QPu" firstAttribute="centerX" secondItem="s5a-SC-cXF" secondAttribute="centerX" id="YL9-0m-WN9"/>
+                        <constraint firstItem="uHb-Rg-QPu" firstAttribute="centerY" secondItem="s5a-SC-cXF" secondAttribute="centerY" id="ncR-MT-azO"/>
                         <constraint firstAttribute="height" constant="44" id="yrw-Z1-xHK"/>
                     </constraints>
                 </view>
@@ -125,10 +141,10 @@
                     <color key="textColor" name="BlackColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-Bs-99Q">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-Bs-99Q">
                     <rect key="frame" x="16" y="196" width="343" height="582"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kj5-SJ-1u8">
+                    <color key="backgroundColor" name="WhiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="4hS-wM-58E">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -157,9 +173,17 @@
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="59.852216748768477"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QNt-1j-7bn">
+            <rect key="frame" x="0.0" y="0.0" width="44" height="27"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+            <point key="canvasLocation" x="-342.39999999999998" y="-75.738916256157637"/>
+        </button>
     </objects>
     <resources>
         <image name="Back" width="7.6666665077209473" height="14"/>
+        <image name="filter" width="44" height="44"/>
         <image name="search" width="24" height="24"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
