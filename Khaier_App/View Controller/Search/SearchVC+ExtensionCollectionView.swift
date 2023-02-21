@@ -46,8 +46,6 @@ extension SearchViewController: CollectionViewConfig{
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
         searchCollectionView.register(UINib(nibName: SearchCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: SearchCollectionViewCell.identifierCell)
-         //   setUPVertical()
-      
     }
     
 //    func setUPVertical(){

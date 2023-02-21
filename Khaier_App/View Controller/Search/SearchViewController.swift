@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
         removeBorderTextField(textFields: [searchTextField])
         setCollectionView()
         setDataOfSearchArray()
-        self.tabBarController?.tabBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         filterButtonConstrain.isHidden = true
         searchTextField.delegate = self
         hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
@@ -43,6 +43,11 @@ class SearchViewController: UIViewController {
             PriorityModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
         ]
     }
+    
+    func moveToFillterAddressVC(){
+        let vc = FilterAddressViewController()
+        present(vc, animated: true, completion: nil)
+    }
 
     @IBAction func backToHomeButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -53,6 +58,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func filterAddressButton(_ sender: Any) {
+        moveToFillterAddressVC()
     }
 }
 

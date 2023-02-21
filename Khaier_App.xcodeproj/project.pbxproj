@@ -19,6 +19,14 @@
 		FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931CA2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift */; };
 		FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */; };
 		FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */; };
+		FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */; };
+		FC2DAECA29A3F8DD0069E3F2 /* BookmarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */; };
+		FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */; };
+		FC2DAED029A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAECE29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib */; };
+		FC2DAED329A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAED129A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift */; };
+		FC2DAED429A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAED229A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib */; };
+		FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */; };
+		FC2DAED929A42D520069E3F2 /* BookmarkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAED829A42D520069E3F2 /* BookmarkType.swift */; };
 		FC349C552999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */; };
 		FC349C592999A1F90006265B /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC349C582999A1F90006265B /* DropDownList.swift */; };
 		FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */; };
@@ -150,6 +158,14 @@
 		FC1931CA2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResetPasswordVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
+		FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkViewController.xib; sourceTree = "<group>"; };
+		FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDonationCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC2DAECE29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkDonationCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC2DAED129A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCharityCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC2DAED229A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCharityCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FC2DAED829A42D520069E3F2 /* BookmarkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkType.swift; sourceTree = "<group>"; };
 		FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FC349C582999A1F90006265B /* DropDownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 		FC34AB9A2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +296,43 @@
 				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC2DAEC629A3F8A00069E3F2 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */,
+				FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */,
+				FC2DAECB29A402540069E3F2 /* Bookmark Donation Cell */,
+				FC2DAECC29A402770069E3F2 /* Bookmark Charity Cell */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		FC2DAECB29A402540069E3F2 /* Bookmark Donation Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */,
+				FC2DAECE29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib */,
+			);
+			path = "Bookmark Donation Cell";
+			sourceTree = "<group>";
+		};
+		FC2DAECC29A402770069E3F2 /* Bookmark Charity Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DAED129A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift */,
+				FC2DAED229A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib */,
+			);
+			path = "Bookmark Charity Cell";
+			sourceTree = "<group>";
+		};
+		FC2DAED729A42D0D0069E3F2 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DAED829A42D520069E3F2 /* BookmarkType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		FC34AB99299940E600B2B7C2 /* OTP Forget Password */ = {
@@ -511,6 +564,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FC2DAED729A42D0D0069E3F2 /* Enum */,
 				FC98F2CD299BDAED002A4E8B /* TabBarController */,
 				FCDEC96D2993DFDD00E355F1 /* Constants */,
 				FC69EB872991283A008E404A /* Fonts */,
@@ -595,6 +649,7 @@
 				FC926010299D5CA700B6EB4F /* Home */,
 				FCF6F0C729A13B7700DBBBF0 /* Search */,
 				FCFA5EBC29A2DF430045B9AB /* Filter Address */,
+				FC2DAEC629A3F8A00069E3F2 /* Bookmark */,
 				FC926017299D5DC600B6EB4F /* Profile */,
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
@@ -621,6 +676,7 @@
 				FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */,
 				FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */,
 				FCDEC97A29944C9300E355F1 /* String+Extension.swift */,
+				FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -651,18 +707,18 @@
 				FCF6F0C829A13BC400DBBBF0 /* SearchViewController.swift */,
 				FCF6F0C929A13BC400DBBBF0 /* SearchViewController.xib */,
 				FCF6F0CC29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift */,
-				FCF6F0CE29A158B100DBBBF0 /* SearchTableView */,
+				FCF6F0CE29A158B100DBBBF0 /* Search CollectionView */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		FCF6F0CE29A158B100DBBBF0 /* SearchTableView */ = {
+		FCF6F0CE29A158B100DBBBF0 /* Search CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */,
 				FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */,
 			);
-			path = SearchTableView;
+			path = "Search CollectionView";
 			sourceTree = "<group>";
 		};
 		FCFA5EBC29A2DF430045B9AB /* Filter Address */ = {
@@ -793,11 +849,13 @@
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
 				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
 				FC92600C299D127200B6EB4F /* ChangePasswordViewController.xib in Resources */,
+				FC2DAECA29A3F8DD0069E3F2 /* BookmarkViewController.xib in Resources */,
 				FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */,
 				FC49CFE629A1865600BFC290 /* SearchCollectionViewCell.xib in Resources */,
 				FCD6D0C1298544E30084FE76 /* Assets.xcassets in Resources */,
 				FC34AB9D2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib in Resources */,
 				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
+				FC2DAED029A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib in Resources */,
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCC03354299DD2080055AEF6 /* NearCollectionViewCell.xib in Resources */,
 				FC926023299D604D00B6EB4F /* DonationViewController.xib in Resources */,
@@ -810,6 +868,7 @@
 				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
 				FC69EB9E299128AF008E404A /* IBMPlexSansArabic-Bold.ttf in Resources */,
 				FC92601F299D603900B6EB4F /* NotificationViewController.xib in Resources */,
+				FC2DAED429A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib in Resources */,
 				FCFA5EBB29A2DF3B0045B9AB /* FilterAddressViewController.xib in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
@@ -968,6 +1027,8 @@
 				FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */,
 				FC92600F299D538500B6EB4F /* ChangePasswordProtocol.swift in Sources */,
 				FC49CFE529A1865600BFC290 /* SearchCollectionViewCell.swift in Sources */,
+				FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */,
+				FC2DAED929A42D520069E3F2 /* BookmarkType.swift in Sources */,
 				FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */,
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
@@ -980,6 +1041,7 @@
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
 				FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */,
+				FC2DAED329A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift in Sources */,
 				FCE415E4299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift in Sources */,
 				FC671DA12985507D00236031 /* Utilities.swift in Sources */,
 				FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */,
@@ -997,6 +1059,7 @@
 				FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
+				FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */,
 				FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FCC03353299DD2080055AEF6 /* NearCollectionViewCell.swift in Sources */,
 				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
@@ -1004,6 +1067,7 @@
 				FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
+				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,

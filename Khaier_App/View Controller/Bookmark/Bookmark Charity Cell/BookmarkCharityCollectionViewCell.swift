@@ -1,27 +1,27 @@
 //
-//  NearCollectionViewCell.swift
+//  BookmarkCharityCollectionViewCell.swift
 //  Khaier_App
 //
-//  Created by Donia Elshenawy on 16/02/2023.
+//  Created by Donia Elshenawy on 20/02/2023.
 //
 
 import UIKit
 
-class NearCollectionViewCell: UICollectionViewCell {
-    static let identifierCell = "NearCollectionViewCell"
-
-    @IBOutlet weak var image: UIImageView!
+class BookmarkCharityCollectionViewCell: UICollectionViewCell {
+    static let identifierCell = "BookmarkCharityCollectionViewCell"
+    
+    @IBOutlet weak var charityImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Initialization code
     }
     
-    func setCharityData(near charity: NearModel){
-        image.image = UIImage(named: charity.image)
+    func setCharityData(charity: NearModel){
+        charityImage.image = UIImage(named: charity.image)
         title.text = charity.title
         addressLabel.text = charity.address
        
@@ -30,7 +30,7 @@ class NearCollectionViewCell: UICollectionViewCell {
 
     @IBAction func saveCharityButton(_ sender: Any) {
     }
+
+
 }
-
-
 

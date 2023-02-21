@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        tabBarController?.tabBar.isHidden = false
         setCollectionView()
         setDataOfPriorityArray()
         setDataOfNearArray()
@@ -48,9 +49,19 @@ class HomeViewController: UIViewController {
         NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري...")
         ]
     }
+    
+    func moveToSearchVC(){
+        let vc = SearchViewController()
+        push(vc: vc)
+    }
+    
+    func moveToBookmarkVC(){
+        let vc = BookmarkViewController()
+        push(vc: vc)
+    }
   
-    @IBAction func bookmarkDonationBtn(_ sender: Any) {
-        
+    @IBAction func bookmarkButton(_ sender: Any) {
+        moveToBookmarkVC()
     }
     
     @IBAction func medecineView(_ sender: Any) {
@@ -70,8 +81,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func searchView(_ sender: Any) {
-        let vc = SearchViewController()
-        push(vc: vc)
+        moveToSearchVC()
     }
 }
 

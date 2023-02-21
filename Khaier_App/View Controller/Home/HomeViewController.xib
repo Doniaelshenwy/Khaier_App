@@ -75,7 +75,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="save"/>
                                             <connections>
-                                                <action selector="bookmarkDonationBtn:" destination="-1" eventType="touchUpInside" id="bUu-bZ-0OB"/>
+                                                <action selector="bookmarkButton:" destination="-1" eventType="touchUpInside" id="Wfc-0d-nbd"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -339,7 +339,7 @@
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fja-TI-FC3">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fja-TI-FC3">
                                     <rect key="frame" x="16" y="375" width="343" height="268"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -358,7 +358,7 @@
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-wt-xGF">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-wt-xGF">
                                     <rect key="frame" x="16" y="707" width="343" height="244"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
