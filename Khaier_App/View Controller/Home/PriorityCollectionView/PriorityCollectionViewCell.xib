@@ -224,6 +224,7 @@
                 <outlet property="imageCase" destination="WUb-fi-v9d" id="i7U-uZ-lro"/>
                 <outlet property="progressView" destination="TFO-np-2EV" id="u3k-gU-wTJ"/>
                 <outlet property="remainDaysLabel" destination="5iX-gv-XmC" id="2Gz-GP-Xig"/>
+                <outlet property="saveCaseButtonConstrain" destination="c2i-pW-FQi" id="96i-Vy-8fi"/>
                 <outlet property="titleCaseLabel" destination="caX-Xs-ya9" id="tp4-xa-D6r"/>
                 <outlet property="typeDonationLabel" destination="jS2-I6-eD4" id="wC7-LU-X1l"/>
             </connections>

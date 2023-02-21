@@ -175,6 +175,7 @@
                 <outlet property="addressLabel" destination="j27-RC-yuq" id="HHI-0g-U7n"/>
                 <outlet property="descriptionLabel" destination="eOl-QY-JHs" id="xUM-Rm-lyJ"/>
                 <outlet property="image" destination="KVf-SN-B1P" id="jNb-c5-0yr"/>
+                <outlet property="saveCharityButtonConstrain" destination="Ive-jJ-90l" id="mzj-tG-CEY"/>
                 <outlet property="title" destination="6SV-dc-Ual" id="52S-K9-94l"/>
             </connections>
             <point key="canvasLocation" x="260.86956521739131" y="124.55357142857142"/>

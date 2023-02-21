@@ -151,18 +151,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1C-8B-Dfd" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medecine" translatesAutoresizingMaskIntoConstraints="NO" id="UaS-I7-fix">
-                                                            <rect key="frame" x="16" y="16.666666666666654" width="40" height="38.666666666666657"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-F6-UBu">
+                                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="h3C-3m-9gp"/>
-                                                                <constraint firstAttribute="height" constant="38.659999999999997" id="hbg-aK-wMK"/>
+                                                                <constraint firstAttribute="height" constant="40" id="3Pq-Qx-yVy"/>
+                                                                <constraint firstAttribute="width" constant="40" id="8Yb-kk-GNh"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="medecine"/>
+                                                            <connections>
+                                                                <action selector="medicineButton:" destination="-1" eventType="touchUpInside" id="Xv1-um-MXB"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" name="medicineColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="UaS-I7-fix" firstAttribute="centerX" secondItem="B1C-8B-Dfd" secondAttribute="centerX" id="7ul-bs-VKF"/>
-                                                        <constraint firstItem="UaS-I7-fix" firstAttribute="centerY" secondItem="B1C-8B-Dfd" secondAttribute="centerY" id="k51-Qn-DUq"/>
+                                                        <constraint firstItem="wtH-F6-UBu" firstAttribute="centerX" secondItem="B1C-8B-Dfd" secondAttribute="centerX" id="a8B-W8-eEK"/>
+                                                        <constraint firstItem="wtH-F6-UBu" firstAttribute="centerY" secondItem="B1C-8B-Dfd" secondAttribute="centerY" id="nu0-Vu-bkQ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
@@ -199,18 +204,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBE-3G-BHb" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="fbu-3Z-yYm">
-                                                            <rect key="frame" x="16" y="16.666666666666654" width="40" height="38.666666666666657"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86V-vx-MVW">
+                                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="Ngh-Ya-Bqe"/>
-                                                                <constraint firstAttribute="height" constant="38.659999999999997" id="gbW-0c-6ns"/>
+                                                                <constraint firstAttribute="width" constant="40" id="PrQ-QM-Ngl"/>
+                                                                <constraint firstAttribute="height" constant="40" id="yBQ-EG-I2m"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="Food"/>
+                                                            <connections>
+                                                                <action selector="foodButton:" destination="-1" eventType="touchUpInside" id="X4K-XD-u0A"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" name="FoodColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="fbu-3Z-yYm" firstAttribute="centerX" secondItem="RBE-3G-BHb" secondAttribute="centerX" id="E68-yT-DfQ"/>
-                                                        <constraint firstItem="fbu-3Z-yYm" firstAttribute="centerY" secondItem="RBE-3G-BHb" secondAttribute="centerY" id="ie6-OI-Yn9"/>
+                                                        <constraint firstItem="86V-vx-MVW" firstAttribute="centerX" secondItem="RBE-3G-BHb" secondAttribute="centerX" id="pmg-lf-T1s"/>
+                                                        <constraint firstItem="86V-vx-MVW" firstAttribute="centerY" secondItem="RBE-3G-BHb" secondAttribute="centerY" id="uam-yK-cmQ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
@@ -247,18 +257,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-E1-9aB" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloth" translatesAutoresizingMaskIntoConstraints="NO" id="IDd-iU-5c9">
-                                                            <rect key="frame" x="16" y="16.666666666666654" width="40" height="38.666666666666657"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuT-gk-5Ze">
+                                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="24H-aH-PmK"/>
-                                                                <constraint firstAttribute="height" constant="38.659999999999997" id="Kou-eI-tBn"/>
+                                                                <constraint firstAttribute="width" constant="40" id="ZyE-3D-x9v"/>
+                                                                <constraint firstAttribute="height" constant="40" id="kto-Fr-J42"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="Cloth"/>
+                                                            <connections>
+                                                                <action selector="clothesButton:" destination="-1" eventType="touchUpInside" id="nKf-bi-sWL"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" name="ClothColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="IDd-iU-5c9" firstAttribute="centerY" secondItem="l2t-E1-9aB" secondAttribute="centerY" id="4bQ-zS-iV9"/>
-                                                        <constraint firstItem="IDd-iU-5c9" firstAttribute="centerX" secondItem="l2t-E1-9aB" secondAttribute="centerX" id="qWV-fH-PrZ"/>
+                                                        <constraint firstItem="uuT-gk-5Ze" firstAttribute="centerY" secondItem="l2t-E1-9aB" secondAttribute="centerY" id="DeC-1W-tvY"/>
+                                                        <constraint firstItem="uuT-gk-5Ze" firstAttribute="centerX" secondItem="l2t-E1-9aB" secondAttribute="centerX" id="nbr-2j-CSh"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
@@ -295,18 +310,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-hp-wLh" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ALL" translatesAutoresizingMaskIntoConstraints="NO" id="3UW-Le-4Zv">
-                                                            <rect key="frame" x="16" y="16.666666666666654" width="40" height="38.666666666666657"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAy-Ls-E3q">
+                                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="38.659999999999997" id="9mb-zk-Ylc"/>
-                                                                <constraint firstAttribute="width" constant="40" id="bDZ-52-ogb"/>
+                                                                <constraint firstAttribute="height" constant="40" id="TwM-g8-G8G"/>
+                                                                <constraint firstAttribute="width" constant="40" id="Utc-oz-OCS"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="ALL"/>
+                                                            <connections>
+                                                                <action selector="allButton:" destination="-1" eventType="touchUpInside" id="qkQ-fo-aAE"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" name="AllColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="3UW-Le-4Zv" firstAttribute="centerX" secondItem="EhM-hp-wLh" secondAttribute="centerX" id="I4c-65-MeJ"/>
-                                                        <constraint firstItem="3UW-Le-4Zv" firstAttribute="centerY" secondItem="EhM-hp-wLh" secondAttribute="centerY" id="c7B-dJ-nWC"/>
+                                                        <constraint firstItem="EAy-Ls-E3q" firstAttribute="centerY" secondItem="EhM-hp-wLh" secondAttribute="centerY" id="9XE-iE-Og1"/>
+                                                        <constraint firstItem="EAy-Ls-E3q" firstAttribute="centerX" secondItem="EhM-hp-wLh" secondAttribute="centerX" id="wAp-vY-H4I"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">

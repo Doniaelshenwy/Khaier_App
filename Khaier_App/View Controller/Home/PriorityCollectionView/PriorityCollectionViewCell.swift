@@ -16,6 +16,9 @@ class PriorityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var remainDaysLabel: UILabel!
     @IBOutlet weak var accessRatio: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var saveCaseButtonConstrain: UIButton!
+    
+    var isRememberCase = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +34,7 @@ class PriorityCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func saveCaseButton(_ sender: Any) {
+        checkSaveButtonIsAccept(isRemember: &isRememberCase, button: saveCaseButtonConstrain)
     }
     @IBAction func donateNowButton(_ sender: Any) {
     }

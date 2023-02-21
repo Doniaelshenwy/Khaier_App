@@ -14,8 +14,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var resultSearchLabel: UILabel!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var filterButtonConstrain: UIButton!
-    
     @IBOutlet weak var resultSearchHeightLabelConstrain: NSLayoutConstraint!
+    
+    @IBOutlet weak var emptyLabel: UILabel!
     var searchArray: [PriorityModel] = []
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class SearchViewController: UIViewController {
         setDataOfSearchArray()
         tabBarController?.tabBar.isHidden = true
         filterButtonConstrain.isHidden = true
+        emptyLabel.isHidden = false
         searchTextField.delegate = self
         hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
     }
@@ -51,9 +53,10 @@ class SearchViewController: UIViewController {
 
     @IBAction func backToHomeButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        tabBarController?.tabBar.isHidden = false
     }
     
-    @IBAction func emptySearchTextField(_ sender: Any) {
+    @IBAction func emptyView(_ sender: Any) {
         searchTextField.text = ""
     }
     
@@ -66,10 +69,12 @@ extension SearchViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if searchTextField.text == ""{
             filterButtonConstrain.isHidden = true
+            emptyLabel.isHidden = false
             hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
         } else {
             showLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
             filterButtonConstrain.isHidden = false
+            emptyLabel.isHidden = true
         }
     }
 }

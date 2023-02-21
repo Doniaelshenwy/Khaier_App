@@ -24,9 +24,6 @@ class HomeViewController: UIViewController {
         setCollectionView()
         setDataOfPriorityArray()
         setDataOfNearArray()
-
-
-        
     }
 
     func setDataOfPriorityArray(){
@@ -41,12 +38,12 @@ class HomeViewController: UIViewController {
     
     func setDataOfNearArray(){
         nearArray = [
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري..."),
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري..."),
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري..."),
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري..."),
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري..."),
-        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري...")
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+        NearModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير")
         ]
     }
     
@@ -59,29 +56,67 @@ class HomeViewController: UIViewController {
         let vc = BookmarkViewController()
         push(vc: vc)
     }
+    
+    func moveToCategoriesVC(){
+        let vc = CategoriesViewController()
+        push(vc: vc)
+    }
+    
+    func moveToMedineCategoriesVC(){
+        let vc = OneCategoryViewController()
+        vc.titleNavigation = "أدوية"
+        push(vc: vc)
+    }
+    
+    func moveToFoodCategoriesVC(){
+        let vc = OneCategoryViewController()
+        vc.titleNavigation = "طعام"
+        push(vc: vc)
+    }
+    
+    func moveToClothesCategoriesVC(){
+        let vc = OneCategoryViewController()
+        vc.titleNavigation = "ملابس"
+        push(vc: vc)
+    }
   
     @IBAction func bookmarkButton(_ sender: Any) {
         moveToBookmarkVC()
     }
     
     @IBAction func medecineView(_ sender: Any) {
-        
+        moveToMedineCategoriesVC()
     }
     
     @IBAction func foodView(_ sender: Any) {
-        
+        moveToFoodCategoriesVC()
     }
     
     @IBAction func clothesView(_ sender: Any) {
-        
+        moveToClothesCategoriesVC()
     }
     
     @IBAction func allView(_ sender: Any) {
-        
+        moveToCategoriesVC()
     }
     
+    @IBAction func medicineButton(_ sender: Any) {
+        moveToMedineCategoriesVC()
+    }
     @IBAction func searchView(_ sender: Any) {
         moveToSearchVC()
+    }
+    
+    @IBAction func foodButton(_ sender: Any) {
+        moveToFoodCategoriesVC()
+    }
+    
+    @IBAction func clothesButton(_ sender: Any) {
+        moveToClothesCategoriesVC()
+    }
+    
+    @IBAction func allButton(_ sender: Any) {
+        moveToCategoriesVC()
     }
 }
 
