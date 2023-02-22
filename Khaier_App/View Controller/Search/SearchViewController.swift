@@ -16,7 +16,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var filterButtonConstrain: UIButton!
     @IBOutlet weak var resultSearchHeightLabelConstrain: NSLayoutConstraint!
     
-    @IBOutlet weak var emptyLabel: UILabel!
+   
+    @IBOutlet weak var emptyButton: UIButton!
     var searchArray: [PriorityModel] = []
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class SearchViewController: UIViewController {
         setDataOfSearchArray()
         tabBarController?.tabBar.isHidden = true
         filterButtonConstrain.isHidden = true
-        emptyLabel.isHidden = false
+        emptyButton.isHidden = false
         searchTextField.delegate = self
         hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
     }
@@ -56,8 +57,9 @@ class SearchViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
     }
     
-    @IBAction func emptyView(_ sender: Any) {
+    @IBAction func emptyTextFiledButton(_ sender: Any) {
         searchTextField.text = ""
+
     }
     
     @IBAction func filterAddressButton(_ sender: Any) {
@@ -69,12 +71,12 @@ extension SearchViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if searchTextField.text == ""{
             filterButtonConstrain.isHidden = true
-            emptyLabel.isHidden = false
+            emptyButton.isHidden = false
             hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
         } else {
             showLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
             filterButtonConstrain.isHidden = false
-            emptyLabel.isHidden = true
+            emptyButton.isHidden = true
         }
     }
 }

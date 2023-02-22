@@ -19,11 +19,10 @@ extension CategoriesViewController: CollectionViewConfig{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nib = UINib(nibName: CategoriesCollectionViewCell.identifierCell, bundle: nil)
-        if let vc = nib.instantiate(withOwner: self, options: nil) as? OneCategoryViewController{
-            vc.titleNavigation = categoriesArray[indexPath.row].nameCategories
-            push(vc: vc)
-        }
+        print("category")
+        let vc = OneCategoryViewController(nibName: "OneCategoryViewController", bundle: nil)
+        vc.titleNavigation = categoriesArray[indexPath.row].nameCategories
+        push(vc: vc)
     }
     
     func setCategoryCollectionView(){

@@ -18,7 +18,6 @@ class DonationViewController: UIViewController {
         let back = [NSAttributedString.Key.backgroundColor: UIColor.white]
           segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
           segmentedControl.setTitleTextAttributes(titleTextSelected, for: .selected)
-        segmentedControl.backgroundColor = UIColor.white
 
     }
 

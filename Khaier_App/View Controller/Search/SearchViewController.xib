@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
-                <outlet property="emptyLabel" destination="gzq-xW-6x7" id="6hk-yJ-eNO"/>
+                <outlet property="emptyButton" destination="0Rn-gp-E3h" id="MtW-8t-9Sw"/>
                 <outlet property="filterButtonConstrain" destination="uHb-Rg-QPu" id="oyV-T7-Ca4"/>
                 <outlet property="resultSearchHeightLabelConstrain" destination="4Vo-At-C0m" id="Z0X-rU-dUm"/>
                 <outlet property="resultSearchLabel" destination="vYb-xv-yDO" id="4nY-rf-cZu"/>
@@ -35,7 +35,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trN-Cs-UtA">
-                    <rect key="frame" x="344" y="68" width="6" height="12"/>
+                    <rect key="frame" x="344" y="63" width="6" height="12"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="6" id="Q9x-WX-Zqn"/>
                         <constraint firstAttribute="height" constant="12" id="cNO-Bt-Ykg"/>
@@ -47,16 +47,16 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-he-eCH">
-                    <rect key="frame" x="68" y="113" width="291" height="44"/>
+                    <rect key="frame" x="79" y="108" width="280" height="44"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="البحث عن التبرعات" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YS9-Xs-OCM">
-                            <rect key="frame" x="16" y="0.0" width="231" height="44"/>
+                            <rect key="frame" x="16" y="0.0" width="220" height="44"/>
                             <color key="textColor" name="BlackColor"/>
                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="5Z1-l1-J8i">
-                            <rect key="frame" x="257" y="10" width="24" height="24"/>
+                            <rect key="frame" x="246" y="10" width="24" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="Fii-N6-zeZ"/>
                                 <constraint firstAttribute="width" constant="24" id="gTt-49-S8n"/>
@@ -69,7 +69,7 @@
                         <constraint firstAttribute="height" constant="44" id="CID-s3-oO6"/>
                         <constraint firstItem="5Z1-l1-J8i" firstAttribute="top" secondItem="Rbo-he-eCH" secondAttribute="top" constant="10" id="EGt-Kc-pI1"/>
                         <constraint firstAttribute="trailing" secondItem="5Z1-l1-J8i" secondAttribute="trailing" constant="10" id="Iqg-5F-LUO"/>
-                        <constraint firstAttribute="width" constant="291" id="QXQ-sz-BgQ"/>
+                        <constraint firstAttribute="width" constant="280" id="QXQ-sz-BgQ"/>
                         <constraint firstAttribute="bottom" secondItem="5Z1-l1-J8i" secondAttribute="bottom" constant="10" id="ZcI-A6-Rzb"/>
                         <constraint firstItem="YS9-Xs-OCM" firstAttribute="top" secondItem="Rbo-he-eCH" secondAttribute="top" id="jrx-lT-Jup"/>
                         <constraint firstItem="5Z1-l1-J8i" firstAttribute="leading" secondItem="YS9-Xs-OCM" secondAttribute="trailing" constant="10" id="vCw-nX-FWd"/>
@@ -87,43 +87,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-SC-cXF" customClass="UIControl">
-                    <rect key="frame" x="16" y="113" width="44" height="44"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الغاء" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzq-xW-6x7">
-                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
-                            <color key="textColor" name="AppColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-Rg-QPu">
-                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="filter"/>
-                            <connections>
-                                <action selector="filterAddressButton:" destination="-1" eventType="touchUpInside" id="A6A-kK-PYu"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" name="Light"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="gzq-xW-6x7" secondAttribute="trailing" id="0KY-Wg-PqV"/>
-                        <constraint firstAttribute="trailing" secondItem="uHb-Rg-QPu" secondAttribute="trailing" id="3sj-bi-QdI"/>
-                        <constraint firstAttribute="bottom" secondItem="uHb-Rg-QPu" secondAttribute="bottom" id="GlY-Ja-ugF"/>
-                        <constraint firstItem="gzq-xW-6x7" firstAttribute="top" secondItem="s5a-SC-cXF" secondAttribute="top" id="Gsh-u4-Gys"/>
-                        <constraint firstAttribute="width" constant="44" id="QA6-7x-xaD"/>
-                        <constraint firstItem="uHb-Rg-QPu" firstAttribute="leading" secondItem="s5a-SC-cXF" secondAttribute="leading" id="YFA-kh-fmo"/>
-                        <constraint firstAttribute="bottom" secondItem="gzq-xW-6x7" secondAttribute="bottom" id="g27-Jd-92J"/>
-                        <constraint firstItem="uHb-Rg-QPu" firstAttribute="top" secondItem="s5a-SC-cXF" secondAttribute="top" id="mTD-xh-9p2"/>
-                        <constraint firstItem="gzq-xW-6x7" firstAttribute="leading" secondItem="s5a-SC-cXF" secondAttribute="leading" id="rbb-Qb-VPm"/>
-                        <constraint firstAttribute="height" constant="44" id="yrw-Z1-xHK"/>
-                    </constraints>
-                    <connections>
-                        <action selector="emptyView:" destination="-1" eventType="touchUpInside" id="ons-ow-vjy"/>
-                    </connections>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="النتائج البحث (100)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYb-xv-yDO">
-                    <rect key="frame" x="237" y="165" width="122" height="20"/>
+                    <rect key="frame" x="237" y="160" width="122" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="4Vo-At-C0m"/>
                     </constraints>
@@ -132,7 +97,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="البحث" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-Va-YfB">
-                    <rect key="frame" x="163.33333333333334" y="59" width="48.666666666666657" height="30"/>
+                    <rect key="frame" x="163.33333333333334" y="54" width="48.666666666666657" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="LOv-5l-zf8"/>
                     </constraints>
@@ -141,7 +106,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NSa-ic-rxk">
-                    <rect key="frame" x="16" y="201" width="343" height="577"/>
+                    <rect key="frame" x="16" y="196" width="343" height="582"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eWm-5k-TOr">
                         <size key="itemSize" width="128" height="128"/>
@@ -150,6 +115,42 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W5Y-UT-jns">
+                    <rect key="frame" x="16" y="108" width="53" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-SC-cXF">
+                            <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-gp-E3h">
+                                    <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="AppColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="الغاء">
+                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="emptyTextFiledButton:" destination="-1" eventType="touchUpInside" id="c8o-l9-8vC"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-Rg-QPu">
+                                    <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="filter"/>
+                                    <connections>
+                                        <action selector="filterAddressButton:" destination="-1" eventType="touchUpInside" id="A6A-kK-PYu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="Light"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="6jx-Bt-j1N"/>
+                        <constraint firstAttribute="height" constant="44" id="C0r-Ka-clZ"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,18 +158,18 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NSa-ic-rxk" secondAttribute="trailing" constant="16" id="0Ej-1Z-OoE"/>
                 <constraint firstItem="Rbo-he-eCH" firstAttribute="top" secondItem="trN-Cs-UtA" secondAttribute="bottom" constant="33" id="7ZV-qr-cKo"/>
                 <constraint firstItem="trN-Cs-UtA" firstAttribute="centerY" secondItem="7vo-Va-YfB" secondAttribute="centerY" id="9Cs-Ab-Bnz"/>
-                <constraint firstItem="s5a-SC-cXF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CQh-0W-mX9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trN-Cs-UtA" secondAttribute="trailing" constant="25" id="IeK-rM-nqH"/>
-                <constraint firstItem="Rbo-he-eCH" firstAttribute="leading" secondItem="s5a-SC-cXF" secondAttribute="trailing" constant="8" id="MJC-5h-7o5"/>
+                <constraint firstItem="W5Y-UT-jns" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IsH-n7-vzj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rbo-he-eCH" secondAttribute="trailing" constant="16" id="Qcr-ge-DHc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vYb-xv-yDO" secondAttribute="trailing" constant="16" id="Xux-Yw-UM2"/>
                 <constraint firstItem="NSa-ic-rxk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aYh-po-iLI"/>
-                <constraint firstItem="s5a-SC-cXF" firstAttribute="centerY" secondItem="Rbo-he-eCH" secondAttribute="centerY" id="mHi-tV-hSb"/>
+                <constraint firstItem="W5Y-UT-jns" firstAttribute="centerY" secondItem="Rbo-he-eCH" secondAttribute="centerY" id="klg-Lh-77r"/>
                 <constraint firstItem="7vo-Va-YfB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="no3-Gj-0xk"/>
                 <constraint firstItem="NSa-ic-rxk" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="s69-Mb-b5H"/>
                 <constraint firstItem="vYb-xv-yDO" firstAttribute="top" secondItem="Rbo-he-eCH" secondAttribute="bottom" constant="8" id="uAd-hl-TF8"/>
-                <constraint firstItem="7vo-Va-YfB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="vWX-Ee-YgO"/>
+                <constraint firstItem="7vo-Va-YfB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="vWX-Ee-YgO"/>
                 <constraint firstItem="NSa-ic-rxk" firstAttribute="top" secondItem="vYb-xv-yDO" secondAttribute="bottom" constant="16" id="w7S-u3-0vM"/>
+                <constraint firstItem="Rbo-he-eCH" firstAttribute="leading" secondItem="W5Y-UT-jns" secondAttribute="trailing" constant="10" id="wS7-FH-2Hz"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="59.852216748768477"/>
         </view>

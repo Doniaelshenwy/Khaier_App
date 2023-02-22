@@ -49,7 +49,10 @@ class HomeViewController: UIViewController {
     
     func moveToSearchVC(){
         let vc = SearchViewController()
-        push(vc: vc)
+//        vc.modalPresentationStyle = .custom
+//        vc.modalTransitionStyle = .crossDissolve
+//        present(vc, animated: true)
+         push(vc: vc)
     }
     
     func moveToBookmarkVC(){
