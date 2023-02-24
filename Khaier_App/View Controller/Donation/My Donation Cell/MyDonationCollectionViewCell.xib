@@ -76,6 +76,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="donationAgainButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="v84-xQ-WUd"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-ul-uvh">
                                         <rect key="frame" x="246" y="48" width="77" height="24"/>
@@ -134,6 +137,13 @@
                 <constraint firstAttribute="bottom" secondItem="AjT-GR-WXu" secondAttribute="bottom" id="k5x-Oq-CXc"/>
             </constraints>
             <size key="customSize" width="343" height="95"/>
+            <connections>
+                <outlet property="donationAgainButtonConstrain" destination="5Fv-zG-Gei" id="Pdf-Kh-SHH"/>
+                <outlet property="donationPercentageLabel" destination="LHn-Qq-6Eb" id="1uL-DD-iu3"/>
+                <outlet property="donationPercentageStackView" destination="eyO-ul-uvh" id="RP1-1p-a8G"/>
+                <outlet property="remainDaysLabel" destination="fxK-aK-1oq" id="9NQ-wQ-X4X"/>
+                <outlet property="titleCaseLabel" destination="Cnr-vC-pvx" id="rre-B0-wLP"/>
+            </connections>
             <point key="canvasLocation" x="348.55072463768118" y="74.665178571428569"/>
         </collectionViewCell>
     </objects>

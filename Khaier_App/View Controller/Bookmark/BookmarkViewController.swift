@@ -46,16 +46,6 @@ class BookmarkViewController: UIViewController {
             NearModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخيييير")
             ]
     }
-    
-    func changeColorOfSelectedButton(isSelectedButton: UIButton){
-        isSelectedButton.backgroundColor = UIColor(named: "AppColor")
-        isSelectedButton.tintColor = UIColor.white
-    }
-    
-    func changeColorOfNotSelectedButton(notSelectedButton: UIButton){
-            notSelectedButton.backgroundColor = UIColor.white
-            notSelectedButton.tintColor = UIColor.black
-    }
 
     // if user press button, move to home screen
     @IBAction func backToHomeVCButton(_ sender: Any) {

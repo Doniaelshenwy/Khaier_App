@@ -16,7 +16,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
-                <outlet property="segmentedControl" destination="b9w-n6-9fa" id="bbU-B4-iAS"/>
+                <outlet property="donationCollectionView" destination="fD3-wr-11R" id="puO-GC-F7d"/>
+                <outlet property="followDonationBtnConstrain" destination="m13-e3-cvc" id="Ye0-HV-Q8h"/>
+                <outlet property="mydonationBtnConstrain" destination="pz5-qM-rs0" id="VtR-uc-LLB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,29 +36,6 @@
                     <color key="textColor" name="BlackColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <segmentedControl opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-n6-9fa">
-                    <rect key="frame" x="16" y="113" width="382" height="41"/>
-                    <color key="backgroundColor" name="WhiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="TAD-Dv-wwJ"/>
-                    </constraints>
-                    <segments>
-                        <segment title="تبرعاتي"/>
-                        <segment title="تتبع التبرع"/>
-                    </segments>
-                    <color key="selectedSegmentTintColor" name="AppColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                            <real key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" name="disapleColor"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </segmentedControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-wr-11R">
                     <rect key="frame" x="16" y="177" width="382" height="685"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,19 +46,88 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjr-hg-ZqM">
+                    <rect key="frame" x="16" y="113" width="382" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz5-qM-rs0">
+                            <rect key="frame" x="210.5" y="4" width="167.5" height="32"/>
+                            <color key="backgroundColor" name="AppColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="EQ9-P3-DYu"/>
+                                <constraint firstAttribute="width" constant="167.5" id="zL1-EG-F3c"/>
+                            </constraints>
+                            <color key="tintColor" name="WhiteColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="تبرعاتي">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="myDonationButton:" destination="-1" eventType="touchUpInside" id="Put-DV-qn2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m13-e3-cvc">
+                            <rect key="frame" x="4" y="4" width="167.5" height="32"/>
+                            <color key="backgroundColor" name="WhiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="BoZ-kj-y9S"/>
+                                <constraint firstAttribute="width" constant="167.5" id="hUa-HE-u27"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167.5" id="jkT-rZ-eNb"/>
+                            </constraints>
+                            <color key="tintColor" name="BlackColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="تتبع التبرع">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="followDonationButton:" destination="-1" eventType="touchUpInside" id="f3E-lF-54g"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="m13-e3-cvc" firstAttribute="top" secondItem="kjr-hg-ZqM" secondAttribute="top" constant="4" id="AQb-tP-WiC"/>
+                        <constraint firstAttribute="trailing" secondItem="pz5-qM-rs0" secondAttribute="trailing" constant="4" id="NOM-58-V93"/>
+                        <constraint firstAttribute="height" constant="40" id="OPx-iZ-dRe"/>
+                        <constraint firstItem="pz5-qM-rs0" firstAttribute="top" secondItem="kjr-hg-ZqM" secondAttribute="top" constant="4" id="c8V-6T-LcB"/>
+                        <constraint firstItem="m13-e3-cvc" firstAttribute="leading" secondItem="kjr-hg-ZqM" secondAttribute="leading" constant="4" id="fU6-uG-hjJ"/>
+                        <constraint firstAttribute="bottom" secondItem="pz5-qM-rs0" secondAttribute="bottom" constant="4" id="hfe-CV-3LC"/>
+                        <constraint firstAttribute="bottom" secondItem="m13-e3-cvc" secondAttribute="bottom" constant="4" id="sG9-kb-IBa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="disapleColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="WhiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kjr-hg-ZqM" secondAttribute="trailing" constant="16" id="0PP-Md-2wX"/>
                 <constraint firstItem="QhH-nD-V7D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0vq-I2-zYp"/>
-                <constraint firstItem="b9w-n6-9fa" firstAttribute="top" secondItem="QhH-nD-V7D" secondAttribute="bottom" constant="24" id="2qM-gr-ppZ"/>
                 <constraint firstItem="fD3-wr-11R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5iw-kf-qV1"/>
                 <constraint firstItem="QhH-nD-V7D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="DE6-48-mCL"/>
-                <constraint firstItem="fD3-wr-11R" firstAttribute="top" secondItem="b9w-n6-9fa" secondAttribute="bottom" constant="24" id="GL4-lZ-NRH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b9w-n6-9fa" secondAttribute="trailing" constant="16" id="PzZ-wG-B6v"/>
+                <constraint firstItem="kjr-hg-ZqM" firstAttribute="top" secondItem="QhH-nD-V7D" secondAttribute="bottom" constant="24" id="OcJ-aZ-x1J"/>
                 <constraint firstItem="fD3-wr-11R" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RhB-zQ-Hi4"/>
-                <constraint firstItem="b9w-n6-9fa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Vg4-e0-yWM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fD3-wr-11R" secondAttribute="trailing" constant="16" id="bfa-bd-nNa"/>
+                <constraint firstItem="kjr-hg-ZqM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tIf-N5-jgV"/>
+                <constraint firstItem="fD3-wr-11R" firstAttribute="top" secondItem="kjr-hg-ZqM" secondAttribute="bottom" constant="24" id="xak-q3-ul1"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="59.598214285714285"/>
         </view>

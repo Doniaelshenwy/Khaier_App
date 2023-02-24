@@ -45,6 +45,9 @@
 		FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */; };
 		FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */; };
 		FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */; };
+		FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */; };
+		FC65C67729A8FACA00F497C8 /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65C67629A8FACA00F497C8 /* DonationType.swift */; };
+		FC65C67929A8FB3C00F497C8 /* FollowDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65C67829A8FB3C00F497C8 /* FollowDonation.swift */; };
 		FC671D9B29854FB000236031 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9A29854FB000236031 /* UIView+Extension.swift */; };
 		FC671D9D29854FED00236031 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9C29854FED00236031 /* UIImageView+Extension.swift */; };
 		FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC671D9E2985503600236031 /* UIViewController+Extension.swift */; };
@@ -84,6 +87,7 @@
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A7118299A76D600A638D0 /* SplashViewController.swift */; };
 		FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6A7119299A76D600A638D0 /* SplashViewController.xib */; };
+		FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78116529A84B6500C8A3C0 /* MyDonation.swift */; };
 		FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */; };
 		FC92600C299D127200B6EB4F /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC92600A299D127200B6EB4F /* ChangePasswordViewController.xib */; };
 		FC92600F299D538500B6EB4F /* ChangePasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92600E299D538500B6EB4F /* ChangePasswordProtocol.swift */; };
@@ -196,6 +200,9 @@
 		FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPSignUPViewController.xib; sourceTree = "<group>"; };
 		FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		FC65C67629A8FACA00F497C8 /* DonationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
+		FC65C67829A8FB3C00F497C8 /* FollowDonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDonation.swift; sourceTree = "<group>"; };
 		FC671D9A29854FB000236031 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FC671D9C29854FED00236031 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FC671D9E2985503600236031 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -217,6 +224,7 @@
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FC6A7118299A76D600A638D0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FC6A7119299A76D600A638D0 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		FC78116529A84B6500C8A3C0 /* MyDonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonation.swift; sourceTree = "<group>"; };
 		FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		FC92600A299D127200B6EB4F /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		FC92600E299D538500B6EB4F /* ChangePasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocol.swift; sourceTree = "<group>"; };
@@ -355,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2DAED829A42D520069E3F2 /* BookmarkType.swift */,
+				FC65C67629A8FACA00F497C8 /* DonationType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -485,6 +494,15 @@
 				FC6A7119299A76D600A638D0 /* SplashViewController.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		FC78116429A84B3F00C8A3C0 /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				FC78116529A84B6500C8A3C0 /* MyDonation.swift */,
+				FC65C67829A8FB3C00F497C8 /* FollowDonation.swift */,
+			);
+			path = Donation;
 			sourceTree = "<group>";
 		};
 		FC926008299D123E00B6EB4F /* Change Password */ = {
@@ -680,6 +698,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC78116429A84B3F00C8A3C0 /* Donation */,
 				FCE6324B29A53F9E00ED2040 /* Categories */,
 				FCE415E7299FB595003A991D /* Home */,
 				FC671DAE298583EA00236031 /* Onboarding */,
@@ -733,6 +752,7 @@
 				FC27ABED2991BE5C00E92AC2 /* UITextField+Extention.swift */,
 				FCDEC97A29944C9300E355F1 /* String+Extension.swift */,
 				FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */,
+				FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -1131,6 +1151,7 @@
 				FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
+				FC65C67729A8FACA00F497C8 /* DonationType.swift in Sources */,
 				FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */,
 				FC2DAED329A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift in Sources */,
 				FCE415E4299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift in Sources */,
@@ -1141,6 +1162,7 @@
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC92601A299D602200B6EB4F /* ProfileViewController.swift in Sources */,
+				FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */,
 				FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */,
@@ -1149,6 +1171,7 @@
 				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,
 				FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */,
 				FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
@@ -1157,6 +1180,7 @@
 				FC400FAA29A55F560030AD2B /* OneCategoryViewController.swift in Sources */,
 				FCC03353299DD2080055AEF6 /* NearCollectionViewCell.swift in Sources */,
 				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
+				FC65C67929A8FB3C00F497C8 /* FollowDonation.swift in Sources */,
 				FC92601E299D603900B6EB4F /* NotificationViewController.swift in Sources */,
 				FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,

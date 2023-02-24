@@ -8,10 +8,14 @@
 import UIKit
 
 class FollowDonationCollectionViewCell: UICollectionViewCell {
+    static let identifierCell = "FollowDonationCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func setFollowDonationData(donation: FollowDonation){
+        
+    }
 }

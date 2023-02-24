@@ -156,3 +156,18 @@ extension UIViewController{
     }
     
 }
+
+// call function if user check button, change background color and text
+extension UIViewController{
+    
+    func changeColorOfSelectedButton(isSelectedButton: UIButton){
+        isSelectedButton.backgroundColor = UIColor(named: "AppColor")
+        isSelectedButton.tintColor = UIColor.white
+    }
+    
+    func changeColorOfNotSelectedButton(notSelectedButton: UIButton){
+            notSelectedButton.backgroundColor = UIColor.white
+            notSelectedButton.tintColor = UIColor.black
+    }
+    
+}
