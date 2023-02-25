@@ -10,7 +10,7 @@ import UIKit
 extension ForgetPasswordViewController: UITextFieldDelegate{
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkTextField(textfield: phoneTextField, label: repeatEnterPhoneLabel, height: repeatEnterPhoneLabelConstrain)
+        checkColorBoderOfTextField(textfield: phoneTextField, label: repeatEnterPhoneLabel, height: repeatEnterPhoneLabelConstrain)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

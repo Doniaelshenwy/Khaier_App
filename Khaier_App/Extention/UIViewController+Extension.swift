@@ -115,7 +115,7 @@ extension UIViewController {
 // change border color of text field and view according text field contain data or not
 extension UIViewController {
     
-    func checkTextField(textfield: UITextField, label: UILabel, height: NSLayoutConstraint) {
+    func checkColorBoderOfTextField(textfield: UITextField, label: UILabel, height: NSLayoutConstraint) {
         if textfield.text == "" {
             setGrayColorTF(textfield)
             hideLabel(heightConstrain: height, repeatLabel: label)
@@ -125,7 +125,7 @@ extension UIViewController {
         }
     }
     
-    func checkPasswordView(textfield: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+    func checkColorBorderOfView(textfield: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
         if textfield.text == "" {
             setGrayColorView(view)
             hideLabel(heightConstrain: height, repeatLabel: label)
@@ -168,6 +168,14 @@ extension UIViewController{
     func changeColorOfNotSelectedButton(notSelectedButton: UIButton){
             notSelectedButton.backgroundColor = UIColor.white
             notSelectedButton.tintColor = UIColor.black
+    }
+    
+}
+
+extension UIViewController {
+    
+    func isNavigationHidden(_ status: Bool) {
+        navigationController?.setNavigationBarHidden(status, animated: true)
     }
     
 }

@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordErrorHeightConstrain: NSLayoutConstraint!
     @IBOutlet weak var phoneErrorHeightConstrain: NSLayoutConstraint!
     @IBOutlet weak var checkRemeberBoxBtnConstrain: UIButton!
+    @IBOutlet weak var phoneView: UIView!
     
     var passwordVisable = true
     var isRemember = false
@@ -74,7 +75,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtn(_ sender: Any) {
         guard let phone = phoneTextField.text, phone != "" else {
-            checkTextFieldIsEmpty(textField: phoneTextField, height: phoneErrorHeightConstrain, label: repeatPhoneLabel)
+            checkViewIsEmpty(view: phoneView, height: phoneErrorHeightConstrain, label: repeatPhoneLabel)
             return }
         guard let password = passwordTextField.text, password != "" else {
             checkViewIsEmpty(view: passwordView, height: passwordErrorHeightConstrain, label: repeatPasswordLabel)
@@ -88,11 +89,3 @@ class LoginViewController: UIViewController {
     
 }
 
-
-extension UIViewController {
-    
-    func isNavigationHidden(_ status: Bool) {
-        navigationController?.setNavigationBarHidden(status, animated: true)
-    }
-    
-}

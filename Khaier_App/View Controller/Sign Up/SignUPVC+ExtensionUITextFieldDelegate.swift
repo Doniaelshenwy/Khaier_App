@@ -10,7 +10,7 @@ import UIKit
 extension SignUpViewController: UITextFieldDelegate{
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkTextField(textfield: phoneTextField, label: enterPhoneLabel, height: phoneErrorHeightConstrain)
+        checkColorBoderOfTextField(textfield: phoneTextField, label: enterPhoneLabel, height: phoneErrorHeightConstrain)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

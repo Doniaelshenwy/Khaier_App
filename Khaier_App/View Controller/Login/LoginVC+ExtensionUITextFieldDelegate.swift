@@ -10,10 +10,8 @@ import UIKit
 extension LoginViewController : UITextFieldDelegate{
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkTextField(textfield: phoneTextField,
-                       label: repeatPhoneLabel,
-                       height: phoneErrorHeightConstrain)
-        checkPasswordView(textfield: passwordTextField, view: passwordView, label: repeatPasswordLabel, height: passwordErrorHeightConstrain)
+        checkColorBorderOfView(textfield: phoneTextField, view: phoneView, label: repeatPhoneLabel, height: phoneErrorHeightConstrain)
+        checkColorBorderOfView(textfield: passwordTextField, view: passwordView, label: repeatPasswordLabel, height: passwordErrorHeightConstrain)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

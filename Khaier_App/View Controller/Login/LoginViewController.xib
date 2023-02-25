@@ -27,6 +27,7 @@
                 <outlet property="passwordView" destination="s4L-ls-E5X" id="pde-ge-0ie"/>
                 <outlet property="phoneErrorHeightConstrain" destination="9rR-Dt-RmI" id="8bm-gB-tag"/>
                 <outlet property="phoneTextField" destination="Zf6-UB-DHw" id="WcL-E5-whP"/>
+                <outlet property="phoneView" destination="JO5-KL-pNQ" id="Z5d-Jo-lW0"/>
                 <outlet property="repeatPasswordLabel" destination="TOv-eG-Fxb" id="3j3-ld-ct0"/>
                 <outlet property="repeatPhoneLabel" destination="XHq-5y-GBa" id="o01-t8-PZH"/>
                 <outlet property="showHidenPasswordBtnOutlet" destination="EUk-oh-yB7" id="mqr-AY-GFl"/>
@@ -81,27 +82,6 @@
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-UB-DHw">
-                                    <rect key="frame" x="16" y="225.66666666666666" width="343" height="47.999999999999972"/>
-                                    <color key="backgroundColor" name="WhiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="48" id="aIT-T1-8wO"/>
-                                    </constraints>
-                                    <color key="textColor" name="BlackColor"/>
-                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1.5"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                                            <real key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" name="disapleColor"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-ls-E5X">
                                     <rect key="frame" x="16" y="338.66666666666669" width="343" height="48"/>
                                     <subviews>
@@ -367,11 +347,41 @@
                                         <constraint firstAttribute="width" constant="17.699999999999999" id="fJV-OE-9s3"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO5-KL-pNQ">
+                                    <rect key="frame" x="16" y="225.66666666666666" width="343" height="47.999999999999972"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-UB-DHw">
+                                            <rect key="frame" x="0.0" y="0.0" width="338" height="48"/>
+                                            <color key="backgroundColor" name="WhiteColor"/>
+                                            <color key="textColor" name="BlackColor"/>
+                                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Zf6-UB-DHw" secondAttribute="trailing" constant="5" id="Aek-Ip-ysv"/>
+                                        <constraint firstItem="Zf6-UB-DHw" firstAttribute="leading" secondItem="JO5-KL-pNQ" secondAttribute="leading" id="PVx-gS-GZm"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zf6-UB-DHw" secondAttribute="bottom" id="QTC-pj-AMv"/>
+                                        <constraint firstItem="Zf6-UB-DHw" firstAttribute="top" secondItem="JO5-KL-pNQ" secondAttribute="top" id="VOC-9w-vNt"/>
+                                        <constraint firstAttribute="height" constant="48" id="rN7-ew-f6a"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="disapleColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" name="WhiteColor"/>
                             <color key="tintColor" name="AppColor"/>
                             <constraints>
-                                <constraint firstItem="Zf6-UB-DHw" firstAttribute="top" secondItem="ZhW-DY-tca" secondAttribute="bottom" constant="8" id="0CW-z4-nV9"/>
                                 <constraint firstAttribute="trailing" secondItem="HjP-84-5S7" secondAttribute="trailing" constant="16" id="1JY-5r-ipB"/>
                                 <constraint firstAttribute="trailing" secondItem="P8Z-uO-oIV" secondAttribute="trailing" constant="16" id="268-Pr-8OX"/>
                                 <constraint firstItem="HjP-84-5S7" firstAttribute="top" secondItem="IKF-VT-pxA" secondAttribute="bottom" constant="32" id="2yw-aO-OH5"/>
@@ -382,8 +392,8 @@
                                 <constraint firstItem="xtf-xM-WNz" firstAttribute="leading" secondItem="1Om-uR-ILu" secondAttribute="trailing" constant="8" id="AnM-0R-58c"/>
                                 <constraint firstItem="P8Z-uO-oIV" firstAttribute="top" secondItem="HjP-84-5S7" secondAttribute="bottom" constant="8" id="CLR-L7-61u"/>
                                 <constraint firstAttribute="trailing" secondItem="IKF-VT-pxA" secondAttribute="trailing" constant="16" id="FtC-uW-wI7"/>
-                                <constraint firstAttribute="trailing" secondItem="Zf6-UB-DHw" secondAttribute="trailing" constant="16" id="GOl-aU-yE5"/>
                                 <constraint firstItem="vwR-Se-zQ3" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" id="Gmi-vy-ugJ"/>
+                                <constraint firstItem="XHq-5y-GBa" firstAttribute="top" secondItem="JO5-KL-pNQ" secondAttribute="bottom" constant="8" id="HaS-SJ-3jj"/>
                                 <constraint firstAttribute="trailing" secondItem="xfq-lX-YK7" secondAttribute="trailing" constant="16" id="Jm0-XS-sEh"/>
                                 <constraint firstItem="fBf-Mg-GVj" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="8" id="Lhy-wO-FHh"/>
                                 <constraint firstItem="omd-gy-C32" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="MWf-Lh-iae"/>
@@ -391,7 +401,6 @@
                                 <constraint firstItem="fBf-Mg-GVj" firstAttribute="centerY" secondItem="RP8-74-b09" secondAttribute="centerY" id="N8r-mb-zQY"/>
                                 <constraint firstItem="Yxu-um-bUr" firstAttribute="top" secondItem="XeM-te-lL1" secondAttribute="bottom" constant="40" id="OHX-6u-hi4"/>
                                 <constraint firstAttribute="trailing" secondItem="s4L-ls-E5X" secondAttribute="trailing" constant="16" id="Q1u-Uo-LRm"/>
-                                <constraint firstItem="XHq-5y-GBa" firstAttribute="top" secondItem="Zf6-UB-DHw" secondAttribute="bottom" constant="8" id="QrF-7o-nUM"/>
                                 <constraint firstAttribute="trailing" secondItem="TOv-eG-Fxb" secondAttribute="trailing" constant="20" id="RKU-A2-cW0"/>
                                 <constraint firstItem="vwR-Se-zQ3" firstAttribute="top" secondItem="T4K-hs-kgG" secondAttribute="top" constant="-50" id="SFw-Tp-37C"/>
                                 <constraint firstItem="TS6-Id-y0r" firstAttribute="top" secondItem="fBf-Mg-GVj" secondAttribute="bottom" constant="51" id="TGJ-Uk-Smq"/>
@@ -399,12 +408,15 @@
                                 <constraint firstItem="RP8-74-b09" firstAttribute="top" secondItem="TOv-eG-Fxb" secondAttribute="bottom" constant="8" id="YI3-fp-sJa"/>
                                 <constraint firstItem="1Om-uR-ILu" firstAttribute="top" secondItem="TS6-Id-y0r" secondAttribute="bottom" constant="16" id="YhX-pl-Dq6"/>
                                 <constraint firstItem="HjP-84-5S7" firstAttribute="leading" secondItem="vwR-Se-zQ3" secondAttribute="trailing" constant="120" id="aWv-n6-G4y"/>
+                                <constraint firstAttribute="trailing" secondItem="JO5-KL-pNQ" secondAttribute="trailing" constant="16" id="cD1-eX-ULu"/>
                                 <constraint firstItem="Yxu-um-bUr" firstAttribute="centerX" secondItem="T4K-hs-kgG" secondAttribute="centerX" id="cbI-X3-Ah3"/>
                                 <constraint firstAttribute="trailing" secondItem="XeM-te-lL1" secondAttribute="trailing" constant="16" id="d7b-az-7kK"/>
                                 <constraint firstItem="XeM-te-lL1" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="dmc-dn-uGU"/>
                                 <constraint firstItem="XdF-ml-3d9" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="eaO-xM-f0H"/>
                                 <constraint firstItem="1Om-uR-ILu" firstAttribute="leading" secondItem="omd-gy-C32" secondAttribute="trailing" constant="8" id="hNo-Zg-jdp"/>
                                 <constraint firstAttribute="height" constant="812" id="i8w-Ai-qkv"/>
+                                <constraint firstItem="JO5-KL-pNQ" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="jTe-NR-FIL"/>
+                                <constraint firstItem="JO5-KL-pNQ" firstAttribute="top" secondItem="ZhW-DY-tca" secondAttribute="bottom" constant="8" id="k8E-ud-lHH"/>
                                 <constraint firstItem="dc0-fh-JB1" firstAttribute="leading" secondItem="RP8-74-b09" secondAttribute="trailing" constant="9" id="nLH-6w-XNQ"/>
                                 <constraint firstItem="xtf-xM-WNz" firstAttribute="centerY" secondItem="1Om-uR-ILu" secondAttribute="centerY" id="qNr-MH-njf"/>
                                 <constraint firstAttribute="trailing" secondItem="TS6-Id-y0r" secondAttribute="trailing" constant="16" id="rFt-Nb-KFK"/>
@@ -416,7 +428,6 @@
                                 <constraint firstAttribute="trailing" secondItem="XHq-5y-GBa" secondAttribute="trailing" constant="16" id="xBv-b4-kCu"/>
                                 <constraint firstAttribute="trailing" secondItem="XdF-ml-3d9" secondAttribute="trailing" constant="16" id="xDU-3x-6tg"/>
                                 <constraint firstItem="ZhW-DY-tca" firstAttribute="top" secondItem="P8Z-uO-oIV" secondAttribute="bottom" constant="24" id="xzi-wK-7Xy"/>
-                                <constraint firstItem="Zf6-UB-DHw" firstAttribute="leading" secondItem="T4K-hs-kgG" secondAttribute="leading" constant="16" id="zUK-cA-87I"/>
                                 <constraint firstItem="IKF-VT-pxA" firstAttribute="top" secondItem="T4K-hs-kgG" secondAttribute="top" constant="38.5" id="znB-ai-Gz7"/>
                             </constraints>
                         </view>

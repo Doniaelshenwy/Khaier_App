@@ -16,10 +16,10 @@ extension AccountViewController: UITextFieldDelegate {
 //
 //    }
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkTextField(textfield: userNameTextField, label: userNameInvalidLabel, height: userNameInvalidHeightConstrain)
-        checkTextField(textfield: nameTextField, label: nameInvalidLabel, height: nameInvalidHeightConstrain)
-        checkPasswordView(textfield: passwordTextField, view: passwordView, label: passwordInvalidLabel, height: passwordInvalidHeightConstrain)
-        checkPasswordView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: confirmPasswordInvalidLabel, height: confirmPasswordInvalidHeightConstrain)
+        checkColorBoderOfTextField(textfield: userNameTextField, label: userNameInvalidLabel, height: userNameInvalidHeightConstrain)
+        checkColorBoderOfTextField(textfield: nameTextField, label: nameInvalidLabel, height: nameInvalidHeightConstrain)
+        checkColorBorderOfView(textfield: passwordTextField, view: passwordView, label: passwordInvalidLabel, height: passwordInvalidHeightConstrain)
+        checkColorBorderOfView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: confirmPasswordInvalidLabel, height: confirmPasswordInvalidHeightConstrain)
     }
     
     func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {

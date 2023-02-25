@@ -15,8 +15,8 @@ extension ResetPasswordViewController: UITextFieldDelegate{
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkPasswordView(textfield: passwordTextField, view: passwordView, label: passwordErrorLabel, height: passwordErrorHeightConstrain)
-        checkPasswordView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: passwordConfirmLabel, height: passwordConfirmHeightConstrain)
+        checkColorBorderOfView(textfield: passwordTextField, view: passwordView, label: passwordErrorLabel, height: passwordErrorHeightConstrain)
+        checkColorBorderOfView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: passwordConfirmLabel, height: passwordConfirmHeightConstrain)
     }
     
 }
