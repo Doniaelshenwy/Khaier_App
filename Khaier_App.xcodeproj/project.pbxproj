@@ -10,6 +10,7 @@
 		A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */; };
 		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
+		FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */; };
 		FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */; };
 		FC1931C12998547700736EF9 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C02998547700736EF9 /* SecureTextField.swift */; };
 		FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */; };
@@ -165,6 +166,7 @@
 		9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FC1931C02998547700736EF9 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUPVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 				FCDEC97A29944C9300E355F1 /* String+Extension.swift */,
 				FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */,
 				FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */,
+				FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -1160,6 +1163,7 @@
 				FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */,
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC92601A299D602200B6EB4F /* ProfileViewController.swift in Sources */,
 				FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */,

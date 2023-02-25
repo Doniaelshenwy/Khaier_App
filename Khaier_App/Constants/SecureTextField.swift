@@ -5,7 +5,6 @@
 //  Created by Donia Elshenawy on 12/02/2023.
 //
 
-import Foundation
 import UIKit
 
 class SecureTextField {

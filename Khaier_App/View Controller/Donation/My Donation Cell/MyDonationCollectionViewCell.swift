@@ -8,6 +8,7 @@
 import UIKit
 
 class MyDonationCollectionViewCell: UICollectionViewCell {
+    
     static let identifierCell = "MyDonationCollectionViewCell"
     
     @IBOutlet weak var titleCaseLabel: UILabel!
@@ -16,17 +17,14 @@ class MyDonationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var donationAgainButtonConstrain: UIButton!
     @IBOutlet weak var donationPercentageStackView: UIStackView!
     
-  
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     func checkDonationPercentage(percentage: MyDonation){
         if percentage.donationPercentage == "100"{
-            donationAgainButtonConstrain.isEnabled = false
-            donationAgainButtonConstrain.backgroundColor = UIColor(named: "DisableColor")
+            donationAgainButtonConstrain.setDisable()
             donationPercentageStackView.isHidden = true
         } else {
             donationPercentageLabel.text = "%\(percentage.donationPercentage)"
@@ -43,5 +41,4 @@ class MyDonationCollectionViewCell: UICollectionViewCell {
     @IBAction func donationAgainButton(_ sender: Any) {
     }
 }
-
 

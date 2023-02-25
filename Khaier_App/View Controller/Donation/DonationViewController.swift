@@ -9,7 +9,6 @@ import UIKit
 
 class DonationViewController: UIViewController {
 
-    
     @IBOutlet weak var mydonationBtnConstrain: UIButton!
     @IBOutlet weak var followDonationBtnConstrain: UIButton!
     @IBOutlet weak var donationCollectionView: UICollectionView!
@@ -55,7 +54,7 @@ class DonationViewController: UIViewController {
 
 extension DonationViewController: CollectionViewConfig{
     
-    func checkDonationType() -> Int{
+    private func checkDonationType() -> Int{
         switch donationType{
         case .myDonation:
             return myDonationArray.count
@@ -65,7 +64,6 @@ extension DonationViewController: CollectionViewConfig{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         checkDonationType()
     }
     

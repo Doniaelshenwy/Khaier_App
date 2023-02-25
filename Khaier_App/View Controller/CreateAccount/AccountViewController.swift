@@ -11,7 +11,6 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var userNameInvalidLabel: UILabel!
@@ -30,11 +29,16 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var confirmEyeBtnConstrain: UIButton!
     @IBOutlet weak var eyeBtnConstrain: UIButton!
     @IBOutlet weak var addressView: UIControl!
+    @IBOutlet weak var addressTextField: UITextField!
+    
     var passwordSecureTextField: SecureTextField?
     var confirmPasswordSecureTextField: SecureTextField?
     var passwordVisable = true
     var confirmPasswordVisable = true
     var isRemember = false
+    let pickerView = UIPickerView()
+    
+    let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +48,7 @@ class AccountViewController: UIViewController {
         passwordSecureTextField = SecureTextField(button: eyeBtnConstrain, textField: passwordTextField)
         confirmPasswordSecureTextField = SecureTextField(button: confirmEyeBtnConstrain, textField: confirmPasswordTextField)
         removeBorderTextField(textFields: [passwordTextField, confirmPasswordTextField])
-        
+        setupPickerView()
     }
 
     @IBAction func showHiddenPasswordBtn(_ sender: Any) {
@@ -55,10 +59,10 @@ class AccountViewController: UIViewController {
         confirmPasswordSecureTextField?.checkPasswordVisiable(visable: &confirmPasswordVisable)
     }
     @IBAction func cityView(_ sender: Any) {
-        DropDownList.shared.data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
-        DropDownList.shared.setupDropDownList(view: addressView, label: cityLabel)
-        checkAddressView(cityLabel: cityLabel, view: addressView, label: addressInvalidLabel, height: addressInvalidConstrain)
-        DropDownList.shared.showDropDownList()
+//        DropDownList.shared.data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+//        DropDownList.shared.setupDropDownList(view: addressView, label: cityLabel)
+//        checkAddressView(cityLabel: cityLabel, view: addressView, label: addressInvalidLabel, height: addressInvalidConstrain)
+//        DropDownList.shared.showDropDownList()
     }
     
     @IBAction func checkBtn(_ sender: Any) {
@@ -74,7 +78,7 @@ class AccountViewController: UIViewController {
             checkTextFieldIsEmpty(textField: nameTextField, height: nameInvalidHeightConstrain, label: nameInvalidLabel)
             return
         }
-        guard let address = cityLabel.text, address != "اختر المدينة و المنطقة" else {
+        guard let address = addressTextField.text, address != "اختر المدينة و المنطقة" else {
             checkViewIsEmpty(view: addressView, height: addressInvalidConstrain, label: addressInvalidLabel)
             return
         }
@@ -91,5 +95,34 @@ class AccountViewController: UIViewController {
         }
     }
     
+    
+}
+
+extension AccountViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    private func setupPickerView() {
+        addressTextField.delegate = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        addressTextField.inputView = pickerView
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return data.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return data[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        addressTextField.text = data[row]
+        addressTextField.resignFirstResponder()
+        setAppColorView(addressView)
+    }
     
 }

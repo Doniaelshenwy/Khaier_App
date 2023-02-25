@@ -12,7 +12,7 @@ class FollowDonationCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     func setFollowDonationData(donation: FollowDonation){

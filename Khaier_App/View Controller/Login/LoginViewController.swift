@@ -29,13 +29,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        isNavigationHidden(true)
         isHiddeninvalidLabel(for: [repeatPhoneLabel, repeatPasswordLabel])
         setZeroHeightLabel(for: [phoneErrorHeightConstrain, passwordErrorHeightConstrain])
         secureTextFiled = SecureTextField(button: showHidenPasswordBtnOutlet, textField: passwordTextField)
-        removeBorderTextField(textFields: [passwordTextField])
-        let arr = [phoneTextField, passwordTextField]
-        arr.forEach { $0?.delegate = self}
+        [phoneTextField, passwordTextField].forEach { $0?.delegate = self}
     }
     
     func moveToForgetPasswordVC(){
@@ -44,7 +42,7 @@ class LoginViewController: UIViewController {
     }
     
     func moveToHomeVC(){
-        let vc = TabBarController(nibName: "TabBarController", bundle: nil)
+        let vc = TabBarController()
         push(vc: vc)
     }
     
@@ -91,3 +89,10 @@ class LoginViewController: UIViewController {
 }
 
 
+extension UIViewController {
+    
+    func isNavigationHidden(_ status: Bool) {
+        navigationController?.setNavigationBarHidden(status, animated: true)
+    }
+    
+}

@@ -81,7 +81,7 @@
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-UB-DHw">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-UB-DHw">
                                     <rect key="frame" x="16" y="225.66666666666666" width="343" height="47.999999999999972"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
@@ -105,7 +105,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-ls-E5X">
                                     <rect key="frame" x="16" y="338.66666666666669" width="343" height="48"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ادخل كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQL-Nf-9EZ">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQL-Nf-9EZ">
                                             <rect key="frame" x="99" y="0.0" width="239" height="48"/>
                                             <color key="textColor" name="BlackColor"/>
                                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>

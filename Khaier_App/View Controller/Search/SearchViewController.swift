@@ -48,7 +48,8 @@ class SearchViewController: UIViewController {
     }
     
     func moveToFillterAddressVC(){
-        let vc = FilterAddressViewController()
+        let vc = FilterAddressViewController(delegate: self)
+        vc.modalPresentationStyle = .custom
         present(vc, animated: true, completion: nil)
     }
 
@@ -78,5 +79,11 @@ extension SearchViewController: UITextFieldDelegate{
             filterButtonConstrain.isHidden = false
             emptyButton.isHidden = true
         }
+    }
+}
+
+extension SearchViewController: AddressFilterationProtocol{
+    func passFilterationAddress(address: String) {
+        print("address = \(address)")
     }
 }

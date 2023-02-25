@@ -21,9 +21,9 @@
             <connections>
                 <outlet property="addressInvalidConstrain" destination="RUT-TK-iyd" id="Lkl-SP-xK5"/>
                 <outlet property="addressInvalidLabel" destination="EH9-dk-9wP" id="r9F-hH-BUr"/>
+                <outlet property="addressTextField" destination="Nvz-pU-UFb" id="blA-7I-Q75"/>
                 <outlet property="addressView" destination="S15-h5-I2t" id="pce-p0-aCA"/>
                 <outlet property="checkBtnConstrain" destination="1zg-Ze-nn0" id="Jmh-68-eTQ"/>
-                <outlet property="cityLabel" destination="SzV-Gs-ijv" id="eqi-5C-Fze"/>
                 <outlet property="confirmEyeBtnConstrain" destination="kAc-HF-yGQ" id="no3-Wb-kKK"/>
                 <outlet property="confirmPasswordInvalidHeightConstrain" destination="Gpf-Xa-36Q" id="OjK-6p-qnm"/>
                 <outlet property="confirmPasswordInvalidLabel" destination="gMF-wg-7OI" id="cRS-Sz-4E5"/>
@@ -222,32 +222,31 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S15-h5-I2t" customClass="UIControl">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S15-h5-I2t">
                                                     <rect key="frame" x="0.0" y="29" width="343" height="48"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختر المدينة و المنطقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-Gs-ijv">
-                                                            <rect key="frame" x="54" y="12" width="273" height="24"/>
-                                                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
-                                                            <color key="textColor" name="BlackColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Px-7YZ">
                                                             <rect key="frame" x="22" y="21" width="12" height="6"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="12" id="v1B-SE-uTa"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="اختر المدينة و المنطقة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nvz-pU-UFb">
+                                                            <rect key="frame" x="54" y="0.0" width="279" height="48"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="SzV-Gs-ijv" secondAttribute="trailing" constant="16" id="HGc-mq-UwB"/>
-                                                        <constraint firstItem="SzV-Gs-ijv" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" constant="12" id="Kfi-Rm-6zd"/>
-                                                        <constraint firstItem="SzV-Gs-ijv" firstAttribute="leading" secondItem="S15-h5-I2t" secondAttribute="leading" constant="54" id="NNw-nD-kRM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Nvz-pU-UFb" secondAttribute="bottom" id="EOe-K1-jsE"/>
+                                                        <constraint firstItem="Nvz-pU-UFb" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" id="Llm-zC-SQ5"/>
                                                         <constraint firstItem="HxR-Px-7YZ" firstAttribute="leading" secondItem="S15-h5-I2t" secondAttribute="leading" constant="22" id="WAn-Ay-aJT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="SzV-Gs-ijv" secondAttribute="bottom" constant="12" id="ZKE-XL-Jtf"/>
+                                                        <constraint firstItem="Nvz-pU-UFb" firstAttribute="leading" secondItem="HxR-Px-7YZ" secondAttribute="trailing" constant="20" id="bd5-ub-4Qo"/>
                                                         <constraint firstAttribute="bottom" secondItem="HxR-Px-7YZ" secondAttribute="bottom" constant="21" id="cxv-5Y-hTR"/>
                                                         <constraint firstAttribute="height" constant="48" id="gkF-TA-09U"/>
                                                         <constraint firstItem="HxR-Px-7YZ" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" constant="21" id="lPY-8o-1os"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Nvz-pU-UFb" secondAttribute="trailing" constant="10" id="xfC-mV-1Es"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">

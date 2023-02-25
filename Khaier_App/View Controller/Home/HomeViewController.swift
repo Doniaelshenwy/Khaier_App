@@ -123,16 +123,4 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch collectionView {
-        case priorityCollectionView:
-            return CGSize(width: 220, height: 268)
-        case nearCollectionView:
-            return CGSize(width: 220, height: 244)
-        default:
-            break
-        }
-        return CGSize(width: 0, height: 0)
-    }
-}
+

@@ -26,7 +26,7 @@ class OTPSignUPViewController: UIViewController {
         super.viewDidLoad()
         repeatSendCodeBtnConstrain.isHidden = true
         repeatSendCodeBtnConstrain.alpha = 0
-        continueBtnConstrain.isEnabled = false
+        continueBtnConstrain.setDisable()
         setDelegateTextField()
         Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
 

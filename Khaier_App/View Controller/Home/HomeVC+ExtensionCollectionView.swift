@@ -16,9 +16,8 @@ extension HomeViewController: CollectionViewConfig{
         case nearCollectionView:
             return nearArray.count
         default:
-            break
+            return 0
         }
-        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,21 +25,32 @@ extension HomeViewController: CollectionViewConfig{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PriorityCollectionViewCell.identifierCell, for: indexPath) as! PriorityCollectionViewCell
             cell.setCaseData(priority: priorityArray[indexPath.row])
             return cell
-        }
-        else if collectionView == nearCollectionView{
+        } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NearCollectionViewCell.identifierCell, for: indexPath) as! NearCollectionViewCell
             cell.setCharityData(near: nearArray[indexPath.row])
             return cell
         }
-        return UICollectionViewCell()
     }
     
     func setCollectionView(){
-        priorityCollectionView.delegate = self
-        priorityCollectionView.dataSource = self
-        nearCollectionView.delegate = self
-        nearCollectionView.dataSource = self
-        priorityCollectionView.register(UINib(nibName: PriorityCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: PriorityCollectionViewCell.identifierCell)
-        nearCollectionView.register(UINib(nibName: NearCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: NearCollectionViewCell.identifierCell)
+        [priorityCollectionView, nearCollectionView].forEach { $0?.delegate = self }
+        [priorityCollectionView, nearCollectionView].forEach { $0?.dataSource = self }
+        priorityCollectionView.register(cells: [PriorityCollectionViewCell.self])
+        nearCollectionView.register(cells: [NearCollectionViewCell.self])
+    }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case priorityCollectionView:
+            return CGSize(width: 220, height: 268)
+        case nearCollectionView:
+            return CGSize(width: 220, height: 244)
+        default:
+            return CGSize(width: 0, height: 0)
+        }
+        
     }
 }
