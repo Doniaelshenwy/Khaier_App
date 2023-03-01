@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
-                <outlet property="donationCollectionView" destination="fD3-wr-11R" id="puO-GC-F7d"/>
+                <outlet property="donationTableView" destination="qb7-bp-OLT" id="dTE-8C-wub"/>
                 <outlet property="followDonationBtnConstrain" destination="m13-e3-cvc" id="Ye0-HV-Q8h"/>
                 <outlet property="mydonationBtnConstrain" destination="pz5-qM-rs0" id="VtR-uc-LLB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,16 +36,6 @@
                     <color key="textColor" name="BlackColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-wr-11R">
-                    <rect key="frame" x="16" y="177" width="382" height="685"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IkA-5s-AIa">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjr-hg-ZqM">
                     <rect key="frame" x="16" y="113" width="382" height="40"/>
                     <subviews>
@@ -115,19 +105,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qb7-bp-OLT">
+                    <rect key="frame" x="16" y="177" width="382" height="685"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="WhiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kjr-hg-ZqM" secondAttribute="trailing" constant="16" id="0PP-Md-2wX"/>
                 <constraint firstItem="QhH-nD-V7D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0vq-I2-zYp"/>
-                <constraint firstItem="fD3-wr-11R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5iw-kf-qV1"/>
+                <constraint firstItem="qb7-bp-OLT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="C0a-ji-Lkw"/>
                 <constraint firstItem="QhH-nD-V7D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="DE6-48-mCL"/>
+                <constraint firstItem="qb7-bp-OLT" firstAttribute="top" secondItem="kjr-hg-ZqM" secondAttribute="bottom" constant="24" id="GU4-fI-P9r"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qb7-bp-OLT" secondAttribute="trailing" constant="16" id="HgD-FC-IAx"/>
                 <constraint firstItem="kjr-hg-ZqM" firstAttribute="top" secondItem="QhH-nD-V7D" secondAttribute="bottom" constant="24" id="OcJ-aZ-x1J"/>
-                <constraint firstItem="fD3-wr-11R" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RhB-zQ-Hi4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fD3-wr-11R" secondAttribute="trailing" constant="16" id="bfa-bd-nNa"/>
+                <constraint firstItem="qb7-bp-OLT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Qhc-tR-cJb"/>
                 <constraint firstItem="kjr-hg-ZqM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tIf-N5-jgV"/>
-                <constraint firstItem="fD3-wr-11R" firstAttribute="top" secondItem="kjr-hg-ZqM" secondAttribute="bottom" constant="24" id="xak-q3-ul1"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="59.598214285714285"/>
         </view>

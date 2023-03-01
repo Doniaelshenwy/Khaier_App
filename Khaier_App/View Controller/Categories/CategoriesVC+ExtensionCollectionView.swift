@@ -7,7 +7,8 @@
 
 import UIKit
 
-extension CategoriesViewController: CollectionViewConfig{
+extension CategoriesViewController: CollectionViewConfig {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoriesArray.count
     }
@@ -25,15 +26,18 @@ extension CategoriesViewController: CollectionViewConfig{
         push(vc: vc)
     }
     
-    func setCategoryCollectionView(){
+    func setCategoryCollectionView() {
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
-        categoriesCollectionView.register(UINib(nibName: CategoriesCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CategoriesCollectionViewCell.identifierCell)
+        categoriesCollectionView.register(cells: [CategoriesCollectionViewCell.self])
     }
+    
 }
 
-extension CategoriesViewController: UICollectionViewDelegateFlowLayout{
+extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.frame.width / 2) - 7, height: 121)
     }
+    
 }

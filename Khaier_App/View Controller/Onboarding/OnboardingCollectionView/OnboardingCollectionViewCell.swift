@@ -18,7 +18,6 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         changeFontOfLabel()
-        
     }
     
     func setup(slide: OnboardingModel){

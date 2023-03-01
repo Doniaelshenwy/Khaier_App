@@ -37,7 +37,6 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setTextFieldImage()
         setupPickerView()
-        
     }
     
     
@@ -66,6 +65,7 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
         dismiss(animated: true, completion: nil)
         }
     }
+    
 }
 
 

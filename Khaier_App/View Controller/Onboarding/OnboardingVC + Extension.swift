@@ -28,7 +28,7 @@ extension OnboardingViewController: CollectionViewConfig{
         onboardingCollectionView.applyRTL()
         onboardingCollectionView.delegate = self
         onboardingCollectionView.dataSource = self
-        onboardingCollectionView.register(UINib(nibName: OnboardingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: OnboardingCollectionViewCell.identifier)
+        onboardingCollectionView.register(cells: [OnboardingCollectionViewCell.self])
     }
 }
 

@@ -8,6 +8,7 @@
 import UIKit
 
 class BookmarkCharityCollectionViewCell: UICollectionViewCell {
+    
     static let identifierCell = "BookmarkCharityCollectionViewCell"
     
     @IBOutlet weak var charityImage: UIImageView!
@@ -17,7 +18,6 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setCharityData(charity: NearModel){

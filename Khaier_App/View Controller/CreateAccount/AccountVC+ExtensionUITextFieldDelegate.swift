@@ -8,13 +8,6 @@
 import UIKit
 
 extension AccountViewController: UITextFieldDelegate {
-//    func textViewDidChangeSelection(_ textView: UITextView) {
-//        checkTextField(textfield: userNameTextField, label: userNameInvalidLabel, height: userNameInvalidHeightConstrain)
-//        checkTextField(textfield: nameTextField, label: nameInvalidLabel, height: nameInvalidHeightConstrain)
-//        checkPasswordView(textfield: passwordTextField, view: passwordView, label: passwordInvalidLabel, height: passwordInvalidHeightConstrain)
-//        checkPasswordView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: confirmPasswordInvalidLabel, height: confirmPasswordInvalidHeightConstrain)
-//
-//    }
     func textFieldDidChangeSelection(_ textField: UITextField) {
         checkColorBoderOfTextField(textfield: userNameTextField, label: userNameInvalidLabel, height: userNameInvalidHeightConstrain)
         checkColorBoderOfTextField(textfield: nameTextField, label: nameInvalidLabel, height: nameInvalidHeightConstrain)

@@ -31,6 +31,7 @@ extension String {
             converted.replacingOccurrences(of: map.original, with: map.converted)
         }
     }
+
 }
 
 //"12345".convertedDigitsToLocale(Locale(identifier: "AR"))

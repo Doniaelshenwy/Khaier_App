@@ -29,7 +29,6 @@ class OTPSignUPViewController: UIViewController {
         continueBtnConstrain.setDisable()
         setDelegateTextField()
         Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
-
     }
     
     @objc func fireTimer() {

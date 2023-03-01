@@ -8,9 +8,9 @@
 import UIKit
 
 class BookmarkDonationCollectionViewCell: UICollectionViewCell {
+    
     static let identifierCell = "BookmarkDonationCollectionViewCell"
 
-    
     @IBOutlet weak var imageCase: UIImageView!
     @IBOutlet weak var typeDonationLabel: UILabel!
     @IBOutlet weak var titleCaseLabel: UILabel!
@@ -21,7 +21,6 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setDonationData(donation: PriorityModel){

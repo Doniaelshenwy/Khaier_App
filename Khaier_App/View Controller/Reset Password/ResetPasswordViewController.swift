@@ -28,8 +28,7 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegateTextField()
-        navigationController?.isNavigationBarHidden = true
-        removeBorderTextField(textFields: [passwordTextField, confirmPasswordTextField])
+        isNavigationHidden(true)
         setZeroHeightLabel(for: [passwordErrorHeightConstrain, passwordConfirmHeightConstrain])
         isHiddeninvalidLabel(for: [passwordErrorLabel, passwordConfirmLabel])
         securePasswordTextField = SecureTextField(button: showHiddenPasswordConstrainBtn, textField: passwordTextField)

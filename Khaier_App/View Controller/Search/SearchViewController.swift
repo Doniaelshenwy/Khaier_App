@@ -22,11 +22,10 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        removeBorderTextField(textFields: [searchTextField])
+        isNavigationHidden(true)
+        isTabBarHidden(true)
         setCollectionView()
         setDataOfSearchArray()
-        tabBarController?.tabBar.isHidden = true
         filterButtonConstrain.isHidden = true
         emptyButton.isHidden = false
         searchTextField.delegate = self
@@ -54,21 +53,21 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func backToHomeButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        tabBarController?.tabBar.isHidden = false
+        pop(isTabBarHide: false)
     }
     
     @IBAction func emptyTextFiledButton(_ sender: Any) {
         searchTextField.text = ""
-
     }
     
     @IBAction func filterAddressButton(_ sender: Any) {
         moveToFillterAddressVC()
     }
+    
 }
 
-extension SearchViewController: UITextFieldDelegate{
+extension SearchViewController: UITextFieldDelegate {
+    
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if searchTextField.text == ""{
             filterButtonConstrain.isHidden = true
@@ -80,10 +79,13 @@ extension SearchViewController: UITextFieldDelegate{
             emptyButton.isHidden = true
         }
     }
+    
 }
 
-extension SearchViewController: AddressFilterationProtocol{
+extension SearchViewController: AddressFilterationProtocol {
+    
     func passFilterationAddress(address: String) {
         print("address = \(address)")
     }
+    
 }

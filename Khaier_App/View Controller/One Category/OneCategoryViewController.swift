@@ -17,14 +17,14 @@ class OneCategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        self.tabBarController?.tabBar.isHidden = true
+        isNavigationHidden(true)
+        isTabBarHidden(true)
         navigationTitleLabel.text = titleNavigation
         setOneCategoryCollectionView()
         setDataOfOneCategoryArray()
     }
     
-    func setDataOfOneCategoryArray(){
+    func setDataOfOneCategoryArray() {
         oneCategoryArray = [
             PriorityModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
             PriorityModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
@@ -34,13 +34,14 @@ class OneCategoryViewController: UIViewController {
         ]
     }
 
-
     @IBAction func backButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        pop(isTabBarHide: false)
     }
+    
 }
 
-extension OneCategoryViewController: CollectionViewConfig{
+extension OneCategoryViewController: CollectionViewConfig {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return oneCategoryArray.count
     }
@@ -54,12 +55,12 @@ extension OneCategoryViewController: CollectionViewConfig{
     func setOneCategoryCollectionView(){
         oneCategoryCollectionView.dataSource = self
         oneCategoryCollectionView.delegate = self
-        oneCategoryCollectionView.register(UINib(nibName: BookmarkDonationCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: BookmarkDonationCollectionViewCell.identifierCell)
+        oneCategoryCollectionView.register(cells: [BookmarkDonationCollectionViewCell.self])
     }
     
 }
 
-extension OneCategoryViewController: UICollectionViewDelegateFlowLayout{
+extension OneCategoryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 160)

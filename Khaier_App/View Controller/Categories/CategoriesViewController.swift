@@ -15,13 +15,13 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        self.tabBarController?.tabBar.isHidden = true
+        isNavigationHidden(true)
+        isTabBarHidden(true)
         setCategoryCollectionView()
         setDataOfCategoriesArray()
     }
     
-    func setDataOfCategoriesArray(){
+    func setDataOfCategoriesArray() {
         categoriesArray = [
         CategoriesModel(imageCategories: "Cloth", nameCategories: "ملابس"),
         CategoriesModel(imageCategories: "Food", nameCategories: "طعام"),
@@ -34,7 +34,7 @@ class CategoriesViewController: UIViewController {
     }
 
     @IBAction func backToHomeVCButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        self.tabBarController?.tabBar.isHidden = false
+        pop(isTabBarHide: false)
     }
+    
 }

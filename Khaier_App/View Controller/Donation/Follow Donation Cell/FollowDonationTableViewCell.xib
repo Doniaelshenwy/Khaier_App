@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+        <array key="IBMPlexSansArabic-Regular.ttf">
+            <string>IBMPlexSansArabic-Regular</string>
+        </array>
+        <array key="IBMPlexSansArabic-SemiBold.ttf">
+            <string>IBMPlexSansArabic-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="238" id="KGk-i7-Jjw" customClass="FollowDonationTableViewCell" customModule="Khaier_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="238"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="238"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7hz-yE-prb">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zds-ev-UvU" customClass="ViewWithAction" customModule="Khaier_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wdc-4a-u8U">
+                                        <rect key="frame" x="216" y="11" width="111" height="47"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعد سارة في العلاج.." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-XX-gxC">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="18"/>
+                                                <color key="backgroundColor" name="WhiteColor"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexSansArabic-SemiBold" family="IBM Plex Sans Arabic" pointSize="12"/>
+                                                <color key="textColor" name="BlackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00م الي 10:30م" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6F-91-oDO">
+                                                <rect key="frame" x="0.0" y="26" width="111" height="21"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                <color key="textColor" name="BlackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="p5D-9S-51u">
+                                        <rect key="frame" x="16" y="22.5" width="95" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-iq-4zx">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قيد الانتظار " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-wh-Hp3">
+                                                <rect key="frame" x="28" y="0.0" width="67" height="24"/>
+                                                <color key="backgroundColor" name="OrangeBack"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="67" id="ycX-eI-ImJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                <color key="textColor" name="orangeTint"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="WhiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="p5D-9S-51u" firstAttribute="top" secondItem="zds-ev-UvU" secondAttribute="top" constant="22.5" id="3cq-Nk-4JV"/>
+                                    <constraint firstAttribute="height" constant="70" id="6tZ-pu-e0D"/>
+                                    <constraint firstItem="p5D-9S-51u" firstAttribute="leading" secondItem="zds-ev-UvU" secondAttribute="leading" constant="16" id="Ygq-0F-Hhy"/>
+                                    <constraint firstItem="Wdc-4a-u8U" firstAttribute="centerY" secondItem="DLu-wh-Hp3" secondAttribute="centerY" id="dDy-Vg-Mt3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wdc-4a-u8U" secondAttribute="trailing" constant="16" id="gpj-eZ-kWu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="disapleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7U-mK-sCV">
+                                <rect key="frame" x="0.0" y="70" width="343" height="152"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sMj-Tq-W9W">
+                                        <rect key="frame" x="16" y="0.0" width="311" height="79"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-hy-25p">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/2/2023" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cF-Zw-Wie">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="21"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ التسليم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydD-0F-her">
+                                                        <rect key="frame" x="242" y="0.0" width="69" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="69" id="Jb3-sn-xmd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ydD-0F-her" secondAttribute="trailing" id="FYa-G3-rb6"/>
+                                                    <constraint firstItem="ydD-0F-her" firstAttribute="top" secondItem="3Rq-hy-25p" secondAttribute="top" id="TeT-wZ-Bxo"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-cD-D6R">
+                                                <rect key="frame" x="0.0" y="29" width="311" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00م الي 10:30م" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7j-Ok-aJU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="21"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معاد التسليم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZq-fU-eA7">
+                                                        <rect key="frame" x="243" y="0.0" width="68" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68" id="f4E-42-EjG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="0Sa-6N-s1d"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="kUG-yP-iTD">
+                                                <rect key="frame" x="0.0" y="58" width="311" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المنصوره ، ش الجمهورية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-OS-0C3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="21"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العنوان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-r1-02P">
+                                                        <rect key="frame" x="251.5" y="0.0" width="59.5" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="59.329999999999998" id="lar-JU-WAy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="jhI-Fc-eW4"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3Rq-hy-25p" secondAttribute="trailing" id="7zw-aJ-AB4"/>
+                                            <constraint firstItem="3Rq-hy-25p" firstAttribute="leading" secondItem="sMj-Tq-W9W" secondAttribute="leading" id="86I-Ey-S0D"/>
+                                            <constraint firstItem="3Rq-hy-25p" firstAttribute="top" secondItem="sMj-Tq-W9W" secondAttribute="top" id="88b-2c-9Ny"/>
+                                            <constraint firstItem="SYs-cD-D6R" firstAttribute="leading" secondItem="sMj-Tq-W9W" secondAttribute="leading" id="9bc-i3-YtZ"/>
+                                            <constraint firstItem="SYs-cD-D6R" firstAttribute="top" secondItem="3Rq-hy-25p" secondAttribute="bottom" constant="8" id="I8U-3p-Duh"/>
+                                            <constraint firstItem="kUG-yP-iTD" firstAttribute="leading" secondItem="sMj-Tq-W9W" secondAttribute="leading" id="JIF-Zi-pJT"/>
+                                            <constraint firstItem="kUG-yP-iTD" firstAttribute="top" secondItem="SYs-cD-D6R" secondAttribute="bottom" constant="8" id="cyM-fh-uNk"/>
+                                            <constraint firstAttribute="trailing" secondItem="kUG-yP-iTD" secondAttribute="trailing" id="gvt-13-BU3"/>
+                                            <constraint firstAttribute="trailing" secondItem="SYs-cD-D6R" secondAttribute="trailing" id="qzM-lH-cCa"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-ep-dvt">
+                                        <rect key="frame" x="3" y="103" width="327" height="57"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-Z8-22U">
+                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="57"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeleviredW" translatesAutoresizingMaskIntoConstraints="NO" id="ZuI-HK-3uF">
+                                                        <rect key="frame" x="20.5" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="G4M-TX-HLU"/>
+                                                            <constraint firstAttribute="height" constant="40" id="NzU-Q5-s1d"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم توصيل تبرعك" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XS-fO-1Jt">
+                                                        <rect key="frame" x="6.5" y="44" width="64" height="15"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="10"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="0XS-fO-1Jt" firstAttribute="top" secondItem="ZuI-HK-3uF" secondAttribute="bottom" constant="4" id="DQ9-vK-Gu8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0XS-fO-1Jt" secondAttribute="trailing" constant="-5" id="F47-R9-xdD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZuI-HK-3uF" secondAttribute="trailing" constant="5" id="I0l-IY-ycY"/>
+                                                    <constraint firstItem="ZuI-HK-3uF" firstAttribute="top" secondItem="MIZ-Z8-22U" secondAttribute="top" id="iYL-ri-wla"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvW-oy-Sph">
+                                                <rect key="frame" x="65.5" y="0.0" width="65.5" height="57"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoneW" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-7Q-1Jd">
+                                                        <rect key="frame" x="20.5" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="Lb0-Dh-ITR"/>
+                                                            <constraint firstAttribute="height" constant="40" id="X9H-SO-0I2"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم الاستلام" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHg-kI-jFN">
+                                                        <rect key="frame" x="12" y="44" width="53.5" height="15"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="10"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-g3-h6i">
+                                                        <rect key="frame" x="-5" y="19.5" width="25.5" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="zG4-4K-bxr"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="OHg-kI-jFN" secondAttribute="trailing" id="0Cr-qD-dfd"/>
+                                                    <constraint firstItem="OHg-kI-jFN" firstAttribute="top" secondItem="aGE-7Q-1Jd" secondAttribute="bottom" constant="4" id="6eO-nc-VB5"/>
+                                                    <constraint firstItem="aGE-7Q-1Jd" firstAttribute="leading" secondItem="XIM-g3-h6i" secondAttribute="trailing" id="Vqk-6R-hd5"/>
+                                                    <constraint firstItem="XIM-g3-h6i" firstAttribute="centerY" secondItem="aGE-7Q-1Jd" secondAttribute="centerY" id="hl1-YD-VIY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aGE-7Q-1Jd" secondAttribute="trailing" constant="5" id="lfT-W6-3zM"/>
+                                                    <constraint firstItem="aGE-7Q-1Jd" firstAttribute="top" secondItem="YvW-oy-Sph" secondAttribute="top" id="m13-4d-1Ns"/>
+                                                    <constraint firstItem="OHg-kI-jFN" firstAttribute="leading" secondItem="YvW-oy-Sph" secondAttribute="leading" constant="12" id="ouy-xP-QuQ"/>
+                                                    <constraint firstItem="XIM-g3-h6i" firstAttribute="leading" secondItem="YvW-oy-Sph" secondAttribute="leading" constant="-5" id="yt2-dC-Uxb"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3K-fE-kBM">
+                                                <rect key="frame" x="131" y="0.0" width="65" height="57"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrackW" translatesAutoresizingMaskIntoConstraints="NO" id="KKn-wn-lNt">
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="JY9-R7-DVh"/>
+                                                            <constraint firstAttribute="height" constant="40" id="cZ3-FG-KKc"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="في الطريق" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-m0-Pee">
+                                                        <rect key="frame" x="22.5" y="44" width="36.5" height="15"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="10"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="1P5-Gl-nL9">
+                                                        <rect key="frame" x="-5" y="19.5" width="25" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="hYB-6S-VTH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="KKn-wn-lNt" secondAttribute="trailing" constant="5" id="4K4-D4-40i"/>
+                                                    <constraint firstItem="KKn-wn-lNt" firstAttribute="top" secondItem="T3K-fE-kBM" secondAttribute="top" id="80O-sW-iYS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bIc-m0-Pee" secondAttribute="trailing" constant="6" id="KkT-u2-cjU"/>
+                                                    <constraint firstItem="bIc-m0-Pee" firstAttribute="top" secondItem="KKn-wn-lNt" secondAttribute="bottom" constant="4" id="Mdu-NU-PNB"/>
+                                                    <constraint firstItem="1P5-Gl-nL9" firstAttribute="centerY" secondItem="KKn-wn-lNt" secondAttribute="centerY" id="Pa2-Vx-19p"/>
+                                                    <constraint firstItem="KKn-wn-lNt" firstAttribute="leading" secondItem="1P5-Gl-nL9" secondAttribute="trailing" id="q6b-Ie-Jof"/>
+                                                    <constraint firstItem="1P5-Gl-nL9" firstAttribute="leading" secondItem="T3K-fE-kBM" secondAttribute="leading" constant="-5" id="v0q-qD-lpr"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-vz-Gch">
+                                                <rect key="frame" x="196" y="0.0" width="65.5" height="57"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ConfirmW" translatesAutoresizingMaskIntoConstraints="NO" id="SCe-4t-7dd">
+                                                        <rect key="frame" x="20.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="WhiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ahm-EI-hCx"/>
+                                                            <constraint firstAttribute="width" constant="40" id="ZMo-LH-pBI"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكيد الطلب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vay-Cx-zdg">
+                                                        <rect key="frame" x="19" y="44" width="46.5" height="15"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="10"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="PE9-dp-GrS">
+                                                        <rect key="frame" x="-5" y="19.5" width="25.5" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="yoh-Gl-6UC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="PE9-dp-GrS" firstAttribute="leading" secondItem="Pa1-vz-Gch" secondAttribute="leading" constant="-5" id="0ms-3o-BSU"/>
+                                                    <constraint firstItem="Vay-Cx-zdg" firstAttribute="top" secondItem="SCe-4t-7dd" secondAttribute="bottom" constant="4" id="C4N-Ha-vsb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SCe-4t-7dd" secondAttribute="trailing" constant="5" id="Mvo-cG-ipt"/>
+                                                    <constraint firstItem="SCe-4t-7dd" firstAttribute="leading" secondItem="PE9-dp-GrS" secondAttribute="trailing" id="bed-Vc-Ske"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Vay-Cx-zdg" secondAttribute="trailing" id="cbX-Hq-HIS"/>
+                                                    <constraint firstItem="SCe-4t-7dd" firstAttribute="top" secondItem="Pa1-vz-Gch" secondAttribute="top" id="kSq-pe-ve0"/>
+                                                    <constraint firstItem="PE9-dp-GrS" firstAttribute="centerY" secondItem="SCe-4t-7dd" secondAttribute="centerY" id="ovx-s5-w3V"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xp1-Gs-i4u">
+                                                <rect key="frame" x="261.5" y="0.0" width="65.5" height="57"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendB" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-b5-0Df">
+                                                        <rect key="frame" x="22.5" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="7V1-sJ-ulY"/>
+                                                            <constraint firstAttribute="height" constant="40" id="iLn-CF-PVH"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ارسال الطلب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-Qn-1xD">
+                                                        <rect key="frame" x="16" y="44" width="49.5" height="15"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="10"/>
+                                                        <color key="textColor" name="BlackColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="MDA-uc-6R2">
+                                                        <rect key="frame" x="-5" y="19.5" width="27.5" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="zfq-0b-ZYk"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="vD1-b5-0Df" secondAttribute="trailing" constant="3" id="0Fz-kD-o6C"/>
+                                                    <constraint firstItem="MDA-uc-6R2" firstAttribute="leading" secondItem="xp1-Gs-i4u" secondAttribute="leading" constant="-5" id="6Qi-ff-BVf"/>
+                                                    <constraint firstItem="vD1-b5-0Df" firstAttribute="leading" secondItem="MDA-uc-6R2" secondAttribute="trailing" id="M0H-6J-3Fn"/>
+                                                    <constraint firstItem="vD1-b5-0Df" firstAttribute="top" secondItem="xp1-Gs-i4u" secondAttribute="top" id="OOL-Fs-O65"/>
+                                                    <constraint firstItem="MMF-Qn-1xD" firstAttribute="top" secondItem="vD1-b5-0Df" secondAttribute="bottom" constant="4" id="Pow-Fg-Hh7"/>
+                                                    <constraint firstItem="MDA-uc-6R2" firstAttribute="centerY" secondItem="vD1-b5-0Df" secondAttribute="centerY" id="hT6-ho-7Z6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MMF-Qn-1xD" secondAttribute="trailing" id="lly-gI-yfG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="5r4-C4-FDi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="WhiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="U8C-ep-dvt" secondAttribute="trailing" constant="13" id="951-d1-EEZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sMj-Tq-W9W" secondAttribute="trailing" constant="16" id="BKZ-Jk-gvW"/>
+                                    <constraint firstItem="U8C-ep-dvt" firstAttribute="top" secondItem="sMj-Tq-W9W" secondAttribute="bottom" constant="24" id="K1N-UE-s2y"/>
+                                    <constraint firstItem="sMj-Tq-W9W" firstAttribute="top" secondItem="t7U-mK-sCV" secondAttribute="top" id="PW8-5G-QN0"/>
+                                    <constraint firstItem="U8C-ep-dvt" firstAttribute="leading" secondItem="t7U-mK-sCV" secondAttribute="leading" constant="3" id="hxE-ZZ-TnI"/>
+                                    <constraint firstItem="sMj-Tq-W9W" firstAttribute="leading" secondItem="t7U-mK-sCV" secondAttribute="leading" constant="16" id="kBk-nU-5bQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="disapleColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7hz-yE-prb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2Bm-8Q-FB4"/>
+                    <constraint firstAttribute="trailing" secondItem="7hz-yE-prb" secondAttribute="trailing" id="554-bA-AKF"/>
+                    <constraint firstAttribute="bottom" secondItem="7hz-yE-prb" secondAttribute="bottom" constant="16" id="KLL-MN-ajC"/>
+                    <constraint firstItem="7hz-yE-prb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mUK-KK-69P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="Gvi-OS-0C3" id="COf-bg-CSY"/>
+                <outlet property="arrowImage" destination="uUe-iq-4zx" id="6Fj-cz-kbG"/>
+                <outlet property="caseFollowDonationLabel" destination="DLu-wh-Hp3" id="ZQK-rz-oXQ"/>
+                <outlet property="confirmImage" destination="SCe-4t-7dd" id="Qf3-wZ-uIX"/>
+                <outlet property="deliveredImage" destination="ZuI-HK-3uF" id="HCe-yO-L5l"/>
+                <outlet property="deliveryDateLbel" destination="9cF-Zw-Wie" id="If0-UF-5Dj"/>
+                <outlet property="deliveryTimeSecondLabel" destination="h7j-Ok-aJU" id="czJ-ga-q5P"/>
+                <outlet property="deliverytimeFirstLabel" destination="g6F-91-oDO" id="2oh-gL-PZr"/>
+                <outlet property="doneImage" destination="aGE-7Q-1Jd" id="bAK-8J-xwg"/>
+                <outlet property="followDonationStackView" destination="7hz-yE-prb" id="LHB-Pn-MhK"/>
+                <outlet property="secodFollowView" destination="t7U-mK-sCV" id="kqa-uR-vGU"/>
+                <outlet property="sendImage" destination="vD1-b5-0Df" id="lLp-1q-NgS"/>
+                <outlet property="titleCaseLabel" destination="uaj-XX-gxC" id="mXl-rQ-m9d"/>
+                <outlet property="truckImage" destination="KKn-wn-lNt" id="tCQ-iY-AOD"/>
+                <outlet property="viewFollowDonationConstrain" destination="zds-ev-UvU" id="ZlH-zD-i3n"/>
+            </connections>
+            <point key="canvasLocation" x="154.34782608695653" y="126.5625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ConfirmW" width="40" height="40"/>
+        <image name="DeleviredW" width="40" height="40"/>
+        <image name="DoneW" width="40" height="40"/>
+        <image name="Line" width="25" height="1"/>
+        <image name="TrackW" width="40" height="40"/>
+        <image name="arrow-down" width="24" height="24"/>
+        <image name="sendB" width="40" height="40"/>
+        <namedColor name="BlackColor">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeBack">
+            <color red="0.94509803921568625" green="0.58823529411764708" blue="0.054901960784313725" alpha="0.17000000178813934" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="disapleColor">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orangeTint">
+            <color red="0.94509803921568625" green="0.59215686274509804" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

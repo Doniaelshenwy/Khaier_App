@@ -19,8 +19,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        tabBarController?.tabBar.isHidden = false
+        isNavigationHidden(true)
+        isTabBarHidden(false)
         setCollectionView()
         setDataOfPriorityArray()
         setDataOfNearArray()

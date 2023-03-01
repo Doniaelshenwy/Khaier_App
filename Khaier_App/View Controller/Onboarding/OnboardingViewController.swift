@@ -24,8 +24,7 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        print("onboard")
+        isNavigationHidden(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -8,9 +8,9 @@
 import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
+    
     static let identifierCell = "SearchCollectionViewCell"
 
-    
     @IBOutlet weak var imageCase: UIImageView!
     @IBOutlet weak var typeDonationLabel: UILabel!
     @IBOutlet weak var titleCaseLabel: UILabel!
@@ -20,10 +20,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    func setSearchData(search: PriorityModel){
+    func setSearchData(search: PriorityModel) {
         imageCase.image = UIImage(named: search.image)
         titleCaseLabel.text = search.title
         typeDonationLabel.text = search.typeDonation

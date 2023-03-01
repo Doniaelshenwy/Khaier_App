@@ -19,8 +19,8 @@ class BookmarkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        self.tabBarController?.tabBar.isHidden = true
+        isNavigationHidden(true)
+        isTabBarHidden(true)
         setBookmarkCollectionView()
         setDataOfDonationArray()
         setDataOfCharityArray()
@@ -70,7 +70,8 @@ class BookmarkViewController: UIViewController {
     }
 }
 
-extension BookmarkViewController: CollectionViewConfig{
+extension BookmarkViewController: CollectionViewConfig {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch bookmarkType {
         case .donation:
@@ -92,18 +93,18 @@ extension BookmarkViewController: CollectionViewConfig{
         }
     }
     
-    func setCell(){
+    func setCell() {
         switch bookmarkType {
         case .donation:
-            bookmarkCollectionView.register(UINib(nibName: BookmarkDonationCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: BookmarkDonationCollectionViewCell.identifierCell)
+            bookmarkCollectionView.register(cells: [BookmarkDonationCollectionViewCell.self])
             bookmarkCollectionView.reloadData()
         case .charity:
-            bookmarkCollectionView.register(UINib(nibName: BookmarkCharityCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: BookmarkCharityCollectionViewCell.identifierCell)
+            bookmarkCollectionView.register(cells: [BookmarkCharityCollectionViewCell.self])
             bookmarkCollectionView.reloadData()
         }
     }
     
-    func setBookmarkCollectionView(){
+    func setBookmarkCollectionView() {
         bookmarkCollectionView.delegate = self
         bookmarkCollectionView.dataSource = self
         setCell()
@@ -111,8 +112,10 @@ extension BookmarkViewController: CollectionViewConfig{
     
 }
 
-extension BookmarkViewController: UICollectionViewDelegateFlowLayout{
+extension BookmarkViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 160)
     }
+    
 }

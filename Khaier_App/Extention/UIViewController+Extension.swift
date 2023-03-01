@@ -68,6 +68,11 @@ extension UIViewController{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func pop(isTabBarHide: Bool){
+        self.navigationController?.popViewController(animated: true)
+        isTabBarHidden(isTabBarHide)
+    }
+    
     func moveToSignUpVC(){
         let vc = SignUpViewController()
         push(vc: vc)
@@ -176,6 +181,10 @@ extension UIViewController {
     
     func isNavigationHidden(_ status: Bool) {
         navigationController?.setNavigationBarHidden(status, animated: true)
+    }
+    
+    func isTabBarHidden(_ status: Bool){
+        tabBarController?.tabBar.isHidden = status
     }
     
 }

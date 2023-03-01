@@ -94,8 +94,6 @@ class AccountViewController: UIViewController {
         ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
         }
     }
-    
-    
 }
 
 extension AccountViewController: UIPickerViewDelegate, UIPickerViewDataSource {

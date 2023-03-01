@@ -11,7 +11,7 @@ class DonationViewController: UIViewController {
 
     @IBOutlet weak var mydonationBtnConstrain: UIButton!
     @IBOutlet weak var followDonationBtnConstrain: UIButton!
-    @IBOutlet weak var donationCollectionView: UICollectionView!
+    @IBOutlet weak var donationTableView: UITableView!
     
     var myDonationArray: [MyDonation] = []
     var followDonationArray: [FollowDonation] = []
@@ -19,10 +19,10 @@ class DonationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        isNavigationHidden(true)
         setDataOfMyDonationArray()
-        setDonationCollectionView()
-
+        setDonationTableView()
+        setDataOfFollowDonationArray()
     }
     
     func setDataOfMyDonationArray(){
@@ -35,24 +35,33 @@ class DonationViewController: UIViewController {
         ]
     }
     
+    func setDataOfFollowDonationArray(){
+        followDonationArray = [
+        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "تم التوصيل", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
+        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
+        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
+        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
+        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "تم التوصيل", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false)
+        ]
+        
+    }
 
     @IBAction func myDonationButton(_ sender: Any) {
         donationType = .myDonation
         changeColorOfSelectedButton(isSelectedButton: mydonationBtnConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: followDonationBtnConstrain)
-        chooseCellCollectionView()
+        chooseCellTableView()
     }
     
     @IBAction func followDonationButton(_ sender: Any) {
         donationType = .followDonation
         changeColorOfSelectedButton(isSelectedButton: followDonationBtnConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: mydonationBtnConstrain)
-        chooseCellCollectionView()
+        chooseCellTableView()
     }
 }
 
-
-extension DonationViewController: CollectionViewConfig{
+extension DonationViewController: TableViewConfig {
     
     private func checkDonationType() -> Int{
         switch donationType{
@@ -63,45 +72,60 @@ extension DonationViewController: CollectionViewConfig{
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checkDonationType()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if donationType == .myDonation{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyDonationCollectionViewCell.identifierCell, for: indexPath) as! MyDonationCollectionViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MyDonationTableViewCell.identifierCell, for: indexPath) as! MyDonationTableViewCell
             cell.setMyDonationData(donation: myDonationArray[indexPath.row])
             return cell
-        }
-        else if donationType == .followDonation {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowDonationCollectionViewCell.identifierCell, for: indexPath) as! FollowDonationCollectionViewCell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: FollowDonationTableViewCell.identifierCell, for: indexPath) as! FollowDonationTableViewCell
             cell.setFollowDonationData(donation: followDonationArray[indexPath.row])
+            cell.viewFollowDonationConstrain.addAction = { [weak self] in
+                self?.followDonationArray[indexPath.row].isPressed?.toggle()
+                self?.donationTableView.reloadData()
+                cell.viewFollowDonationConstrain.borderWidth = 0
+                cell.followDonationStackView.borderWidth = 1.5
+            }
             return cell
         }
-        return UICollectionViewCell()
     }
     
-    func chooseCellCollectionView(){
+    @objc func viewAction(indexPath: IndexPath) {
+        
+    }
+    
+    func chooseCellTableView() {
         if donationType == .myDonation{
-            donationCollectionView.register(UINib(nibName: MyDonationCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: MyDonationCollectionViewCell.identifierCell)
-            donationCollectionView.reloadData()
-        }
-        else if donationType == .followDonation{
-            donationCollectionView.register(UINib(nibName: FollowDonationCollectionViewCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: FollowDonationCollectionViewCell.identifierCell)
-            donationCollectionView.reloadData()
+            donationTableView.registerCellNib(cellClass: MyDonationTableViewCell.self)
+            donationTableView.reloadData()
+        } else {
+            donationTableView.registerCellNib(cellClass: FollowDonationTableViewCell.self)
+            donationTableView.reloadData()
         }
     }
     
-    func setDonationCollectionView(){
-        donationCollectionView.delegate = self
-        donationCollectionView.dataSource = self
-        chooseCellCollectionView()
+    func setDonationTableView() {
+        donationTableView.delegate = self
+        donationTableView.dataSource = self
+        chooseCellTableView()
     }
-}
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch donationType {
 
-extension DonationViewController: UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 95)
+        case .myDonation:
+            return 110
+        case .followDonation:
+            let aa = followDonationArray[indexPath.row].isPressed
+            if aa == true {
+                return 265
+            } else {
+                return 90
+            }
+        }
     }
 }

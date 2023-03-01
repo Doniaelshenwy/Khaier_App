@@ -9,4 +9,11 @@ import Foundation
 
 struct FollowDonation{
     
+    var title: String
+    var deliveryTime: String
+    var caseFollowDonation: String
+    var deliveryDate: String
+    var address: String
+    var isPressed: Bool? = false
+
 }

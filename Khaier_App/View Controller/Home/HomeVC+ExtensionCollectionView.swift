@@ -42,6 +42,7 @@ extension HomeViewController: CollectionViewConfig{
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case priorityCollectionView:
@@ -51,6 +52,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
         default:
             return CGSize(width: 0, height: 0)
         }
-        
     }
+    
 }
