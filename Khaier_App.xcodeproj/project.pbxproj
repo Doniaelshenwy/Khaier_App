@@ -96,6 +96,7 @@
 		FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A7118299A76D600A638D0 /* SplashViewController.swift */; };
 		FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6A7119299A76D600A638D0 /* SplashViewController.xib */; };
 		FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78116529A84B6500C8A3C0 /* MyDonation.swift */; };
+		FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8AF70B29B7C9AE00BF5534 /* DonateNowProtocol.swift */; };
 		FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */; };
 		FC92600C299D127200B6EB4F /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC92600A299D127200B6EB4F /* ChangePasswordViewController.xib */; };
 		FC92600F299D538500B6EB4F /* ChangePasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92600E299D538500B6EB4F /* ChangePasswordProtocol.swift */; };
@@ -248,6 +249,7 @@
 		FC6A7118299A76D600A638D0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FC6A7119299A76D600A638D0 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		FC78116529A84B6500C8A3C0 /* MyDonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonation.swift; sourceTree = "<group>"; };
+		FC8AF70B29B7C9AE00BF5534 /* DonateNowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateNowProtocol.swift; sourceTree = "<group>"; };
 		FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		FC92600A299D127200B6EB4F /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		FC92600E299D538500B6EB4F /* ChangePasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocol.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 		FC47817F29B6A854009C5139 /* Zakat value */ = {
 			isa = PBXGroup;
 			children = (
+				FC8AF70D29B7D1BF00BF5534 /* DonateNow Protocol */,
 				FC47818029B6A890009C5139 /* ZakatValueViewController.swift */,
 				FC47818129B6A890009C5139 /* ZakatValueViewController.xib */,
 			);
@@ -559,6 +562,14 @@
 				FC65C67829A8FB3C00F497C8 /* FollowDonation.swift */,
 			);
 			path = Donation;
+			sourceTree = "<group>";
+		};
+		FC8AF70D29B7D1BF00BF5534 /* DonateNow Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC8AF70B29B7C9AE00BF5534 /* DonateNowProtocol.swift */,
+			);
+			path = "DonateNow Protocol";
 			sourceTree = "<group>";
 		};
 		FC926008299D123E00B6EB4F /* Change Password */ = {
@@ -1293,6 +1304,7 @@
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
+				FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */,
 				FC33F3AD29AD550D003ACDC4 /* MyDonationTableViewCell.swift in Sources */,
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
 				FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */,

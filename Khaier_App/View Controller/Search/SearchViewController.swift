@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
         filterButtonConstrain.isHidden = true
         emptyButton.isHidden = false
         searchTextField.delegate = self
-        hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
+        hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +72,7 @@ extension SearchViewController: UITextFieldDelegate {
         if searchTextField.text == ""{
             filterButtonConstrain.isHidden = true
             emptyButton.isHidden = false
-            hideLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
+            hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
         } else {
             showLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
             filterButtonConstrain.isHidden = false

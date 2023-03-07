@@ -42,9 +42,9 @@ class EditPasswordViewController: UIViewController {
     }
     
     func hideInvalidLabel() {
-        hideLabel(heightConstrain: oldPasswordInvalidHeightLabel, repeatLabel: oldPasswordInvalidLabel)
-        hideLabel(heightConstrain: newPasswordInvalidheightLabel, repeatLabel: newPasswordInvalidLabel)
-        hideLabel(heightConstrain: confirmNewPasswordInvalidheightLabel, repeatLabel: confirmNewPasswordInvalidLabel)
+        hideLabel(heightInvalidLabel: oldPasswordInvalidHeightLabel, invalidLabel: oldPasswordInvalidLabel)
+        hideLabel(heightInvalidLabel: newPasswordInvalidheightLabel, invalidLabel: newPasswordInvalidLabel)
+        hideLabel(heightInvalidLabel: confirmNewPasswordInvalidheightLabel, invalidLabel: confirmNewPasswordInvalidLabel)
     }
     
     func setSecurePassword() {

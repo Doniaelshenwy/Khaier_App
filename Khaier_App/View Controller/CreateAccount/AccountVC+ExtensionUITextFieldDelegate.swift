@@ -18,10 +18,10 @@ extension AccountViewController: UITextFieldDelegate {
     func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {
         if cityLabel.text == "اختر المدينة و المنطقة" {
             setGrayColorView(view)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         } else {
             setAppColorView(view)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         }
     }
     

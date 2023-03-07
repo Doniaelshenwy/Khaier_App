@@ -19,7 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateZakatViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
-                <outlet property="EnterAmountTextField" destination="0xU-fw-C6S" id="Tzc-4m-Fqw"/>
+                <outlet property="enterAmountInvalidHeightLabel" destination="6f9-Lm-jtH" id="Ngz-Bg-ZuP"/>
+                <outlet property="enterAmountInvalidLabel" destination="x3v-UN-IfE" id="ldJ-pw-oxM"/>
+                <outlet property="enterAmountTextField" destination="0xU-fw-C6S" id="Tzc-4m-Fqw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -127,7 +129,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-vD-lpf">
-                                    <rect key="frame" x="20" y="300" width="343" height="48"/>
+                                    <rect key="frame" x="20" y="320" width="343" height="48"/>
                                     <color key="backgroundColor" name="AppColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="8dQ-RD-a2B"/>
@@ -146,12 +148,22 @@
                                         <action selector="CalculateButton:" destination="-1" eventType="touchUpInside" id="Naw-gR-4Yh"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال كلمة المبلغ" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-UN-IfE">
+                                    <rect key="frame" x="245" y="268" width="114" height="20"/>
+                                    <color key="backgroundColor" name="WhiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="6f9-Lm-jtH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="x3v-UN-IfE" secondAttribute="trailing" constant="16" id="7lg-mc-xKO"/>
                                 <constraint firstAttribute="trailing" secondItem="CPI-OE-kQP" secondAttribute="trailing" constant="12" id="7nT-PM-rlw"/>
                                 <constraint firstItem="Qhd-hu-RPh" firstAttribute="centerY" secondItem="ufr-bf-c1U" secondAttribute="centerY" id="C06-fL-9v0"/>
-                                <constraint firstItem="Kbe-vD-lpf" firstAttribute="top" secondItem="CPI-OE-kQP" secondAttribute="bottom" constant="40" id="G3a-st-3bo"/>
                                 <constraint firstItem="Kbe-vD-lpf" firstAttribute="leading" secondItem="5Mm-rn-L7b" secondAttribute="leading" constant="20" id="M8g-hH-4wu"/>
                                 <constraint firstAttribute="trailing" secondItem="Kbe-vD-lpf" secondAttribute="trailing" constant="12" id="Mh0-8V-xyS"/>
                                 <constraint firstAttribute="trailing" secondItem="hjJ-gU-MvB" secondAttribute="trailing" constant="16" id="VkH-eq-JAJ"/>
@@ -163,6 +175,8 @@
                                 <constraint firstItem="CPI-OE-kQP" firstAttribute="top" secondItem="hjJ-gU-MvB" secondAttribute="bottom" constant="32" id="lE3-Hx-8Uy"/>
                                 <constraint firstItem="ufr-bf-c1U" firstAttribute="centerX" secondItem="5Mm-rn-L7b" secondAttribute="centerX" id="mVs-IE-bBB"/>
                                 <constraint firstItem="CPI-OE-kQP" firstAttribute="leading" secondItem="5Mm-rn-L7b" secondAttribute="leading" constant="20" id="nej-GE-HlD"/>
+                                <constraint firstItem="Kbe-vD-lpf" firstAttribute="top" secondItem="x3v-UN-IfE" secondAttribute="bottom" constant="32" id="spT-mX-huj"/>
+                                <constraint firstItem="x3v-UN-IfE" firstAttribute="top" secondItem="CPI-OE-kQP" secondAttribute="bottom" constant="8" id="zDl-Dy-MHM"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -204,6 +218,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

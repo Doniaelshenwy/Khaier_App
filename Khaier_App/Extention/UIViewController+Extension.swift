@@ -96,13 +96,13 @@ extension UIViewController {
         labels.forEach { $0.isHidden = true }
     }
     
-    func hideLabel(heightConstrain: NSLayoutConstraint, repeatLabel: UILabel){
-        heightConstrain.constant = 0
+    func hideLabel(heightInvalidLabel: NSLayoutConstraint, invalidLabel: UILabel){
+        heightInvalidLabel.constant = 0
         UIView.animate(withDuration: 0.6) {
             self.view.layoutIfNeeded()
-            repeatLabel.alpha = 0
+            invalidLabel.alpha = 0
         } completion: { _ in
-            repeatLabel.isHidden = true
+            invalidLabel.isHidden = true
         }
     }
     
@@ -123,20 +123,20 @@ extension UIViewController {
     func checkColorBoderOfTextField(textfield: UITextField, label: UILabel, height: NSLayoutConstraint) {
         if textfield.text == "" {
             setGrayColorTF(textfield)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         } else {
             setAppColorTF(textfield)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         }
     }
     
     func checkColorBorderOfView(textfield: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
         if textfield.text == "" {
             setGrayColorView(view)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         } else {
             setAppColorView(view)
-            hideLabel(heightConstrain: height, repeatLabel: label)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
         }
     }
     
