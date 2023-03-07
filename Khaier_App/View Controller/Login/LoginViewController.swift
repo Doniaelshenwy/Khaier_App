@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
         isNavigationHidden(true)
         isHiddeninvalidLabel(for: [repeatPhoneLabel, repeatPasswordLabel])
         setZeroHeightLabel(for: [phoneErrorHeightConstrain, passwordErrorHeightConstrain])

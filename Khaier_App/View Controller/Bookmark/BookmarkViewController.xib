@@ -37,10 +37,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agh-bq-IfR">
-                    <rect key="frame" x="344" y="68" width="6" height="12"/>
+                    <rect key="frame" x="335" y="62" width="24" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="12" id="Ajo-r2-RDo"/>
-                        <constraint firstAttribute="width" constant="6" id="tDg-YJ-tFj"/>
+                        <constraint firstAttribute="height" constant="24" id="Ajo-r2-RDo"/>
+                        <constraint firstAttribute="width" constant="24" id="tDg-YJ-tFj"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="Back"/>
@@ -137,8 +137,7 @@
                 <constraint firstItem="agh-bq-IfR" firstAttribute="centerY" secondItem="fHG-e4-Cvw" secondAttribute="centerY" id="M5q-gR-9xd"/>
                 <constraint firstItem="9S4-iY-P6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PjF-BT-gET"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EvY-5C-BHp" secondAttribute="trailing" constant="16" id="SLZ-av-wyJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="agh-bq-IfR" secondAttribute="trailing" constant="25" id="XUb-DU-A1S"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="agh-bq-IfR" secondAttribute="trailing" constant="25" id="nZp-DF-xRx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="agh-bq-IfR" secondAttribute="trailing" constant="16" id="nZp-DF-xRx"/>
                 <constraint firstItem="fHG-e4-Cvw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="rvg-IE-Ikl"/>
                 <constraint firstItem="EvY-5C-BHp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="u8I-7t-euG"/>
                 <constraint firstItem="EvY-5C-BHp" firstAttribute="top" secondItem="fHG-e4-Cvw" secondAttribute="bottom" constant="24" id="v8r-vI-bYJ"/>

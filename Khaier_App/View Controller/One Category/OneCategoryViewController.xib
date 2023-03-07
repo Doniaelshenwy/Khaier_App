@@ -36,10 +36,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-lv-cYC">
-                    <rect key="frame" x="383" y="68" width="6" height="12"/>
+                    <rect key="frame" x="374" y="62" width="24" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="12" id="QRV-n4-dFN"/>
-                        <constraint firstAttribute="width" constant="6" id="UYL-RO-4NM"/>
+                        <constraint firstAttribute="height" constant="24" id="QRV-n4-dFN"/>
+                        <constraint firstAttribute="width" constant="24" id="UYL-RO-4NM"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="Back"/>
@@ -65,7 +65,7 @@
                 <constraint firstItem="VCS-Rj-h8L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4jc-dW-tbZ"/>
                 <constraint firstItem="ZUr-cc-nPH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7K1-gU-ZSY"/>
                 <constraint firstItem="bYr-lv-cYC" firstAttribute="centerY" secondItem="ZUr-cc-nPH" secondAttribute="centerY" id="7wx-zm-QMB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bYr-lv-cYC" secondAttribute="trailing" constant="25" id="Hem-0t-1wY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bYr-lv-cYC" secondAttribute="trailing" constant="16" id="Hem-0t-1wY"/>
                 <constraint firstItem="ZUr-cc-nPH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="WR9-gS-wkv"/>
                 <constraint firstItem="VCS-Rj-h8L" firstAttribute="top" secondItem="ZUr-cc-nPH" secondAttribute="bottom" constant="24" id="XMH-Qh-OvY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VCS-Rj-h8L" secondAttribute="trailing" constant="16" id="jYd-tT-yJi"/>

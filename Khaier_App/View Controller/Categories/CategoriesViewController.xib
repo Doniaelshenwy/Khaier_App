@@ -35,10 +35,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0Q-UC-RWr">
-                    <rect key="frame" x="383" y="68" width="6" height="12"/>
+                    <rect key="frame" x="374" y="62" width="24" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="6" id="63U-A9-vFs"/>
-                        <constraint firstAttribute="height" constant="12" id="KdC-5E-XWV"/>
+                        <constraint firstAttribute="width" constant="24" id="63U-A9-vFs"/>
+                        <constraint firstAttribute="height" constant="24" id="KdC-5E-XWV"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="Back"/>
@@ -65,7 +65,7 @@
                 <constraint firstItem="V1z-lH-GEU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CAw-bl-Ej7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V1z-lH-GEU" secondAttribute="trailing" constant="16" id="Nya-Eg-OPV"/>
                 <constraint firstItem="Bf5-66-gLM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SE0-MW-b04"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T0Q-UC-RWr" secondAttribute="trailing" constant="25" id="pUK-0E-1nv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T0Q-UC-RWr" secondAttribute="trailing" constant="16" id="pUK-0E-1nv"/>
                 <constraint firstItem="T0Q-UC-RWr" firstAttribute="centerY" secondItem="Bf5-66-gLM" secondAttribute="centerY" id="sjh-Ph-zGJ"/>
                 <constraint firstItem="V1z-lH-GEU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uAm-hb-Kzz"/>
             </constraints>

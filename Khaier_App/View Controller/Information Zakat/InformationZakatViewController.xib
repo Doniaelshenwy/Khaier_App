@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationZakatViewController" customModule="Khaier_App" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsInformationZakatLabel" destination="tGq-qI-GAP" id="hM3-Rl-KzQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-QW-syG">
+                    <rect key="frame" x="16" y="108" width="343" height="435"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGq-qI-GAP">
+                            <rect key="frame" x="16" y="16" width="311" height="403"/>
+                            <mutableString key="text">كيف تحسب زكاتك؟
+
+الزكاة هي أحد أركان الإسلام الخمسة ، واجبة على جميع المسلمين الذين يتقيدون بقيم النصاب . النصاب هو الحد الأدنى لصافي رأس المال الذي يجب أن يمتلكه المسلم حتى يكون مؤهلاً لدفع الزكاة ، وهو ما يعادل 87.48 جرامًا (7.5 تولة) من الذهب و 612.36 جرامًا (52.5 تولة) من الفضة على التوالي. فيجب عليه دفع 2.5٪ من تلك الثروة كزكاة سنوياً ، ويجب حساب المبلغ قبل التبرع بيوم علي الاكثر.
+
+نقرأ في سورة البقرة "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ الله إِنَّ الله بِمَا تَعْمَلُونَ بَصِيرٌ ".
+
+تطبيق خَـــيِّـــرْ يقدم حاسبة الزكاة ، تمكنك من حساب قيمة الزكاة الخاصة بك بعد كتابة المال أو المبلغ الذي تملكه بعد تحقق نصاب الزكاة، وبعد ذلك يظهر لك قيمة الزكاة الخاصة بها.
+ يرجى التواصل مع جهة أو دار فتوى شرعية حتى تتحقق من شروط وضوابط الزكاة الواجبة.</mutableString>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                            <color key="textColor" name="BlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tGq-qI-GAP" secondAttribute="bottom" constant="16" id="GyM-UF-Zpg"/>
+                        <constraint firstAttribute="width" constant="343" id="RML-j2-exT"/>
+                        <constraint firstAttribute="trailing" secondItem="tGq-qI-GAP" secondAttribute="trailing" constant="16" id="Sco-yH-sX9"/>
+                        <constraint firstItem="tGq-qI-GAP" firstAttribute="leading" secondItem="jJd-QW-syG" secondAttribute="leading" constant="16" id="bBF-jr-cHo"/>
+                        <constraint firstAttribute="height" constant="435" id="eHj-Yh-9gY"/>
+                        <constraint firstItem="tGq-qI-GAP" firstAttribute="top" secondItem="jJd-QW-syG" secondAttribute="top" constant="16" id="k8M-tq-eMb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jJd-QW-syG" secondAttribute="trailing" constant="16" id="3Cj-Kz-cot"/>
+                <constraint firstItem="jJd-QW-syG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="F1b-Kp-4vK"/>
+                <constraint firstItem="jJd-QW-syG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="nn9-Q5-BBm"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="47.290640394088669"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BlackColor">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -41,6 +41,12 @@
 		FC3DCC8F29AE907B00DEDFFA /* ViewWithAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DCC8E29AE907B00DEDFFA /* ViewWithAction.swift */; };
 		FC400FAA29A55F560030AD2B /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC400FA829A55F560030AD2B /* OneCategoryViewController.swift */; };
 		FC400FAB29A55F560030AD2B /* OneCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC400FA929A55F560030AD2B /* OneCategoryViewController.xib */; };
+		FC47817829B69C0A009C5139 /* CalculateZakatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47817629B69C0A009C5139 /* CalculateZakatViewController.swift */; };
+		FC47817929B69C0A009C5139 /* CalculateZakatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC47817729B69C0A009C5139 /* CalculateZakatViewController.xib */; };
+		FC47817D29B6A71E009C5139 /* InformationZakatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47817B29B6A71E009C5139 /* InformationZakatViewController.swift */; };
+		FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC47817C29B6A71E009C5139 /* InformationZakatViewController.xib */; };
+		FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47818029B6A890009C5139 /* ZakatValueViewController.swift */; };
+		FC47818329B6A890009C5139 /* ZakatValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC47818129B6A890009C5139 /* ZakatValueViewController.xib */; };
 		FC49CFE529A1865600BFC290 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */; };
 		FC49CFE629A1865600BFC290 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */; };
 		FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */; };
@@ -133,6 +139,12 @@
 		FCE6324A29A536DD00ED2040 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE6324829A536DD00ED2040 /* CategoriesCollectionViewCell.xib */; };
 		FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6324C29A53FB900ED2040 /* CategoriesModel.swift */; };
 		FCE6324F29A5417C00ED2040 /* CategoriesVC+ExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6324E29A5417C00ED2040 /* CategoriesVC+ExtensionCollectionView.swift */; };
+		FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0BC3829B4F55F008EDDAD /* EditPasswordViewController.swift */; };
+		FCF0BC3B29B4F55F008EDDAD /* EditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF0BC3929B4F55F008EDDAD /* EditPasswordViewController.xib */; };
+		FCF0BC3D29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0BC3C29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift */; };
+		FCF50C4B29B007FE0051F142 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF50C4929B007FE0051F142 /* NotificationTableViewCell.swift */; };
+		FCF50C4C29B007FE0051F142 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF50C4A29B007FE0051F142 /* NotificationTableViewCell.xib */; };
+		FCF50C4F29B013EF0051F142 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF50C4E29B013EF0051F142 /* Notification.swift */; };
 		FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6F0C829A13BC400DBBBF0 /* SearchViewController.swift */; };
 		FCF6F0CB29A13BC400DBBBF0 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF6F0C929A13BC400DBBBF0 /* SearchViewController.xib */; };
 		FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6F0CC29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift */; };
@@ -185,6 +197,7 @@
 		FC2DAED229A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCharityCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		FC2DAED829A42D520069E3F2 /* BookmarkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkType.swift; sourceTree = "<group>"; };
+		FC30547729B36973009D43D8 /* MyPlayground copy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "MyPlayground copy.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC33F3AB29AD550D003ACDC4 /* MyDonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonationTableViewCell.swift; sourceTree = "<group>"; };
 		FC33F3AC29AD550D003ACDC4 /* MyDonationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDonationTableViewCell.xib; sourceTree = "<group>"; };
 		FC33F3AF29AD5528003ACDC4 /* FollowDonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDonationTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +211,12 @@
 		FC3DCC8E29AE907B00DEDFFA /* ViewWithAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithAction.swift; sourceTree = "<group>"; };
 		FC400FA829A55F560030AD2B /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		FC400FA929A55F560030AD2B /* OneCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneCategoryViewController.xib; sourceTree = "<group>"; };
+		FC47817629B69C0A009C5139 /* CalculateZakatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateZakatViewController.swift; sourceTree = "<group>"; };
+		FC47817729B69C0A009C5139 /* CalculateZakatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateZakatViewController.xib; sourceTree = "<group>"; };
+		FC47817B29B6A71E009C5139 /* InformationZakatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationZakatViewController.swift; sourceTree = "<group>"; };
+		FC47817C29B6A71E009C5139 /* InformationZakatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationZakatViewController.xib; sourceTree = "<group>"; };
+		FC47818029B6A890009C5139 /* ZakatValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZakatValueViewController.swift; sourceTree = "<group>"; };
+		FC47818129B6A890009C5139 /* ZakatValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZakatValueViewController.xib; sourceTree = "<group>"; };
 		FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUPViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +295,12 @@
 		FCE6324829A536DD00ED2040 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCE6324C29A53FB900ED2040 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		FCE6324E29A5417C00ED2040 /* CategoriesVC+ExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+ExtensionCollectionView.swift"; sourceTree = "<group>"; };
+		FCF0BC3829B4F55F008EDDAD /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		FCF0BC3929B4F55F008EDDAD /* EditPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPasswordViewController.xib; sourceTree = "<group>"; };
+		FCF0BC3C29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPasswordVC+ExtentionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		FCF50C4929B007FE0051F142 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		FCF50C4A29B007FE0051F142 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		FCF50C4E29B013EF0051F142 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FCF6F0C829A13BC400DBBBF0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FCF6F0C929A13BC400DBBBF0 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		FCF6F0CC29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+ExtensionCollectionView.swift"; sourceTree = "<group>"; };
@@ -408,6 +433,33 @@
 				FC33F3B029AD5528003ACDC4 /* FollowDonationTableViewCell.xib */,
 			);
 			path = "Follow Donation Cell";
+			sourceTree = "<group>";
+		};
+		FC47817529B69BCE009C5139 /* Calculate Zakat */ = {
+			isa = PBXGroup;
+			children = (
+				FC47817629B69C0A009C5139 /* CalculateZakatViewController.swift */,
+				FC47817729B69C0A009C5139 /* CalculateZakatViewController.xib */,
+			);
+			path = "Calculate Zakat";
+			sourceTree = "<group>";
+		};
+		FC47817A29B6A6ED009C5139 /* Information Zakat */ = {
+			isa = PBXGroup;
+			children = (
+				FC47817B29B6A71E009C5139 /* InformationZakatViewController.swift */,
+				FC47817C29B6A71E009C5139 /* InformationZakatViewController.xib */,
+			);
+			path = "Information Zakat";
+			sourceTree = "<group>";
+		};
+		FC47817F29B6A854009C5139 /* Zakat value */ = {
+			isa = PBXGroup;
+			children = (
+				FC47818029B6A890009C5139 /* ZakatValueViewController.swift */,
+				FC47818129B6A890009C5139 /* ZakatValueViewController.xib */,
+			);
+			path = "Zakat value";
 			sourceTree = "<group>";
 		};
 		FC4AD9FD299310BF006B9F70 /* OTP SignUp */ = {
@@ -555,6 +607,7 @@
 			children = (
 				FC92601C299D603900B6EB4F /* NotificationViewController.swift */,
 				FC92601D299D603900B6EB4F /* NotificationViewController.xib */,
+				FCF50C4729B007C50051F142 /* Notification Cell */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -617,6 +670,7 @@
 		FCD6D0A8298544E00084FE76 = {
 			isa = PBXGroup;
 			children = (
+				FC30547729B36973009D43D8 /* MyPlayground copy.playground */,
 				FCD6D0B3298544E00084FE76 /* Khaier_App */,
 				FCD6D0CD298544E40084FE76 /* Khaier_AppTests */,
 				FCD6D0D7298544E40084FE76 /* Khaier_AppUITests */,
@@ -702,6 +756,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCF50C4D29B013CF0051F142 /* Notification */,
 				FC78116429A84B3F00C8A3C0 /* Donation */,
 				FCE6324B29A53F9E00ED2040 /* Categories */,
 				FCE415E7299FB595003A991D /* Home */,
@@ -730,6 +785,10 @@
 				FCE6324129A5336F00ED2040 /* Categories */,
 				FC400FA729A55F2A0030AD2B /* One Category */,
 				FC926017299D5DC600B6EB4F /* Profile */,
+				FCF0BC3729B4F52E008EDDAD /* Edit Password */,
+				FC47817529B69BCE009C5139 /* Calculate Zakat */,
+				FC47817A29B6A6ED009C5139 /* Information Zakat */,
+				FC47817F29B6A854009C5139 /* Zakat value */,
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
 			);
@@ -809,6 +868,33 @@
 				FCE6324C29A53FB900ED2040 /* CategoriesModel.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		FCF0BC3729B4F52E008EDDAD /* Edit Password */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0BC3829B4F55F008EDDAD /* EditPasswordViewController.swift */,
+				FCF0BC3929B4F55F008EDDAD /* EditPasswordViewController.xib */,
+				FCF0BC3C29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift */,
+			);
+			path = "Edit Password";
+			sourceTree = "<group>";
+		};
+		FCF50C4729B007C50051F142 /* Notification Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FCF50C4929B007FE0051F142 /* NotificationTableViewCell.swift */,
+				FCF50C4A29B007FE0051F142 /* NotificationTableViewCell.xib */,
+			);
+			path = "Notification Cell";
+			sourceTree = "<group>";
+		};
+		FCF50C4D29B013CF0051F142 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FCF50C4E29B013EF0051F142 /* Notification.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		FCF6F0C729A13B7700DBBBF0 /* Search */ = {
@@ -950,6 +1036,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */,
+				FC47817929B69C0A009C5139 /* CalculateZakatViewController.xib in Resources */,
 				FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */,
 				FCC03350299DD1EF0055AEF6 /* PriorityCollectionViewCell.xib in Resources */,
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
@@ -969,9 +1056,12 @@
 				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
 				FC2DAED029A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib in Resources */,
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
+				FCF50C4C29B007FE0051F142 /* NotificationTableViewCell.xib in Resources */,
 				FCC03354299DD2080055AEF6 /* NearCollectionViewCell.xib in Resources */,
 				FC926023299D604D00B6EB4F /* DonationViewController.xib in Resources */,
+				FCF0BC3B29B4F55F008EDDAD /* EditPasswordViewController.xib in Resources */,
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
+				FC47818329B6A890009C5139 /* ZakatValueViewController.xib in Resources */,
 				FC92601B299D602200B6EB4F /* ProfileViewController.xib in Resources */,
 				FC33F3B229AD5528003ACDC4 /* FollowDonationTableViewCell.xib in Resources */,
 				FCE6324529A533E000ED2040 /* CategoriesViewController.xib in Resources */,
@@ -987,6 +1077,7 @@
 				FCFA5EBB29A2DF3B0045B9AB /* FilterAddressViewController.xib in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
+				FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,9 +1242,12 @@
 				FCC0334F299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
+				FC47817829B69C0A009C5139 /* CalculateZakatViewController.swift in Sources */,
+				FCF0BC3D29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift in Sources */,
 				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,
 				FCE415EB299FB5D8003A991D /* NearModel.swift in Sources */,
 				FC27ABEE2991BE5C00E92AC2 /* UITextField+Extention.swift in Sources */,
+				FCF50C4F29B013EF0051F142 /* Notification.swift in Sources */,
 				FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
@@ -1165,7 +1259,9 @@
 				FCE6324F29A5417C00ED2040 /* CategoriesVC+ExtensionCollectionView.swift in Sources */,
 				FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
+				FC47817D29B6A71E009C5139 /* InformationZakatViewController.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */,
 				FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */,
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC92601A299D602200B6EB4F /* ProfileViewController.swift in Sources */,
@@ -1186,6 +1282,7 @@
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
 				FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */,
 				FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FCF50C4B29B007FE0051F142 /* NotificationTableViewCell.swift in Sources */,
 				FC400FAA29A55F560030AD2B /* OneCategoryViewController.swift in Sources */,
 				FCC03353299DD2080055AEF6 /* NearCollectionViewCell.swift in Sources */,
 				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
@@ -1198,6 +1295,7 @@
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 				FC33F3AD29AD550D003ACDC4 /* MyDonationTableViewCell.swift in Sources */,
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
+				FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */,
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

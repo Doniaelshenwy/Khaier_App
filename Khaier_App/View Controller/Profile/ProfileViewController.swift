@@ -8,12 +8,51 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var profileImage: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        isNavigationHidden(true)
     }
+    
+    func moveToEditPasswordVC() {
+        let vc = EditPasswordViewController()
+        push(vc: vc)
+    }
+    
+    func moveToCalculateZakatVC() {
+        let vc = CalculateZakatViewController()
+        push(vc: vc)
+    }
+        
 
-
+    @IBAction func notificationButton(_ sender: Any) {
+    }
+    @IBAction func editProfileButton(_ sender: Any) {
+    }
+    
+    @IBAction func rememberView(_ sender: Any) {
+    }
+    
+    @IBAction func calculateZakatView(_ sender: Any) {
+        moveToCalculateZakatVC()
+    }
+    
+    
+    @IBAction func editPasswordView(_ sender: Any) {
+        moveToEditPasswordVC()
+    }
+    
+    
+    @IBAction func aboutApplicationView(_ sender: Any) {
+    }
+    
+    @IBAction func deleteAccountView(_ sender: Any) {
+    }
+    @IBAction func logoutView(_ sender: Any) {
+    }
+    
 }

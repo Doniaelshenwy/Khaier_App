@@ -115,13 +115,13 @@ extension DonationViewController: TableViewConfig {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         switch donationType {
-
         case .myDonation:
             return 110
         case .followDonation:
-            let aa = followDonationArray[indexPath.row].isPressed
-            if aa == true {
+            let height = followDonationArray[indexPath.row].isPressed
+            if height == true {
                 return 265
             } else {
                 return 90
