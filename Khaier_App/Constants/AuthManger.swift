@@ -5,10 +5,10 @@
 //  Created by Donia Elshenawy on 08/02/2023.
 //
 
-import Foundation
 import FirebaseAuth
 
-class AuthManager{
+class AuthManager {
+    
     static let shared = AuthManager()
     private let auth = Auth.auth()
     

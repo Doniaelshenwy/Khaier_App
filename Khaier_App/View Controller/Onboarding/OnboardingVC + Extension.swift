@@ -5,10 +5,9 @@
 //  Created by Donia Elshenawy on 28/01/2023.
 //
 
-import Foundation
 import UIKit
 
-extension OnboardingViewController: CollectionViewConfig{
+extension OnboardingViewController: CollectionViewConfig {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return onBoardingArray.count
     }
@@ -24,7 +23,7 @@ extension OnboardingViewController: CollectionViewConfig{
         currentPage = Int(round(scrollView.contentOffset.x / width))
     }
     
-    func setCollectionView(){
+    func setCollectionView() {
         onboardingCollectionView.applyRTL()
         onboardingCollectionView.delegate = self
         onboardingCollectionView.dataSource = self

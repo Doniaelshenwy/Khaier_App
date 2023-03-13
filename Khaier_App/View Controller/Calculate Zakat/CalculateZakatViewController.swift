@@ -23,14 +23,14 @@ class CalculateZakatViewController: UIViewController {
     
     func moveToInformationZakatVC(){
         let vc = InformationZakatViewController()
+//        customPresent(vc)
         vc.modalPresentationStyle = .custom
         present(vc, animated: false, completion: nil)
     }
     
     func moveToZakatValueVC(){
         let vc = ZakatValueViewController(delegate: self)
-        vc.modalPresentationStyle = .custom
-        present(vc, animated: true, completion: nil)
+        customPresent(vc, animated: false)
     }
     
     func checkEnterAmountData() {

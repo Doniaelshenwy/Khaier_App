@@ -18,20 +18,22 @@ class ProfileViewController: UIViewController {
         isNavigationHidden(true)
     }
     
-    func moveToEditPasswordVC() {
+    private func moveToEditPasswordVC() {
         let vc = EditPasswordViewController()
         push(vc: vc)
     }
     
-    func moveToCalculateZakatVC() {
+    private func moveToCalculateZakatVC() {
         let vc = CalculateZakatViewController()
         push(vc: vc)
     }
-        
 
     @IBAction func notificationButton(_ sender: Any) {
     }
+    
     @IBAction func editProfileButton(_ sender: Any) {
+        let vc = EditProfileViewController()
+        push(vc: vc)
     }
     
     @IBAction func rememberView(_ sender: Any) {
@@ -41,18 +43,21 @@ class ProfileViewController: UIViewController {
         moveToCalculateZakatVC()
     }
     
-    
     @IBAction func editPasswordView(_ sender: Any) {
         moveToEditPasswordVC()
     }
-    
     
     @IBAction func aboutApplicationView(_ sender: Any) {
     }
     
     @IBAction func deleteAccountView(_ sender: Any) {
+        let vc = DeleteAccountViewController()
+        customPresent(vc, animated: false)
     }
+    
     @IBAction func logoutView(_ sender: Any) {
+        let vc = ExitViewController()
+        customPresent(vc, animated: false)
     }
     
 }

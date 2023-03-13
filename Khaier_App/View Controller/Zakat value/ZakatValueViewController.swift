@@ -11,7 +11,7 @@ class ZakatValueViewController: UIViewController {
 
     @IBOutlet weak var valueLabel: UILabel!
     
-    weak var delegate: DonateNowProtocol!
+    private weak var delegate: DonateNowProtocol!
     
     init(delegate: DonateNowProtocol){
         self.delegate = delegate

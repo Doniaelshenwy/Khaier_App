@@ -18,5 +18,4 @@ extension SignUpViewController: UITextFieldDelegate{
           let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
           return newString.length <= 11
       }
-    
 }

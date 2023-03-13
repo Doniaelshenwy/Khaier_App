@@ -39,7 +39,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-MQ-py0">
                             <rect key="frame" x="16" y="57" width="311" height="147"/>
-                            <mutableString key="text">الزكاة هي أحد أركان الإسلام الخمسة ، واجبة على جميع المسلمين الذين يتقيدون بقيم النصاب . النصاب هو الحد الأدنى لصافي رأس المال الذي يجب أن يمتلكه المسلم حتى يكون مؤهلاً لدفع الزكاة ، وهو ما يعادل 87.48 جرامًا (7.5 تولة) من الذهب و 612.36 جرامًا (52.5 تولة) من الفضة على التوالي. فيجب عليه دفع 2.5٪ من تلك الثروة كزكاة سنوياً ، ويجب حساب المبلغ قبل التبرع بيوم علي الاكثر.</mutableString>
+                            <string key="text">الزكاة هي أحد أركان الإسلام الخمسة ، واجبة على جميع المسلمين الذين يتقيدون بقيم النصاب . النصاب هو الحد الأدنى لصافي رأس المال الذي يجب أن يمتلكه المسلم حتى يكون مؤهلاً لدفع الزكاة ، وهو ما يعادل 87.48 جرامًا (7.5 تولة) من الذهب و 612.36 جرامًا (52.5 تولة) من الفضة على التوالي. فيجب عليه دفع 2.5٪ من تلك الثروة كزكاة سنوياً ، ويجب حساب المبلغ قبل التبرع بيوم علي الاكثر.</string>
                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                             <color key="textColor" name="BlackColor"/>
                             <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKf-cF-f97">
                             <rect key="frame" x="16" y="224" width="311" height="42"/>
                             <string key="text">نقرأ في سورة البقرة "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ الله إِنَّ الله بِمَا تَعْمَلُونَ بَصِيرٌ ".</string>
-                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
                             <color key="textColor" name="AppColor"/>
                             <nil key="highlightedColor"/>
                         </label>

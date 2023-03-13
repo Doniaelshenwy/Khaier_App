@@ -15,15 +15,15 @@ extension AccountViewController: UITextFieldDelegate {
         checkColorBorderOfView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: confirmPasswordInvalidLabel, height: confirmPasswordInvalidHeightConstrain)
     }
     
-    func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {
-        if cityLabel.text == "اختر المدينة و المنطقة" {
-            setGrayColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        } else {
-            setAppColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        }
-    }
+//    func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+//        if cityLabel.text == "اختر المدينة و المنطقة" {
+//            setGrayColorView(view)
+//            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+//        } else {
+//            setAppColorView(view)
+//            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+//        }
+//    }
     
     func setDelegateTextField(){
         let textFieldDelegate = [userNameTextField, nameTextField, passwordTextField, confirmPasswordTextField]

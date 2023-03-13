@@ -158,14 +158,16 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVW-w7-ZRC">
-                            <rect key="frame" x="80" y="245" width="215" height="40"/>
+                            <rect key="frame" x="16" y="261" width="343" height="40"/>
                             <color key="backgroundColor" name="AppColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="z2U-3a-uVJ"/>
                             </constraints>
                             <color key="tintColor" name="WhiteColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Apply"/>
+                            <buttonConfiguration key="configuration" style="plain" title="تصفية">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="applyButtonTapped:" destination="-1" eventType="touchUpInside" id="WtS-4L-Fuh"/>
                             </connections>
@@ -174,14 +176,14 @@
                     <color key="backgroundColor" name="WhiteColor"/>
                     <constraints>
                         <constraint firstItem="7xK-kI-2zJ" firstAttribute="top" secondItem="Em4-a5-QbH" secondAttribute="bottom" constant="15.15" id="03k-DL-qSC"/>
-                        <constraint firstItem="aVW-w7-ZRC" firstAttribute="leading" secondItem="9cO-WO-Em5" secondAttribute="leading" constant="80" id="07C-Gm-2Vh"/>
+                        <constraint firstItem="aVW-w7-ZRC" firstAttribute="leading" secondItem="9cO-WO-Em5" secondAttribute="leading" constant="16" id="07C-Gm-2Vh"/>
                         <constraint firstItem="f2b-q3-Vdp" firstAttribute="leading" secondItem="9cO-WO-Em5" secondAttribute="leading" constant="16" id="Ajc-Kw-WFL"/>
                         <constraint firstItem="Ru7-15-Fbv" firstAttribute="top" secondItem="Em4-a5-QbH" secondAttribute="bottom" constant="12" id="Bw7-MT-m7u"/>
                         <constraint firstAttribute="trailing" secondItem="7xK-kI-2zJ" secondAttribute="trailing" constant="19.149999999999999" id="CdP-xt-d94"/>
                         <constraint firstItem="Em4-a5-QbH" firstAttribute="leading" secondItem="9cO-WO-Em5" secondAttribute="leading" constant="16" id="Mjt-Pi-hfc"/>
-                        <constraint firstAttribute="trailing" secondItem="aVW-w7-ZRC" secondAttribute="trailing" constant="80" id="NhE-lQ-muR"/>
+                        <constraint firstAttribute="trailing" secondItem="aVW-w7-ZRC" secondAttribute="trailing" constant="16" id="NhE-lQ-muR"/>
                         <constraint firstItem="Em4-a5-QbH" firstAttribute="top" secondItem="f2b-q3-Vdp" secondAttribute="bottom" constant="44" id="XRL-S3-gC6"/>
-                        <constraint firstItem="aVW-w7-ZRC" firstAttribute="top" secondItem="Ru7-15-Fbv" secondAttribute="bottom" constant="40" id="amz-ue-Ocv"/>
+                        <constraint firstItem="aVW-w7-ZRC" firstAttribute="top" secondItem="Ru7-15-Fbv" secondAttribute="bottom" constant="56" id="amz-ue-Ocv"/>
                         <constraint firstAttribute="trailing" secondItem="Em4-a5-QbH" secondAttribute="trailing" constant="16" id="h4h-4S-bIy"/>
                         <constraint firstAttribute="trailing" secondItem="f2b-q3-Vdp" secondAttribute="trailing" constant="16" id="oao-iZ-0EW"/>
                         <constraint firstItem="7xK-kI-2zJ" firstAttribute="leading" secondItem="Ru7-15-Fbv" secondAttribute="trailing" constant="9.1500000000000004" id="pN9-fT-Zac"/>

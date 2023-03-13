@@ -15,9 +15,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var filterButtonConstrain: UIButton!
     @IBOutlet weak var resultSearchHeightLabelConstrain: NSLayoutConstraint!
-    
-   
     @IBOutlet weak var emptyButton: UIButton!
+    
     var searchArray: [PriorityModel] = []
     
     override func viewDidLoad() {

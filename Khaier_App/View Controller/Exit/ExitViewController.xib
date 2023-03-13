@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+        <array key="IBMPlexSansArabic-Regular.ttf">
+            <string>IBMPlexSansArabic-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExitViewController" customModule="Khaier_App" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pE-aa-Cfc">
+                    <rect key="frame" x="39.666666666666657" y="325.66666666666669" width="296" height="161"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل خروج" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogE-TN-bYg">
+                            <rect key="frame" x="16" y="16" width="264" height="27"/>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
+                            <color key="textColor" name="BlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هل انت متاكد انك تريد تسجيل خروج؟" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-ul-h6j">
+                            <rect key="frame" x="16" y="53" width="264" height="24"/>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            <color key="textColor" name="GrayColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IWP-Yg-6Le">
+                            <rect key="frame" x="16" y="109" width="264" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-I7-6E7">
+                                    <rect key="frame" x="0.0" y="0.0" width="124" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Bob-F6-DR2"/>
+                                        <constraint firstAttribute="width" constant="124" id="FEt-TV-o6h"/>
+                                    </constraints>
+                                    <color key="tintColor" name="AppColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="الغاء">
+                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="AppColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="aSp-J1-DSg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGi-7E-1pV">
+                                    <rect key="frame" x="140" y="0.0" width="124" height="36"/>
+                                    <color key="backgroundColor" name="AppColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="124" id="3WH-P8-CMO"/>
+                                        <constraint firstAttribute="height" constant="36" id="Pyk-4A-jV0"/>
+                                    </constraints>
+                                    <color key="tintColor" name="WhiteColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="تسجيل خروج">
+                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="exitButton:" destination="-1" eventType="touchUpInside" id="1fQ-fx-39I"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="IWP-Yg-6Le" firstAttribute="leading" secondItem="9pE-aa-Cfc" secondAttribute="leading" constant="16" id="Cqm-eP-4zv"/>
+                        <constraint firstAttribute="trailing" secondItem="ogE-TN-bYg" secondAttribute="trailing" constant="16" id="DY8-Sg-BSe"/>
+                        <constraint firstAttribute="trailing" secondItem="bMp-ul-h6j" secondAttribute="trailing" constant="16" id="LF2-LC-d3X"/>
+                        <constraint firstItem="IWP-Yg-6Le" firstAttribute="top" secondItem="bMp-ul-h6j" secondAttribute="bottom" constant="32" id="NfI-e1-irk"/>
+                        <constraint firstAttribute="trailing" secondItem="IWP-Yg-6Le" secondAttribute="trailing" constant="16" id="VGE-w0-k26"/>
+                        <constraint firstItem="bMp-ul-h6j" firstAttribute="leading" secondItem="9pE-aa-Cfc" secondAttribute="leading" constant="16" id="asT-KC-oSW"/>
+                        <constraint firstAttribute="height" constant="161" id="c6S-vO-Ask"/>
+                        <constraint firstItem="bMp-ul-h6j" firstAttribute="top" secondItem="ogE-TN-bYg" secondAttribute="bottom" constant="10" id="e8A-kZ-Bx6"/>
+                        <constraint firstItem="ogE-TN-bYg" firstAttribute="top" secondItem="9pE-aa-Cfc" secondAttribute="top" constant="16" id="ffY-fX-zlr"/>
+                        <constraint firstAttribute="width" constant="296" id="jW3-VD-EjM"/>
+                        <constraint firstItem="ogE-TN-bYg" firstAttribute="leading" secondItem="9pE-aa-Cfc" secondAttribute="leading" constant="16" id="pwK-DH-rnE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9pE-aa-Cfc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M0V-ZD-uKL"/>
+                <constraint firstItem="9pE-aa-Cfc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="R6X-rY-geL"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="47.290640394088669"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppColor">
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BlackColor">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayColor">
+            <color red="0.56099998950958252" green="0.56099998950958252" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

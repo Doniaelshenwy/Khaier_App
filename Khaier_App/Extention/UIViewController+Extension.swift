@@ -5,7 +5,6 @@
 //  Created by Donia Elshenawy on 28/01/2023.
 //
 
-import Foundation
 import UIKit
 
 // set border color for textfield and view and remove border
@@ -71,6 +70,11 @@ extension UIViewController{
     func pop(isTabBarHide: Bool){
         self.navigationController?.popViewController(animated: true)
         isTabBarHidden(isTabBarHide)
+    }
+    
+    func customPresent(_ vc: UIViewController, animated: Bool) {
+        vc.modalPresentationStyle = .custom
+        self.present(vc, animated: animated, completion: nil)
     }
     
     func moveToSignUpVC(){
@@ -148,6 +152,20 @@ extension UIViewController {
     func checkViewIsEmpty(view: UIView, height: NSLayoutConstraint, label invalid: UILabel ){
     setRedColorView(view)
     showLabel(heightConstrain: height, repeatLabel: invalid)
+    }
+    
+}
+
+// address when use picker view
+extension UIViewController {
+    func checkAddressView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+        if textField.text == "اختر المدينة و المنطقة" {
+            setGrayColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        } else {
+            setAppColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        }
     }
     
 }

@@ -225,14 +225,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S15-h5-I2t">
                                                     <rect key="frame" x="0.0" y="29" width="343" height="48"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Px-7YZ">
-                                                            <rect key="frame" x="22" y="21" width="12" height="6"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Px-7YZ">
+                                                            <rect key="frame" x="22" y="12" width="24" height="24"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="12" id="v1B-SE-uTa"/>
+                                                                <constraint firstAttribute="width" constant="24" id="v1B-SE-uTa"/>
                                                             </constraints>
                                                         </imageView>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="اختر المدينة و المنطقة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nvz-pU-UFb">
-                                                            <rect key="frame" x="54" y="0.0" width="279" height="48"/>
+                                                            <rect key="frame" x="66" y="0.0" width="267" height="48"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
@@ -243,9 +243,9 @@
                                                         <constraint firstItem="Nvz-pU-UFb" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" id="Llm-zC-SQ5"/>
                                                         <constraint firstItem="HxR-Px-7YZ" firstAttribute="leading" secondItem="S15-h5-I2t" secondAttribute="leading" constant="22" id="WAn-Ay-aJT"/>
                                                         <constraint firstItem="Nvz-pU-UFb" firstAttribute="leading" secondItem="HxR-Px-7YZ" secondAttribute="trailing" constant="20" id="bd5-ub-4Qo"/>
-                                                        <constraint firstAttribute="bottom" secondItem="HxR-Px-7YZ" secondAttribute="bottom" constant="21" id="cxv-5Y-hTR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="HxR-Px-7YZ" secondAttribute="bottom" constant="12" id="cxv-5Y-hTR"/>
                                                         <constraint firstAttribute="height" constant="48" id="gkF-TA-09U"/>
-                                                        <constraint firstItem="HxR-Px-7YZ" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" constant="21" id="lPY-8o-1os"/>
+                                                        <constraint firstItem="HxR-Px-7YZ" firstAttribute="top" secondItem="S15-h5-I2t" secondAttribute="top" constant="12" id="lPY-8o-1os"/>
                                                         <constraint firstAttribute="trailing" secondItem="Nvz-pU-UFb" secondAttribute="trailing" constant="10" id="xfC-mV-1Es"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -596,8 +596,8 @@
     <resources>
         <image name="Login" width="163" height="199"/>
         <image name="Logo" width="172" height="172"/>
+        <image name="arrow-down" width="24" height="24.333333969116211"/>
         <image name="check" width="18" height="18"/>
-        <image name="down" width="14" height="7.6666665077209473"/>
         <image name="eye-off" width="24" height="24"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
