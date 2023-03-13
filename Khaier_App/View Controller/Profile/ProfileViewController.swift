@@ -56,8 +56,16 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutView(_ sender: Any) {
-        let vc = ExitViewController()
+        let vc = ExitViewController(delegate: self)
         customPresent(vc, animated: false)
+    }
+    
+}
+
+extension ProfileViewController: LogoutProtocol {
+    
+    func movetoLoginVCFromExitVC() {
+        moveToLoginVC()
     }
     
 }

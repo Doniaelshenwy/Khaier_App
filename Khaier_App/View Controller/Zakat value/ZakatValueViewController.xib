@@ -32,16 +32,16 @@
                     <rect key="frame" x="44.666666666666657" y="276.66666666666669" width="286" height="259.00000000000006"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="z2Z-6A-ACv">
-                            <rect key="frame" x="16" y="47.999999999999993" width="254" height="74.333333333333314"/>
+                            <rect key="frame" x="16" y="48" width="254" height="91"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قيمة الزكاة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-eg-ayS">
-                                    <rect key="frame" x="90.666666666666686" y="0.0" width="72.666666666666686" height="23.333333333333332"/>
+                                    <rect key="frame" x="88.333333333333343" y="0.0" width="77.333333333333343" height="30"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="20"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000.00  ج.م" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eog-ha-I9S">
-                                    <rect key="frame" x="45.333333333333329" y="39.333333333333314" width="163.33333333333337" height="35"/>
+                                    <rect key="frame" x="38.333333333333343" y="46" width="177" height="45"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-SemiBold" family="IBM Plex Sans Arabic" pointSize="30"/>
                                     <color key="textColor" name="BlackColor"/>
                                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spK-oZ-u3K">
-                            <rect key="frame" x="32" y="154.33333333333331" width="222" height="40"/>
+                            <rect key="frame" x="32" y="171" width="222" height="40"/>
                             <color key="backgroundColor" name="AppColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="JqQ-fr-aN8"/>
@@ -89,7 +89,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="TGr-6F-xSR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9Dn-Rw-KFl"/>
                 <constraint firstItem="TGr-6F-xSR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VVv-IX-Ugh"/>

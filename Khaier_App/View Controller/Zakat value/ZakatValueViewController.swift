@@ -28,7 +28,7 @@ class ZakatValueViewController: UIViewController {
     }
 
     @IBAction func donateNowButton(_ sender: Any) {
-        dismiss(animated: true)
+        dismiss(animated: false)
         delegate.movetoHomeVCFromZakatValue()
     }
     

@@ -23,6 +23,7 @@
 		FC2BF40829BF665700490A46 /* DeleteAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2BF40629BF665700490A46 /* DeleteAccountViewController.xib */; };
 		FC2BF40B29BF666B00490A46 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF40929BF666B00490A46 /* ExitViewController.swift */; };
 		FC2BF40C29BF666B00490A46 /* ExitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2BF40A29BF666B00490A46 /* ExitViewController.xib */; };
+		FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF40E29BF710600490A46 /* LogoutProtocol.swift */; };
 		FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */; };
 		FC2DAECA29A3F8DD0069E3F2 /* BookmarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */; };
 		FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */; };
@@ -203,6 +204,7 @@
 		FC2BF40629BF665700490A46 /* DeleteAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteAccountViewController.xib; sourceTree = "<group>"; };
 		FC2BF40929BF666B00490A46 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		FC2BF40A29BF666B00490A46 /* ExitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitViewController.xib; sourceTree = "<group>"; };
+		FC2BF40E29BF710600490A46 /* LogoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutProtocol.swift; sourceTree = "<group>"; };
 		FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkViewController.xib; sourceTree = "<group>"; };
 		FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDonationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		FC2BF40329BF661600490A46 /* Exit */ = {
 			isa = PBXGroup;
 			children = (
+				FC2BF40D29BF70D200490A46 /* Log out Protocol */,
 				FC2BF40929BF666B00490A46 /* ExitViewController.swift */,
 				FC2BF40A29BF666B00490A46 /* ExitViewController.xib */,
 			);
@@ -397,6 +400,14 @@
 				FC2BF40629BF665700490A46 /* DeleteAccountViewController.xib */,
 			);
 			path = "Delete Account";
+			sourceTree = "<group>";
+		};
+		FC2BF40D29BF70D200490A46 /* Log out Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BF40E29BF710600490A46 /* LogoutProtocol.swift */,
+			);
+			path = "Log out Protocol";
 			sourceTree = "<group>";
 		};
 		FC2DAEC629A3F8A00069E3F2 /* Bookmark */ = {
@@ -1335,6 +1346,7 @@
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
 				FCC0334F299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift in Sources */,
+				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
 				FC307ADB29B943C600DFAE60 /* RememberViewController.swift in Sources */,
