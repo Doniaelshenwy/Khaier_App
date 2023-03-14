@@ -202,10 +202,12 @@ extension EditReminderViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
     
     private func setTimeTextFieldImage(nameImage: String) {
-        let image = UIImageView()
-        image.image = UIImage(named: nameImage)
-        timeTextField.leftViewMode = .always
-        timeTextField.leftView = image
+        let imageView = UIImageView(image: UIImage(named: nameImage))
+           imageView.frame = CGRect(x: 16, y: 8, width: imageView.image!.size.width , height: imageView.image!.size.height)
+           let paddingView: UIView = UIView.init(frame: CGRect(x: 16, y: 8, width: 24, height: 24))
+           paddingView.addSubview(imageView)
+           timeTextField.leftViewMode = .always
+           timeTextField.leftView = paddingView
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
