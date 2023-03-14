@@ -33,7 +33,7 @@ class EditProfileViewController: UIViewController {
         hideInvalidLabel()
         setTextFieldDelegate()
         setupPickerView()
-        setTextFieldImage(nameImage: "arrow-down")
+        setTextFieldImage(nameImage: "down")
     }
     
     func hideInvalidLabel() {
@@ -146,7 +146,6 @@ extension EditProfileViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         chooseAddressTextField.text = data[row]
         chooseAddressTextField.resignFirstResponder()
         setAppColorView(addressView)
-        setTextFieldImage(nameImage: "down")
     }
     
 }

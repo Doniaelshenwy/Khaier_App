@@ -47,8 +47,7 @@ class SearchViewController: UIViewController {
     
     func moveToFillterAddressVC(){
         let vc = FilterAddressViewController(delegate: self)
-        vc.modalPresentationStyle = .custom
-        present(vc, animated: true, completion: nil)
+        customPresent(vc, animated: false)
     }
 
     @IBAction func backToHomeButton(_ sender: Any) {

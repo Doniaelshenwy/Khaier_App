@@ -49,7 +49,7 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
 
     // when user press x button dismiss screen and move to searchVC
     @IBAction func closeFilterAddressView(_ sender: Any) {
-        dismiss(animated: true)
+        dismiss(animated: false)
     }
 
     

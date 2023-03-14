@@ -30,9 +30,13 @@ class AddReminderViewController: UIViewController {
     
     var allDayReminder = false
     
-    private let pickerView = UIPickerView()
+    private let reminderPickerView = UIPickerView()
+    private let repeatPickerView = UIPickerView()
+    private let datePicker = UIDatePicker()
+    private let timePicker = UIDatePicker()
     
-    let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+    let reminderData = ["قبل 15 دقيقة", " قبل 30 دقيقة","  قبل 45 دقيقة","  قبل ساعة","  قبل ساعتين","  قبل يوم"," قبل يومين"]
+    let repeatData = ["تكرار","كل يوم","كل أسبوع","كل شهر","كل سنة"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +44,9 @@ class AddReminderViewController: UIViewController {
         hideInvalidLabel()
         setTextFieldDelegate()
         setupPickerView()
-       // setTextFieldImage(nameImage: "arrow-down")
+        setReminderTextFieldImage(nameImage: "down")
+        setRepeatTextFieldImage(nameImage: "down")
+        setTimeTextFieldImage(nameImage: "down")
     }
     
     func hideInvalidLabel() {
@@ -55,6 +61,8 @@ class AddReminderViewController: UIViewController {
         if allDayReminder {
             checkColorBoderOfTextField(textfield: timeTextField, label: timeInvalidLabel, height: timeHeightInvalidLabel)
             timeTextField.isUserInteractionEnabled = false
+            timeTextField.text = ""
+            setGrayColorTF(timeTextField)
         } else {
             timeTextField.isUserInteractionEnabled = true
         }
@@ -90,10 +98,6 @@ class AddReminderViewController: UIViewController {
         pop(isTabBarHide: true)
     }
     
-    @IBAction func showCalenderButton(_ sender: Any) {
-       
-    }
-    
     @IBAction func showReminderAllDayButton(_ sender: Any) {
         allDayReminder.toggle()
         isAllDayReminder()
@@ -123,41 +127,128 @@ extension AddReminderViewController: UITextFieldDelegate {
 
 extension AddReminderViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
-    private func setupPickerView() {
-//        let textField = [reminderTextField, repeatTextField]
-//        textField.forEach { $0?.delegate = self }
-//        textField.forEach { $0?.inputView = pickerView}
-        reminderTextField.delegate = self
-        reminderTextField.inputView = pickerView
-        pickerView.delegate = self
-        pickerView.dataSource = self
+    func setTimePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneTimePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        timeTextField.inputAccessoryView = toolbar
+        timePicker.preferredDatePickerStyle = .wheels
+        timePicker.locale = Locale(identifier: "ar")
+        timeTextField.inputView = timePicker
+        timePicker.datePickerMode = .time
     }
     
-    private func setTextFieldImage(nameImage: String) {
-        let textField = [reminderTextField, repeatTextField]
+    @objc func doneTimePressed() {
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+        formatter.dateFormat = "hh:mm a"
+        timeTextField.text = formatter.string(from: timePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    func setDatePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneDatePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        dateTextField.inputAccessoryView = toolbar
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.locale = Locale(identifier: "ar")
+        dateTextField.inputView = datePicker
+        datePicker.datePickerMode = .date
+    }
+    
+    @objc func doneDatePressed() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        formatter.dateFormat = "d MMM yyyy"
+        formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+        dateTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    private func setupPickerView() {
+        let textField = [reminderTextField, repeatTextField,timeTextField]
+        textField.forEach { $0?.delegate = self }
+        reminderTextField.inputView = reminderPickerView
+        repeatTextField.inputView = repeatPickerView
+        let pickerView = [reminderPickerView, repeatPickerView]
+        pickerView.forEach { $0.delegate = self }
+        pickerView.forEach { $0.dataSource = self }
+        setTimePicker()
+        setDatePicker()
+    }
+    
+    private func setReminderTextFieldImage(nameImage: String) {
         let image = UIImageView()
         image.image = UIImage(named: nameImage)
-        textField.forEach { $0?.leftViewMode = .always}
-        textField.forEach { $0?.leftView = image}
+        reminderTextField.leftViewMode = .always
+        reminderTextField.leftView = image
+        repeatTextField.leftViewMode = .always
+        repeatTextField.leftView = image
+    }
+    
+    private func setRepeatTextFieldImage(nameImage: String) {
+        let image = UIImageView()
+        image.image = UIImage(named: nameImage)
+        repeatTextField.leftViewMode = .always
+        repeatTextField.leftView = image
+    }
+    
+    private func setTimeTextFieldImage(nameImage: String) {
+        let image = UIImageView()
+        image.image = UIImage(named: nameImage)
+        timeTextField.leftViewMode = .always
+        timeTextField.leftView = image
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        switch pickerView {
+        case reminderPickerView:
+            return 1
+        case repeatPickerView:
+            return 1
+        case datePicker:
+            return 3
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        switch pickerView {
+        case reminderPickerView:
+            return reminderData.count
+        case repeatPickerView:
+            return repeatData.count
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        switch pickerView {
+        case reminderPickerView:
+            return reminderData[row]
+        case repeatPickerView:
+            return repeatData[row]
+        default:
+            return ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        reminderTextField.text = data[row]
-        reminderView.resignFirstResponder()
-        setAppColorView(reminderView)
-        setTextFieldImage(nameImage: "down")
+        if pickerView == reminderPickerView {
+            reminderTextField.text = reminderData[row]
+            reminderView.resignFirstResponder()
+            setAppColorView(reminderView)
+        } else {
+            repeatTextField.text = repeatData[row]
+            repeatView.resignFirstResponder()
+            setAppColorView(repeatView)
+        }
     }
     
 }
