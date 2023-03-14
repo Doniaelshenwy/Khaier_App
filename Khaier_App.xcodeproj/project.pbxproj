@@ -24,6 +24,8 @@
 		FC2BF40B29BF666B00490A46 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF40929BF666B00490A46 /* ExitViewController.swift */; };
 		FC2BF40C29BF666B00490A46 /* ExitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2BF40A29BF666B00490A46 /* ExitViewController.xib */; };
 		FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF40E29BF710600490A46 /* LogoutProtocol.swift */; };
+		FC2BF41329BF744800490A46 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF41129BF744800490A46 /* AddReminderViewController.swift */; };
+		FC2BF41429BF744800490A46 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2BF41229BF744800490A46 /* AddReminderViewController.xib */; };
 		FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */; };
 		FC2DAECA29A3F8DD0069E3F2 /* BookmarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */; };
 		FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */; };
@@ -32,10 +34,8 @@
 		FC2DAED429A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAED229A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib */; };
 		FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */; };
 		FC2DAED929A42D520069E3F2 /* BookmarkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAED829A42D520069E3F2 /* BookmarkType.swift */; };
-		FC307ADB29B943C600DFAE60 /* RememberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC307AD929B943C600DFAE60 /* RememberViewController.swift */; };
-		FC307ADC29B943C600DFAE60 /* RememberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC307ADA29B943C600DFAE60 /* RememberViewController.xib */; };
-		FC307AE029B9471D00DFAE60 /* RememberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC307ADE29B9471D00DFAE60 /* RememberTableViewCell.swift */; };
-		FC307AE129B9471D00DFAE60 /* RememberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC307ADF29B9471D00DFAE60 /* RememberTableViewCell.xib */; };
+		FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC307AD929B943C600DFAE60 /* ReminderViewController.swift */; };
+		FC307ADC29B943C600DFAE60 /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC307ADA29B943C600DFAE60 /* ReminderViewController.xib */; };
 		FC33F3AD29AD550D003ACDC4 /* MyDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F3AB29AD550D003ACDC4 /* MyDonationTableViewCell.swift */; };
 		FC33F3AE29AD550D003ACDC4 /* MyDonationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC33F3AC29AD550D003ACDC4 /* MyDonationTableViewCell.xib */; };
 		FC33F3B129AD5528003ACDC4 /* FollowDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F3AF29AD5528003ACDC4 /* FollowDonationTableViewCell.swift */; };
@@ -55,6 +55,11 @@
 		FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC47817C29B6A71E009C5139 /* InformationZakatViewController.xib */; };
 		FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47818029B6A890009C5139 /* ZakatValueViewController.swift */; };
 		FC47818329B6A890009C5139 /* ZakatValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC47818129B6A890009C5139 /* ZakatValueViewController.xib */; };
+		FC48AE7629C08E0200C195FE /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48AE7529C08E0200C195FE /* Reminder.swift */; };
+		FC48AE7A29C08EBD00C195FE /* EditReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48AE7829C08EBD00C195FE /* EditReminderViewController.swift */; };
+		FC48AE7B29C08EBD00C195FE /* EditReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC48AE7929C08EBD00C195FE /* EditReminderViewController.xib */; };
+		FC48AE7E29C09BBB00C195FE /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48AE7C29C09BBB00C195FE /* ReminderTableViewCell.swift */; };
+		FC48AE7F29C09BBB00C195FE /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC48AE7D29C09BBB00C195FE /* ReminderTableViewCell.xib */; };
 		FC49CFE529A1865600BFC290 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */; };
 		FC49CFE629A1865600BFC290 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */; };
 		FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */; };
@@ -205,6 +210,8 @@
 		FC2BF40929BF666B00490A46 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		FC2BF40A29BF666B00490A46 /* ExitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitViewController.xib; sourceTree = "<group>"; };
 		FC2BF40E29BF710600490A46 /* LogoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutProtocol.swift; sourceTree = "<group>"; };
+		FC2BF41129BF744800490A46 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		FC2BF41229BF744800490A46 /* AddReminderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReminderViewController.xib; sourceTree = "<group>"; };
 		FC2DAEC729A3F8DD0069E3F2 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		FC2DAEC829A3F8DD0069E3F2 /* BookmarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkViewController.xib; sourceTree = "<group>"; };
 		FC2DAECD29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDonationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -214,10 +221,8 @@
 		FC2DAED529A42C330069E3F2 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		FC2DAED829A42D520069E3F2 /* BookmarkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkType.swift; sourceTree = "<group>"; };
 		FC30547729B36973009D43D8 /* MyPlayground copy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "MyPlayground copy.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		FC307AD929B943C600DFAE60 /* RememberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberViewController.swift; sourceTree = "<group>"; };
-		FC307ADA29B943C600DFAE60 /* RememberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RememberViewController.xib; sourceTree = "<group>"; };
-		FC307ADE29B9471D00DFAE60 /* RememberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberTableViewCell.swift; sourceTree = "<group>"; };
-		FC307ADF29B9471D00DFAE60 /* RememberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RememberTableViewCell.xib; sourceTree = "<group>"; };
+		FC307AD929B943C600DFAE60 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		FC307ADA29B943C600DFAE60 /* ReminderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
 		FC33F3AB29AD550D003ACDC4 /* MyDonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonationTableViewCell.swift; sourceTree = "<group>"; };
 		FC33F3AC29AD550D003ACDC4 /* MyDonationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDonationTableViewCell.xib; sourceTree = "<group>"; };
 		FC33F3AF29AD5528003ACDC4 /* FollowDonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDonationTableViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +242,11 @@
 		FC47817C29B6A71E009C5139 /* InformationZakatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationZakatViewController.xib; sourceTree = "<group>"; };
 		FC47818029B6A890009C5139 /* ZakatValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZakatValueViewController.swift; sourceTree = "<group>"; };
 		FC47818129B6A890009C5139 /* ZakatValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZakatValueViewController.xib; sourceTree = "<group>"; };
+		FC48AE7529C08E0200C195FE /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		FC48AE7829C08EBD00C195FE /* EditReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReminderViewController.swift; sourceTree = "<group>"; };
+		FC48AE7929C08EBD00C195FE /* EditReminderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditReminderViewController.xib; sourceTree = "<group>"; };
+		FC48AE7C29C09BBB00C195FE /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		FC48AE7D29C09BBB00C195FE /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
 		FC49CFE329A1865600BFC290 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUPViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +420,15 @@
 			path = "Log out Protocol";
 			sourceTree = "<group>";
 		};
+		FC2BF41029BF741A00490A46 /* Add Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BF41129BF744800490A46 /* AddReminderViewController.swift */,
+				FC2BF41229BF744800490A46 /* AddReminderViewController.xib */,
+			);
+			path = "Add Reminder";
+			sourceTree = "<group>";
+		};
 		FC2DAEC629A3F8A00069E3F2 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,23 +467,23 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		FC307AD829B9434300DFAE60 /* Remember */ = {
+		FC307AD829B9434300DFAE60 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
-				FC307AD929B943C600DFAE60 /* RememberViewController.swift */,
-				FC307ADA29B943C600DFAE60 /* RememberViewController.xib */,
-				FC307ADD29B946EF00DFAE60 /* Remember TableView */,
+				FC307AD929B943C600DFAE60 /* ReminderViewController.swift */,
+				FC307ADA29B943C600DFAE60 /* ReminderViewController.xib */,
+				FC307ADD29B946EF00DFAE60 /* Reminder TableView */,
 			);
-			path = Remember;
+			path = Reminder;
 			sourceTree = "<group>";
 		};
-		FC307ADD29B946EF00DFAE60 /* Remember TableView */ = {
+		FC307ADD29B946EF00DFAE60 /* Reminder TableView */ = {
 			isa = PBXGroup;
 			children = (
-				FC307ADE29B9471D00DFAE60 /* RememberTableViewCell.swift */,
-				FC307ADF29B9471D00DFAE60 /* RememberTableViewCell.xib */,
+				FC48AE7C29C09BBB00C195FE /* ReminderTableViewCell.swift */,
+				FC48AE7D29C09BBB00C195FE /* ReminderTableViewCell.xib */,
 			);
-			path = "Remember TableView";
+			path = "Reminder TableView";
 			sourceTree = "<group>";
 		};
 		FC34AB99299940E600B2B7C2 /* OTP Forget Password */ = {
@@ -531,6 +550,23 @@
 				FC47818129B6A890009C5139 /* ZakatValueViewController.xib */,
 			);
 			path = "Zakat value";
+			sourceTree = "<group>";
+		};
+		FC48AE7429C08DE600C195FE /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AE7529C08E0200C195FE /* Reminder.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		FC48AE7729C08E9000C195FE /* Edit Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AE7829C08EBD00C195FE /* EditReminderViewController.swift */,
+				FC48AE7929C08EBD00C195FE /* EditReminderViewController.xib */,
+			);
+			path = "Edit Reminder";
 			sourceTree = "<group>";
 		};
 		FC4AD9FD299310BF006B9F70 /* OTP SignUp */ = {
@@ -844,6 +880,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC48AE7429C08DE600C195FE /* Reminder */,
 				FCF50C4D29B013CF0051F142 /* Notification */,
 				FC78116429A84B3F00C8A3C0 /* Donation */,
 				FCE6324B29A53F9E00ED2040 /* Categories */,
@@ -880,7 +917,9 @@
 				FC47817529B69BCE009C5139 /* Calculate Zakat */,
 				FC47817A29B6A6ED009C5139 /* Information Zakat */,
 				FC47817F29B6A854009C5139 /* Zakat value */,
-				FC307AD829B9434300DFAE60 /* Remember */,
+				FC307AD829B9434300DFAE60 /* Reminder */,
+				FC2BF41029BF741A00490A46 /* Add Reminder */,
+				FC48AE7729C08E9000C195FE /* Edit Reminder */,
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
 			);
@@ -1144,6 +1183,7 @@
 				FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				FCF6F0CB29A13BC400DBBBF0 /* SearchViewController.xib in Resources */,
+				FC48AE7F29C09BBB00C195FE /* ReminderTableViewCell.xib in Resources */,
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
 				FC2BF40829BF665700490A46 /* DeleteAccountViewController.xib in Resources */,
 				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
@@ -1161,7 +1201,9 @@
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCF50C4C29B007FE0051F142 /* NotificationTableViewCell.xib in Resources */,
 				FCC03354299DD2080055AEF6 /* NearCollectionViewCell.xib in Resources */,
+				FC2BF41429BF744800490A46 /* AddReminderViewController.xib in Resources */,
 				FC926023299D604D00B6EB4F /* DonationViewController.xib in Resources */,
+				FC48AE7B29C08EBD00C195FE /* EditReminderViewController.xib in Resources */,
 				FCF0BC3B29B4F55F008EDDAD /* EditPasswordViewController.xib in Resources */,
 				FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */,
 				FC47818329B6A890009C5139 /* ZakatValueViewController.xib in Resources */,
@@ -1169,7 +1211,6 @@
 				FC33F3B229AD5528003ACDC4 /* FollowDonationTableViewCell.xib in Resources */,
 				FCE6324529A533E000ED2040 /* CategoriesViewController.xib in Resources */,
 				FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */,
-				FC307AE129B9471D00DFAE60 /* RememberTableViewCell.xib in Resources */,
 				FC400FAB29A55F560030AD2B /* OneCategoryViewController.xib in Resources */,
 				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
 				FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */,
@@ -1180,7 +1221,7 @@
 				FC2DAED429A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.xib in Resources */,
 				FCFA5EBB29A2DF3B0045B9AB /* FilterAddressViewController.xib in Resources */,
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
-				FC307ADC29B943C600DFAE60 /* RememberViewController.xib in Resources */,
+				FC307ADC29B943C600DFAE60 /* ReminderViewController.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
 				FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */,
 			);
@@ -1349,10 +1390,11 @@
 				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
-				FC307ADB29B943C600DFAE60 /* RememberViewController.swift in Sources */,
+				FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */,
 				FC47817829B69C0A009C5139 /* CalculateZakatViewController.swift in Sources */,
 				FCF0BC3D29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift in Sources */,
 				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,
+				FC48AE7E29C09BBB00C195FE /* ReminderTableViewCell.swift in Sources */,
 				FCE415EB299FB5D8003A991D /* NearModel.swift in Sources */,
 				FCF50C4F29B013EF0051F142 /* Notification.swift in Sources */,
 				FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */,
@@ -1360,13 +1402,14 @@
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
 				FC65C67729A8FACA00F497C8 /* DonationType.swift in Sources */,
 				FC671D9F2985503600236031 /* UIViewController+Extension.swift in Sources */,
+				FC48AE7629C08E0200C195FE /* Reminder.swift in Sources */,
 				FC2DAED329A402DC0069E3F2 /* BookmarkCharityCollectionViewCell.swift in Sources */,
 				FCE415E4299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift in Sources */,
 				FC671DA12985507D00236031 /* Utilities.swift in Sources */,
 				FCE6324F29A5417C00ED2040 /* CategoriesVC+ExtensionCollectionView.swift in Sources */,
 				FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
-				FC307AE029B9471D00DFAE60 /* RememberTableViewCell.swift in Sources */,
+				FC2BF41329BF744800490A46 /* AddReminderViewController.swift in Sources */,
 				FC47817D29B6A71E009C5139 /* InformationZakatViewController.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */,
@@ -1404,6 +1447,7 @@
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 				FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */,
+				FC48AE7A29C08EBD00C195FE /* EditReminderViewController.swift in Sources */,
 				FC33F3AD29AD550D003ACDC4 /* MyDonationTableViewCell.swift in Sources */,
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
 				FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */,

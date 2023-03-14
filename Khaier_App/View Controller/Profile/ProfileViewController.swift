@@ -37,6 +37,8 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func rememberView(_ sender: Any) {
+        let vc = ReminderViewController()
+        push(vc: vc)
     }
     
     @IBAction func calculateZakatView(_ sender: Any) {
