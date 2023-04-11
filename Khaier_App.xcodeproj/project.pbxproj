@@ -148,6 +148,8 @@
 		FCE415E4299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE415E3299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift */; };
 		FCE415E9299FB5B7003A991D /* PriorityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE415E8299FB5B7003A991D /* PriorityModel.swift */; };
 		FCE415EB299FB5D8003A991D /* NearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE415EA299FB5D8003A991D /* NearModel.swift */; };
+		FCE4980629E4B65F00B0DDA9 /* DonationInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE4980429E4B65F00B0DDA9 /* DonationInViewController.swift */; };
+		FCE4980729E4B65F00B0DDA9 /* DonationInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE4980529E4B65F00B0DDA9 /* DonationInViewController.xib */; };
 		FCE6324429A533E000ED2040 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6324229A533E000ED2040 /* CategoriesViewController.swift */; };
 		FCE6324529A533E000ED2040 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE6324329A533E000ED2040 /* CategoriesViewController.xib */; };
 		FCE6324929A536DD00ED2040 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6324729A536DD00ED2040 /* CategoriesCollectionViewCell.swift */; };
@@ -321,6 +323,8 @@
 		FCE415E3299FB34F003A991D /* HomeVC+ExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ExtensionCollectionView.swift"; sourceTree = "<group>"; };
 		FCE415E8299FB5B7003A991D /* PriorityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityModel.swift; sourceTree = "<group>"; };
 		FCE415EA299FB5D8003A991D /* NearModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearModel.swift; sourceTree = "<group>"; };
+		FCE4980429E4B65F00B0DDA9 /* DonationInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationInViewController.swift; sourceTree = "<group>"; };
+		FCE4980529E4B65F00B0DDA9 /* DonationInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationInViewController.xib; sourceTree = "<group>"; };
 		FCE6324229A533E000ED2040 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		FCE6324329A533E000ED2040 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		FCE6324729A536DD00ED2040 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -922,6 +926,7 @@
 				FC48AE7729C08E9000C195FE /* Edit Reminder */,
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
+				FCE4980329E4B62A00B0DDA9 /* Donation In */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -970,6 +975,15 @@
 				FCE415EA299FB5D8003A991D /* NearModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FCE4980329E4B62A00B0DDA9 /* Donation In */ = {
+			isa = PBXGroup;
+			children = (
+				FCE4980429E4B65F00B0DDA9 /* DonationInViewController.swift */,
+				FCE4980529E4B65F00B0DDA9 /* DonationInViewController.xib */,
+			);
+			path = "Donation In";
 			sourceTree = "<group>";
 		};
 		FCE6324129A5336F00ED2040 /* Categories */ = {
@@ -1213,6 +1227,7 @@
 				FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */,
 				FC400FAB29A55F560030AD2B /* OneCategoryViewController.xib in Resources */,
 				FC69EB95299128AF008E404A /* IBMPlexSansArabic-Light.ttf in Resources */,
+				FCE4980729E4B65F00B0DDA9 /* DonationInViewController.xib in Resources */,
 				FCDEC98129945B9300E355F1 /* GoogleService-Info.plist in Resources */,
 				FC671DA7298564AF00236031 /* OnboardingViewController.xib in Resources */,
 				FC69EB92299128AF008E404A /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
@@ -1391,6 +1406,7 @@
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
 				FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */,
+				FCE4980629E4B65F00B0DDA9 /* DonationInViewController.swift in Sources */,
 				FC47817829B69C0A009C5139 /* CalculateZakatViewController.swift in Sources */,
 				FCF0BC3D29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift in Sources */,
 				FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */,

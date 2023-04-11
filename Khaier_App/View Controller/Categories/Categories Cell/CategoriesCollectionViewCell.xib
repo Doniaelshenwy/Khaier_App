@@ -35,7 +35,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ملابس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qci-oe-WED">
-                                        <rect key="frame" x="58.5" y="78" width="47" height="27"/>
+                                        <rect key="frame" x="62.5" y="78" width="39.5" height="21"/>
                                         <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
                                         <color key="textColor" name="BlackColor"/>
                                         <nil key="highlightedColor"/>
