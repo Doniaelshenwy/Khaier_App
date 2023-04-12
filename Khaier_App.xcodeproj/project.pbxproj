@@ -11,6 +11,8 @@
 		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
 		FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */; };
+		FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */; };
+		FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */; };
 		FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */; };
 		FC1931C12998547700736EF9 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C02998547700736EF9 /* SecureTextField.swift */; };
 		FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */; };
@@ -124,6 +126,8 @@
 		FC92AABB29BC9E380031838B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92AABA29BC9E380031838B /* CustomView.swift */; };
 		FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98F2CE299BDB09002A4E8B /* TabBarController.swift */; };
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
+		FCB39D7729E649540026CAA8 /* CharityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB39D7529E649540026CAA8 /* CharityViewController.swift */; };
+		FCB39D7829E649540026CAA8 /* CharityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB39D7629E649540026CAA8 /* CharityViewController.xib */; };
 		FCC0334F299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0334D299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift */; };
 		FCC03350299DD1EF0055AEF6 /* PriorityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC0334E299DD1EF0055AEF6 /* PriorityCollectionViewCell.xib */; };
 		FCC03353299DD2080055AEF6 /* NearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC03351299DD2080055AEF6 /* NearCollectionViewCell.swift */; };
@@ -199,6 +203,8 @@
 		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
+		FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
+		FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityProfileViewController.xib; sourceTree = "<group>"; };
 		FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FC1931C02998547700736EF9 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUPVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -295,6 +301,8 @@
 		FC92AABA29BC9E380031838B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		FC98F2CE299BDB09002A4E8B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		FCB39D7529E649540026CAA8 /* CharityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityViewController.swift; sourceTree = "<group>"; };
+		FCB39D7629E649540026CAA8 /* CharityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityViewController.xib; sourceTree = "<group>"; };
 		FCC0334D299DD1EF0055AEF6 /* PriorityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCC0334E299DD1EF0055AEF6 /* PriorityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriorityCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCC03351299DD2080055AEF6 /* NearCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -395,6 +403,17 @@
 				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC102F6529E638AA00BA66CC /* charity Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */,
+				FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */,
+				FCB39D7529E649540026CAA8 /* CharityViewController.swift */,
+				FCB39D7629E649540026CAA8 /* CharityViewController.xib */,
+			);
+			path = "charity Profile";
 			sourceTree = "<group>";
 		};
 		FC2BF40329BF661600490A46 /* Exit */ = {
@@ -927,6 +946,7 @@
 				FC926016299D5DB800B6EB4F /* Notification */,
 				FC926015299D5DA700B6EB4F /* Donation */,
 				FCE4980329E4B62A00B0DDA9 /* Donation In */,
+				FC102F6529E638AA00BA66CC /* charity Profile */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -1198,6 +1218,7 @@
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				FCF6F0CB29A13BC400DBBBF0 /* SearchViewController.xib in Resources */,
 				FC48AE7F29C09BBB00C195FE /* ReminderTableViewCell.xib in Resources */,
+				FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */,
 				FC69EBA1299128AF008E404A /* IBMPlexSansArabic-Medium.ttf in Resources */,
 				FC2BF40829BF665700490A46 /* DeleteAccountViewController.xib in Resources */,
 				FCC6299A2996E971001406CE /* ResetPasswordViewController.xib in Resources */,
@@ -1212,6 +1233,7 @@
 				FC34AB9D2999412A00B2B7C2 /* OTPForgetPasswordViewController.xib in Resources */,
 				FC69EB8F299128AF008E404A /* IBMPlexSansArabic-Thin.ttf in Resources */,
 				FC2DAED029A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.xib in Resources */,
+				FCB39D7829E649540026CAA8 /* CharityViewController.xib in Resources */,
 				FC69EB9B299128AF008E404A /* IBMPlexSansArabic-ExtraLight.ttf in Resources */,
 				FCF50C4C29B007FE0051F142 /* NotificationTableViewCell.xib in Resources */,
 				FCC03354299DD2080055AEF6 /* NearCollectionViewCell.xib in Resources */,
@@ -1445,6 +1467,7 @@
 				FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */,
 				FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FCB39D7729E649540026CAA8 /* CharityViewController.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC3DCC8F29AE907B00DEDFFA /* ViewWithAction.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
@@ -1467,6 +1490,7 @@
 				FC33F3AD29AD550D003ACDC4 /* MyDonationTableViewCell.swift in Sources */,
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
 				FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */,
+				FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */,
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 				FCEA5A3529BD21A100E8D84E /* EditProfileViewController.swift in Sources */,
 			);
