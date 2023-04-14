@@ -206,3 +206,16 @@ extension UIViewController {
     }
     
 }
+
+// add specific word and change color
+extension UIViewController {
+    
+    func colorOfLabelText(label: UILabel, description: String){
+        let myString = description.prefix(800)
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: String(myString), attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "BlackColor")!]));
+        text.append(NSAttributedString(string: "...المزيد", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "AppColor")!]))
+        label.attributedText = text
+    }
+    
+}

@@ -289,13 +289,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rub-8I-cZ2">
-                                                            <rect key="frame" x="16" y="27" width="72" height="32"/>
+                                                            <rect key="frame" x="16" y="23" width="88" height="40"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-3f-pLK">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCb-oz-uzh">
-                                                                            <rect key="frame" x="-3.6666666666666679" y="-0.33333333333337123" width="39.333333333333343" height="32.666666666666664"/>
+                                                                            <rect key="frame" x="0.3333333333333357" y="3.6666666666666288" width="39.333333333333336" height="32.666666666666664"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="plain" image="save"/>
                                                                         </button>
@@ -303,35 +303,35 @@
                                                                     <color key="backgroundColor" name="Light"/>
                                                                     <constraints>
                                                                         <constraint firstItem="iCb-oz-uzh" firstAttribute="centerX" secondItem="fNc-3f-pLK" secondAttribute="centerX" id="0f1-pB-aNA"/>
-                                                                        <constraint firstAttribute="width" constant="32" id="9TF-Zk-vES"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="9TF-Zk-vES"/>
                                                                         <constraint firstItem="iCb-oz-uzh" firstAttribute="centerY" secondItem="fNc-3f-pLK" secondAttribute="centerY" id="M0e-rZ-ZJV"/>
-                                                                        <constraint firstAttribute="height" constant="32" id="UjH-YY-LX0"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="UjH-YY-LX0"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                                                                            <real key="value" value="16"/>
+                                                                            <real key="value" value="20"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-dn-pHa">
-                                                                    <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                                                                    <rect key="frame" x="48" y="0.0" width="40" height="40"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pc-kZ-SdO">
-                                                                            <rect key="frame" x="-6" y="-1" width="44" height="34"/>
+                                                                            <rect key="frame" x="-2" y="3" width="44" height="34"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="plain" image="calling"/>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" name="Light"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="32" id="CcJ-HO-4IM"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="CcJ-HO-4IM"/>
                                                                         <constraint firstItem="2Pc-kZ-SdO" firstAttribute="centerX" secondItem="9wC-dn-pHa" secondAttribute="centerX" id="D9J-uW-C0h"/>
-                                                                        <constraint firstAttribute="width" constant="32" id="cPB-Xc-mBq"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="cPB-Xc-mBq"/>
                                                                         <constraint firstItem="2Pc-kZ-SdO" firstAttribute="centerY" secondItem="9wC-dn-pHa" secondAttribute="centerY" id="nbQ-3I-nM0"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
-                                                                            <real key="value" value="16"/>
+                                                                            <real key="value" value="20"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
