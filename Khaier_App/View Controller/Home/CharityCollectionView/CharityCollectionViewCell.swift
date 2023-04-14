@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NearCollectionViewCell: UICollectionViewCell {
+class CharityCollectionViewCell: UICollectionViewCell {
     static let identifierCell = "NearCollectionViewCell"
 
     @IBOutlet weak var image: UIImageView!
@@ -23,7 +23,7 @@ class NearCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setCharityData(near charity: NearModel){
+    func setCharityData(near charity: CharityModel){
         image.image = UIImage(named: charity.image)
         title.text = charity.title
         addressLabel.text = charity.address

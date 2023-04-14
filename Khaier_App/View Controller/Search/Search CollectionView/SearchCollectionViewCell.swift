@@ -22,7 +22,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setSearchData(search: PriorityModel) {
+    func setSearchData(search: CaseDonationModel) {
         imageCase.image = UIImage(named: search.image)
         titleCaseLabel.text = search.title
         typeDonationLabel.text = search.typeDonation

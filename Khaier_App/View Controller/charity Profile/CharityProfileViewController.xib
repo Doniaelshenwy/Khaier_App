@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="achievementCollectionView" destination="qce-uh-geo" id="6BI-wW-uOw"/>
                 <outlet property="caseDonationCollectionView" destination="PAD-WP-2Fr" id="beS-GP-Amp"/>
+                <outlet property="caseDonationCollectionViewHeightConstrain" destination="XuK-Kh-kBp" id="kcV-OO-jsj"/>
                 <outlet property="charityDescriptionLabel" destination="8Mf-PP-uoK" id="4rS-Gm-Ctd"/>
                 <outlet property="descriptionView" destination="Pyc-h9-gBc" id="rVV-un-Thb"/>
                 <outlet property="donationsCategoryCollectionView" destination="HLt-KK-SoM" id="HGw-jq-TM5"/>
@@ -40,7 +41,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGz-ls-e6b">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="5684"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="5690"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resala" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-qE-vtO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
@@ -115,24 +116,24 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="khB-Sy-P0e">
-                                    <rect key="frame" x="187.33333333333337" y="251" width="171.66666666666663" height="47"/>
+                                    <rect key="frame" x="187.33333333333337" y="251" width="171.66666666666663" height="53"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-b8-rMe">
-                                            <rect key="frame" x="43.333333333333314" y="0.0" width="128.33333333333334" height="21"/>
+                                            <rect key="frame" x="12.333333333333314" y="0.0" width="159.33333333333334" height="27"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-UK-jqi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="21"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="27"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمعية الامل الخيرية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-zB-DZ3">
-                                                    <rect key="frame" x="19.999999999999993" y="0.0" width="108.33333333333331" height="21"/>
-                                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-SemiBold" family="IBM Plex Sans Arabic" pointSize="14"/>
-                                                    <color key="textColor" name="BlackColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمعية الامل الخيرية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55c-bt-Ne6">
+                                                    <rect key="frame" x="20" y="0.0" width="139.33333333333334" height="27"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-SemiBold" family="IBM Plex Sans Arabic" pointSize="18"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6.5" translatesAutoresizingMaskIntoConstraints="NO" id="5X4-nB-5eo">
-                                            <rect key="frame" x="0.0" y="29" width="171.66666666666666" height="18"/>
+                                            <rect key="frame" x="0.0" y="35" width="171.66666666666666" height="18"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المنصورة، الدقهلية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFK-Xc-Kqi">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="18"/>
@@ -157,7 +158,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-5O-F8r">
-                                    <rect key="frame" x="16" y="314" width="343" height="5370"/>
+                                    <rect key="frame" x="16" y="320" width="343" height="5370"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-h9-gBc" customClass="UIControl">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
@@ -226,7 +227,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="268" id="XuK-Kh-kBp"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mE1-4x-Fxg">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mE1-4x-Fxg">
                                                         <size key="itemSize" width="128" height="128"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -234,7 +235,7 @@
                                                     </collectionViewFlowLayout>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حالات عاجلة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-6O-bbE">
-                                                    <rect key="frame" x="240.33333333333329" y="487" width="86.666666666666657" height="27"/>
+                                                    <rect key="frame" x="256.33333333333331" y="487" width="86.666666666666686" height="27"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -245,7 +246,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="268" id="67a-Dm-iYl"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t93-fp-yb6">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t93-fp-yb6">
                                                         <size key="itemSize" width="128" height="128"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -264,7 +265,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="268" id="IXK-gP-goQ"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WeN-uQ-gYN">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WeN-uQ-gYN">
                                                         <size key="itemSize" width="128" height="128"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -394,7 +395,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Mt5-Yh-4Y8" secondAttribute="trailing" id="dpK-30-dnU"/>
                                                 <constraint firstItem="PAD-WP-2Fr" firstAttribute="top" secondItem="HLt-KK-SoM" secondAttribute="bottom" constant="16" id="eOf-TY-ayh"/>
                                                 <constraint firstAttribute="trailing" secondItem="iIx-Kj-Akh" secondAttribute="trailing" id="hhv-nD-Yzz"/>
-                                                <constraint firstAttribute="trailing" secondItem="nyl-6O-bbE" secondAttribute="trailing" constant="16" id="icz-p7-5wP"/>
+                                                <constraint firstAttribute="trailing" secondItem="nyl-6O-bbE" secondAttribute="trailing" id="icz-p7-5wP"/>
                                                 <constraint firstItem="iIx-Kj-Akh" firstAttribute="top" secondItem="DRP-AE-o71" secondAttribute="bottom" constant="16" id="kDB-xW-CwJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="jOk-Nd-IhX" secondAttribute="trailing" id="ohI-1H-Q7N"/>
                                                 <constraint firstItem="Mt5-Yh-4Y8" firstAttribute="top" secondItem="jOk-Nd-IhX" secondAttribute="bottom" constant="24" id="otO-pJ-8I2"/>
@@ -457,9 +458,6 @@
         <image name="twitter" width="21" height="17.333333969116211"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BlackColor">
-            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayColor">
             <color red="0.56099998950958252" green="0.56099998950958252" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

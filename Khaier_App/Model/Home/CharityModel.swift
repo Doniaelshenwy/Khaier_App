@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NearModel{
+struct CharityModel{
     var image: String
     var title: String
     var address: String

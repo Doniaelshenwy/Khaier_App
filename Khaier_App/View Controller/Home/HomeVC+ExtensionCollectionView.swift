@@ -22,11 +22,11 @@ extension HomeViewController: CollectionViewConfig{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == priorityCollectionView{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PriorityCollectionViewCell.identifierCell, for: indexPath) as! PriorityCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
             cell.setCaseData(priority: priorityArray[indexPath.row])
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NearCollectionViewCell.identifierCell, for: indexPath) as! NearCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharityCollectionViewCell.identifierCell, for: indexPath) as! CharityCollectionViewCell
             cell.setCharityData(near: nearArray[indexPath.row])
             return cell
         }
@@ -35,8 +35,8 @@ extension HomeViewController: CollectionViewConfig{
     func setCollectionView(){
         [priorityCollectionView, nearCollectionView].forEach { $0?.delegate = self }
         [priorityCollectionView, nearCollectionView].forEach { $0?.dataSource = self }
-        priorityCollectionView.register(cells: [PriorityCollectionViewCell.self])
-        nearCollectionView.register(cells: [NearCollectionViewCell.self])
+        priorityCollectionView.register(cells: [DonationCaseCollectionViewCell.self])
+        nearCollectionView.register(cells: [CharityCollectionViewCell.self])
     }
     
 }

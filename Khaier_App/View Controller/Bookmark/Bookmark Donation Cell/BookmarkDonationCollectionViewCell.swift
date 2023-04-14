@@ -23,7 +23,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setDonationData(donation: PriorityModel){
+    func setDonationData(donation: CaseDonationModel){
         imageCase.image = UIImage(named: donation.image)
         titleCaseLabel.text = donation.title
         typeDonationLabel.text = donation.typeDonation

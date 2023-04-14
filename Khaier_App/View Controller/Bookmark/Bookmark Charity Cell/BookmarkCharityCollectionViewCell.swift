@@ -20,7 +20,7 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setCharityData(charity: NearModel){
+    func setCharityData(charity: CharityModel){
         charityImage.image = UIImage(named: charity.image)
         title.text = charity.title
         addressLabel.text = charity.address
