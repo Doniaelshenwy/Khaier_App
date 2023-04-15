@@ -20,7 +20,6 @@ extension CategoriesViewController: CollectionViewConfig {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("category")
         let vc = OneCategoryViewController(nibName: "OneCategoryViewController", bundle: nil)
         vc.titleNavigation = categoriesArray[indexPath.row].nameCategories
         push(vc: vc)

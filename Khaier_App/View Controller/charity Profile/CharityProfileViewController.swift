@@ -18,8 +18,10 @@ class CharityProfileViewController: UIViewController {
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet weak var caseDonationCollectionViewHeightConstrain: NSLayoutConstraint!
     
-    var isSelected = false
-    var categoryArray: [String] = ["الكل","ملابس","الطعام","أدوية","ورق","بلاستيك","ألعاب أطفال","أثاث"]
+    var showMore = false
+    var donationsCategoryId: Int?
+
+    var categoryArray: [DonationCategoryModel] = []
     var caseDonationArray: [CaseDonationModel] = []
     var urgentCasesArray: [CaseDonationModel] = []
     var achievementArray: [CaseDonationModel] = []
@@ -30,10 +32,24 @@ class CharityProfileViewController: UIViewController {
         isTabBarHidden(true)
         setDataOfCharityDescription()
         setCollectionView()
-       // setZeroOfHeightOfCollectionView()
+        setZeroOfHeightOfCollectionView()
         setDataOfCaseDonationArray()
         setDataOfUrgentCasesArray()
         setDataOfAchievementArray()
+        setDataOfcategoryArray()
+    }
+    
+    func setDataOfcategoryArray() {
+        categoryArray = [
+        DonationCategoryModel(name: "الكل", isSelected: false),
+        DonationCategoryModel(name: "ملابس", isSelected: false),
+        DonationCategoryModel(name: "الطعام", isSelected: false),
+        DonationCategoryModel(name: "أدوية", isSelected: false),
+        DonationCategoryModel(name: "ورق", isSelected: false),
+        DonationCategoryModel(name: "بلاستيك", isSelected: false),
+        DonationCategoryModel(name: "ألعاب أطفال", isSelected: false),
+        DonationCategoryModel(name: "أثاث", isSelected: false)
+        ]
     }
     
     func setDataOfCaseDonationArray(){
@@ -97,18 +113,18 @@ class CharityProfileViewController: UIViewController {
     
     
     @IBAction func readMoreDescriptionCharity(_ sender: Any) {
-        if isSelected == false {
+        if showMore == false {
         UIView.animate(withDuration: 1) {
             self.charityDescriptionLabel.text = "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريا الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي ي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــالخــــيريالخــــيري ي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريا الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبيالطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخـــ الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريا الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيريالطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــالخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي ي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــالخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري لخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي ي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــي...الطــــــــــبي الخــــيري الطــالخــــيريالخــــيري الطــــــــــبي الخــــيري...الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري."
         }
-            isSelected.toggle()
+            showMore.toggle()
         } else {
             UIView.animate(withDuration: 100) {
 
                 self.colorOfLabelText(label: self.charityDescriptionLabel, description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري")
                 self.charityDescriptionLabel.layoutIfNeeded()
             }
-            isSelected.toggle()
+            showMore.toggle()
         }
     }
    
@@ -134,21 +150,35 @@ extension CharityProfileViewController: CollectionViewConfig{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == donationsCategoryCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationsCategoryCollectionViewCell.identifierCell, for: indexPath) as! DonationsCategoryCollectionViewCell
-            cell.nameCategoryLabel.text = categoryArray[indexPath.row]
+//            cell.nameCategoryLabel.text = categoryArray[indexPath.row]
+            cell.setDataOfDonationCategoryCell(category: categoryArray[indexPath.row])
             return cell
         } else if collectionView == caseDonationCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
-                cell.setCaseData(priority: caseDonationArray[indexPath.row])
+            cell.setCaseData(priority: caseDonationArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
             return cell
         }  else if collectionView == urgentCasesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
-              cell.setCaseData(priority: urgentCasesArray[indexPath.row])
+            cell.setCaseData(priority: urgentCasesArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
             return cell
         }  else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
-            cell.setCaseData(priority: achievementArray[indexPath.row])
+            cell.setCaseData(priority: achievementArray[indexPath.row], isHidedonationDone: false, isEnabledDonateNow: false)
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        categoryArray.forEach{$0.isSelected = false}
+        if indexPath.row == donationsCategoryId {
+            hideCollectionView(heightInvalidCollectionView: caseDonationCollectionViewHeightConstrain, invalidCollectionView: caseDonationCollectionView)
+            donationsCategoryId = nil
+        } else {
+            categoryArray[indexPath.row].isSelected?.toggle()
+            showCollectinView(heightInvalidCollectionView: caseDonationCollectionViewHeightConstrain, invalidCollectionView: caseDonationCollectionView)
+            donationsCategoryId = indexPath.row
+        }
+        donationsCategoryCollectionView.reloadData()
     }
     
     func setCollectionView() {

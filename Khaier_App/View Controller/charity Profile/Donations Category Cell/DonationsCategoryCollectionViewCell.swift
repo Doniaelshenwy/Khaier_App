@@ -17,4 +17,14 @@ class DonationsCategoryCollectionViewCell: UICollectionViewCell {
         
     }
 
+    func setDataOfDonationCategoryCell(category: DonationCategoryModel) {
+        nameCategoryLabel.text = category.name
+        if category.isSelected! {
+            nameCategoryLabel.backgroundColor = UIColor(named: "AppColor")
+            nameCategoryLabel.textColor = .white
+        } else {
+            nameCategoryLabel.backgroundColor = .white
+            nameCategoryLabel.textColor = UIColor(named: "AppColor")
+        }
+    }
 }

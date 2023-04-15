@@ -13,6 +13,9 @@
 		FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */; };
 		FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */; };
 		FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */; };
+		FC138D9C29EB3A0300F129C9 /* DonationCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */; };
+		FC138DA029EB464E00F129C9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC138D9E29EB464E00F129C9 /* PaymentViewController.swift */; };
+		FC138DA129EB464E00F129C9 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC138D9F29EB464E00F129C9 /* PaymentViewController.xib */; };
 		FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */; };
 		FC1931C12998547700736EF9 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C02998547700736EF9 /* SecureTextField.swift */; };
 		FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */; };
@@ -207,6 +210,9 @@
 		FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
 		FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityProfileViewController.xib; sourceTree = "<group>"; };
+		FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCategoryModel.swift; sourceTree = "<group>"; };
+		FC138D9E29EB464E00F129C9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		FC138D9F29EB464E00F129C9 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		FC1931BE299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FC1931C02998547700736EF9 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		FC1931C229985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUPVC+ExtensionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -417,6 +423,23 @@
 				FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */,
 			);
 			path = "charity Profile";
+			sourceTree = "<group>";
+		};
+		FC138D9A29EB39DA00F129C9 /* Donation Category */ = {
+			isa = PBXGroup;
+			children = (
+				FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */,
+			);
+			path = "Donation Category";
+			sourceTree = "<group>";
+		};
+		FC138D9D29EB461B00F129C9 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				FC138D9E29EB464E00F129C9 /* PaymentViewController.swift */,
+				FC138D9F29EB464E00F129C9 /* PaymentViewController.xib */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		FC2BF40329BF661600490A46 /* Exit */ = {
@@ -917,6 +940,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC138D9A29EB39DA00F129C9 /* Donation Category */,
 				FC48AE7429C08DE600C195FE /* Reminder */,
 				FCF50C4D29B013CF0051F142 /* Notification */,
 				FC78116429A84B3F00C8A3C0 /* Donation */,
@@ -961,6 +985,7 @@
 				FC926015299D5DA700B6EB4F /* Donation */,
 				FCE4980329E4B62A00B0DDA9 /* Donation In */,
 				FC102F6529E638AA00BA66CC /* charity Profile */,
+				FC138D9D29EB461B00F129C9 /* Payment */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -1275,6 +1300,7 @@
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 				FC307ADC29B943C600DFAE60 /* ReminderViewController.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
+				FC138DA129EB464E00F129C9 /* PaymentViewController.xib in Resources */,
 				FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1495,6 +1521,7 @@
 				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
 				FC65C67929A8FB3C00F497C8 /* FollowDonation.swift in Sources */,
 				FC92601E299D603900B6EB4F /* NotificationViewController.swift in Sources */,
+				FC138D9C29EB3A0300F129C9 /* DonationCategoryModel.swift in Sources */,
 				FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
@@ -1509,6 +1536,7 @@
 				FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */,
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 				FCEA5A3529BD21A100E8D84E /* EditProfileViewController.swift in Sources */,
+				FC138DA029EB464E00F129C9 /* PaymentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ extension HomeViewController: CollectionViewConfig{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == priorityCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
-            cell.setCaseData(priority: priorityArray[indexPath.row])
+            cell.setCaseData(priority: priorityArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharityCollectionViewCell.identifierCell, for: indexPath) as! CharityCollectionViewCell
