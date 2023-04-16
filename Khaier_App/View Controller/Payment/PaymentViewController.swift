@@ -9,7 +9,7 @@ import UIKit
 
 class PaymentViewController: UIViewController {
     
-    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var fiveButtonConstrain: UIButton!
     @IBOutlet weak var tenButtonConstrain: UIButton!
     @IBOutlet weak var twoHundredButtonConstrain: UIButton!
@@ -21,6 +21,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         isNavigationHidden(true)
         isTabBarHidden(true)
+        setTextFieldDelegate()
     }
     
     func moveToPaymentMethodVC() {
@@ -33,7 +34,7 @@ class PaymentViewController: UIViewController {
     }
     
     func selectAmount(sender: UIButton) {
-        amountLabel.text = sender.titleLabel?.text
+        amountTextField.text = sender.titleLabel?.text
         sender.backgroundColor = UIColor(named: "AppColor")
         sender.tintColor = .white
     }
@@ -72,6 +73,18 @@ class PaymentViewController: UIViewController {
     @IBAction func twoHundredButton(_ sender: Any) {
         deselectAmount()
         selectAmount(sender: twoHundredButtonConstrain)
+    }
+    
+}
+
+extension PaymentViewController: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        deselectAmount()
+    }
+    
+    func setTextFieldDelegate() {
+        amountTextField.delegate = self
     }
     
 }

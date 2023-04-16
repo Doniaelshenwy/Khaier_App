@@ -20,6 +20,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentMethodViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
                 <outlet property="creditNumberTextField" destination="duL-Js-lxw" id="dSf-si-NpR"/>
+                <outlet property="dateTextField" destination="nbC-Q5-yai" id="0vQ-S1-eBZ"/>
+                <outlet property="dateView" destination="3oN-1w-oo8" id="DFb-s6-Aik"/>
+                <outlet property="enterCreditNumberHeightInvalid" destination="IWg-ak-ZFN" id="hod-uA-RrW"/>
+                <outlet property="enterCreditNumberInvalidLabel" destination="bjQ-lJ-CVm" id="qFY-G6-cwZ"/>
+                <outlet property="enterNameHeightInvalid" destination="NHB-6s-Oew" id="EYl-91-b0N"/>
+                <outlet property="enterNameInvalidLabel" destination="HTP-bJ-66k" id="ErJ-2U-4Kc"/>
+                <outlet property="enterPasswordOrDateHeightInvalid" destination="vJh-9x-47X" id="uwD-hX-eWh"/>
+                <outlet property="enterPasswordOrDateInvalidLabel" destination="QpC-qj-jue" id="3eP-A3-Rco"/>
                 <outlet property="fullNameTextField" destination="83o-z0-XlZ" id="6jN-z7-XOd"/>
                 <outlet property="masterCardButtonConstrain" destination="s05-H3-Dhk" id="fPY-m3-M0u"/>
                 <outlet property="passwordTextField" destination="A7J-Z4-om1" id="xKz-zf-ee2"/>
@@ -324,7 +332,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coO-bD-jO1">
                                                     <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="77"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ انتهاء البطاقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pj-nz-B5e">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" تاريخ انتهاء البطاقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pj-nz-B5e">
                                                             <rect key="frame" x="20" y="0.0" width="143.66666666666666" height="21"/>
                                                             <color key="backgroundColor" name="WhiteColor"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>

@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
-                <outlet property="amountLabel" destination="SjZ-Ah-oVX" id="7xb-kp-x4H"/>
+                <outlet property="amountTextField" destination="nO9-Lk-R19" id="7Fh-rK-XPD"/>
                 <outlet property="fiftyButtonConstrain" destination="UF2-H6-zki" id="b47-kk-tjR"/>
                 <outlet property="fiveButtonConstrain" destination="6n3-tf-pme" id="4ms-7G-EJr"/>
                 <outlet property="hundredButtonConstrain" destination="9sn-w9-2Ab" id="0wU-7P-TE3"/>
@@ -67,20 +67,19 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eri-ex-Pzi">
                                     <rect key="frame" x="16" y="142" width="343" height="119"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 ج" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjZ-Ah-oVX">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-Lk-R19">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="119"/>
                                             <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="30"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="nO9-Lk-R19" secondAttribute="bottom" id="3qo-Ig-hMg"/>
+                                        <constraint firstItem="nO9-Lk-R19" firstAttribute="top" secondItem="Eri-ex-Pzi" secondAttribute="top" id="Wjz-hd-CbK"/>
+                                        <constraint firstItem="nO9-Lk-R19" firstAttribute="leading" secondItem="Eri-ex-Pzi" secondAttribute="leading" id="dfR-E0-bki"/>
                                         <constraint firstAttribute="height" constant="119" id="fgd-TZ-wix"/>
-                                        <constraint firstAttribute="bottom" secondItem="SjZ-Ah-oVX" secondAttribute="bottom" id="g5W-UI-39f"/>
-                                        <constraint firstAttribute="trailing" secondItem="SjZ-Ah-oVX" secondAttribute="trailing" id="k0P-DK-G2d"/>
-                                        <constraint firstItem="SjZ-Ah-oVX" firstAttribute="leading" secondItem="Eri-ex-Pzi" secondAttribute="leading" id="oaA-MN-KiK"/>
-                                        <constraint firstItem="SjZ-Ah-oVX" firstAttribute="top" secondItem="Eri-ex-Pzi" secondAttribute="top" id="ujc-CL-Q0J"/>
+                                        <constraint firstAttribute="trailing" secondItem="nO9-Lk-R19" secondAttribute="trailing" id="zI3-Bt-wwy"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
