@@ -11,6 +11,8 @@ class PaymentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        isNavigationHidden(true)
+        isTabBarHidden(true)
 
     }
 

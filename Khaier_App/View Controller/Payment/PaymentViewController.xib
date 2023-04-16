@@ -94,6 +94,182 @@
                                         <constraint firstAttribute="height" constant="1" id="OJh-h6-baP"/>
                                     </constraints>
                                 </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VLi-qn-kPN">
+                                    <rect key="frame" x="15.666666666666657" y="294" width="344" height="86"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="omH-rX-VRA">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="35"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ2-bf-kkg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="3P3-SN-Mtz"/>
+                                                        <constraint firstAttribute="height" constant="35" id="ROy-zp-F16"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="20 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sah-jc-mll">
+                                                    <rect key="frame" x="122" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="LmX-N8-dZ1"/>
+                                                        <constraint firstAttribute="width" constant="100" id="fbF-pg-0Ov"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="10 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-tf-pme">
+                                                    <rect key="frame" x="244" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="3yH-dE-nze"/>
+                                                        <constraint firstAttribute="height" constant="35" id="ksU-Rh-9U9"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="5 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pa0-BR-MSd">
+                                            <rect key="frame" x="0.0" y="51" width="344" height="35"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-fo-Tyb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="c0t-Nn-Dy3"/>
+                                                        <constraint firstAttribute="height" constant="35" id="icC-ZF-uQZ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="200 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-w9-2Ab">
+                                                    <rect key="frame" x="122" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="A66-MB-YgC"/>
+                                                        <constraint firstAttribute="height" constant="35" id="RCR-Pk-C35"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="100 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UF2-H6-zki">
+                                                    <rect key="frame" x="244" y="0.0" width="100" height="35"/>
+                                                    <color key="backgroundColor" name="WhiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="qOl-50-JfX"/>
+                                                        <constraint firstAttribute="width" constant="100" id="zxe-mN-Exd"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="AppColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="50 ج">
+                                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="AppColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-6J-puy">
+                                    <rect key="frame" x="16" y="420" width="343" height="48"/>
+                                    <color key="backgroundColor" name="AppColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="6l8-Lr-haB"/>
+                                    </constraints>
+                                    <color key="tintColor" name="WhiteColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="استمرار">
+                                        <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -101,14 +277,21 @@
                                 <constraint firstItem="Eri-ex-Pzi" firstAttribute="top" secondItem="GPa-2M-vgv" secondAttribute="bottom" constant="8" id="BhO-VJ-yc5"/>
                                 <constraint firstItem="13B-Nl-rZ3" firstAttribute="centerX" secondItem="L7E-tr-tct" secondAttribute="centerX" id="Bsc-Eg-JqE"/>
                                 <constraint firstItem="GPa-2M-vgv" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="16" id="EfC-lv-AlF"/>
+                                <constraint firstItem="bvh-6J-puy" firstAttribute="top" secondItem="VLi-qn-kPN" secondAttribute="bottom" constant="40" id="Etj-mE-Mlo"/>
+                                <constraint firstAttribute="trailing" secondItem="VLi-qn-kPN" secondAttribute="trailing" constant="15.5" id="Ezy-Jl-d9Z"/>
+                                <constraint firstAttribute="trailing" secondItem="bvh-6J-puy" secondAttribute="trailing" constant="16" id="IJ9-z9-8YC"/>
                                 <constraint firstAttribute="trailing" secondItem="GPa-2M-vgv" secondAttribute="trailing" constant="16" id="Jah-oK-bdJ"/>
                                 <constraint firstItem="lWi-Qs-nAx" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="44.5" id="Knt-GA-tOL"/>
+                                <constraint firstItem="bvh-6J-puy" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="16" id="Nfv-re-296"/>
                                 <constraint firstItem="lWi-Qs-nAx" firstAttribute="top" secondItem="Eri-ex-Pzi" secondAttribute="bottom" constant="16" id="P8r-bc-l1P"/>
+                                <constraint firstItem="VLi-qn-kPN" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="15.5" id="PbI-oB-hjy"/>
                                 <constraint firstAttribute="trailing" secondItem="Eri-ex-Pzi" secondAttribute="trailing" constant="16" id="Wav-sr-5kM"/>
                                 <constraint firstItem="M2n-he-yOG" firstAttribute="centerY" secondItem="13B-Nl-rZ3" secondAttribute="centerY" id="Xa3-5L-ziI"/>
                                 <constraint firstItem="GPa-2M-vgv" firstAttribute="top" secondItem="13B-Nl-rZ3" secondAttribute="bottom" constant="24" id="adk-Yx-2ww"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bvh-6J-puy" secondAttribute="bottom" constant="20" id="eMc-ud-B1Q"/>
                                 <constraint firstAttribute="trailing" secondItem="lWi-Qs-nAx" secondAttribute="trailing" constant="44.5" id="oJe-WA-rZX"/>
                                 <constraint firstItem="Eri-ex-Pzi" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="16" id="vQe-3Z-Z7c"/>
+                                <constraint firstItem="VLi-qn-kPN" firstAttribute="top" secondItem="lWi-Qs-nAx" secondAttribute="bottom" constant="16" id="vSX-IQ-jNP"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -136,8 +319,14 @@
     </objects>
     <resources>
         <image name="Back" width="7.6666665077209473" height="14"/>
+        <namedColor name="AppColor">
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BlackColor">
             <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="disapleColor">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
