@@ -48,7 +48,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدفع" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-QV-M2g">
-                                    <rect key="frame" x="166.33333333333334" y="59" width="42.666666666666657" height="30"/>
+                                    <rect key="frame" x="166.33333333333334" y="15" width="42.666666666666657" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Qez-36-AHZ"/>
                                     </constraints>
@@ -57,7 +57,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcz-r5-Vpl">
-                                    <rect key="frame" x="335" y="62" width="24" height="24"/>
+                                    <rect key="frame" x="335" y="18" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="FNn-BG-kYf"/>
                                         <constraint firstAttribute="height" constant="24" id="XB8-8l-d58"/>
@@ -69,13 +69,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختر وسيلة الدفع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-Gr-JpZ">
-                                    <rect key="frame" x="256" y="110" width="103" height="24"/>
+                                    <rect key="frame" x="256" y="66" width="103" height="24"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="AaD-zI-o5l">
-                                    <rect key="frame" x="16" y="158" width="344" height="50"/>
+                                    <rect key="frame" x="16" y="114" width="344" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s05-H3-Dhk">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
@@ -155,20 +155,20 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kr-Iz-VNq">
-                                    <rect key="frame" x="65.666666666666686" y="232" width="244" height="1"/>
+                                    <rect key="frame" x="65.666666666666686" y="188" width="244" height="1"/>
                                     <color key="backgroundColor" name="disapleColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="4SV-xd-lxw"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ادخل بيانات البطاقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-u3-cp1">
-                                    <rect key="frame" x="237.33333333333334" y="257" width="121.66666666666666" height="24"/>
+                                    <rect key="frame" x="237.33333333333334" y="213" width="121.66666666666666" height="24"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fHU-qd-4Ge">
-                                    <rect key="frame" x="16" y="305" width="343" height="77"/>
+                                    <rect key="frame" x="16" y="261" width="343" height="77"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-CN-ua0">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="77"/>
@@ -221,7 +221,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9hk-cB-Zb9">
-                                    <rect key="frame" x="16" y="426" width="343" height="77"/>
+                                    <rect key="frame" x="16" y="382" width="343" height="77"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-az-3nO">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="77"/>
@@ -274,7 +274,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6e-DV-FVp">
-                                    <rect key="frame" x="16" y="684" width="343" height="48"/>
+                                    <rect key="frame" x="16" y="640" width="343" height="48"/>
                                     <color key="backgroundColor" name="AppColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="5Y0-ji-KkJ"/>
@@ -294,7 +294,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال الأسم" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTP-bJ-66k">
-                                    <rect key="frame" x="265" y="390" width="94" height="20"/>
+                                    <rect key="frame" x="265" y="346" width="94" height="20"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="NHB-6s-Oew"/>
@@ -304,7 +304,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال رقم البطاقة" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjQ-lJ-CVm">
-                                    <rect key="frame" x="234.66666666666666" y="511" width="124.33333333333334" height="20"/>
+                                    <rect key="frame" x="234.66666666666666" y="467" width="124.33333333333334" height="20"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="IWg-ak-ZFN"/>
@@ -314,7 +314,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يرجي ادخال الرقم السري" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpC-qj-jue">
-                                    <rect key="frame" x="233.33333333333334" y="632" width="125.66666666666666" height="20"/>
+                                    <rect key="frame" x="233.33333333333334" y="588" width="125.66666666666666" height="20"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="vJh-9x-47X"/>
@@ -324,7 +324,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rbm-oi-vIL">
-                                    <rect key="frame" x="16" y="547" width="343" height="77"/>
+                                    <rect key="frame" x="16" y="503" width="343" height="77"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-Bb-m0K">
                                             <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="77"/>
@@ -472,6 +472,7 @@
                                 <constraint firstItem="HTP-bJ-66k" firstAttribute="top" secondItem="fHU-qd-4Ge" secondAttribute="bottom" constant="8" id="bGQ-gP-xkT"/>
                                 <constraint firstAttribute="trailing" secondItem="hXL-Gr-JpZ" secondAttribute="trailing" constant="16" id="c0b-ED-lyM"/>
                                 <constraint firstItem="j6e-DV-FVp" firstAttribute="top" secondItem="QpC-qj-jue" secondAttribute="bottom" constant="32" id="cFC-8d-lEt"/>
+                                <constraint firstItem="8gD-QV-M2g" firstAttribute="top" secondItem="2LF-Nk-gyo" secondAttribute="top" constant="15" id="cnA-yz-8QP"/>
                                 <constraint firstAttribute="trailing" secondItem="HTP-bJ-66k" secondAttribute="trailing" constant="16" id="dXG-rX-hVX"/>
                                 <constraint firstAttribute="trailing" secondItem="7Kr-Iz-VNq" secondAttribute="trailing" constant="65.5" id="gqY-f0-rKO"/>
                                 <constraint firstAttribute="trailing" secondItem="bjQ-lJ-CVm" secondAttribute="trailing" constant="16" id="hyB-IR-mBe"/>
@@ -502,7 +503,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="2qP-Bc-gaU" secondAttribute="bottom" id="Asv-qH-l4k"/>
-                <constraint firstItem="8gD-QV-M2g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="BCf-m5-sXz"/>
                 <constraint firstItem="2qP-Bc-gaU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PLj-o2-f7d"/>
                 <constraint firstItem="2qP-Bc-gaU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uKF-NO-UIo"/>
                 <constraint firstItem="2qP-Bc-gaU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yJm-WD-YQ0"/>

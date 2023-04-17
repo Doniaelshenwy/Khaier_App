@@ -41,7 +41,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدفع" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13B-Nl-rZ3">
-                                    <rect key="frame" x="166.33333333333334" y="59" width="42.666666666666657" height="30"/>
+                                    <rect key="frame" x="166.33333333333334" y="15" width="42.666666666666657" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="hpA-gW-vGu"/>
                                     </constraints>
@@ -50,7 +50,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-he-yOG">
-                                    <rect key="frame" x="335" y="62" width="24" height="24"/>
+                                    <rect key="frame" x="335" y="18" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="9nm-jv-3hE"/>
                                         <constraint firstAttribute="height" constant="24" id="ayN-qm-cCk"/>
@@ -59,13 +59,13 @@
                                     <buttonConfiguration key="configuration" style="plain" image="Back"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ادخل مبلغ المال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPa-2M-vgv">
-                                    <rect key="frame" x="16" y="113" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="69" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eri-ex-Pzi">
-                                    <rect key="frame" x="16" y="142" width="343" height="119"/>
+                                    <rect key="frame" x="16" y="98" width="343" height="119"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-Lk-R19">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="119"/>
@@ -94,14 +94,14 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWi-Qs-nAx">
-                                    <rect key="frame" x="44.666666666666657" y="277" width="286" height="1"/>
+                                    <rect key="frame" x="44.666666666666657" y="233" width="286" height="1"/>
                                     <color key="backgroundColor" name="disapleColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="OJh-h6-baP"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VLi-qn-kPN">
-                                    <rect key="frame" x="15.666666666666657" y="294" width="344" height="86"/>
+                                    <rect key="frame" x="15.666666666666657" y="250" width="344" height="86"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="omH-rX-VRA">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="35"/>
@@ -278,7 +278,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-6J-puy">
-                                    <rect key="frame" x="16" y="420" width="343" height="48"/>
+                                    <rect key="frame" x="16" y="376" width="343" height="48"/>
                                     <color key="backgroundColor" name="AppColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="6l8-Lr-haB"/>
@@ -314,6 +314,7 @@
                                 <constraint firstItem="VLi-qn-kPN" firstAttribute="leading" secondItem="L7E-tr-tct" secondAttribute="leading" constant="15.5" id="PbI-oB-hjy"/>
                                 <constraint firstAttribute="trailing" secondItem="Eri-ex-Pzi" secondAttribute="trailing" constant="16" id="Wav-sr-5kM"/>
                                 <constraint firstItem="M2n-he-yOG" firstAttribute="centerY" secondItem="13B-Nl-rZ3" secondAttribute="centerY" id="Xa3-5L-ziI"/>
+                                <constraint firstItem="13B-Nl-rZ3" firstAttribute="top" secondItem="L7E-tr-tct" secondAttribute="top" constant="15" id="ZCf-FO-rwA"/>
                                 <constraint firstItem="GPa-2M-vgv" firstAttribute="top" secondItem="13B-Nl-rZ3" secondAttribute="bottom" constant="24" id="adk-Yx-2ww"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bvh-6J-puy" secondAttribute="bottom" constant="20" id="eMc-ud-B1Q"/>
                                 <constraint firstAttribute="trailing" secondItem="lWi-Qs-nAx" secondAttribute="trailing" constant="44.5" id="oJe-WA-rZX"/>
@@ -337,7 +338,6 @@
             <constraints>
                 <constraint firstItem="Bxd-f7-Jb6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4TN-eo-rbs"/>
                 <constraint firstItem="Bxd-f7-Jb6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OeT-fq-foq"/>
-                <constraint firstItem="13B-Nl-rZ3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="n1Y-eW-UeO"/>
                 <constraint firstAttribute="bottom" secondItem="Bxd-f7-Jb6" secondAttribute="bottom" id="ogX-cG-2Nl"/>
                 <constraint firstItem="Bxd-f7-Jb6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wRx-EH-Zz4"/>
             </constraints>

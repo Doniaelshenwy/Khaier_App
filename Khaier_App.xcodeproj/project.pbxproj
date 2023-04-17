@@ -10,6 +10,8 @@
 		A263589E78A029826F8D2389 /* Pods_Khaier_App_Khaier_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ED9A8B9BE4489FB681E6B1 /* Pods_Khaier_App_Khaier_AppUITests.framework */; };
 		A982F0131198CB97C2369565 /* Pods_Khaier_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */; };
 		BDF642FF119D57E68A23BE8B /* Pods_Khaier_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3B8314DA9F6643A89543E /* Pods_Khaier_App.framework */; };
+		FC0561F429ECC80B00CD905F /* DonatinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0561F229ECC80B00CD905F /* DonatinDetailsViewController.swift */; };
+		FC0561F529ECC80B00CD905F /* DonatinDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0561F329ECC80B00CD905F /* DonatinDetailsViewController.xib */; };
 		FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */; };
 		FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */; };
 		FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */; };
@@ -209,6 +211,8 @@
 		9BF67A3CF2DBE072536A83E2 /* Pods-Khaier_App-Khaier_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_App-Khaier_AppUITests/Pods-Khaier_App-Khaier_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khaier_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDD5EE7A2BD0FD39CE776D /* Pods-Khaier_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khaier_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Khaier_AppTests/Pods-Khaier_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC0561F229ECC80B00CD905F /* DonatinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatinDetailsViewController.swift; sourceTree = "<group>"; };
+		FC0561F329ECC80B00CD905F /* DonatinDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonatinDetailsViewController.xib; sourceTree = "<group>"; };
 		FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
 		FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityProfileViewController.xib; sourceTree = "<group>"; };
@@ -417,6 +421,15 @@
 				DDF9F21754E2EC60625533C0 /* Pods_Khaier_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC0561F129ECC75300CD905F /* Donation Details */ = {
+			isa = PBXGroup;
+			children = (
+				FC0561F229ECC80B00CD905F /* DonatinDetailsViewController.swift */,
+				FC0561F329ECC80B00CD905F /* DonatinDetailsViewController.xib */,
+			);
+			path = "Donation Details";
 			sourceTree = "<group>";
 		};
 		FC102F6529E638AA00BA66CC /* charity Profile */ = {
@@ -1000,6 +1013,7 @@
 				FC102F6529E638AA00BA66CC /* charity Profile */,
 				FC138D9D29EB461B00F129C9 /* Payment */,
 				FC19ABDB29EC3BD200401A72 /* Payment Method */,
+				FC0561F129ECC75300CD905F /* Donation Details */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -1315,6 +1329,7 @@
 				FC671DAC2985819000236031 /* OnboardingCollectionViewCell.xib in Resources */,
 				FC307ADC29B943C600DFAE60 /* ReminderViewController.xib in Resources */,
 				FC926014299D5CE100B6EB4F /* HomeViewController.xib in Resources */,
+				FC0561F529ECC80B00CD905F /* DonatinDetailsViewController.xib in Resources */,
 				FC138DA129EB464E00F129C9 /* PaymentViewController.xib in Resources */,
 				FC47817E29B6A71E009C5139 /* InformationZakatViewController.xib in Resources */,
 			);
@@ -1473,6 +1488,7 @@
 				FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */,
 				FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */,
 				FC92600F299D538500B6EB4F /* ChangePasswordProtocol.swift in Sources */,
+				FC0561F429ECC80B00CD905F /* DonatinDetailsViewController.swift in Sources */,
 				FC49CFE529A1865600BFC290 /* SearchCollectionViewCell.swift in Sources */,
 				FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */,
 				FC2DAED929A42D520069E3F2 /* BookmarkType.swift in Sources */,
