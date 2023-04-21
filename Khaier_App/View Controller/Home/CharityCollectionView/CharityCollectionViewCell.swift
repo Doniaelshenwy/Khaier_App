@@ -8,7 +8,7 @@
 import UIKit
 
 class CharityCollectionViewCell: UICollectionViewCell {
-    static let identifierCell = "NearCollectionViewCell"
+    static let identifierCell = "CharityCollectionViewCell"
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var title: UILabel!

@@ -37,6 +37,7 @@ class AccountViewController: UIViewController {
     var confirmPasswordVisable = true
     var isRemember = false
     let pickerView = UIPickerView()
+    let apiRequest: AuthAPIProtocol = AuthAPI()
     
     let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
     
@@ -49,6 +50,25 @@ class AccountViewController: UIViewController {
         confirmPasswordSecureTextField = SecureTextField(button: confirmEyeBtnConstrain, textField: confirmPasswordTextField)
         removeBorderTextField(textFields: [passwordTextField, confirmPasswordTextField])
         setupPickerView()
+    }
+    
+    func moveToHomeVC(){
+        let vc = TabBarController()
+        push(vc: vc)
+    }
+    
+    func registerRequest(model: RegisterRequestModel) {
+        apiRequest.registerRequest(model: model) { [weak self] response in
+            switch response{
+            case .success(let data):
+                ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
+                UserDefault.saveUserName(data?.user?.username ?? "")
+                UserDefault.saveAddress(data?.user?.address ?? "")
+                self?.moveToHomeVC()
+            case .failure(_):
+                break
+            }
+        }
     }
 
     @IBAction func showHiddenPasswordBtn(_ sender: Any) {
@@ -91,7 +111,12 @@ class AccountViewController: UIViewController {
             return
         }
         if isRemember == true{
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
+            if password == confirmPassword {
+                let model = RegisterRequestModel(userName: userName, name: name, phone: "01019434345" , password: password, address: address)
+                registerRequest(model: model)
+            } else {
+                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب ان تكون كلمتي السر متطابقتين")
+            }
         }
     }
 }

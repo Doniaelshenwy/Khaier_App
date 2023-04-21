@@ -75,6 +75,12 @@
 		FC49CFE629A1865600BFC290 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */; };
 		FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */; };
 		FC4ADA01299310E5006B9F70 /* OTPSignUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */; };
+		FC5AD38129ED7554008A31FA /* AuthNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38029ED7554008A31FA /* AuthNetwork.swift */; };
+		FC5AD38329ED7593008A31FA /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38229ED7593008A31FA /* AuthAPI.swift */; };
+		FC5AD38629ED75C1008A31FA /* Target Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38529ED75C1008A31FA /* Target Type.swift */; };
+		FC5AD38829ED75E2008A31FA /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38729ED75E2008A31FA /* BaseAPI.swift */; };
+		FC5AD38B29ED76D8008A31FA /* AuthResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */; };
+		FC5AD38D29ED7AE4008A31FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5AD38C29ED7AE4008A31FA /* Constant.swift */; };
 		FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */; };
 		FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */; };
 		FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */; };
@@ -153,6 +159,7 @@
 		FCD6D0DB298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */; };
 		FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6D0ED298546730084FE76 /* LoginViewController.swift */; };
 		FCD6D0F0298546730084FE76 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD6D0EE298546730084FE76 /* LoginViewController.xib */; };
+		FCDE9BAC29EDF3010041EC53 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE9BAB29EDF3010041EC53 /* UserDefault.swift */; };
 		FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC96F2993E01B00E355F1 /* AuthManger.swift */; };
 		FCDEC9732993F8CE00E355F1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */; };
 		FCDEC9742993F8CE00E355F1 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */; };
@@ -277,6 +284,12 @@
 		FC49CFE429A1865600BFC290 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC4AD9FE299310E5006B9F70 /* OTPSignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUPViewController.swift; sourceTree = "<group>"; };
 		FC4AD9FF299310E5006B9F70 /* OTPSignUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPSignUPViewController.xib; sourceTree = "<group>"; };
+		FC5AD38029ED7554008A31FA /* AuthNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetwork.swift; sourceTree = "<group>"; };
+		FC5AD38229ED7593008A31FA /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		FC5AD38529ED75C1008A31FA /* Target Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Target Type.swift"; sourceTree = "<group>"; };
+		FC5AD38729ED75E2008A31FA /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseModel.swift; sourceTree = "<group>"; };
+		FC5AD38C29ED7AE4008A31FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FC6068842992872100BB7978 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		FC6068852992872100BB7978 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		FC65C67429A8FA6B00F497C8 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -341,6 +354,7 @@
 		FCD6D0DA298544E40084FE76 /* Khaier_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khaier_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCD6D0ED298546730084FE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FCD6D0EE298546730084FE76 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FCDE9BAB29EDF3010041EC53 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		FCDEC96F2993E01B00E355F1 /* AuthManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManger.swift; sourceTree = "<group>"; };
 		FCDEC9712993F8CE00E355F1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FCDEC9722993F8CE00E355F1 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
@@ -664,6 +678,41 @@
 			path = "OTP SignUp";
 			sourceTree = "<group>";
 		};
+		FC5AD37E29ED74EA008A31FA /* Generic Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC5AD38429ED75AE008A31FA /* Base */,
+				FC5AD37F29ED74F9008A31FA /* Network */,
+			);
+			path = "Generic Network";
+			sourceTree = "<group>";
+		};
+		FC5AD37F29ED74F9008A31FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC5AD38029ED7554008A31FA /* AuthNetwork.swift */,
+				FC5AD38229ED7593008A31FA /* AuthAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FC5AD38429ED75AE008A31FA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC5AD38529ED75C1008A31FA /* Target Type.swift */,
+				FC5AD38729ED75E2008A31FA /* BaseAPI.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FC5AD38929ED76B6008A31FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FC606883299286F700BB7978 /* Forget Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -903,6 +952,7 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
+				FC5AD37E29ED74EA008A31FA /* Generic Network */,
 				FC2DAED729A42D0D0069E3F2 /* Enum */,
 				FC98F2CD299BDAED002A4E8B /* TabBarController */,
 				FCDEC96D2993DFDD00E355F1 /* Constants */,
@@ -966,6 +1016,7 @@
 		FCD6D0EA298546220084FE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC5AD38929ED76B6008A31FA /* Network */,
 				FC138D9A29EB39DA00F129C9 /* Donation Category */,
 				FC48AE7429C08DE600C195FE /* Reminder */,
 				FCF50C4D29B013CF0051F142 /* Notification */,
@@ -1051,6 +1102,8 @@
 				FC349C582999A1F90006265B /* DropDownList.swift */,
 				FC1931C02998547700736EF9 /* SecureTextField.swift */,
 				FC3DCC8E29AE907B00DEDFFA /* ViewWithAction.swift */,
+				FC5AD38C29ED7AE4008A31FA /* Constant.swift */,
+				FCDE9BAB29EDF3010041EC53 /* UserDefault.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1520,6 +1573,7 @@
 				FCF6F0CD29A158AB00DBBBF0 /* SearchVC+ExtensionCollectionView.swift in Sources */,
 				FC671DAB2985819000236031 /* OnboardingCollectionViewCell.swift in Sources */,
 				FC2BF41329BF744800490A46 /* AddReminderViewController.swift in Sources */,
+				FC5AD38129ED7554008A31FA /* AuthNetwork.swift in Sources */,
 				FC47817D29B6A71E009C5139 /* InformationZakatViewController.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */,
@@ -1532,6 +1586,7 @@
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC33F3B129AD5528003ACDC4 /* FollowDonationTableViewCell.swift in Sources */,
 				FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */,
+				FC5AD38B29ED76D8008A31FA /* AuthResponseModel.swift in Sources */,
 				FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */,
 				FCE6324429A533E000ED2040 /* CategoriesViewController.swift in Sources */,
 				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,
@@ -1539,10 +1594,13 @@
 				FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */,
 				FC1931C52998644200736EF9 /* OTPSignUpVC+ExtensionUITextFieldDelegate.swift in Sources */,
+				FC5AD38329ED7593008A31FA /* AuthAPI.swift in Sources */,
+				FC5AD38D29ED7AE4008A31FA /* Constant.swift in Sources */,
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC39AFEE29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.swift in Sources */,
 				FC3DCC8F29AE907B00DEDFFA /* ViewWithAction.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
+				FC5AD38629ED75C1008A31FA /* Target Type.swift in Sources */,
 				FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */,
 				FC1931C929986D4F00736EF9 /* ForgetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FCF50C4B29B007FE0051F142 /* NotificationTableViewCell.swift in Sources */,
@@ -1552,6 +1610,7 @@
 				FC349C592999A1F90006265B /* DropDownList.swift in Sources */,
 				FC65C67929A8FB3C00F497C8 /* FollowDonation.swift in Sources */,
 				FC92601E299D603900B6EB4F /* NotificationViewController.swift in Sources */,
+				FCDE9BAC29EDF3010041EC53 /* UserDefault.swift in Sources */,
 				FC138D9C29EB3A0300F129C9 /* DonationCategoryModel.swift in Sources */,
 				FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
@@ -1569,6 +1628,7 @@
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 				FCEA5A3529BD21A100E8D84E /* EditProfileViewController.swift in Sources */,
 				FC138DA029EB464E00F129C9 /* PaymentViewController.swift in Sources */,
+				FC5AD38829ED75E2008A31FA /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1746,6 +1806,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Khaier;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1775,6 +1836,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Khaier_App/Configration/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Khaier;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
     var isRemember = false
     var maxLength = 11
     var secureTextFiled: SecureTextField?
+    let apiRequest: AuthAPIProtocol = AuthAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,19 +49,39 @@ class LoginViewController: UIViewController {
         push(vc: vc)
     }
     
-    func checkPhonePassword(phone: String, password: String){
-        let convertPhoneArabic = phone.convertedDigitsToLocale(Locale(identifier: "AR"))
-        let convertPasswordArabic = password.convertedDigitsToLocale(Locale(identifier: "AR"))
-        if convertPhoneArabic == "٠١٠١٩٤٣٤٣٤٥" && convertPasswordArabic == "١٢٣"{
-            ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
-            moveToHomeVC()
-            if isRemember{
-                UserDefaults.standard.set(isRemember, forKey: "isEnter")
+    func loginRequest(phoneNumber: String, password: String) {
+        
+        let loginModel = LoginRequestModel(phoneNumber: phoneNumber, password: password)
+        apiRequest.loginRequest(model: loginModel) { response in
+            switch response {
+            case .success(let data):
+                if let error = data?.error {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
+                    self.moveToHomeVC()
+                }
+            case .failure(_):
+                break
+//                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error.localizedDescription)
+//                print("eroooooooor")
             }
-        } else {
-            ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يرجي ادخال البيانات بشكل صحيح")
         }
     }
+    
+//    func checkPhonePassword(phone: String, password: String){
+//        let convertPhoneArabic = phone.convertedDigitsToLocale(Locale(identifier: "AR"))
+//        let convertPasswordArabic = password.convertedDigitsToLocale(Locale(identifier: "AR"))
+//        if convertPhoneArabic == "٠١٠١٩٤٣٤٣٤٥" && convertPasswordArabic == "١٢٣"{
+//            ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
+//            moveToHomeVC()
+//            if isRemember{
+//                UserDefaults.standard.set(isRemember, forKey: "isEnter")
+//            }
+//        } else {
+//            ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يرجي ادخال البيانات بشكل صحيح")
+//        }
+//    }
 
     @IBAction func rememberMeBtn(_ sender: UIButton) {
         checkBoxIsAccept(isRemember: &isRemember, button: checkRemeberBoxBtnConstrain)
@@ -81,7 +102,7 @@ class LoginViewController: UIViewController {
         guard let password = passwordTextField.text, password != "" else {
             checkViewIsEmpty(view: passwordView, height: passwordErrorHeightConstrain, label: repeatPasswordLabel)
             return }
-        checkPhonePassword(phone: phone, password: password)
+        loginRequest(phoneNumber: phone, password: password)
     }
     
     @IBAction func signUpBtn(_ sender: Any) {
