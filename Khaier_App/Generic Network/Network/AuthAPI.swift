@@ -20,12 +20,18 @@ struct RegisterRequestModel {
     var address: String
 }
 
+struct VerifyPhoneRequestModel {
+    var phone_number: String
+}
+
 protocol AuthAPIProtocol : AuthAPI{
     func loginRequest(model: LoginRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
     func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
+    func verifyPhoneRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
 }
 
-class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol{
+class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
+    
     func loginRequest(model: LoginRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void){
         fetchData(target: .login(model: model), responseClass: AuthResponseModel.self) { result in
             completion(result)
@@ -37,4 +43,11 @@ class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol{
             completion(result)
         }
     }
+    
+    func verifyPhoneRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void) {
+        fetchData(target: .verifyPhone(model: model), responseClass: VerifyPhoneResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
 }

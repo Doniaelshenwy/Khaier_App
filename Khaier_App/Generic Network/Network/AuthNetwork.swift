@@ -11,6 +11,7 @@ import Alamofire
 enum AuthNetwork{
     case login(model: LoginRequestModel)
     case register(model: RegisterRequestModel)
+    case verifyPhone(model: VerifyPhoneRequestModel)
 }
 
 extension AuthNetwork : TargetType{
@@ -28,6 +29,8 @@ extension AuthNetwork : TargetType{
             return "login"
         case .register :
             return "signup"
+        case .verifyPhone(model: let model):
+            return "Verify_phone_signup"
         }
     }
     
@@ -36,6 +39,8 @@ extension AuthNetwork : TargetType{
         case .login:
             return .post
         case .register:
+            return .post
+        case .verifyPhone:
             return .post
         }
     }
@@ -47,6 +52,8 @@ extension AuthNetwork : TargetType{
      
         case .register(model: let model):
             return .requestParameter(paramter: ["username" : model.userName, "name" : model.name, "phone_number" : model.phone, "password" : model.password, "address" : model.address], encoding: JSONEncoding.default)
+        case .verifyPhone(model: let model):
+            return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
         }
     }
     var header: [String : String] {

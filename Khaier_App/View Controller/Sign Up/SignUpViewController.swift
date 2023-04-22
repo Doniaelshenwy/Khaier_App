@@ -15,11 +15,31 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneErrorHeightConstrain: NSLayoutConstraint!
     @IBOutlet weak var enterPhoneLabel: UILabel!
     
+    let apiRequest: AuthAPIProtocol = AuthAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setZeroHeightLabel(for: [phoneErrorHeightConstrain])
         isHiddeninvalidLabel(for: [enterPhoneLabel])
         phoneTextField.delegate = self
+    }
+    
+    func verifyPhoneRequest(phoneNumber: String) {
+        let model = VerifyPhoneRequestModel(phone_number: phoneNumber)
+        apiRequest.verifyPhoneRequest(model: model) { response in
+            switch response {
+            case .success(let data):
+                if (data?.success == "denied") {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: (data?.error?.phoneNumber?[0]) ?? "")
+                } else if (data?.success == "accepted") {
+                    print(":ok")
+                    self.moveToOTPSignUPVC(phone: phoneNumber)
+                }
+            case .failure(_):
+                print("errrr")
+                break
+            }
+        }
     }
     
     func moveToOTPSignUPVC(phone: String){
@@ -33,7 +53,8 @@ class SignUpViewController: UIViewController {
         AuthManager.shared.startAuth(phoneNumber: number) { [weak self] state in
             switch state{
             case true:
-                self?.moveToOTPSignUPVC(phone: phone)
+               // self?.moveToOTPSignUPVC(phone: phone)
+                self?.verifyPhoneRequest(phoneNumber: phone)
             case false:
                 ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: " رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
             }
@@ -46,7 +67,8 @@ class SignUpViewController: UIViewController {
             return
         }
        // callSendCode(phone: phone) // when firebase send code
-        moveToOTPSignUPVC(phone: phone) // test
+      //  moveToOTPSignUPVC(phone: phone) // test
+        verifyPhoneRequest(phoneNumber: phone)
     }
    
     @IBAction func loginBtn(_ sender: Any) {

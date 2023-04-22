@@ -27,3 +27,16 @@ struct UserResponseModel: Codable {
         case updatedAt = "updated_at"
     }
 }
+
+struct VerifyPhoneResponseModel: Codable {
+    let success: String?
+    let error: Error?
+}
+
+struct Error: Codable {
+    let phoneNumber: [String]?
+
+    enum CodingKeys: String, CodingKey {
+        case phoneNumber = "phone_number"
+    }
+}
