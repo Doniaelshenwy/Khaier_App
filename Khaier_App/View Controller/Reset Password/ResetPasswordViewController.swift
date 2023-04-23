@@ -47,7 +47,7 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: data?.errors?.password?[0] ?? "")
                 }
             case .failure(let error):
-                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error.localizedDescription)
+                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "error.localizedDescription")
             }
         }
     }
