@@ -34,6 +34,7 @@ class SignUpViewController: UIViewController {
                 } else if (data?.success == "accepted") {
                     print(":ok")
                     self.moveToOTPSignUPVC(phone: phoneNumber)
+                   // self.callSendCode(phone: phoneNumber)
                 }
             case .failure(_):
                 print("errrr")
@@ -53,8 +54,8 @@ class SignUpViewController: UIViewController {
         AuthManager.shared.startAuth(phoneNumber: number) { [weak self] state in
             switch state{
             case true:
-               // self?.moveToOTPSignUPVC(phone: phone)
-                self?.verifyPhoneRegisterRequest(phoneNumber: phone)
+                self?.moveToOTPSignUPVC(phone: phone)
+               // self?.verifyPhoneRegisterRequest(phoneNumber: phone)
             case false:
                 ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: " رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
             }
@@ -66,7 +67,7 @@ class SignUpViewController: UIViewController {
             checkTextFieldIsEmpty(textField: phoneTextField, height: phoneErrorHeightConstrain, label: enterPhoneLabel)
             return
         }
-       // callSendCode(phone: phone) // when firebase send code
+        //callSendCode(phone: phone) // when firebase send code
       //  moveToOTPSignUPVC(phone: phone) // test
         verifyPhoneRegisterRequest(phoneNumber: phone)
     }

@@ -64,6 +64,8 @@ extension AuthNetwork : TargetType{
     }
     var header: [String : String] {
         switch self {
+        case .register:
+            return ["Accept" : "application/json", "Content-Type" : "application/json"]
         case .updatePassword:
             return ["Accept" : "application/json", "Content-Type" : "application/json"]
         default:

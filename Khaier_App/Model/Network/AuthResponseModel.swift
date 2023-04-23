@@ -33,14 +33,6 @@ struct VerifyPhoneResponseModel: Codable {
     let error: Errors?
 }
 
-//struct Error: Codable {
-//    let phoneNumber: [String]?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case phoneNumber = "phone_number"
-//    }
-//}
-
 struct UpdatePasswordResponseModel: Codable {
     let message: String?
     let link: String?

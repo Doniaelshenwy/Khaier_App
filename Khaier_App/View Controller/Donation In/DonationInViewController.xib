@@ -378,6 +378,9 @@
                                                             <real key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="donateNowButton:" destination="-1" eventType="touchUpInside" id="b6U-yp-t0A"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="WhiteColor"/>

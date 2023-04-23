@@ -24,6 +24,11 @@ class DonationInViewController: UIViewController {
 
     }
     
+    func moveToDonationDetailsVc() {
+        let vc = DonatinDetailsViewController()
+        push(vc: vc)
+    }
+    
     @IBAction func readMoreDescriptionCharity(_ sender: Any) {
         if isSelected == false {
         UIView.animate(withDuration: 1) {
@@ -40,6 +45,9 @@ class DonationInViewController: UIViewController {
         }
     }
     
-   
+    @IBAction func donateNowButton(_ sender: Any) {
+        moveToDonationDetailsVc()
+    }
+    
     
 }

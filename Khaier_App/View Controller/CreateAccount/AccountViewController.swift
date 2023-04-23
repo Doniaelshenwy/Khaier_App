@@ -116,7 +116,7 @@ class AccountViewController: UIViewController {
                 let model = RegisterRequestModel(userName: userName, name: name, phone: phone , password: password, address: address)
                 registerRequest(model: model)
             } else {
-                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب ان تكون كلمتي السر متطابقتين")
+                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب ان يكون كلمتي المرور متطابقتين")
             }
         }
     }
