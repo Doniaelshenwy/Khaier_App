@@ -17,15 +17,19 @@ class BaseAPI<T : TargetType>{
         let params = buildParamters(task: target.task)
         AF.request(target.baseURL + target.path, method: method, parameters: params.0, encoding: params.1, headers: header).response { dataResponse in
             guard let statusCode = dataResponse.response?.statusCode else { return }
-            if statusCode == 200{ // success
-//                guard let jsonResponse = try? dataResponse.result.get() else { return }
-//                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonResponse, options: []) else { return }
-                guard let data = dataResponse.data else { return }
-                guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
-                completion(.success(jsonDecoder))
-            } else { // failed
-                completion(.failure(NSError()))
-            }
+            guard let data = dataResponse.data else { return }
+            guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
+            completion(.success(jsonDecoder))
+            
+//            if statusCode == 200{ // success
+////                guard let jsonResponse = try? dataResponse.result.get() else { return }
+////                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonResponse, options: []) else { return }
+//                guard let data = dataResponse.data else { return }
+//                guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
+//                completion(.success(jsonDecoder))
+//            } else { // failed
+//                completion(.failure(NSError()))
+//            }
         }
     }
     
