@@ -9,9 +9,11 @@ import Foundation
 import Alamofire
 
 enum AuthNetwork{
-    case login(model: LoginRequestModel)
+    case login(model: AuthRequestModel)
     case register(model: RegisterRequestModel)
-    case verifyPhone(model: VerifyPhoneRequestModel)
+    case verifyPhoneRegister(model: VerifyPhoneRequestModel)
+    case verifyPhoneForgetPassword(model: VerifyPhoneRequestModel)
+    case updatePassword(model: AuthRequestModel)
 }
 
 extension AuthNetwork : TargetType{
@@ -29,18 +31,18 @@ extension AuthNetwork : TargetType{
             return "login"
         case .register :
             return "signup"
-        case .verifyPhone(model: let model):
+        case .verifyPhoneRegister:
             return "Verify_phone_signup"
+        case .verifyPhoneForgetPassword:
+            return "Verify_phone_forgetPassword"
+        case .updatePassword:
+            return "update_password"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .login:
-            return .post
-        case .register:
-            return .post
-        case .verifyPhone:
+        default:
             return .post
         }
     }
@@ -50,14 +52,20 @@ extension AuthNetwork : TargetType{
         case .login(let model):
             return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password], encoding: JSONEncoding.default)
      
-        case .register(model: let model):
+        case .register(let model):
             return .requestParameter(paramter: ["username" : model.userName, "name" : model.name, "phone_number" : model.phone, "password" : model.password, "address" : model.address], encoding: JSONEncoding.default)
-        case .verifyPhone(model: let model):
+        case .verifyPhoneRegister(let model):
             return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
+        case .verifyPhoneForgetPassword(let model):
+            return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
+        case .updatePassword(let model):
+            return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password], encoding: JSONEncoding.default)
         }
     }
     var header: [String : String] {
         switch self {
+        case .updatePassword:
+            return ["Accept" : "application/json", "Content-Type" : "application/json"]
         default:
             return [:]
         }

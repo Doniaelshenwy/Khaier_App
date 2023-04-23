@@ -38,6 +38,7 @@ class AccountViewController: UIViewController {
     var isRemember = false
     let pickerView = UIPickerView()
     let apiRequest: AuthAPIProtocol = AuthAPI()
+    var phone: String = ""
     
     let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
     
@@ -112,7 +113,7 @@ class AccountViewController: UIViewController {
         }
         if isRemember == true{
             if password == confirmPassword {
-                let model = RegisterRequestModel(userName: userName, name: name, phone: "01019434345" , password: password, address: address)
+                let model = RegisterRequestModel(userName: userName, name: name, phone: phone , password: password, address: address)
                 registerRequest(model: model)
             } else {
                 ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب ان تكون كلمتي السر متطابقتين")

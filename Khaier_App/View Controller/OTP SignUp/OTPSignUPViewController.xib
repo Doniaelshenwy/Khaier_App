@@ -309,8 +309,10 @@
                             <constraints>
                                 <constraint firstItem="hbx-S4-7Kb" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="0T5-R9-hUF"/>
                                 <constraint firstItem="Hwi-3n-lD7" firstAttribute="top" secondItem="ECA-ic-qFB" secondAttribute="bottom" constant="16" id="7OG-CW-qt0"/>
+                                <constraint firstItem="Hwi-3n-lD7" firstAttribute="leading" secondItem="v42-0r-5EU" secondAttribute="leading" constant="23.670000000000002" id="9SS-ZD-eci"/>
                                 <constraint firstItem="Z7v-Ud-V2y" firstAttribute="top" secondItem="v42-0r-5EU" secondAttribute="top" constant="38.5" id="EhX-68-kzF"/>
                                 <constraint firstItem="BbC-Xd-7Rb" firstAttribute="top" secondItem="v42-0r-5EU" secondAttribute="top" constant="156" id="Erj-vp-F3R"/>
+                                <constraint firstAttribute="trailing" secondItem="Hwi-3n-lD7" secondAttribute="trailing" constant="23.329999999999998" id="I4a-mv-VuS"/>
                                 <constraint firstItem="Ann-Oc-ndb" firstAttribute="leading" secondItem="v42-0r-5EU" secondAttribute="leading" constant="16" id="IKK-qH-NC5"/>
                                 <constraint firstAttribute="trailing" secondItem="C9p-H9-dY0" secondAttribute="trailing" constant="16" id="LWR-DY-8fQ"/>
                                 <constraint firstItem="ECA-ic-qFB" firstAttribute="top" secondItem="C9p-H9-dY0" secondAttribute="bottom" constant="8" id="Oum-8k-1ho"/>
@@ -324,7 +326,6 @@
                                 <constraint firstAttribute="trailing" secondItem="ECA-ic-qFB" secondAttribute="trailing" constant="16" id="tvJ-Ny-Aad"/>
                                 <constraint firstItem="BbC-Xd-7Rb" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="uvk-D3-4Y6"/>
                                 <constraint firstItem="hbx-S4-7Kb" firstAttribute="top" secondItem="Ann-Oc-ndb" secondAttribute="bottom" constant="28" id="uxL-iE-CnT"/>
-                                <constraint firstItem="Hwi-3n-lD7" firstAttribute="centerX" secondItem="v42-0r-5EU" secondAttribute="centerX" id="wq3-LC-J8j"/>
                                 <constraint firstItem="C9p-H9-dY0" firstAttribute="top" secondItem="BbC-Xd-7Rb" secondAttribute="bottom" constant="32" id="x13-8M-VhF"/>
                             </constraints>
                         </view>
@@ -362,7 +363,7 @@
     </objects>
     <resources>
         <image name="Login" width="163" height="199"/>
-        <image name="Logo" width="172" height="172"/>
+        <image name="Logo" width="162.33332824707031" height="172"/>
         <image name="OTP" width="241" height="216"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

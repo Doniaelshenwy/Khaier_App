@@ -24,6 +24,8 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
     var confirmPasswordVisable = true
     var securePasswordTextField: SecureTextField?
     var secureConfirmPasswordTextField: SecureTextField?
+    var phone: String = ""
+    let apiRequest: AuthAPIProtocol = AuthAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,21 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
         isHiddeninvalidLabel(for: [passwordErrorLabel, passwordConfirmLabel])
         securePasswordTextField = SecureTextField(button: showHiddenPasswordConstrainBtn, textField: passwordTextField)
         secureConfirmPasswordTextField = SecureTextField(button: showHiddenConfirmPasswordConstrainBtn, textField: confirmPasswordTextField)
-        
+    }
+    
+    func updatePasswordRequest(model: AuthRequestModel) {
+        apiRequest.updatePasswordRequest(model: model) { response in
+            switch response {
+            case .success(let data):
+                if data?.message == "password updated successfully" {
+                    self.moveToChangePasswordVC()
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: data?.errors?.password?[0] ?? "")
+                }
+            case .failure(let error):
+                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error.localizedDescription)
+            }
+        }
     }
     
     func moveToChangePasswordVC(){
@@ -50,7 +66,15 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
             checkViewIsEmpty(view: confirmPasswordView, height: passwordConfirmHeightConstrain, label: passwordConfirmLabel)
             return
         }
-        moveToChangePasswordVC()
+        let model = AuthRequestModel(phoneNumber: phone, password: password)
+        if password == confirmPassword {
+            updatePasswordRequest(model: model)
+
+        } else {
+            ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب تطابق كلمتي المرور")
+        }
+        //moveToChangePasswordVC()
+        
 //        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغير رقم المرور")
     }
 

@@ -24,9 +24,9 @@ class SignUpViewController: UIViewController {
         phoneTextField.delegate = self
     }
     
-    func verifyPhoneRequest(phoneNumber: String) {
+    func verifyPhoneRegisterRequest(phoneNumber: String) {
         let model = VerifyPhoneRequestModel(phone_number: phoneNumber)
-        apiRequest.verifyPhoneRequest(model: model) { response in
+        apiRequest.verifyPhoneRegisterRequest(model: model) { response in
             switch response {
             case .success(let data):
                 if (data?.success == "denied") {
@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
             switch state{
             case true:
                // self?.moveToOTPSignUPVC(phone: phone)
-                self?.verifyPhoneRequest(phoneNumber: phone)
+                self?.verifyPhoneRegisterRequest(phoneNumber: phone)
             case false:
                 ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: " رقم الهاتف غير صحيح يرجي ادخاله مره أخري")
             }
@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
         }
        // callSendCode(phone: phone) // when firebase send code
       //  moveToOTPSignUPVC(phone: phone) // test
-        verifyPhoneRequest(phoneNumber: phone)
+        verifyPhoneRegisterRequest(phoneNumber: phone)
     }
    
     @IBAction func loginBtn(_ sender: Any) {

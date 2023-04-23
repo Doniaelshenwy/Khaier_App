@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
     
     func loginRequest(phoneNumber: String, password: String) {
         
-        let loginModel = LoginRequestModel(phoneNumber: phoneNumber, password: password)
+        let loginModel = AuthRequestModel(phoneNumber: phoneNumber, password: password)
         apiRequest.loginRequest(model: loginModel) { response in
             switch response {
             case .success(let data):

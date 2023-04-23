@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginRequestModel {
+struct AuthRequestModel {
     var phoneNumber: String
     var password: String
 }
@@ -25,14 +25,16 @@ struct VerifyPhoneRequestModel {
 }
 
 protocol AuthAPIProtocol : AuthAPI{
-    func loginRequest(model: LoginRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
+    func loginRequest(model: AuthRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
     func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
-    func verifyPhoneRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
+    func verifyPhoneRegisterRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
+    func verifyPhoneForgetPasswordRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
+    func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void)
 }
 
 class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
-    
-    func loginRequest(model: LoginRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void){
+   
+    func loginRequest(model: AuthRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void){
         fetchData(target: .login(model: model), responseClass: AuthResponseModel.self) { result in
             completion(result)
         }
@@ -44,8 +46,20 @@ class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
         }
     }
     
-    func verifyPhoneRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void) {
-        fetchData(target: .verifyPhone(model: model), responseClass: VerifyPhoneResponseModel.self) { result in
+    func verifyPhoneRegisterRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void) {
+        fetchData(target: .verifyPhoneRegister(model: model), responseClass: VerifyPhoneResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func verifyPhoneForgetPasswordRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void) {
+        fetchData(target: .verifyPhoneForgetPassword(model: model), responseClass: VerifyPhoneResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void) {
+        fetchData(target: .updatePassword(model: model), responseClass: UpdatePasswordResponseModel.self) { result in
             completion(result)
         }
     }

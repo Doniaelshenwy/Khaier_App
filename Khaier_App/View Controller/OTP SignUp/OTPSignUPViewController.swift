@@ -44,6 +44,7 @@ class OTPSignUPViewController: UIViewController {
     
     func moveToAccountVC(){
         let vc = AccountViewController()
+        vc.phone = phone
         push(vc: vc)
     }
     

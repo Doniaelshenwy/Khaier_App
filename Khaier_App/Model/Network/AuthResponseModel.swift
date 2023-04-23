@@ -30,13 +30,28 @@ struct UserResponseModel: Codable {
 
 struct VerifyPhoneResponseModel: Codable {
     let success: String?
-    let error: Error?
+    let error: Errors?
 }
 
-struct Error: Codable {
-    let phoneNumber: [String]?
+//struct Error: Codable {
+//    let phoneNumber: [String]?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case phoneNumber = "phone_number"
+//    }
+//}
+
+struct UpdatePasswordResponseModel: Codable {
+    let message: String?
+    let link: String?
+    let errors: Errors?
+}
+
+struct Errors: Codable {
+    let phoneNumber, password: [String]?
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
+        case password
     }
 }

@@ -46,6 +46,7 @@ class OTPForgetPasswordViewController: UIViewController {
     
     func moveToResetPasswordVC(){
         let vc = ResetPasswordViewController()
+        vc.phone = phone
         push(vc: vc)
     }
     
