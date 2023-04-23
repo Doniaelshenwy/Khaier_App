@@ -58,7 +58,12 @@ class LoginViewController: UIViewController {
                 if let error = data?.error {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
+                    UserDefault.saveUserName(data?.user?.name ?? "")
+                    UserDefault.saveAddress(data?.user?.address ?? "")
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
+                    if self.isRemember{
+                        UserDefault.saveReminder(self.isRemember)
+                    }
                     self.moveToHomeVC()
                 }
             case .failure(_):

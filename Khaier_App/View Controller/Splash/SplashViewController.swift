@@ -21,6 +21,19 @@ class SplashViewController: UIViewController {
         let vc = OnboardingViewController()
         push(vc: vc)
     }
+    
+    private func moveToTabBar(){
+        let vc = TabBarController()
+        push(vc: vc)
+    }
+    
+    private func isOpenAppBefore() {
+        if UserDefault.getLogin() || UserDefault.getRegister() {
+            moveToLoginVC()
+        } else {
+            moveToOnBoarding()
+        }
+    }
 
     private func animate(){
         UIView.animate(withDuration: 1, delay: 0.5, options: []) {
@@ -28,7 +41,11 @@ class SplashViewController: UIViewController {
             let translateTransform = CGAffineTransform(translationX: 173, y: -340.33)
             self.animateImage.transform = scaleTransform.concatenating(translateTransform)
         } completion: { [weak self] _ in
-            self?.moveToOnBoarding()
+            if UserDefault.getReminder() {
+                self?.moveToTabBar()
+            } else {
+                self?.isOpenAppBefore()
+            }
         }
     }
     

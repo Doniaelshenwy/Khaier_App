@@ -40,10 +40,12 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func signUpBtn(_ sender: UIButton) {
+        UserDefault.saveRegister(true)
         moveToSignUpVC()
     }
     
     @IBAction func loginBtn(_ sender: Any) {
+        UserDefault.saveLogin(true)
         moveToLoginVC()
     }
     
