@@ -25,11 +25,21 @@ class ExitViewController: UIViewController {
         isNavigationHidden(false)
         isTabBarHidden(true)
     }
+    
+    func logout() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+            keyWindow?.rootViewController = LoginViewController()
+            UIView.transition(with: keyWindow!, duration: 0.5, options: .curveEaseIn, animations: nil, completion: nil)
+        }
+    }
 
     @IBAction func exitButton(_ sender: Any) {
         ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تسجيل الخروج")
         dismiss(animated: true)
-        delegate.movetoLoginVCFromExitVC()
+        //delegate.movetoLoginVCFromExitVC()
+        UserDefault.clearUserDefaults()
+        logout()
     }
     
     @IBAction func cancelButton(_ sender: Any) {
