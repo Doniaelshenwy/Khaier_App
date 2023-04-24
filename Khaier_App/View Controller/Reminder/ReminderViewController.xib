@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController" customModule="Khaier_App" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="rry-DV-qny" id="FBY-Er-JcN"/>
                 <outlet property="reminderTableView" destination="VvN-tb-Qup" id="9ga-XX-JRh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,6 +54,34 @@
                         <constraint firstAttribute="height" constant="450" id="wdt-0Q-bYK"/>
                     </constraints>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rry-DV-qny">
+                    <rect key="frame" x="88" y="280" width="199" height="233"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reminder" translatesAutoresizingMaskIntoConstraints="NO" id="vG2-uK-oZH">
+                            <rect key="frame" x="0.0" y="0.0" width="199" height="166"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="166" id="NPR-b6-GLY"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا يوجد تذكيرات بعد !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34J-6P-dAG">
+                            <rect key="frame" x="30.666666666666671" y="206" width="138" height="24"/>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="34J-6P-dAG" firstAttribute="top" secondItem="vG2-uK-oZH" secondAttribute="bottom" constant="40" id="1Os-ke-sHH"/>
+                        <constraint firstItem="34J-6P-dAG" firstAttribute="leading" secondItem="rry-DV-qny" secondAttribute="leading" constant="30.5" id="2jf-YX-XlQ"/>
+                        <constraint firstAttribute="trailing" secondItem="34J-6P-dAG" secondAttribute="trailing" constant="30.5" id="C8B-vO-5gG"/>
+                        <constraint firstItem="vG2-uK-oZH" firstAttribute="leading" secondItem="rry-DV-qny" secondAttribute="leading" id="IYo-BM-Nxh"/>
+                        <constraint firstAttribute="trailing" secondItem="vG2-uK-oZH" secondAttribute="trailing" id="PoY-6Y-9Y7"/>
+                        <constraint firstAttribute="height" constant="233" id="VkS-B7-FEB"/>
+                        <constraint firstItem="vG2-uK-oZH" firstAttribute="top" secondItem="rry-DV-qny" secondAttribute="top" id="nd8-Um-hHE"/>
+                        <constraint firstAttribute="width" constant="199" id="shD-Ww-uVG"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYl-YW-u6N">
                     <rect key="frame" x="32" y="648" width="56" height="56"/>
                     <color key="backgroundColor" name="AppColor"/>
@@ -79,10 +108,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mYl-YW-u6N" secondAttribute="bottom" constant="74" id="362-xw-Kg9"/>
+                <constraint firstItem="rry-DV-qny" firstAttribute="top" secondItem="esB-60-6q0" secondAttribute="bottom" constant="191" id="7N1-69-182"/>
                 <constraint firstItem="VvN-tb-Qup" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7vr-Lf-2zR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VvN-tb-Qup" secondAttribute="trailing" constant="16" id="QYb-s5-crF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OpP-zF-ip2" secondAttribute="trailing" constant="16" id="Sy7-c5-YcK"/>
                 <constraint firstItem="mYl-YW-u6N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="anL-Um-hYg"/>
+                <constraint firstItem="rry-DV-qny" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d4f-Cg-dHK"/>
                 <constraint firstItem="esB-60-6q0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="eMq-aO-9Xn"/>
                 <constraint firstItem="esB-60-6q0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iRO-Ff-5Df"/>
                 <constraint firstItem="OpP-zF-ip2" firstAttribute="centerY" secondItem="esB-60-6q0" secondAttribute="centerY" id="jZe-4B-WB9"/>
@@ -93,6 +124,7 @@
     </objects>
     <resources>
         <image name="Back" width="7.6666665077209473" height="14"/>
+        <image name="reminder" width="199" height="168"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

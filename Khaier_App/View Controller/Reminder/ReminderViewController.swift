@@ -10,6 +10,7 @@ import UIKit
 class ReminderViewController: UIViewController {
 
     @IBOutlet weak var reminderTableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     var reminderArray: [Reminder] = []
     
@@ -18,7 +19,21 @@ class ReminderViewController: UIViewController {
         isNavigationHidden(true)
         isTabBarHidden(true)
         setReminderTableView()
-        setDataOfReminderArray()
+        //setDataOfReminderArray()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        isHidenEmptyViewReminderArray()
+    }
+    
+    func isHidenEmptyViewReminderArray() {
+        if reminderArray.count == 0 {
+            emptyView.isHidden = false
+            reminderTableView.isHidden = true
+        } else {
+            emptyView.isHidden = true
+            reminderTableView.isHidden = false
+        }
     }
     
     func setDataOfReminderArray() {

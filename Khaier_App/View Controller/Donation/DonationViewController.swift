@@ -12,6 +12,8 @@ class DonationViewController: UIViewController {
     @IBOutlet weak var mydonationBtnConstrain: UIButton!
     @IBOutlet weak var followDonationBtnConstrain: UIButton!
     @IBOutlet weak var donationTableView: UITableView!
+    @IBOutlet weak var emptyImage: UIImageView!
+    @IBOutlet weak var emptyView: UIView!
     
     var myDonationArray: [MyDonation] = []
     var followDonationArray: [FollowDonation] = []
@@ -20,9 +22,31 @@ class DonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
-        setDataOfMyDonationArray()
+        //setDataOfMyDonationArray()
         setDonationTableView()
-        setDataOfFollowDonationArray()
+        //setDataOfFollowDonationArray()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        isHidenEmptyViewMyDonationArray()
+    }
+    
+    func isHidenEmptyViewMyDonationArray() {
+        if myDonationArray.count == 0 {
+            emptyView.isHidden = false
+            emptyImage.image = UIImage(named: "My Donation")
+        } else {
+            emptyView.isHidden = true
+        }
+    }
+    
+    func isHidenEmptyViewFollowDonationArray() {
+        if followDonationArray.count == 0 {
+            emptyView.isHidden = false
+            emptyImage.image = UIImage(named: "follow Donation")
+        } else {
+            emptyView.isHidden = true
+        }
     }
     
     func setDataOfMyDonationArray(){
@@ -51,6 +75,7 @@ class DonationViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: mydonationBtnConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: followDonationBtnConstrain)
         chooseCellTableView()
+        isHidenEmptyViewMyDonationArray()
     }
     
     @IBAction func followDonationButton(_ sender: Any) {
@@ -58,7 +83,13 @@ class DonationViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: followDonationBtnConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: mydonationBtnConstrain)
         chooseCellTableView()
+        isHidenEmptyViewFollowDonationArray()
     }
+    
+    @IBAction func moveToHomeVcButton(_ sender: Any) {
+        moveToHomeVC()
+    }
+    
 }
 
 extension DonationViewController: TableViewConfig {

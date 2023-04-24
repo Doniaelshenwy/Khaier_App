@@ -28,7 +28,19 @@ class BookmarkViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        isHidenEmptyViewDonationArray()
+    }
+    
+    func isHidenEmptyViewDonationArray() {
         if donationArray.count == 0 {
+            emptyView.isHidden = false
+        } else {
+            emptyView.isHidden = true
+        }
+    }
+    
+    func isHidenEmptyViewCharityArray() {
+        if charityArray.count == 0 {
             emptyView.isHidden = false
         } else {
             emptyView.isHidden = true
@@ -68,11 +80,7 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: charityButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: donationButtonConstrain)
         setCell()
-        if charityArray.count == 0 {
-            emptyView.isHidden = false
-        } else {
-            emptyView.isHidden = true
-        }
+        isHidenEmptyViewCharityArray()
     }
     
     // if user press button, show case donation
@@ -81,11 +89,7 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: donationButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: charityButtonConstrain)
         setCell()
-        if donationArray.count == 0 {
-            emptyView.isHidden = false
-        } else {
-            emptyView.isHidden = true
-        }
+        isHidenEmptyViewDonationArray()
     }
     
     @IBAction func moveToHomeVCButton(_ sender: Any) {

@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var filterButtonConstrain: UIButton!
     @IBOutlet weak var resultSearchHeightLabelConstrain: NSLayoutConstraint!
     @IBOutlet weak var emptyButton: UIButton!
+    @IBOutlet weak var emptyView: UIView!
     
     var searchArray: [CaseDonationModel] = []
     
@@ -24,15 +25,24 @@ class SearchViewController: UIViewController {
         isNavigationHidden(true)
         isTabBarHidden(true)
         setCollectionView()
-        setDataOfSearchArray()
+        //setDataOfSearchArray()
         filterButtonConstrain.isHidden = true
         emptyButton.isHidden = false
         searchTextField.delegate = self
         hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
+        emptyView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         resultSearchLabel.text = "النتائج البحث(\(searchArray.count))"
+    }
+    
+    func isHidenEmptyView() {
+        if searchArray.count == 0 {
+            emptyView.isHidden = false
+        } else {
+            emptyView.isHidden = true
+        }
     }
     
     func setDataOfSearchArray(){
@@ -71,10 +81,12 @@ extension SearchViewController: UITextFieldDelegate {
             filterButtonConstrain.isHidden = true
             emptyButton.isHidden = false
             hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
+            emptyView.isHidden = true
         } else {
             showLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
             filterButtonConstrain.isHidden = false
             emptyButton.isHidden = true
+            isHidenEmptyView()
         }
     }
     

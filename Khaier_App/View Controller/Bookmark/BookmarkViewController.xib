@@ -161,6 +161,7 @@
                             <rect key="frame" x="26" y="313.33333333333337" width="168" height="40"/>
                             <color key="backgroundColor" name="AppColor"/>
                             <constraints>
+                                <constraint firstAttribute="width" constant="168" id="3Hk-T6-1eE"/>
                                 <constraint firstAttribute="height" constant="40" id="Hgj-jI-vPa"/>
                             </constraints>
                             <color key="tintColor" name="WhiteColor"/>
@@ -204,10 +205,9 @@
                 <constraint firstItem="agh-bq-IfR" firstAttribute="centerY" secondItem="fHG-e4-Cvw" secondAttribute="centerY" id="M5q-gR-9xd"/>
                 <constraint firstItem="9S4-iY-P6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PjF-BT-gET"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EvY-5C-BHp" secondAttribute="trailing" constant="16" id="SLZ-av-wyJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KfL-7u-a9D" secondAttribute="trailing" constant="77.5" id="iSt-Ef-5ID"/>
-                <constraint firstItem="KfL-7u-a9D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="77.5" id="lyl-df-B6A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="agh-bq-IfR" secondAttribute="trailing" constant="16" id="nZp-DF-xRx"/>
                 <constraint firstItem="fHG-e4-Cvw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="rvg-IE-Ikl"/>
+                <constraint firstItem="KfL-7u-a9D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s6Q-13-vb1"/>
                 <constraint firstItem="EvY-5C-BHp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="u8I-7t-euG"/>
                 <constraint firstItem="EvY-5C-BHp" firstAttribute="top" secondItem="fHG-e4-Cvw" secondAttribute="bottom" constant="24" id="v8r-vI-bYJ"/>
                 <constraint firstItem="fHG-e4-Cvw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xqh-fC-sGd"/>
