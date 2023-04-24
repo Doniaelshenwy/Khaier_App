@@ -71,6 +71,11 @@ class DonatinDetailsViewController: UIViewController {
         trashView.isHidden = false
     }
     
+    func moveToThanksDonationVC(){
+        let vc = ThanksDonationViewController(delegate: self)
+        customPresent(vc, animated: false)
+    }
+    
     func setData() {
         guard let descriptionDonation = descriptionDonationTextField.text, descriptionDonation != "" else {
             checkTextFieldIsEmpty(textField: descriptionDonationTextField, height: descriptionDonationHeightInvalidLabel, label: descriptionDonationInvalidLabel)
@@ -97,7 +102,7 @@ class DonatinDetailsViewController: UIViewController {
             return
         }
         if isChooseImageDonation {
-            ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم التبرع")
+            moveToThanksDonationVC()
         } else {
             checkViewIsEmpty(view: imageView, height: addImageHeightInvalidLabel, label: addImageInvalidLabel)
         }
@@ -278,3 +283,14 @@ extension DonatinDetailsViewController: UIImagePickerControllerDelegate, UINavig
     
 }
 
+
+extension DonatinDetailsViewController: ThanksDonationProtocol {
+    func moveToHomeVC() {
+        let vc = HomeViewController()
+        push(vc: vc)
+    }
+    
+    func movetoHomeVCFromThanksDonation() {
+        moveToHomeVC()
+    }
+}
