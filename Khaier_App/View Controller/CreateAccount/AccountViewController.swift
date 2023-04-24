@@ -53,11 +53,6 @@ class AccountViewController: UIViewController {
         setupPickerView()
     }
     
-    func moveToHomeVC(){
-        let vc = TabBarController()
-        push(vc: vc)
-    }
-    
     func registerRequest(model: RegisterRequestModel) {
         apiRequest.registerRequest(model: model) { [weak self] response in
             switch response{

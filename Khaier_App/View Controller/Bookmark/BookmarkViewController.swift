@@ -12,6 +12,7 @@ class BookmarkViewController: UIViewController {
     @IBOutlet weak var charityButtonConstrain: UIButton!
     @IBOutlet weak var donationButtonConstrain: UIButton!
     @IBOutlet weak var bookmarkCollectionView: UICollectionView!
+    @IBOutlet weak var emptyView: UIView!
     
     var donationArray: [CaseDonationModel] = []
     var charityArray: [CharityModel] = []
@@ -23,7 +24,15 @@ class BookmarkViewController: UIViewController {
         isTabBarHidden(true)
         setBookmarkCollectionView()
         setDataOfDonationArray()
-        setDataOfCharityArray()
+        //setDataOfCharityArray()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if donationArray.count == 0 {
+            emptyView.isHidden = false
+        } else {
+            emptyView.isHidden = true
+        }
     }
     
     func setDataOfDonationArray(){
@@ -59,6 +68,11 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: charityButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: donationButtonConstrain)
         setCell()
+        if charityArray.count == 0 {
+            emptyView.isHidden = false
+        } else {
+            emptyView.isHidden = true
+        }
     }
     
     // if user press button, show case donation
@@ -67,6 +81,15 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: donationButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: charityButtonConstrain)
         setCell()
+        if donationArray.count == 0 {
+            emptyView.isHidden = false
+        } else {
+            emptyView.isHidden = true
+        }
+    }
+    
+    @IBAction func moveToHomeVCButton(_ sender: Any) {
+        moveToHomeVC()
     }
 }
 

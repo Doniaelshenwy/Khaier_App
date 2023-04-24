@@ -44,11 +44,6 @@ class LoginViewController: UIViewController {
         push(vc: vc)
     }
     
-    func moveToHomeVC(){
-        let vc = TabBarController()
-        push(vc: vc)
-    }
-    
     func loginRequest(phoneNumber: String, password: String) {
         
         let loginModel = AuthRequestModel(phoneNumber: phoneNumber, password: password)

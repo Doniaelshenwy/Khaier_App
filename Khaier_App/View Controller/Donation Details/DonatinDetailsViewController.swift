@@ -285,10 +285,6 @@ extension DonatinDetailsViewController: UIImagePickerControllerDelegate, UINavig
 
 
 extension DonatinDetailsViewController: ThanksDonationProtocol {
-    func moveToHomeVC() {
-        let vc = HomeViewController()
-        push(vc: vc)
-    }
     
     func movetoHomeVCFromThanksDonation() {
         moveToHomeVC()

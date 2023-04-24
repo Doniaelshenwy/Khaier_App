@@ -87,6 +87,11 @@ extension UIViewController{
         push(vc: vc)
     }
     
+    func moveToHomeVC(){
+        let vc = TabBarController()
+        push(vc: vc)
+    }
+    
 }
 
 // show or hide invalid label when text field is empty

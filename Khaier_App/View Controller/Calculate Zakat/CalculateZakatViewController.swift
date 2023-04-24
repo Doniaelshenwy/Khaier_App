@@ -61,11 +61,6 @@ extension CalculateZakatViewController: UITextFieldDelegate {
 
 extension CalculateZakatViewController: DonateNowProtocol {
     
-    func moveToHomeVC() {
-        let vc = HomeViewController()
-        push(vc: vc)
-    }
-    
     func movetoHomeVCFromZakatValue() {
         moveToHomeVC()
     }
