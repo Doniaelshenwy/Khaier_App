@@ -17,7 +17,9 @@ struct RegisterRequestModel {
     var name: String
     var phone: String
     var password: String
-    var address: String
+    var passwordConfirmation: String
+    var cityId: Int
+    var districtId: Int
 }
 
 struct VerifyPhoneRequestModel {
@@ -26,22 +28,23 @@ struct VerifyPhoneRequestModel {
 
 protocol AuthAPIProtocol : AuthAPI{
     func loginRequest(model: AuthRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
-    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
+    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<RegisterResponseModel?, NSError>) -> Void)
     func verifyPhoneRegisterRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func verifyPhoneForgetPasswordRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void)
+    func cityRegisterRequest(completion: @escaping (Result<CityRegisterResponseModel?, NSError>) -> Void)
 }
 
 class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
-   
+    
     func loginRequest(model: AuthRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void){
         fetchData(target: .login(model: model), responseClass: AuthResponseModel.self) { result in
             completion(result)
         }
     }
     
-    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void) {
-        fetchData(target: .register(model: model), responseClass: AuthResponseModel.self) { result in
+    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<RegisterResponseModel?, NSError>) -> Void) {
+        fetchData(target: .register(model: model), responseClass: RegisterResponseModel.self) { result in
             completion(result)
         }
     }
@@ -60,6 +63,12 @@ class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
     
     func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void) {
         fetchData(target: .updatePassword(model: model), responseClass: UpdatePasswordResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func cityRegisterRequest(completion: @escaping (Result<CityRegisterResponseModel?, NSError>) -> Void) {
+        fetchData(target: .cityRegister, responseClass: CityRegisterResponseModel.self) { result in
             completion(result)
         }
     }

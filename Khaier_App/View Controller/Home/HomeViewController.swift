@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         helloNameLabel.text = "اهلا \(UserDefault.getUsername()) 👋"
-        titleLabel.text = UserDefault.getAddress()
+        titleLabel.text = UserDefault.getCity() + UserDefault.getRegion()
     }
 
     func setDataOfPriorityArray(){

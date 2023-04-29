@@ -14,6 +14,7 @@ enum AuthNetwork{
     case verifyPhoneRegister(model: VerifyPhoneRequestModel)
     case verifyPhoneForgetPassword(model: VerifyPhoneRequestModel)
     case updatePassword(model: AuthRequestModel)
+    case cityRegister
 }
 
 extension AuthNetwork : TargetType{
@@ -37,11 +38,15 @@ extension AuthNetwork : TargetType{
             return "Verify_phone_forgetPassword"
         case .updatePassword:
             return "update_password"
+        case .cityRegister:
+            return "signup"
         }
     }
     
     var method: HTTPMethod {
         switch self {
+        case .cityRegister:
+            return .get
         default:
             return .post
         }
@@ -53,13 +58,15 @@ extension AuthNetwork : TargetType{
             return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password], encoding: JSONEncoding.default)
      
         case .register(let model):
-            return .requestParameter(paramter: ["username" : model.userName, "name" : model.name, "phone_number" : model.phone, "password" : model.password, "address" : model.address], encoding: JSONEncoding.default)
+            return .requestParameter(paramter: ["username" : model.userName, "name" : model.name, "phone_number" : model.phone, "password" : model.password, "password_confirmation" : model.passwordConfirmation, "city_id" : model.cityId, "district_id" : model.districtId], encoding: JSONEncoding.default)
         case .verifyPhoneRegister(let model):
             return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
         case .verifyPhoneForgetPassword(let model):
             return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
         case .updatePassword(let model):
             return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password], encoding: JSONEncoding.default)
+        case .cityRegister:
+            return .requestPlain
         }
     }
     var header: [String : String] {

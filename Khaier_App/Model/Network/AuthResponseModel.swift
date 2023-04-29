@@ -28,8 +28,29 @@ struct UserResponseModel: Codable {
     }
 }
 
+struct CityRegisterResponseModel: Codable {
+    let cities: [City]
+    let districts: [District]
+}
+
+struct City: Codable {
+    let id: Int
+    let name: String
+}
+
+struct District: Codable {
+    let id: Int
+    let name: String
+    let cityID: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case cityID = "city_id"
+    }
+}
+
 struct VerifyPhoneResponseModel: Codable {
-    let success: String?
+    let message: String?
     let error: Errors?
 }
 
@@ -40,10 +61,34 @@ struct UpdatePasswordResponseModel: Codable {
 }
 
 struct Errors: Codable {
-    let phoneNumber, password: [String]?
+    let username, phoneNumber, password: [String]?
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
         case password
+        case username
+    }
+}
+
+
+struct RegisterResponseModel: Codable {
+    let user: UserRegisterResponseModel?
+    let token: String?
+    let error: Errors?
+    let message: String?
+}
+
+struct UserRegisterResponseModel: Codable {
+    let id: Int?
+    let username, name, phoneNumber: String?
+    let address: String?
+    let createdAt, updatedAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, username, name
+        case phoneNumber = "phone_number"
+        case address
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }

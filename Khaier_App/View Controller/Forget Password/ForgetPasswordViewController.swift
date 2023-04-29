@@ -27,14 +27,13 @@ class ForgetPasswordViewController: UIViewController {
         apiRequest.verifyPhoneForgetPasswordRequest(model: model) { response in
             switch response {
             case .success(let data):
-                if (data?.success == "denied") {
+                if (data?.message == "denied") {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: (data?.error?.phoneNumber?[0]) ?? "")
-                } else if (data?.success == "accepted") {
+                } else if (data?.message == "accepted") {
                     print(":ok")
                     self.moveToOTPForgetPasswordVC(phone: phoneNumber)
                 }
             case .failure(_):
-                print("errrr")
                 break
             }
         }

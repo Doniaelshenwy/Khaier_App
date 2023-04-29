@@ -13,17 +13,29 @@ extension AccountViewController: UITextFieldDelegate {
         checkColorBoderOfTextField(textfield: nameTextField, label: nameInvalidLabel, height: nameInvalidHeightConstrain)
         checkColorBorderOfView(textfield: passwordTextField, view: passwordView, label: passwordInvalidLabel, height: passwordInvalidHeightConstrain)
         checkColorBorderOfView(textfield: confirmPasswordTextField, view: confirmPasswordView, label: confirmPasswordInvalidLabel, height: confirmPasswordInvalidHeightConstrain)
+        checkCityView(textField: cityTextField, view: cityView, label: addressInvalidLabel, height: addressInvalidConstrain)
+        checkRegionView(textField: regionTextField, view: regionView, label: regionInvalidLabel, height: regionHeightInvalidLabel)
     }
     
-//    func checkAddressView(cityLabel: UILabel, view: UIView, label: UILabel, height: NSLayoutConstraint) {
-//        if cityLabel.text == "اختر المدينة و المنطقة" {
-//            setGrayColorView(view)
-//            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-//        } else {
-//            setAppColorView(view)
-//            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-//        }
-//    }
+    func checkCityView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+        if textField.text == "اختر المدينة" {
+            setGrayColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        } else {
+            setAppColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        }
+    }
+    
+    func checkRegionView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+        if textField.text == "اختر المنطقة" {
+            setGrayColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        } else {
+            setAppColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        }
+    }
     
     func setDelegateTextField(){
         let textFieldDelegate = [userNameTextField, nameTextField, passwordTextField, confirmPasswordTextField]

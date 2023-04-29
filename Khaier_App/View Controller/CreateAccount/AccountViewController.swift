@@ -28,24 +28,33 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var confirmPasswordInvalidLabel: UILabel!
     @IBOutlet weak var confirmEyeBtnConstrain: UIButton!
     @IBOutlet weak var eyeBtnConstrain: UIButton!
-    @IBOutlet weak var addressView: UIControl!
-    @IBOutlet weak var addressTextField: UITextField!
-    
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var cityView: UIControl!
+    @IBOutlet weak var regionHeightInvalidLabel: NSLayoutConstraint!
+    @IBOutlet weak var regionView: UIControl!
+    @IBOutlet weak var regionInvalidLabel: UILabel!
+    @IBOutlet weak var regionTextField: UITextField!
     var passwordSecureTextField: SecureTextField?
     var confirmPasswordSecureTextField: SecureTextField?
     var passwordVisable = true
     var confirmPasswordVisable = true
     var isRemember = false
-    let pickerView = UIPickerView()
+    let cityPickerView = UIPickerView()
+    let regionPickerView = UIPickerView()
     let apiRequest: AuthAPIProtocol = AuthAPI()
     var phone: String = ""
+    var cityId = 0
+    var regionId = 0
     
-    let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+//    let cityData = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+//    let regionData = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+    var cityData : [City] = []
+    var regionData : [District] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegateTextField()
-        isHiddeninvalidLabel(for: [userNameInvalidLabel, nameInvalidLabel, addressInvalidLabel, passwordInvalidLabel, confirmPasswordInvalidLabel])
+        isHiddeninvalidLabel(for: [userNameInvalidLabel, nameInvalidLabel, addressInvalidLabel, passwordInvalidLabel, confirmPasswordInvalidLabel, regionInvalidLabel])
         setZeroHeightLabel(for: [userNameInvalidHeightConstrain, nameInvalidHeightConstrain, addressInvalidConstrain, passwordInvalidHeightConstrain, confirmPasswordInvalidHeightConstrain])
         passwordSecureTextField = SecureTextField(button: eyeBtnConstrain, textField: passwordTextField)
         confirmPasswordSecureTextField = SecureTextField(button: confirmEyeBtnConstrain, textField: confirmPasswordTextField)
@@ -53,16 +62,36 @@ class AccountViewController: UIViewController {
         setupPickerView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        cityRegisterRequest()
+    }
+    
     func registerRequest(model: RegisterRequestModel) {
         apiRequest.registerRequest(model: model) { [weak self] response in
-            switch response{
+            switch response {
             case .success(let data):
-                ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
-                UserDefault.saveUserName(data?.user?.username ?? "")
-                UserDefault.saveAddress(data?.user?.address ?? "")
-                self?.moveToHomeVC()
+                if let error = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
+                    UserDefault.saveUserName(data?.user?.username ?? "")
+                    self?.moveToHomeVC()
+                }
             case .failure(_):
                 break
+            }
+        }
+    }
+    
+    func cityRegisterRequest() {
+        apiRequest.cityRegisterRequest { response in
+            switch response {
+            case .success(let data):
+                guard let unwrappedData = data else { return }
+                self.cityData = unwrappedData.cities
+                self.regionData = unwrappedData.districts
+            case .failure(_):
+                print("Error Data City")
             }
         }
     }
@@ -75,10 +104,6 @@ class AccountViewController: UIViewController {
         confirmPasswordSecureTextField?.checkPasswordVisiable(visable: &confirmPasswordVisable)
     }
     @IBAction func cityView(_ sender: Any) {
-//        DropDownList.shared.data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
-//        DropDownList.shared.setupDropDownList(view: addressView, label: cityLabel)
-//        checkAddressView(cityLabel: cityLabel, view: addressView, label: addressInvalidLabel, height: addressInvalidConstrain)
-//        DropDownList.shared.showDropDownList()
     }
     
     @IBAction func checkBtn(_ sender: Any) {
@@ -94,10 +119,16 @@ class AccountViewController: UIViewController {
             checkTextFieldIsEmpty(textField: nameTextField, height: nameInvalidHeightConstrain, label: nameInvalidLabel)
             return
         }
-        guard let address = addressTextField.text, address != "اختر المدينة و المنطقة" else {
-            checkViewIsEmpty(view: addressView, height: addressInvalidConstrain, label: addressInvalidLabel)
+        guard let city = cityTextField.text, city != "اختر المدينة" else {
+            checkViewIsEmpty(view: cityView, height: addressInvalidConstrain, label: addressInvalidLabel)
             return
         }
+        UserDefault.saveCity(city)
+        guard let region = regionTextField.text, region != "اختر المنطقة" else {
+            checkViewIsEmpty(view: regionView, height: regionHeightInvalidLabel, label: regionInvalidLabel)
+            return
+        }
+        UserDefault.saveRegion(region)
         guard let password = passwordTextField.text, password != "" else {
             checkViewIsEmpty(view: passwordView, height: passwordInvalidHeightConstrain, label: passwordInvalidLabel)
             return
@@ -107,12 +138,9 @@ class AccountViewController: UIViewController {
             return
         }
         if isRemember == true{
-            if password == confirmPassword {
-                let model = RegisterRequestModel(userName: userName, name: name, phone: phone , password: password, address: address)
-                registerRequest(model: model)
-            } else {
-                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب ان يكون كلمتي المرور متطابقتين")
-            }
+            let model = RegisterRequestModel(userName: userName, name: name, phone: phone , password: password, passwordConfirmation: confirmPassword, cityId: cityId, districtId: regionId)
+            registerRequest(model: model)
+            print(cityId)
         }
     }
 }
@@ -120,10 +148,11 @@ class AccountViewController: UIViewController {
 extension AccountViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     private func setupPickerView() {
-        addressTextField.delegate = self
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        addressTextField.inputView = pickerView
+        [cityTextField, regionTextField].forEach { $0.delegate = self }
+        [cityPickerView, regionPickerView].forEach { $0.delegate = self }
+        [cityPickerView, regionPickerView].forEach { $0.dataSource = self }
+        cityTextField.inputView = cityPickerView
+        regionTextField.inputView = regionPickerView
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -131,17 +160,40 @@ extension AccountViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        switch pickerView {
+        case cityPickerView:
+            return cityData.count
+        case regionPickerView:
+            return regionData.filter({$0.cityID == self.cityId}).count
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        switch pickerView {
+        case cityPickerView:
+            return cityData[row].name
+        case regionPickerView:
+            return regionData.filter({$0.cityID == cityId})[row].name
+        default:
+            return ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        addressTextField.text = data[row]
-        addressTextField.resignFirstResponder()
-        setAppColorView(addressView)
+        switch pickerView {
+        case cityPickerView:
+            cityTextField.text = cityData[row].name
+            cityTextField.resignFirstResponder()
+            cityId = cityData[row].id
+        case regionPickerView:
+            regionTextField.text = regionData[row].name
+            regionTextField.resignFirstResponder()
+            regionId = regionData[row].id
+        default:
+            break
+        }
     }
     
 }

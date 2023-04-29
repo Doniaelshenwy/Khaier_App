@@ -21,7 +21,7 @@ class BaseAPI<T : TargetType>{
             guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
             completion(.success(jsonDecoder))
             
-//            if statusCode == 200{ // success
+//            if statusCode >= 200 && statusCode <= 300{ // success
 ////                guard let jsonResponse = try? dataResponse.result.get() else { return }
 ////                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonResponse, options: []) else { return }
 //                guard let data = dataResponse.data else { return }

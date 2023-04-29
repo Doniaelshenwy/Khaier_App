@@ -28,17 +28,17 @@ class SignUpViewController: UIViewController {
         let model = VerifyPhoneRequestModel(phone_number: phoneNumber)
         apiRequest.verifyPhoneRegisterRequest(model: model) { response in
             switch response {
+                
             case .success(let data):
-                if (data?.success == "denied") {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: (data?.error?.phoneNumber?[0]) ?? "")
-                } else if (data?.success == "accepted") {
-                    print(":ok")
+                if let error = data?.error?.phoneNumber?[0] {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
+                } else {
                     self.moveToOTPSignUPVC(phone: phoneNumber)
-                   // self.callSendCode(phone: phoneNumber)
+                    //self.callSendCode(phone: phoneNumber)
                 }
             case .failure(_):
-                print("errrr")
                 break
+//                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error.localizedDescription)
             }
         }
     }

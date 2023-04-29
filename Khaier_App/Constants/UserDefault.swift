@@ -12,16 +12,24 @@ class UserDefault {
         UserDefaults.standard.set(name, forKey: "userName")
     }
     
-    static func saveAddress(_ address: String) {
-        UserDefaults.standard.set(address, forKey: "userAddress")
+    static func saveCity(_ city: String) {
+        UserDefaults.standard.set(city, forKey: "userCity")
+    }
+    
+    static func getCity()-> String {
+        return UserDefaults.standard.string(forKey: "userCity") ?? ""
+    }
+    
+    static func saveRegion(_ region: String) {
+        UserDefaults.standard.set(region, forKey: "userRegion")
+    }
+    
+    static func getRegion()-> String {
+        return UserDefaults.standard.string(forKey: "userRegion") ?? ""
     }
     
     static func getUsername() -> String{
         return UserDefaults.standard.string(forKey: "userName") ?? ""
-    }
-    
-    static func getAddress()-> String {
-        return UserDefaults.standard.string(forKey: "userAddress") ?? ""
     }
     
     static func saveLogin(_ login: Bool) {
@@ -48,9 +56,26 @@ class UserDefault {
         return UserDefaults.standard.bool(forKey: "Reminder")
     }
     
+    static func getRegionId() -> Int {
+        UserDefaults.standard.integer(forKey: "RegionID")
+    }
+    
+    static func saveRegionId(_ id: Int) {
+        UserDefaults.standard.set(id, forKey: "RegionID")
+    }
+    
+    static func getCityId() -> Int {
+        UserDefaults.standard.integer(forKey: "CityID")
+    }
+    
+    static func saveCityId(_ id: Int) {
+        UserDefaults.standard.set(id, forKey: "CityID")
+    }
+    
     static func clearUserDefaults() {
         saveUserName("")
-        saveAddress("")
+        saveCity("")
+        saveRegion("")
         saveRegister(false)
         saveLogin(false)
         saveReminder(false)
