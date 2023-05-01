@@ -22,9 +22,9 @@ class CharityProfileViewController: UIViewController {
     var donationsCategoryId: Int?
 
     var categoryArray: [DonationCategoryModel] = []
-    var caseDonationArray: [CaseDonationModel] = []
-    var urgentCasesArray: [CaseDonationModel] = []
-    var achievementArray: [CaseDonationModel] = []
+    var caseDonationArray: [Case] = []
+    var urgentCasesArray: [Case] = []
+    var achievementArray: [Case] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,9 @@ class CharityProfileViewController: UIViewController {
         setDataOfCharityDescription()
         setCollectionView()
         setZeroOfHeightOfCollectionView()
-        setDataOfCaseDonationArray()
-        setDataOfUrgentCasesArray()
-        setDataOfAchievementArray()
+//        setDataOfCaseDonationArray()
+//        setDataOfUrgentCasesArray()
+//        setDataOfAchievementArray()
         setDataOfcategoryArray()
     }
     
@@ -52,35 +52,35 @@ class CharityProfileViewController: UIViewController {
         ]
     }
     
-    func setDataOfCaseDonationArray(){
-        caseDonationArray = [
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
-    }
-    
-    func setDataOfUrgentCasesArray(){
-        urgentCasesArray = [
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
-    }
-    
-    func setDataOfAchievementArray(){
-        achievementArray = [
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
-    }
+//    func setDataOfCaseDonationArray(){
+//        caseDonationArray = [
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
+//        ]
+//    }
+//
+//    func setDataOfUrgentCasesArray(){
+//        urgentCasesArray = [
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
+//        ]
+//    }
+//
+//    func setDataOfAchievementArray(){
+//        achievementArray = [
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
+//        ]
+//    }
     
     
     func setDataOfCharityDescription() {

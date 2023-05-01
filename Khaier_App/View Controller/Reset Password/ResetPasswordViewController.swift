@@ -41,18 +41,18 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
         apiRequest.updatePasswordRequest(model: model) { response in
             switch response {
             case .success(let data):
-                if data?.message == "password updated successfully" {
-                    self.moveToChangePasswordVC()
+                if let error = data?.errors?.password?[0] {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: data?.errors?.password?[0] ?? "")
+                    self.moveToChangePasswordVC()
                 }
-            case .failure(let error):
-                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "error.localizedDescription")
+            case .failure(_):
+                break
             }
         }
     }
     
-    func moveToChangePasswordVC(){
+    func moveToChangePasswordVC() {
         let vc = ChangePasswordViewController(delegate: self)
         present(vc, animated: true, completion: nil)
     }
@@ -66,13 +66,9 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
             checkViewIsEmpty(view: confirmPasswordView, height: passwordConfirmHeightConstrain, label: passwordConfirmLabel)
             return
         }
-        let model = AuthRequestModel(phoneNumber: phone, password: password)
-        if password == confirmPassword {
+        print("password \(password), \(confirmPassword)")
+        let model = AuthRequestModel(phoneNumber: phone, password: password, confirmPassword: confirmPassword)
             updatePasswordRequest(model: model)
-
-        } else {
-            ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "يجب تطابق كلمتي المرور")
-        }
         //moveToChangePasswordVC()
         
 //        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغير رقم المرور")

@@ -70,7 +70,9 @@ class AccountViewController: UIViewController {
         apiRequest.registerRequest(model: model) { [weak self] response in
             switch response {
             case .success(let data):
-                if let error = data?.message {
+                if let error = data?.errors?.password?[0] {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
+                } else if let error = data?.errors?.username?[0] {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")

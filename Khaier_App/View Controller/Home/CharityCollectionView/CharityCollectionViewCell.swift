@@ -23,12 +23,12 @@ class CharityCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setCharityData(near charity: CharityModel){
-        image.image = UIImage(named: charity.image)
-        title.text = charity.title
-        addressLabel.text = charity.address
-       
-        colorOfLabelText(label: descriptionLabel, description: charity.description)
+    func setCharityData(near charity: Charity){
+//        image.image = UIImage(named: charity.image)
+//        title.text = charity.title
+//        addressLabel.text = charity.address
+//       
+//        colorOfLabelText(label: descriptionLabel, description: charity.description)
     }
 
     @IBAction func saveCharityButton(_ sender: Any) {

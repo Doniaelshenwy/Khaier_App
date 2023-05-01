@@ -10,7 +10,7 @@ import Foundation
 struct AuthResponseModel: Codable {
     let user: UserResponseModel?
     let token: String?
-    let error: String?
+    let errors: Errors?
 }
 
 struct UserResponseModel: Codable {
@@ -62,11 +62,13 @@ struct UpdatePasswordResponseModel: Codable {
 
 struct Errors: Codable {
     let username, phoneNumber, password: [String]?
+    let login: String?
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
         case password
         case username
+        case login
     }
 }
 

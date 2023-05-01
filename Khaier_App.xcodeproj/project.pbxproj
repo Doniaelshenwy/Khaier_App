@@ -15,6 +15,11 @@
 		FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */; };
 		FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */; };
 		FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */; };
+		FC10D41029FF3F26002A194E /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D40F29FF3F26002A194E /* DataResponseModel.swift */; };
+		FC10D41529FF4161002A194E /* Data Target Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41429FF4161002A194E /* Data Target Type.swift */; };
+		FC10D41729FF4178002A194E /* Data BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41629FF4178002A194E /* Data BaseAPI.swift */; };
+		FC10D41929FF4189002A194E /* DataNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41829FF4189002A194E /* DataNetwork.swift */; };
+		FC10D41B29FF4199002A194E /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41A29FF4199002A194E /* DataAPI.swift */; };
 		FC138D9C29EB3A0300F129C9 /* DonationCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */; };
 		FC138DA029EB464E00F129C9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC138D9E29EB464E00F129C9 /* PaymentViewController.swift */; };
 		FC138DA129EB464E00F129C9 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC138D9F29EB464E00F129C9 /* PaymentViewController.xib */; };
@@ -226,6 +231,11 @@
 		FC0D7A1629AA3228009F47EF /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
 		FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityProfileViewController.xib; sourceTree = "<group>"; };
+		FC10D40F29FF3F26002A194E /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
+		FC10D41429FF4161002A194E /* Data Target Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Target Type.swift"; sourceTree = "<group>"; };
+		FC10D41629FF4178002A194E /* Data BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data BaseAPI.swift"; sourceTree = "<group>"; };
+		FC10D41829FF4189002A194E /* DataNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNetwork.swift; sourceTree = "<group>"; };
+		FC10D41A29FF4199002A194E /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
 		FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCategoryModel.swift; sourceTree = "<group>"; };
 		FC138D9E29EB464E00F129C9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		FC138D9F29EB464E00F129C9 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
@@ -462,6 +472,33 @@
 			path = "charity Profile";
 			sourceTree = "<group>";
 		};
+		FC10D41129FF4120002A194E /* Data Generic Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC10D41229FF4132002A194E /* Base */,
+				FC10D41329FF413B002A194E /* Network */,
+			);
+			path = "Data Generic Network";
+			sourceTree = "<group>";
+		};
+		FC10D41229FF4132002A194E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC10D41429FF4161002A194E /* Data Target Type.swift */,
+				FC10D41629FF4178002A194E /* Data BaseAPI.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FC10D41329FF413B002A194E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC10D41829FF4189002A194E /* DataNetwork.swift */,
+				FC10D41A29FF4199002A194E /* DataAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FC138D9A29EB39DA00F129C9 /* Donation Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,13 +721,13 @@
 			path = "OTP SignUp";
 			sourceTree = "<group>";
 		};
-		FC5AD37E29ED74EA008A31FA /* Generic Network */ = {
+		FC5AD37E29ED74EA008A31FA /* Auth Generic Network */ = {
 			isa = PBXGroup;
 			children = (
 				FC5AD38429ED75AE008A31FA /* Base */,
 				FC5AD37F29ED74F9008A31FA /* Network */,
 			);
-			path = "Generic Network";
+			path = "Auth Generic Network";
 			sourceTree = "<group>";
 		};
 		FC5AD37F29ED74F9008A31FA /* Network */ = {
@@ -715,6 +752,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */,
+				FC10D40F29FF3F26002A194E /* DataResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -968,7 +1006,8 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
-				FC5AD37E29ED74EA008A31FA /* Generic Network */,
+				FC10D41129FF4120002A194E /* Data Generic Network */,
+				FC5AD37E29ED74EA008A31FA /* Auth Generic Network */,
 				FC2DAED729A42D0D0069E3F2 /* Enum */,
 				FC98F2CD299BDAED002A4E8B /* TabBarController */,
 				FCDEC96D2993DFDD00E355F1 /* Constants */,
@@ -1578,6 +1617,7 @@
 				FCC0334F299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift in Sources */,
 				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
+				FC10D41729FF4178002A194E /* Data BaseAPI.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
 				FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */,
 				FCE4980629E4B65F00B0DDA9 /* DonationInViewController.swift in Sources */,
@@ -1605,6 +1645,7 @@
 				FC47817D29B6A71E009C5139 /* InformationZakatViewController.swift in Sources */,
 				FC1931BF299851F700736EF9 /* LoginVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC47818229B6A890009C5139 /* ZakatValueViewController.swift in Sources */,
+				FC10D41B29FF4199002A194E /* DataAPI.swift in Sources */,
 				FC0D7A1729AA3228009F47EF /* UITableView+Extention.swift in Sources */,
 				FCDEC97B29944C9300E355F1 /* String+Extension.swift in Sources */,
 				FC2BF40729BF665700490A46 /* DeleteAccountViewController.swift in Sources */,
@@ -1646,6 +1687,8 @@
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
+				FC10D41529FF4161002A194E /* Data Target Type.swift in Sources */,
+				FC10D41029FF3F26002A194E /* DataResponseModel.swift in Sources */,
 				FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */,
 				FCBCB3EC29EA00E600108335 /* DonationCaseCollectionViewCell.swift in Sources */,
 				FC48AE7A29C08EBD00C195FE /* EditReminderViewController.swift in Sources */,
@@ -1653,6 +1696,7 @@
 				FC34AB9F299943C100B2B7C2 /* OTPForgetPasswordVC+Extension.swift in Sources */,
 				FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */,
 				FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */,
+				FC10D41929FF4189002A194E /* DataNetwork.swift in Sources */,
 				FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */,
 				FCEA5A3529BD21A100E8D84E /* EditProfileViewController.swift in Sources */,
 				FC138DA029EB464E00F129C9 /* PaymentViewController.swift in Sources */,

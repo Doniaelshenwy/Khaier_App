@@ -28,13 +28,13 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func setCaseData(priority: CaseDonationModel, isHidedonationDone: Bool, isEnabledDonateNow: Bool){
-        imageCase.image = UIImage(named: priority.image)
-        titleCaseLabel.text = priority.title
-        typeDonationLabel.text = priority.typeDonation
-        remainDaysLabel.text = "متبقي \(priority.remainDays) يوم"
-        accessRatioLabel.text = "%\(priority.accessRatio)"
-        progressView.progress = Float(priority.accessRatio) / 100
+    func setCaseData(priority: Case, isHidedonationDone: Bool, isEnabledDonateNow: Bool){
+//        imageCase.image = UIImage(named: priority.image)
+//        titleCaseLabel.text = priority.title
+//        typeDonationLabel.text = priority.typeDonation
+//        remainDaysLabel.text = "متبقي \(priority.remainDays) يوم"
+//        accessRatioLabel.text = "%\(priority.accessRatio)"
+//        progressView.progress = Float(priority.accessRatio) / 100
         donationDoneImage.isHidden = isHidedonationDone
         donateNowOutlet.isEnabled = isEnabledDonateNow
         changeBackgroundColor(isEnabledButton: isEnabledDonateNow)

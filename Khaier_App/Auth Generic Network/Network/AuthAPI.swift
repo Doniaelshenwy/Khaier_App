@@ -10,6 +10,7 @@ import Foundation
 struct AuthRequestModel {
     var phoneNumber: String
     var password: String
+    var confirmPassword: String?
 }
 
 struct RegisterRequestModel {
@@ -28,7 +29,7 @@ struct VerifyPhoneRequestModel {
 
 protocol AuthAPIProtocol : AuthAPI{
     func loginRequest(model: AuthRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
-    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<RegisterResponseModel?, NSError>) -> Void)
+    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void)
     func verifyPhoneRegisterRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func verifyPhoneForgetPasswordRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void)
@@ -43,8 +44,8 @@ class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
         }
     }
     
-    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<RegisterResponseModel?, NSError>) -> Void) {
-        fetchData(target: .register(model: model), responseClass: RegisterResponseModel.self) { result in
+    func registerRequest(model: RegisterRequestModel, completion: @escaping (Result<AuthResponseModel?, NSError>) -> Void) {
+        fetchData(target: .register(model: model), responseClass: AuthResponseModel.self) { result in
             completion(result)
         }
     }

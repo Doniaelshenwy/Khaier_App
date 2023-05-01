@@ -72,6 +72,14 @@ class UserDefault {
         UserDefaults.standard.set(id, forKey: "CityID")
     }
     
+    static func getToken() -> String {
+        UserDefaults.standard.string(forKey: "Token") ?? ""
+    }
+    
+    static func saveToken(_ token: String) {
+        UserDefaults.standard.set(token, forKey: "Token")
+    }
+    
     static func clearUserDefaults() {
         saveUserName("")
         saveCity("")

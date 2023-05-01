@@ -14,43 +14,65 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var priorityCollectionView: UICollectionView!
     @IBOutlet weak var nearCollectionView: UICollectionView!
     
-    var priorityArray: [CaseDonationModel] = []
-    var nearArray: [CharityModel] = []
+    var priorityArray: [Case] = []
+    var nearArray: [Charity] = []
+    let apiRequest: DataAPIProtocol = DataAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
         isTabBarHidden(false)
         setCollectionView()
-        setDataOfPriorityArray()
-        setDataOfNearArray()
+//        setDataOfPriorityArray()
+//        setDataOfNearArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        helloNameLabel.text = "اهلا \(UserDefault.getUsername()) 👋"
-        titleLabel.text = UserDefault.getCity() + UserDefault.getRegion()
-    }
-
-    func setDataOfPriorityArray(){
-        priorityArray = [
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
+        homeRequest()
+//        helloNameLabel.text = "اهلا \(UserDefault.getUsername()) 👋"
+//        titleLabel.text = UserDefault.getCity() + UserDefault.getRegion()
     }
     
-    func setDataOfNearArray(){
-        nearArray = [
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير")
-        ]
+    func homeRequest() {
+        apiRequest.homeRequest { response in
+            switch response {
+            case .success(let data):
+                self.helloNameLabel.text = "اهلا \(data?.user?.name) 👋"
+                self.titleLabel.text = data?.user?.address
+                print(data?.cases?.count)
+                print(data?.cases)
+                if let cases = data?.cases, let nearCharities = data?.charities{
+                    self.priorityArray = cases
+                    self.nearArray = nearCharities
+                } else {
+                    print("error in data")
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
+
+//    func setDataOfPriorityArray(){
+//        priorityArray = [
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
+//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
+//        ]
+//    }
+//
+//    func setDataOfNearArray(){
+//        nearArray = [
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
+//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير")
+//        ]
+//    }
     
     func moveToSearchVC(){
         let vc = SearchViewController()

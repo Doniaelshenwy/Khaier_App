@@ -50,10 +50,11 @@ class LoginViewController: UIViewController {
         apiRequest.loginRequest(model: loginModel) { response in
             switch response {
             case .success(let data):
-                if let error = data?.error {
+                if let error = data?.errors?.login {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    UserDefault.saveUserName(data?.user?.name ?? "")
+                    //UserDefault.saveUserName(data?.user?.name ?? "Doniaaaa")
+                    UserDefault.saveToken(data?.token ?? "")
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
                     if self.isRemember{
                         UserDefault.saveReminder(self.isRemember)
