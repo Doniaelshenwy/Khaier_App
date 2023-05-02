@@ -72,7 +72,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمعية الامل الخيرية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-dc-Ual">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمعية الامل الخيرية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-dc-Ual">
                                 <rect key="frame" x="99.5" y="120" width="108.5" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="fC2-wq-80L"/>
@@ -146,6 +146,7 @@
                             <constraint firstItem="iEr-OI-1Id" firstAttribute="top" secondItem="zZQ-np-geQ" secondAttribute="bottom" constant="8" id="m4Z-82-wrO"/>
                             <constraint firstItem="6SV-dc-Ual" firstAttribute="top" secondItem="KVf-SN-B1P" secondAttribute="bottom" constant="8" id="pcE-Sp-fpa"/>
                             <constraint firstAttribute="trailing" secondItem="6SV-dc-Ual" secondAttribute="trailing" constant="12" id="w26-vc-e6Z"/>
+                            <constraint firstItem="fbk-TO-t06" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dCW-m0-bO0" secondAttribute="leading" constant="10" id="wkc-Qw-Mv6"/>
                             <constraint firstAttribute="trailing" secondItem="iEr-OI-1Id" secondAttribute="trailing" constant="12" id="xTV-QV-KIk"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

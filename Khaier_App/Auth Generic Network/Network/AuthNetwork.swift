@@ -22,7 +22,7 @@ extension AuthNetwork : TargetType{
     var baseURL: String {
         switch self {
         default:
-            return Constant.authBaseURL
+            return Constant.baseURL
         }
     }
     

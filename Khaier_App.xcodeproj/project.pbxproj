@@ -16,8 +16,6 @@
 		FC102F6829E6390100BA66CC /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */; };
 		FC102F6929E6390100BA66CC /* CharityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */; };
 		FC10D41029FF3F26002A194E /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D40F29FF3F26002A194E /* DataResponseModel.swift */; };
-		FC10D41529FF4161002A194E /* Data Target Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41429FF4161002A194E /* Data Target Type.swift */; };
-		FC10D41729FF4178002A194E /* Data BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41629FF4178002A194E /* Data BaseAPI.swift */; };
 		FC10D41929FF4189002A194E /* DataNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41829FF4189002A194E /* DataNetwork.swift */; };
 		FC10D41B29FF4199002A194E /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10D41A29FF4199002A194E /* DataAPI.swift */; };
 		FC138D9C29EB3A0300F129C9 /* DonationCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */; };
@@ -148,8 +146,6 @@
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
 		FCBCB3EC29EA00E600108335 /* DonationCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */; };
 		FCBCB3ED29EA00E600108335 /* DonationCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */; };
-		FCC0334F299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0334D299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift */; };
-		FCC03350299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC0334E299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.xib */; };
 		FCC03353299DD2080055AEF6 /* CharityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */; };
 		FCC03354299DD2080055AEF6 /* CharityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC03352299DD2080055AEF6 /* CharityCollectionViewCell.xib */; };
 		FCC191C829F5DF36002741DD /* ThanksDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC191C629F5DF36002741DD /* ThanksDonationViewController.swift */; };
@@ -232,8 +228,6 @@
 		FC102F6629E6390100BA66CC /* CharityProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
 		FC102F6729E6390100BA66CC /* CharityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityProfileViewController.xib; sourceTree = "<group>"; };
 		FC10D40F29FF3F26002A194E /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
-		FC10D41429FF4161002A194E /* Data Target Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Target Type.swift"; sourceTree = "<group>"; };
-		FC10D41629FF4178002A194E /* Data BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data BaseAPI.swift"; sourceTree = "<group>"; };
 		FC10D41829FF4189002A194E /* DataNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNetwork.swift; sourceTree = "<group>"; };
 		FC10D41A29FF4199002A194E /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
 		FC138D9B29EB3A0300F129C9 /* DonationCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCategoryModel.swift; sourceTree = "<group>"; };
@@ -347,8 +341,6 @@
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationCaseCollectionViewCell.xib; sourceTree = "<group>"; };
-		FCC0334D299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDonationCollectionViewCell.swift; sourceTree = "<group>"; };
-		FCC0334E299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaseDonationCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCC03352299DD2080055AEF6 /* CharityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharityCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCC191C629F5DF36002741DD /* ThanksDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksDonationViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +454,13 @@
 			path = "Donation Details";
 			sourceTree = "<group>";
 		};
+		FC0576512A0080EF00490688 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		FC102F6529E638AA00BA66CC /* charity Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,22 +471,12 @@
 			path = "charity Profile";
 			sourceTree = "<group>";
 		};
-		FC10D41129FF4120002A194E /* Data Generic Network */ = {
+		FC10D41129FF4120002A194E /* HomeGenericNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				FC10D41229FF4132002A194E /* Base */,
 				FC10D41329FF413B002A194E /* Network */,
 			);
-			path = "Data Generic Network";
-			sourceTree = "<group>";
-		};
-		FC10D41229FF4132002A194E /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				FC10D41429FF4161002A194E /* Data Target Type.swift */,
-				FC10D41629FF4178002A194E /* Data BaseAPI.swift */,
-			);
-			path = Base;
+			path = HomeGenericNetwork;
 			sourceTree = "<group>";
 		};
 		FC10D41329FF413B002A194E /* Network */ = {
@@ -943,8 +932,6 @@
 		FCC0334B299DD11E0055AEF6 /* CaseDonationCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				FCC0334D299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift */,
-				FCC0334E299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.xib */,
 				FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */,
 				FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */,
 			);
@@ -1006,7 +993,8 @@
 		FCD6D0B3298544E00084FE76 /* Khaier_App */ = {
 			isa = PBXGroup;
 			children = (
-				FC10D41129FF4120002A194E /* Data Generic Network */,
+				FC0576512A0080EF00490688 /* NetworkLayer */,
+				FC10D41129FF4120002A194E /* HomeGenericNetwork */,
 				FC5AD37E29ED74EA008A31FA /* Auth Generic Network */,
 				FC2DAED729A42D0D0069E3F2 /* Enum */,
 				FC98F2CD299BDAED002A4E8B /* TabBarController */,
@@ -1398,7 +1386,6 @@
 				FC47817929B69C0A009C5139 /* CalculateZakatViewController.xib in Resources */,
 				FC6068872992872100BB7978 /* ForgetPasswordViewController.xib in Resources */,
 				FCBCB3ED29EA00E600108335 /* DonationCaseCollectionViewCell.xib in Resources */,
-				FCC03350299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.xib in Resources */,
 				FCD6D0C4298544E30084FE76 /* LaunchScreen.storyboard in Resources */,
 				FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */,
 				FC69EB98299128AF008E404A /* IBMPlexSansArabic-Regular.ttf in Resources */,
@@ -1614,10 +1601,8 @@
 				FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */,
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
-				FCC0334F299DD1EF0055AEF6 /* CaseDonationCollectionViewCell.swift in Sources */,
 				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
-				FC10D41729FF4178002A194E /* Data BaseAPI.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
 				FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */,
 				FCE4980629E4B65F00B0DDA9 /* DonationInViewController.swift in Sources */,
@@ -1687,7 +1672,6 @@
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
-				FC10D41529FF4161002A194E /* Data Target Type.swift in Sources */,
 				FC10D41029FF3F26002A194E /* DataResponseModel.swift in Sources */,
 				FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */,
 				FCBCB3EC29EA00E600108335 /* DonationCaseCollectionViewCell.swift in Sources */,

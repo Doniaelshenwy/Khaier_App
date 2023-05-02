@@ -24,11 +24,10 @@ class CharityCollectionViewCell: UICollectionViewCell {
     }
     
     func setCharityData(near charity: Charity){
-//        image.image = UIImage(named: charity.image)
-//        title.text = charity.title
-//        addressLabel.text = charity.address
-//       
-//        colorOfLabelText(label: descriptionLabel, description: charity.description)
+        image.image = UIImage(named: "Charities")
+        title.text = charity.name
+        addressLabel.text = charity.address
+        colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")
     }
 
     @IBAction func saveCharityButton(_ sender: Any) {

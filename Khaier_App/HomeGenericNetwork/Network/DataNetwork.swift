@@ -12,11 +12,11 @@ enum DataNetwork{
     case home
 }
 
-extension DataNetwork : DataTargetType {
+extension DataNetwork : TargetType {
     var baseURL: String {
         switch self {
         default:
-            return Constant.dataBaseURL
+            return Constant.baseURL
         }
     }
     
@@ -26,14 +26,14 @@ extension DataNetwork : DataTargetType {
             return "home"
         }
     }
-    var method: HTTPMethodData {
+    var method: HTTPMethod {
         switch self {
         case .home:
             return .get
         }
     }
         
-    var task: TaskData {
+    var task: Task {
         switch self {
         case .home:
             return .requestPlain

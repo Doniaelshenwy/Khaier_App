@@ -25,16 +25,15 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setCaseData(priority: Case, isHidedonationDone: Bool, isEnabledDonateNow: Bool){
-//        imageCase.image = UIImage(named: priority.image)
-//        titleCaseLabel.text = priority.title
-//        typeDonationLabel.text = priority.typeDonation
-//        remainDaysLabel.text = "متبقي \(priority.remainDays) يوم"
-//        accessRatioLabel.text = "%\(priority.accessRatio)"
-//        progressView.progress = Float(priority.accessRatio) / 100
+        imageCase.image = UIImage(named: "casePriority")
+        titleCaseLabel.text = priority.title
+        typeDonationLabel.text = priority.category
+        remainDaysLabel.text = "متبقي \(priority.remainingDays ?? 0) يوم"
+        accessRatioLabel.text = "%\(priority.percentage ?? 0)"
+        progressView.progress = Float(priority.percentage ?? 0) / 100
         donationDoneImage.isHidden = isHidedonationDone
         donateNowOutlet.isEnabled = isEnabledDonateNow
         changeBackgroundColor(isEnabledButton: isEnabledDonateNow)

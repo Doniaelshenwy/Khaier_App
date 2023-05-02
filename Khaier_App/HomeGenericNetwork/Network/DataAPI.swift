@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol DataAPIProtocol : DataAPI{
+protocol DataAPIProtocol {
     func homeRequest(completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
 }
 
-class DataAPI : DataBaseAPI<DataNetwork>, DataAPIProtocol {
+class DataAPI : BaseAPI<DataNetwork>, DataAPIProtocol {
     func homeRequest(completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void) {
         fetchData(target: .home, responseClass: HomeResponseModel.self) { result in
             completion(result)

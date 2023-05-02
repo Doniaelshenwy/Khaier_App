@@ -8,6 +8,5 @@
 import Foundation
 
 class Constant {
-    static let authBaseURL = "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/api/"
-    static let dataBaseURL = "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/api/"
+    static let baseURL = "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/api/"
 }

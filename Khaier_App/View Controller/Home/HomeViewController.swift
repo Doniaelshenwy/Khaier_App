@@ -23,62 +23,33 @@ class HomeViewController: UIViewController {
         isNavigationHidden(true)
         isTabBarHidden(false)
         setCollectionView()
-//        setDataOfPriorityArray()
-//        setDataOfNearArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         homeRequest()
-//        helloNameLabel.text = "اهلا \(UserDefault.getUsername()) 👋"
-//        titleLabel.text = UserDefault.getCity() + UserDefault.getRegion()
     }
     
     func homeRequest() {
-        apiRequest.homeRequest { response in
+        apiRequest.homeRequest { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let data):
-                self.helloNameLabel.text = "اهلا \(data?.user?.name) 👋"
-                self.titleLabel.text = data?.user?.address
-                print(data?.cases?.count)
-                print(data?.cases)
+                self.helloNameLabel.text = "اهلا \(data?.user?.name ?? "") 👋"
+                self.titleLabel.text = data?.user?.address ?? ""
                 if let cases = data?.cases, let nearCharities = data?.charities{
                     self.priorityArray = cases
                     self.nearArray = nearCharities
-                } else {
-                    print("error in data")
+                    self.priorityCollectionView.reloadData()
+                    self.nearCollectionView.reloadData()
                 }
             case .failure(_):
                 break
             }
         }
     }
-
-//    func setDataOfPriorityArray(){
-//        priorityArray = [
-//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-//            CaseDonationModel(image: "casePriority", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-//        ]
-//    }
-//
-//    func setDataOfNearArray(){
-//        nearArray = [
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-//        CharityModel(image: "charity", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير")
-//        ]
-//    }
     
     func moveToSearchVC(){
         let vc = SearchViewController()
-//        vc.modalPresentationStyle = .custom
-//        vc.modalTransitionStyle = .crossDissolve
-//        present(vc, animated: true)
          push(vc: vc)
     }
     
