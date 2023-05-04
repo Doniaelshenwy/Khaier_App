@@ -10,6 +10,7 @@ import Alamofire
 
 enum DataNetwork{
     case home
+    case search(search: String)
 }
 
 extension DataNetwork : TargetType {
@@ -24,11 +25,15 @@ extension DataNetwork : TargetType {
         switch self{
         case .home:
             return "home"
+        case .search:
+            return "home"
         }
     }
     var method: HTTPMethod {
         switch self {
         case .home:
+            return .get
+        case .search:
             return .get
         }
     }
@@ -37,12 +42,14 @@ extension DataNetwork : TargetType {
         switch self {
         case .home:
             return .requestPlain
+        case .search(let search):
+            return .requestParameter(paramter: ["search" : search], encoding: URLEncoding.default)
         }
     }
         
     var header: [String : String] {
         switch self {
-        case .home:
+        default:
             return ["Authorization": "Bearer \(UserDefault.getToken())"]
         }
     }

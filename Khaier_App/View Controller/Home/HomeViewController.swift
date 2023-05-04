@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     }
     
     func homeRequest() {
-        apiRequest.homeRequest { [weak self] response in
+        apiRequest.homeRequest() { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let data):

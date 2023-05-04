@@ -22,13 +22,13 @@ class SearchCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setSearchData(search: CaseDonationModel) {
-        imageCase.image = UIImage(named: search.image)
+    func setSearchData(search: Case) {
+        imageCase.image = UIImage(named: "caseSearch")
         titleCaseLabel.text = search.title
-        typeDonationLabel.text = search.typeDonation
-        remainDaysLabel.text = "متبقي \(search.remainDays) يوم"
-        accessRatioLabel.text = "%\(search.accessRatio)"
-        progressView.progress = Float(search.accessRatio) / 100
+        typeDonationLabel.text = search.category
+        remainDaysLabel.text = "متبقي \(search.remainingDays ?? 0) يوم"
+        accessRatioLabel.text = "%\(search.percentage ?? 0)"
+        progressView.progress = Float(search.percentage ?? 0) / 100
     }
     
     @IBAction func saveButton(_ sender: Any) {

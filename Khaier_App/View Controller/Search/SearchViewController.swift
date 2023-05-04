@@ -18,23 +18,37 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var emptyButton: UIButton!
     @IBOutlet weak var emptyView: UIView!
     
-    var searchArray: [CaseDonationModel] = []
+    var searchArray: [Case] = []
+    let apiRequest: DataAPIProtocol = DataAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
         isTabBarHidden(true)
         setCollectionView()
-        //setDataOfSearchArray()
         filterButtonConstrain.isHidden = true
         emptyButton.isHidden = false
         searchTextField.delegate = self
-        hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
+        hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain,
+                  invalidLabel: resultSearchLabel)
         emptyView.isHidden = true
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        resultSearchLabel.text = "النتائج البحث(\(searchArray.count))"
+
+    func searchRequest(search: String) {
+        apiRequest.searchRequest(search: search) { response in
+            switch response {
+            case .success(let data):
+                if let cases = data?.cases {
+                    self.searchArray = cases
+                    self.isHidenEmptyView()
+                    self.searchCollectionView.reloadData()
+                } else {
+                    self.isHidenEmptyView()
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     func isHidenEmptyView() {
@@ -43,16 +57,7 @@ class SearchViewController: UIViewController {
         } else {
             emptyView.isHidden = true
         }
-    }
-    
-    func setDataOfSearchArray(){
-        searchArray = [
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
+        self.resultSearchLabel.text = "النتائج البحث(\(self.searchArray.count))"
     }
     
     func moveToFillterAddressVC(){
@@ -66,6 +71,8 @@ class SearchViewController: UIViewController {
     
     @IBAction func emptyTextFiledButton(_ sender: Any) {
         searchTextField.text = ""
+        searchArray = []
+        searchCollectionView.reloadData()
     }
     
     @IBAction func filterAddressButton(_ sender: Any) {
@@ -80,14 +87,19 @@ extension SearchViewController: UITextFieldDelegate {
         if searchTextField.text == ""{
             filterButtonConstrain.isHidden = true
             emptyButton.isHidden = false
-            hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain, invalidLabel: resultSearchLabel)
+            hideLabel(heightInvalidLabel: resultSearchHeightLabelConstrain,
+                      invalidLabel: resultSearchLabel)
             emptyView.isHidden = true
+            searchArray = []
         } else {
-            showLabel(heightConstrain: resultSearchHeightLabelConstrain, repeatLabel: resultSearchLabel)
+            searchRequest(search: textField.text ?? "")
+            showLabel(heightConstrain: resultSearchHeightLabelConstrain,
+                      repeatLabel: resultSearchLabel)
             filterButtonConstrain.isHidden = false
             emptyButton.isHidden = true
             isHidenEmptyView()
         }
+        searchCollectionView.reloadData()
     }
     
 }

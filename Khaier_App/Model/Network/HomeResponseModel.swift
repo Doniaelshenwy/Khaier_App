@@ -1,5 +1,5 @@
 //
-//  DataResponseModel.swift
+//  HomeResponseModel.swift
 //  Khaier_App
 //
 //  Created by Donia Elshenawy on 01/05/2023.
