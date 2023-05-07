@@ -13,6 +13,9 @@ class CategoriesViewController: UIViewController {
     
     var categoriesArray: [CategoriesModel] = []
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)

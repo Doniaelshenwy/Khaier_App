@@ -33,7 +33,7 @@ protocol AuthAPIProtocol : AuthAPI{
     func verifyPhoneRegisterRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func verifyPhoneForgetPasswordRequest(model: VerifyPhoneRequestModel, completion: @escaping (Result<VerifyPhoneResponseModel?, NSError>) -> Void)
     func updatePasswordRequest(model: AuthRequestModel, completion: @escaping (Result<UpdatePasswordResponseModel?, NSError>) -> Void)
-    func cityRegisterRequest(completion: @escaping (Result<CityRegisterResponseModel?, NSError>) -> Void)
+    func cityRegisterRequest(completion: @escaping (Result<CityResponseModel?, NSError>) -> Void)
 }
 
 class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
@@ -68,8 +68,8 @@ class AuthAPI : BaseAPI<AuthNetwork>, AuthAPIProtocol {
         }
     }
     
-    func cityRegisterRequest(completion: @escaping (Result<CityRegisterResponseModel?, NSError>) -> Void) {
-        fetchData(target: .cityRegister, responseClass: CityRegisterResponseModel.self) { result in
+    func cityRegisterRequest(completion: @escaping (Result<CityResponseModel?, NSError>) -> Void) {
+        fetchData(target: .cityRegister, responseClass: CityResponseModel.self) { result in
             completion(result)
         }
     }

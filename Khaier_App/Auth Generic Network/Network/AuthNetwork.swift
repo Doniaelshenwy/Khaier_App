@@ -64,7 +64,7 @@ extension AuthNetwork : TargetType{
         case .verifyPhoneForgetPassword(let model):
             return .requestParameter(paramter: ["phone_number" : model.phone_number], encoding: JSONEncoding.default)
         case .updatePassword(let model):
-            return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password, "password_confirmation" : model.confirmPassword], encoding: JSONEncoding.default)
+            return .requestParameter(paramter: ["phone_number" : model.phoneNumber, "password" : model.password, "password_confirmation" : model.confirmPassword ?? []], encoding: JSONEncoding.default)
         case .cityRegister:
             return .requestPlain
         }

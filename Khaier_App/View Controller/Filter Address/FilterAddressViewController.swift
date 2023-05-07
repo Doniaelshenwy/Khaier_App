@@ -8,21 +8,31 @@
 import UIKit
 
 protocol AddressFilterationProtocol: AnyObject {
-    func passFilterationAddress(address: String)
+    func passFilterationAddress(casesData: [Case])
 }
 
 
 class FilterAddressViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var checkAddressBoxButton: UIButton!
-    @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var cityView: UIControl!
+    @IBOutlet weak var regionTextField: UITextField!
+    @IBOutlet weak var regionView: UIControl!
     
     var isRemember = false
-    private let pickerView = UIPickerView()
+    private let cityPickerView = UIPickerView()
+    private let regionPickerView = UIPickerView()
     private weak var delegate: AddressFilterationProtocol?
-    
-    let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+    var cityData : [City] = []
+    var regionData : [District] = []
+    var caseData : [Case] = []
+    let apiRequest: AuthAPIProtocol = AuthAPI()
+    let apiFilterRequest: DataAPIProtocol = DataAPI()
+    var search = ""
+    var locationUser = ""
+    var cityId = 0
+    var regionId = 0
     
     init(delegate: AddressFilterationProtocol? = nil) {
         super.init(nibName: nil, bundle: nil)
@@ -39,12 +49,43 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
         setupPickerView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        cityRegisterRequest()
+    }
+    
+    private func filterRequest(model : FilterRequestModel) {
+        apiFilterRequest.filterRequest(model: model) { response in
+            switch response {
+            case .success(let data):
+                if let error = data?.error {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
+                } else {
+                    self.caseData = data?.cases ?? []
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    func cityRegisterRequest() {
+        apiRequest.cityRegisterRequest { response in
+            switch response {
+            case .success(let data):
+                guard let unwrappedData = data else { return }
+                self.cityData = unwrappedData.cities
+                self.regionData = unwrappedData.districts
+            case .failure(_):
+                print("Error Data City")
+            }
+        }
+    }
     
     private func setTextFieldImage() {
         let image = UIImageView()
         image.image = UIImage(named: "down")
-        addressTextField.leftViewMode = .always
-        addressTextField.leftView = image
+        cityTextField.leftViewMode = .always
+        cityTextField.leftView = image
     }
 
     // when user press x button dismiss screen and move to searchVC
@@ -56,14 +97,22 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
     // when user check my location, result of search is determined user's location
     @IBAction func checkYourLocationBoxButton(_ sender: Any) {
         checkBoxIsAccept(isRemember: &isRemember, button: checkAddressBoxButton)
+        locationUser = "user"
     }
     
     @IBAction func applyButtonTapped(_ sender: Any) {
-        guard let address = addressTextField.text else { return }
-        if address != "اختر المدينة و المنطقة" {
-        delegate?.passFilterationAddress(address: address)
-        dismiss(animated: true, completion: nil)
+        if locationUser == "" {
+        guard let city = cityTextField.text, city != "اختر المدينة" else { return }
+        guard let region = cityTextField.text, region != "اخترالمنطقة" else { return }
+            let model = FilterRequestModel(search: search, city: city, district: region, location: locationUser)
+            filterRequest(model: model)
+        } else {
+            let model = FilterRequestModel(search: search, location: locationUser)
+            filterRequest(model: model)
         }
+        delegate?.passFilterationAddress(casesData: caseData)
+        dismiss(animated: true, completion: nil)
+        
     }
     
 }
@@ -72,10 +121,11 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
 extension FilterAddressViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     private func setupPickerView() {
-        addressTextField.delegate = self
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        addressTextField.inputView = pickerView
+        [cityTextField, regionTextField].forEach({ $0?.delegate = self })
+        [cityPickerView, regionPickerView].forEach({$0.delegate = self })
+        [cityPickerView, regionPickerView].forEach({$0.dataSource = self })
+        cityTextField.inputView = cityPickerView
+        regionTextField.inputView = regionPickerView
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -83,18 +133,44 @@ extension FilterAddressViewController: UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        switch pickerView {
+        case cityPickerView:
+            return cityData.count
+        case regionPickerView:
+            return regionData.filter({$0.cityID == self.cityId}).count
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        switch pickerView {
+        case cityPickerView:
+            return cityData[row].name
+        case regionPickerView:
+            return regionData.filter({$0.cityID == cityId})[row].name
+        default:
+            return ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        addressTextField.text = data[row]
-        addressTextField.resignFirstResponder()
-        setAppColorView(addressView)
-        checkAddressBoxButton.imageView?.image = UIImage(named: "check")
+        switch pickerView {
+        case cityPickerView:
+            cityTextField.text = cityData[row].name
+            cityTextField.resignFirstResponder()
+            cityId = cityData[row].id
+            setAppColorView(cityView)
+            checkAddressBoxButton.imageView?.image = UIImage(named: "check")
+        case regionPickerView:
+            regionTextField.text = regionData[row].name
+            regionTextField.resignFirstResponder()
+            regionId = regionData[row].id
+            setAppColorView(regionView)
+            checkAddressBoxButton.imageView?.image = UIImage(named: "check")
+        default:
+            break
+        }
     }
     
 }

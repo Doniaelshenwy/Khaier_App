@@ -136,7 +136,6 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     }
 
-    // MARK: TabBar items animation when an item tapped
     func SimpleAnnimationWhenSelectItem(_ item: UITabBarItem) {
         guard let barItemView = item.value(forKey: "view") as? UIView else { return }
         let timeInterval: TimeInterval = 0.3

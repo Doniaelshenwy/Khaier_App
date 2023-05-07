@@ -11,6 +11,7 @@ import Alamofire
 enum DataNetwork{
     case home
     case search(search: String)
+    case filter(model: FilterRequestModel)
 }
 
 extension DataNetwork : TargetType {
@@ -23,17 +24,13 @@ extension DataNetwork : TargetType {
     
     var path: String {
         switch self{
-        case .home:
-            return "home"
-        case .search:
+        default:
             return "home"
         }
     }
     var method: HTTPMethod {
         switch self {
-        case .home:
-            return .get
-        case .search:
+        default:
             return .get
         }
     }
@@ -44,6 +41,8 @@ extension DataNetwork : TargetType {
             return .requestPlain
         case .search(let search):
             return .requestParameter(paramter: ["search" : search], encoding: URLEncoding.default)
+        case .filter(model: let model):
+            return.requestParameter(paramter: ["search" : model.search, "city" : model.city, "district" : model.district, "location" : model.location], encoding: URLEncoding.default)
         }
     }
         

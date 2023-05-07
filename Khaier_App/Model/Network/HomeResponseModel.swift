@@ -12,6 +12,9 @@ struct HomeResponseModel: Codable {
     let categories: Categories?
     let cases: [Case]?
     let charities: [Charity]?
+    let cities: [City]?
+    let districts: [District]?
+    let error: String?
 }
 
 struct Case: Codable {
@@ -56,4 +59,20 @@ struct Charity: Codable {
 
 struct UserHome: Codable {
     let name, address: String?
+}
+
+struct SearchCity: Codable {
+    let id: Int
+    let name: String
+}
+
+struct SearchDistrict: Codable {
+    let id: Int
+    let name: String
+    let cityID: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case cityID = "city_id"
+    }
 }

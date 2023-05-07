@@ -7,9 +7,17 @@
 
 import Foundation
 
+struct FilterRequestModel {
+    var search: String
+    var city: String?
+    var district: String?
+    var location: String?
+}
+
 protocol DataAPIProtocol {
     func homeRequest(completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
     func searchRequest(search: String, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
+    func filterRequest(model: FilterRequestModel, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
 }
 
 class DataAPI : BaseAPI<DataNetwork>, DataAPIProtocol {
@@ -21,6 +29,12 @@ class DataAPI : BaseAPI<DataNetwork>, DataAPIProtocol {
     
     func searchRequest(search: String, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void) {
         fetchData(target: .search(search: search), responseClass: HomeResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func filterRequest(model: FilterRequestModel, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void) {
+        fetchData(target: .filter(model: model), responseClass: HomeResponseModel.self) { result in
             completion(result)
         }
     }

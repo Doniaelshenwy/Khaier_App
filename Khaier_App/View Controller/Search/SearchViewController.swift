@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     
     var searchArray: [Case] = []
     let apiRequest: DataAPIProtocol = DataAPI()
+    var search = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,7 @@ class SearchViewController: UIViewController {
     
     func moveToFillterAddressVC(){
         let vc = FilterAddressViewController(delegate: self)
+        vc.search = search
         customPresent(vc, animated: false)
     }
 
@@ -98,6 +100,7 @@ extension SearchViewController: UITextFieldDelegate {
             filterButtonConstrain.isHidden = false
             emptyButton.isHidden = true
             isHidenEmptyView()
+            search = searchTextField.text ?? ""
         }
         searchCollectionView.reloadData()
     }
@@ -106,8 +109,10 @@ extension SearchViewController: UITextFieldDelegate {
 
 extension SearchViewController: AddressFilterationProtocol {
     
-    func passFilterationAddress(address: String) {
-        print("address = \(address)")
+    func passFilterationAddress(casesData: [Case]) {
+        searchArray = casesData
+        isHidenEmptyView() 
+        searchCollectionView.reloadData()
     }
     
 }

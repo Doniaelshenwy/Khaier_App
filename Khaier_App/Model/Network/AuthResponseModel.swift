@@ -28,7 +28,7 @@ struct UserResponseModel: Codable {
     }
 }
 
-struct CityRegisterResponseModel: Codable {
+struct CityResponseModel: Codable {
     let cities: [City]
     let districts: [District]
 }

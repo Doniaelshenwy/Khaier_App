@@ -35,7 +35,7 @@ class SplashViewController: UIViewController {
         }
     }
 
-    private func animate(){
+    private func animate() {
         UIView.animate(withDuration: 1, delay: 0.5, options: []) {
             let scaleTransform = CGAffineTransform(scaleX: 0.23255, y: 0.23255)
             let translateTransform = CGAffineTransform(translationX: 173, y: -340.33)

@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
     }
     
     func loginRequest(phoneNumber: String, password: String) {
-        
         let loginModel = AuthRequestModel(phoneNumber: phoneNumber, password: password)
         apiRequest.loginRequest(model: loginModel) { response in
             switch response {
@@ -53,7 +52,6 @@ class LoginViewController: UIViewController {
                 if let error = data?.errors?.login {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    //UserDefault.saveUserName(data?.user?.name ?? "Doniaaaa")
                     UserDefault.saveToken(data?.token ?? "")
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "👏🏻 مرحبا")
                     if self.isRemember{
@@ -63,8 +61,6 @@ class LoginViewController: UIViewController {
                 } 
             case .failure(_):
                 break
-//                ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error.localizedDescription)
-//                print("eroooooooor")
             }
         }
     }
