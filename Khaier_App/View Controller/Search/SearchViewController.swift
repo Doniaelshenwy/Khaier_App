@@ -53,11 +53,7 @@ class SearchViewController: UIViewController {
     }
     
     func isHidenEmptyView() {
-        if searchArray.count == 0 {
-            emptyView.isHidden = false
-        } else {
-            emptyView.isHidden = true
-        }
+        searchArray.isEmpty ? (emptyView.isHidden = false) : (emptyView.isHidden = true)
         self.resultSearchLabel.text = "النتائج البحث(\(self.searchArray.count))"
     }
     
@@ -111,7 +107,7 @@ extension SearchViewController: AddressFilterationProtocol {
     
     func passFilterationAddress(casesData: [Case]) {
         searchArray = casesData
-        isHidenEmptyView() 
+        isHidenEmptyView()
         searchCollectionView.reloadData()
     }
     

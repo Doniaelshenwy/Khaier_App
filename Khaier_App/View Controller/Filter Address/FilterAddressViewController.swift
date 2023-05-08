@@ -11,7 +11,6 @@ protocol AddressFilterationProtocol: AnyObject {
     func passFilterationAddress(casesData: [Case])
 }
 
-
 class FilterAddressViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var checkAddressBoxButton: UIButton!
@@ -26,7 +25,6 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
     private weak var delegate: AddressFilterationProtocol?
     var cityData : [City] = []
     var regionData : [District] = []
-    var caseData : [Case] = []
     let apiRequest: AuthAPIProtocol = AuthAPI()
     let apiFilterRequest: DataAPIProtocol = DataAPI()
     var search = ""
@@ -54,13 +52,15 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func filterRequest(model : FilterRequestModel) {
-        apiFilterRequest.filterRequest(model: model) { response in
+        apiFilterRequest.filterRequest(model: model) { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let data):
                 if let error = data?.error {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    self.caseData = data?.cases ?? []
+                    self.dismiss(animated: true, completion: nil)
+                    self.delegate?.passFilterationAddress(casesData: data?.cases ?? [])
                 }
             case .failure(_):
                 break
@@ -69,7 +69,8 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
     }
     
     func cityRegisterRequest() {
-        apiRequest.cityRegisterRequest { response in
+        apiRequest.cityRegisterRequest { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let data):
                 guard let unwrappedData = data else { return }
@@ -97,24 +98,20 @@ class FilterAddressViewController: UIViewController, UITextFieldDelegate {
     // when user check my location, result of search is determined user's location
     @IBAction func checkYourLocationBoxButton(_ sender: Any) {
         checkBoxIsAccept(isRemember: &isRemember, button: checkAddressBoxButton)
-        locationUser = "user"
+        isRemember ? (locationUser = "user") : (locationUser = "")
     }
     
     @IBAction func applyButtonTapped(_ sender: Any) {
         if locationUser == "" {
         guard let city = cityTextField.text, city != "اختر المدينة" else { return }
-        guard let region = cityTextField.text, region != "اخترالمنطقة" else { return }
+        guard let region = regionTextField.text, region != "اخترالمنطقة" else { return }
             let model = FilterRequestModel(search: search, city: city, district: region, location: locationUser)
             filterRequest(model: model)
         } else {
             let model = FilterRequestModel(search: search, location: locationUser)
             filterRequest(model: model)
         }
-        delegate?.passFilterationAddress(casesData: caseData)
-        dismiss(animated: true, completion: nil)
-        
     }
-    
 }
 
 

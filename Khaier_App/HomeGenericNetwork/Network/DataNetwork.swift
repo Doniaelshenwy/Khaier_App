@@ -42,7 +42,7 @@ extension DataNetwork : TargetType {
         case .search(let search):
             return .requestParameter(paramter: ["search" : search], encoding: URLEncoding.default)
         case .filter(model: let model):
-            return.requestParameter(paramter: ["search" : model.search, "city" : model.city, "district" : model.district, "location" : model.location], encoding: URLEncoding.default)
+            return.requestParameter(paramter: ["search" : model.search, "city" : model.city ?? "", "district" : model.district ?? "", "location" : model.location ?? ""], encoding: URLEncoding.default)
         }
     }
         
