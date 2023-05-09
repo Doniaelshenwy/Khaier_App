@@ -127,11 +127,11 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تذكرني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-74-b09">
-                                    <rect key="frame" x="298.66666666666669" y="422.66666666666669" width="30.333333333333314" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تذكرني" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-74-b09">
+                                    <rect key="frame" x="279" y="422.66666666666669" width="50" height="21"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="30.329999999999998" id="jb8-RY-JoE"/>
+                                        <constraint firstAttribute="width" constant="50" id="jb8-RY-JoE"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="BlackColor"/>
@@ -457,7 +457,7 @@
         <image name="Facebook" width="40" height="40"/>
         <image name="Google" width="38" height="38"/>
         <image name="Login" width="163" height="199"/>
-        <image name="Logo" width="172" height="172"/>
+        <image name="Logo" width="162.33332824707031" height="172"/>
         <image name="check" width="18" height="18"/>
         <image name="eye-off" width="24" height="24"/>
         <namedColor name="AppColor">

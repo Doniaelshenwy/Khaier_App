@@ -18,13 +18,15 @@ struct HomeResponseModel: Codable {
 }
 
 struct Case: Codable {
-    let id: Int?
+    let userID, id, bookmarkID: Int?
     let title, category, maxAmount, collectedAmount: String?
     let percentage, remainingDays: Int?
     let priority, thumbnail: String?
     let href: Href?
 
     enum CodingKeys: String, CodingKey {
+        case userID = "user_id"
+        case bookmarkID = "bookmark_id"
         case id, title, category, maxAmount, collectedAmount, percentage
         case remainingDays = "remaining_days"
         case priority, thumbnail, href

@@ -14,21 +14,39 @@ class BookmarkViewController: UIViewController {
     @IBOutlet weak var bookmarkCollectionView: UICollectionView!
     @IBOutlet weak var emptyView: UIView!
     
-    var donationArray: [CaseDonationModel] = []
+    var donationArray: [Case] = []
     var charityArray: [CharityModel] = []
     var bookmarkType : BookmarkType = .donation
+    let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
         isTabBarHidden(true)
         setBookmarkCollectionView()
-        setDataOfDonationArray()
         //setDataOfCharityArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        isHidenEmptyViewDonationArray()
+       // isHidenEmptyViewDonationArray()
+        casesRequest()
+        
+    }
+    
+    func casesRequest() {
+        apiRequest.bookmarkRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                print("case = \(data?.caseBookmarks)")
+                if let cases = data?.caseBookmarks {
+                    self.donationArray = cases
+                    self.bookmarkCollectionView.reloadData()
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     func isHidenEmptyViewDonationArray() {
@@ -45,16 +63,6 @@ class BookmarkViewController: UIViewController {
         } else {
             emptyView.isHidden = true
         }
-    }
-    
-    func setDataOfDonationArray(){
-        donationArray = [
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
     }
     
     func setDataOfCharityArray(){

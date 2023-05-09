@@ -23,13 +23,13 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setDonationData(donation: CaseDonationModel){
-        imageCase.image = UIImage(named: donation.image)
+    func setDonationData(donation: Case){
+        imageCase.image = UIImage(named: "caseSearch")
         titleCaseLabel.text = donation.title
-        typeDonationLabel.text = donation.typeDonation
-        remainDaysLabel.text = "متبقي \(donation.remainDays) يوم"
-        accessRatioLabel.text = "%\(donation.accessRatio)"
-        progressView.progress = Float(donation.accessRatio) / 100
+        typeDonationLabel.text = donation.category
+        remainDaysLabel.text = "متبقي \(donation.remainingDays ?? 0) يوم"
+        accessRatioLabel.text = "%\(donation.percentage ?? 0)"
+        progressView.progress = Float(donation.percentage ?? 0) / 100
     }
     
     @IBAction func saveButton(_ sender: Any) {

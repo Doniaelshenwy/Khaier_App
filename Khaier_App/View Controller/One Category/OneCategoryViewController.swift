@@ -13,7 +13,7 @@ class OneCategoryViewController: UIViewController {
     @IBOutlet weak var navigationTitleLabel: UILabel!
     
     var titleNavigation: String = ""
-    var oneCategoryArray: [CaseDonationModel] = []
+    var oneCategoryArray: [Case] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +21,6 @@ class OneCategoryViewController: UIViewController {
         isTabBarHidden(true)
         navigationTitleLabel.text = titleNavigation
         setOneCategoryCollectionView()
-        setDataOfOneCategoryArray()
-    }
-    
-    func setDataOfOneCategoryArray() {
-        oneCategoryArray = [
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 60),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 20),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 80),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 100),
-            CaseDonationModel(image: "caseSearch", title: "ساعد ساره في العلاج..", typeDonation: "أدوية", remainDays: "11", accessRatio: 10)
-        ]
     }
 
     @IBAction func backButton(_ sender: Any) {

@@ -128,6 +128,9 @@
 		FC69EBAC29913551008E404A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69EBA629913550008E404A /* SignUpViewController.xib */; };
 		FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A7118299A76D600A638D0 /* SplashViewController.swift */; };
 		FC6A711B299A76D600A638D0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6A7119299A76D600A638D0 /* SplashViewController.xib */; };
+		FC71BE882A0B06F200212733 /* BookmarkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC71BE872A0B06F200212733 /* BookmarkNetwork.swift */; };
+		FC71BE8A2A0B070600212733 /* BookmarkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC71BE892A0B070600212733 /* BookmarkAPI.swift */; };
+		FC71BE8C2A0B093800212733 /* BookmarkResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC71BE8B2A0B093800212733 /* BookmarkResponseModel.swift */; };
 		FC78116629A84B6500C8A3C0 /* MyDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78116529A84B6500C8A3C0 /* MyDonation.swift */; };
 		FC8AF70C29B7C9AE00BF5534 /* DonateNowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8AF70B29B7C9AE00BF5534 /* DonateNowProtocol.swift */; };
 		FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */; };
@@ -323,6 +326,9 @@
 		FC69EBA629913550008E404A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FC6A7118299A76D600A638D0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FC6A7119299A76D600A638D0 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		FC71BE872A0B06F200212733 /* BookmarkNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkNetwork.swift; sourceTree = "<group>"; };
+		FC71BE892A0B070600212733 /* BookmarkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAPI.swift; sourceTree = "<group>"; };
+		FC71BE8B2A0B093800212733 /* BookmarkResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkResponseModel.swift; sourceTree = "<group>"; };
 		FC78116529A84B6500C8A3C0 /* MyDonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonation.swift; sourceTree = "<group>"; };
 		FC8AF70B29B7C9AE00BF5534 /* DonateNowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateNowProtocol.swift; sourceTree = "<group>"; };
 		FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -742,6 +748,7 @@
 			children = (
 				FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */,
 				FC10D40F29FF3F26002A194E /* HomeResponseModel.swift */,
+				FC71BE8B2A0B093800212733 /* BookmarkResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -824,6 +831,23 @@
 				FC6A7119299A76D600A638D0 /* SplashViewController.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		FC71BE852A0B06BA00212733 /* BookmarkGenericNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				FC71BE862A0B06CE00212733 /* Network */,
+			);
+			path = BookmarkGenericNetwork;
+			sourceTree = "<group>";
+		};
+		FC71BE862A0B06CE00212733 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC71BE872A0B06F200212733 /* BookmarkNetwork.swift */,
+				FC71BE892A0B070600212733 /* BookmarkAPI.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		FC78116429A84B3F00C8A3C0 /* Donation */ = {
@@ -994,6 +1018,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0576512A0080EF00490688 /* NetworkLayer */,
+				FC71BE852A0B06BA00212733 /* BookmarkGenericNetwork */,
 				FC10D41129FF4120002A194E /* HomeGenericNetwork */,
 				FC5AD37E29ED74EA008A31FA /* Auth Generic Network */,
 				FC2DAED729A42D0D0069E3F2 /* Enum */,
@@ -1588,6 +1613,7 @@
 				FCD6D0EF298546730084FE76 /* LoginViewController.swift in Sources */,
 				FC2BF40B29BF666B00490A46 /* ExitViewController.swift in Sources */,
 				FC671D9D29854FED00236031 /* UIImageView+Extension.swift in Sources */,
+				FC71BE8C2A0B093800212733 /* BookmarkResponseModel.swift in Sources */,
 				FC926022299D604D00B6EB4F /* DonationViewController.swift in Sources */,
 				FCE6324929A536DD00ED2040 /* CategoriesCollectionViewCell.swift in Sources */,
 				FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */,
@@ -1669,7 +1695,9 @@
 				FCF6F0CA29A13BC400DBBBF0 /* SearchViewController.swift in Sources */,
 				FC4ADA00299310E5006B9F70 /* OTPSignUPViewController.swift in Sources */,
 				FC19ABDE29EC3C2100401A72 /* PaymentMethodViewController.swift in Sources */,
+				FC71BE8A2A0B070600212733 /* BookmarkAPI.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
+				FC71BE882A0B06F200212733 /* BookmarkNetwork.swift in Sources */,
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,
 				FC10D41029FF3F26002A194E /* HomeResponseModel.swift in Sources */,
