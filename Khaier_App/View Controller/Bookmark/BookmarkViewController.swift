@@ -30,7 +30,6 @@ class BookmarkViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         casesRequest()
-        //charitiesRequest()
     }
     
     private func casesRequest() {
@@ -103,7 +102,6 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: charityButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: donationButtonConstrain)
         setCell()
-//        isHidenEmptyViewCharityArray()
         charitiesRequest()
     }
     
@@ -113,7 +111,6 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: donationButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: charityButtonConstrain)
         setCell()
-//        isHidenEmptyViewDonationArray()
         casesRequest()
     }
     
