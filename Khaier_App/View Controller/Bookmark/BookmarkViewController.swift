@@ -13,9 +13,11 @@ class BookmarkViewController: UIViewController {
     @IBOutlet weak var donationButtonConstrain: UIButton!
     @IBOutlet weak var bookmarkCollectionView: UICollectionView!
     @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var descriptionEmptyViewLabel: UILabel!
+    @IBOutlet weak var titleEmptyViewLabel: UILabel!
     
     var donationArray: [Case] = []
-    var charityArray: [CharityModel] = []
+    var charityArray: [Charity] = []
     var bookmarkType : BookmarkType = .donation
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     
@@ -24,24 +26,44 @@ class BookmarkViewController: UIViewController {
         isNavigationHidden(true)
         isTabBarHidden(true)
         setBookmarkCollectionView()
-        //setDataOfCharityArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       // isHidenEmptyViewDonationArray()
         casesRequest()
-        
+        //charitiesRequest()
     }
     
-    func casesRequest() {
-        apiRequest.bookmarkRequest { [weak self] response in
+    private func casesRequest() {
+        apiRequest.casesBookmarkRequest { [weak self] response in
+            print(response)
             guard let self = self else { return }
             switch response {
             case .success(let data):
-                print("case = \(data?.caseBookmarks)")
                 if let cases = data?.caseBookmarks {
                     self.donationArray = cases
                     self.bookmarkCollectionView.reloadData()
+                    self.isHidenEmptyViewDonationArray()
+                    print("count = \(self.donationArray.count)")
+                } else {
+                    self.isHidenEmptyViewDonationArray()
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    private func charitiesRequest() {
+        apiRequest.charitiesBookmarkRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let charities = data?.charityBookmarks {
+                    self.charityArray = charities
+                    self.bookmarkCollectionView.reloadData()
+                    self.isHidenEmptyViewCharityArray()
+                } else {
+                    self.isHidenEmptyViewCharityArray()
                 }
             case .failure(_):
                 break
@@ -52,6 +74,8 @@ class BookmarkViewController: UIViewController {
     func isHidenEmptyViewDonationArray() {
         if donationArray.count == 0 {
             emptyView.isHidden = false
+            titleEmptyViewLabel.text = "لم تقم بحفظ اي حالة تبرع بعد !!"
+            descriptionEmptyViewLabel.text = "تصفح الان حالات التبرع"
         } else {
             emptyView.isHidden = true
         }
@@ -60,20 +84,11 @@ class BookmarkViewController: UIViewController {
     func isHidenEmptyViewCharityArray() {
         if charityArray.count == 0 {
             emptyView.isHidden = false
+            titleEmptyViewLabel.text = "لم تقم بحفظ اي جمعية بعد !!"
+            descriptionEmptyViewLabel.text = "تصفح الان الجمعيات الخيرية"
         } else {
             emptyView.isHidden = true
         }
-    }
-    
-    func setDataOfCharityArray(){
-        charityArray = [
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيير"),
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخيير"),
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخييير"),
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخييير"),
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخيييير"),
-            CharityModel(image: "charityBookmark", title: "جمعية الامل الخيرية", address: "المنصورة، الدقهلية", description: "جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخيييير")
-            ]
     }
 
     // if user press button, move to home screen
@@ -88,7 +103,8 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: charityButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: donationButtonConstrain)
         setCell()
-        isHidenEmptyViewCharityArray()
+//        isHidenEmptyViewCharityArray()
+        charitiesRequest()
     }
     
     // if user press button, show case donation
@@ -97,7 +113,8 @@ class BookmarkViewController: UIViewController {
         changeColorOfSelectedButton(isSelectedButton: donationButtonConstrain)
         changeColorOfNotSelectedButton(notSelectedButton: charityButtonConstrain)
         setCell()
-        isHidenEmptyViewDonationArray()
+//        isHidenEmptyViewDonationArray()
+        casesRequest()
     }
     
     @IBAction func moveToHomeVCButton(_ sender: Any) {

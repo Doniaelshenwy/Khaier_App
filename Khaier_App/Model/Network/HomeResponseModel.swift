@@ -54,10 +54,18 @@ struct Category: Codable {
 }
 
 struct Charity: Codable {
-    let id: Int?
+    let userID, id, bookmarkID: Int?
     let name, excerpt, address, thumbnail: String?
     let href: String?
+
+    enum CodingKeys: String, CodingKey {
+        case userID = "user_id"
+        case id
+        case bookmarkID = "bookmark_id"
+        case name, excerpt, address, thumbnail, href
+    }
 }
+
 
 struct UserHome: Codable {
     let name, address: String?

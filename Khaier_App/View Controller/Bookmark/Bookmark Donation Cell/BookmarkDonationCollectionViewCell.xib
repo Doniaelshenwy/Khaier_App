@@ -53,7 +53,7 @@
                                                     <constraint firstAttribute="width" constant="13.33" id="UOf-Rq-lXi"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="save-fill"/>
                                                 <connections>
                                                     <action selector="saveButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TqU-fm-Ijx"/>
                                                 </connections>
@@ -242,7 +242,7 @@
     </objects>
     <resources>
         <image name="caseSearch" width="115" height="134"/>
-        <image name="save" width="15.333333015441895" height="18.666666030883789"/>
+        <image name="save-fill" width="15.333333015441895" height="18.666666030883789"/>
         <namedColor name="AppColor">
             <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

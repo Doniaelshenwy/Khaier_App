@@ -10,6 +10,7 @@ import Alamofire
 
 enum BookmarkNetwork{
     case cases
+    case charity
 }
 
 extension BookmarkNetwork : TargetType {
@@ -24,11 +25,15 @@ extension BookmarkNetwork : TargetType {
         switch self {
         case .cases:
             return "bookmarks/cases"
+        case .charity:
+            return "bookmarks/charities"
         }
     }
     var method: HTTPMethod {
         switch self {
         case .cases:
+            return .get
+        case .charity:
             return .get
         }
     }
@@ -36,6 +41,8 @@ extension BookmarkNetwork : TargetType {
     var task: Task {
         switch self {
         case .cases:
+            return .requestPlain
+        case .charity:
             return .requestPlain
         }
     }

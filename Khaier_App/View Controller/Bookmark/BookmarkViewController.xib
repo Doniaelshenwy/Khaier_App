@@ -21,8 +21,10 @@
             <connections>
                 <outlet property="bookmarkCollectionView" destination="9S4-iY-P6d" id="lHh-nF-xYj"/>
                 <outlet property="charityButtonConstrain" destination="CJq-xZ-ebC" id="ysu-0r-1uu"/>
+                <outlet property="descriptionEmptyViewLabel" destination="QoN-fj-Shr" id="rJO-t9-Osj"/>
                 <outlet property="donationButtonConstrain" destination="QOS-OB-XaS" id="avM-cB-Hgh"/>
                 <outlet property="emptyView" destination="KfL-7u-a9D" id="CzT-v5-GZC"/>
+                <outlet property="titleEmptyViewLabel" destination="kBE-qD-VJo" id="Q9f-dF-Vj1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

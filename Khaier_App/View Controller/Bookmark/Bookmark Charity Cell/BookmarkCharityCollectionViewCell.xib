@@ -56,7 +56,7 @@
                                                     <constraint firstAttribute="width" constant="13.33" id="xzq-vt-0oK"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="save-fill"/>
                                                 <connections>
                                                     <action selector="saveCharityButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wFb-C1-59r"/>
                                                 </connections>
@@ -160,6 +160,7 @@
                 <outlet property="addressLabel" destination="f8x-ns-LlG" id="l89-Km-Yug"/>
                 <outlet property="charityImage" destination="yGW-KP-teJ" id="1yz-Bt-C9w"/>
                 <outlet property="descriptionLabel" destination="Xwr-BF-awf" id="Nah-3u-Mbe"/>
+                <outlet property="saveCharityButtonConstrain" destination="eKI-Xq-EDv" id="Rs4-bY-oBz"/>
                 <outlet property="title" destination="oTw-ph-FsN" id="oly-0f-Hgg"/>
             </connections>
             <point key="canvasLocation" x="349.60000000000002" y="99.753694581280797"/>
@@ -169,7 +170,7 @@
         <image name="charityBookmark" width="115" height="134"/>
         <image name="checkmark" width="16" height="16"/>
         <image name="location" width="20" height="20"/>
-        <image name="save" width="15.333333015441895" height="18.666666030883789"/>
+        <image name="save-fill" width="15.333333015441895" height="18.666666030883789"/>
         <namedColor name="BlackColor">
             <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
