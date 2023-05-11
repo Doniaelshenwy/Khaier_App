@@ -10,5 +10,6 @@ import Foundation
 struct BookmarkResponseModel: Codable {
     let caseBookmarks: [Case]?
     let charityBookmarks: [Charity]?
+    let message: String?
+    let errors: Errors?
 }
-

@@ -49,5 +49,8 @@ class DonationInViewController: UIViewController {
         moveToDonationDetailsVc()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        pop(isTabBarHide: false)
+    }
     
 }

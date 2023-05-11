@@ -92,8 +92,7 @@ class BookmarkViewController: UIViewController {
 
     // if user press button, move to home screen
     @IBAction func backToHomeVCButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        tabBarController?.tabBar.isHidden = false
+        pop(isTabBarHide: false)
     }
     
     // if user press button, show charity

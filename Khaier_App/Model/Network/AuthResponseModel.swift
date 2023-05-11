@@ -63,15 +63,18 @@ struct UpdatePasswordResponseModel: Codable {
 struct Errors: Codable {
     let username, phoneNumber, password: [String]?
     let login: String?
+    let userID: [String]?
+    let myCaseID: [String]?
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
         case password
         case username
         case login
+        case userID = "user_id"
+        case myCaseID = "my_case_id"
     }
 }
-
 
 struct RegisterResponseModel: Codable {
     let user: UserRegisterResponseModel?

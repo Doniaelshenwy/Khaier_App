@@ -21,6 +21,10 @@ extension UICollectionViewCell{
         isRemember.toggle()
         isRemember ? button.setImage("save-fill") : button.setImage("save")
     }
+    
+    func checkSaveButtonIsAccept(id: Int, button: UIButton){
+        id == 0 ? button.setImage("save") : button.setImage("save-fill")
+    }
 
 }
 

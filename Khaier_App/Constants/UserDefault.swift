@@ -80,6 +80,14 @@ class UserDefault {
         UserDefaults.standard.set(token, forKey: "Token")
     }
     
+    static func getBookmarkId() -> Int {
+        UserDefaults.standard.integer(forKey: "BookmarkId")
+    }
+    
+    static func saveBookmarkId(_ bookmarkId: Int) {
+        UserDefaults.standard.set(bookmarkId, forKey: "BookmarkId")
+    }
+    
     static func clearUserDefaults() {
         saveUserName("")
         saveCity("")

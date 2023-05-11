@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-extension HomeViewController: CollectionViewConfig{
+extension HomeViewController: CollectionViewConfig {
+    func moveToDonationInVC() {
+        let vc = DonationInViewController()
+        push(vc: vc)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case priorityCollectionView:
@@ -24,6 +29,9 @@ extension HomeViewController: CollectionViewConfig{
         if collectionView == priorityCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
             cell.setCaseData(priority: priorityArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
+            cell.donationNowAction = { [weak self] in
+                self?.moveToDonationInVC()
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharityCollectionViewCell.identifierCell, for: indexPath) as! CharityCollectionViewCell
