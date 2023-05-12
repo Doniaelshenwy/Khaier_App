@@ -18,6 +18,8 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saveCharityButtonConstrain: UIButton!
     
     var isRememberCharity = false
+    let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
+    var bookmarkId : Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +30,28 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
         title.text = charity.name
         addressLabel.text = charity.address
         colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")
+        bookmarkId = charity.bookmarkID
+    }
+    
+    func deleteCharityBookmarkRequest(bookmarkId: Int) {
+        apiRequest.deleteCharityBookmarkRequest(id: bookmarkId) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.saveCharityButtonConstrain.setImage("save")
+                } else {
+                    print("not delete")
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
 
     @IBAction func saveCharityButton(_ sender: Any) {
-        checkSaveButtonIsAccept(isRemember: &isRememberCharity, button: saveCharityButtonConstrain)
+        deleteCharityBookmarkRequest(bookmarkId: bookmarkId ?? 0)
     }
 }
 

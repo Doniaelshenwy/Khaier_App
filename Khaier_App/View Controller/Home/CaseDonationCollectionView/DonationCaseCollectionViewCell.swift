@@ -61,7 +61,8 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     }
     
     func addcaseBookmarkRequest(model: AddCaseRequestModel) {
-        apiRequest.addCaseBookmarkRequest(model: model) { response in
+        apiRequest.addCaseBookmarkRequest(model: model) { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let data):
                 if let errorUserId = data?.errors?.userID?[0] {

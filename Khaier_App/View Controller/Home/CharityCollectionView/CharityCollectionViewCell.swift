@@ -17,7 +17,6 @@ class CharityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saveCharityButtonConstrain: UIButton!
 
     var isRememberCharity = false
-    var donationNowAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     var bookmarkId : Int?
     var userId : Int?

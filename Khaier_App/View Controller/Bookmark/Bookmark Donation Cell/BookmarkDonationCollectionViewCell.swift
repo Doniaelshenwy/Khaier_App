@@ -17,8 +17,11 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var accessRatioLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var saveCaseButtonConstrain: UIButton!
     
     var donationNowAction: (() -> ())?
+    let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
+    var bookmarkId : Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,9 +34,28 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         remainDaysLabel.text = "متبقي \(donation.remainingDays ?? 0) يوم"
         accessRatioLabel.text = "%\(donation.percentage ?? 0)"
         progressView.progress = Float(donation.percentage ?? 0) / 100
+        bookmarkId = donation.bookmarkID
+    }
+    
+    func deletecaseBookmarkRequest(bookmarkId: Int) {
+        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.saveCaseButtonConstrain.setImage("save")
+                } else {
+                    print("not delete")
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        deletecaseBookmarkRequest(bookmarkId: bookmarkId ?? 0)
     }
     
     @IBAction func donateNowButton(_ sender: Any) {

@@ -124,6 +124,23 @@ extension BookmarkViewController: CollectionViewConfig {
         push(vc: vc)
     }
     
+    func setCell() {
+        switch bookmarkType {
+        case .donation:
+            bookmarkCollectionView.register(cells: [BookmarkDonationCollectionViewCell.self])
+            bookmarkCollectionView.reloadData()
+        case .charity:
+            bookmarkCollectionView.register(cells: [BookmarkCharityCollectionViewCell.self])
+            bookmarkCollectionView.reloadData()
+        }
+    }
+    
+    func setBookmarkCollectionView() {
+        bookmarkCollectionView.delegate = self
+        bookmarkCollectionView.dataSource = self
+        setCell()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch bookmarkType {
         case .donation:
@@ -148,23 +165,12 @@ extension BookmarkViewController: CollectionViewConfig {
         }
     }
     
-    func setCell() {
-        switch bookmarkType {
-        case .donation:
-            bookmarkCollectionView.register(cells: [BookmarkDonationCollectionViewCell.self])
-            bookmarkCollectionView.reloadData()
-        case .charity:
-            bookmarkCollectionView.register(cells: [BookmarkCharityCollectionViewCell.self])
-            bookmarkCollectionView.reloadData()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if bookmarkType == .charity  {
+            let vc = CharityProfileViewController(nibName: "CharityProfileViewController", bundle: nil)
+            push(vc: vc)
         }
     }
-    
-    func setBookmarkCollectionView() {
-        bookmarkCollectionView.delegate = self
-        bookmarkCollectionView.dataSource = self
-        setCell()
-    }
-    
 }
 
 extension BookmarkViewController: UICollectionViewDelegateFlowLayout {
