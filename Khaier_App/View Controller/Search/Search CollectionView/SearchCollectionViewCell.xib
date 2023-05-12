@@ -40,7 +40,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB2-8H-rHv" customClass="UIControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB2-8H-rHv">
                                 <rect key="frame" x="222.33333333333334" y="23" width="28" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-ys-mU9">
@@ -229,6 +229,7 @@
                 <outlet property="imageCase" destination="Djh-H6-aHy" id="0rl-eg-NQj"/>
                 <outlet property="progressView" destination="jhU-c6-eW1" id="UG1-MU-EsA"/>
                 <outlet property="remainDaysLabel" destination="1Tb-z7-aqJ" id="cQU-B8-y6B"/>
+                <outlet property="saveCaseButtonConstrain" destination="E5u-ys-mU9" id="Viu-s7-gUz"/>
                 <outlet property="titleCaseLabel" destination="ghV-JF-fiZ" id="O0N-z4-CgT"/>
                 <outlet property="typeDonationLabel" destination="WVS-sz-0fF" id="GiL-nB-UBp"/>
             </connections>

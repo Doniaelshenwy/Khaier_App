@@ -17,9 +17,21 @@ class SearchCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var accessRatioLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var saveCaseButtonConstrain: UIButton!
+    
+    let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
+    var isRememberCase = false
+    var bookmarkId : Int?
+    var userId : Int?
+    var caseId : Int?
+    var donationNowAction: (() -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func checkBookmark(bookmarkId: Int) {
+        bookmarkId == 0 ? saveCaseButtonConstrain.setImage("save") : saveCaseButtonConstrain.setImage("save-fill")
     }
     
     func setSearchData(search: Case) {
@@ -29,12 +41,55 @@ class SearchCollectionViewCell: UICollectionViewCell {
         remainDaysLabel.text = "متبقي \(search.remainingDays ?? 0) يوم"
         accessRatioLabel.text = "%\(search.percentage ?? 0)"
         progressView.progress = Float(search.percentage ?? 0) / 100
+        checkBookmark(bookmarkId: search.bookmarkID ?? 0)
+        bookmarkId = search.bookmarkID
+        userId = search.userID
+        caseId = search.id
+    }
+    
+    func addcaseBookmarkRequest(model: AddCaseRequestModel) {
+        apiRequest.addCaseBookmarkRequest(model: model) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let errorUserId = data?.errors?.userID?[0] {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorUserId)
+                } else if let errorCaseId = data?.errors?.myCaseID?[0] {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorCaseId)
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: data?.message ?? "")
+                    self.saveCaseButtonConstrain.setImage("save-fill")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    func deletecaseBookmarkRequest(bookmarkId: Int) {
+        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.saveCaseButtonConstrain.setImage("save")
+                } else {
+                    print("not delete")
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        let model = AddCaseRequestModel(userId: userId, caseId: caseId)
+        bookmarkId == 0 ? addcaseBookmarkRequest(model: model) : deletecaseBookmarkRequest(bookmarkId: bookmarkId ?? 0)
     }
     
     @IBAction func donateNowButton(_ sender: Any) {
+        donationNowAction?()
     }
 
 }
