@@ -65,6 +65,7 @@ struct Errors: Codable {
     let login: String?
     let userID: [String]?
     let myCaseID: [String]?
+    let charityID: [String]?
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
@@ -73,6 +74,7 @@ struct Errors: Codable {
         case login
         case userID = "user_id"
         case myCaseID = "my_case_id"
+        case charityID = "charity_id"
     }
 }
 

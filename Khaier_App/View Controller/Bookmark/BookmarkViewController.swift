@@ -119,6 +119,10 @@ class BookmarkViewController: UIViewController {
 }
 
 extension BookmarkViewController: CollectionViewConfig {
+    func moveToDonationInVC() {
+        let vc = DonationInViewController()
+        push(vc: vc)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch bookmarkType {
@@ -130,10 +134,13 @@ extension BookmarkViewController: CollectionViewConfig {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if bookmarkType == .donation{
+        if bookmarkType == .donation {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkDonationCollectionViewCell.identifierCell, for: indexPath) as! BookmarkDonationCollectionViewCell
-        cell.setDonationData(donation: donationArray[indexPath.row])
-        return cell
+            cell.setDonationData(donation: donationArray[indexPath.row])
+            cell.donationNowAction = { [weak self] in
+                self?.moveToDonationInVC()
+            }
+            return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkCharityCollectionViewCell.identifierCell, for: indexPath) as! BookmarkCharityCollectionViewCell
             cell.setCharityData(charity: charityArray[indexPath.row])

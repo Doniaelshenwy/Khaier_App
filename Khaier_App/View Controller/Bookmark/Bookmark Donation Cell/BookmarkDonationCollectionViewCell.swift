@@ -17,7 +17,8 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var accessRatioLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-
+    
+    var donationNowAction: (() -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +37,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func donateNowButton(_ sender: Any) {
+        donationNowAction?()
     }
 
 }

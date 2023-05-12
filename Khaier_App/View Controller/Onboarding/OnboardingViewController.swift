@@ -34,8 +34,8 @@ class OnboardingViewController: UIViewController {
     func setDataOfonBoardingArray(){
         onBoardingArray = [
             OnboardingModel(image: "1stOnboarding", description: "ساهم بفعل الخير بالتبرع من خلالنا", title: "كن خَـــيِّـــرْ "),
-            OnboardingModel(image: "2ndOnboarding", description: "تقدر تتبرع من خلال الابلكيشن اونلاين لتوفير وقتك و مجهودك", title: "أتبرع أونلاين"),
-            OnboardingModel(image: "3rdOnboarding", description: " أتبرع من مكانك و المندوب هياخد التبرع من باب بيتك", title: "تبرعك هيوصل اينما كنت")
+            OnboardingModel(image: "2ndOnboarding", description: "تقدر تتبرع من خلال الابلكيشن اونلاين لتوفير وقتك و مجهودك", title: "التبرع اونلاين"),
+            OnboardingModel(image: "3rdOnboarding", description: "توصيل التبرع من المنزل الي الجمعية لضمان توصيل تبرعك لمن يستحق ", title: "توصيل التبرع")
         ]
     }
     

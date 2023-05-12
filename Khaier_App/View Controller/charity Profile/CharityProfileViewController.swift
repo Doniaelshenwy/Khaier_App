@@ -127,7 +127,11 @@ class CharityProfileViewController: UIViewController {
             showMore.toggle()
         }
     }
-   
+    
+    @IBAction func backButton(_ sender: Any) {
+        pop(isTabBarHide: false)
+    }
+    
 }
 
 

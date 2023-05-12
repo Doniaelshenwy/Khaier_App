@@ -14,6 +14,13 @@ extension HomeViewController: CollectionViewConfig {
         push(vc: vc)
     }
     
+    func setCollectionView(){
+        [priorityCollectionView, nearCollectionView].forEach { $0?.delegate = self }
+        [priorityCollectionView, nearCollectionView].forEach { $0?.dataSource = self }
+        priorityCollectionView.register(cells: [DonationCaseCollectionViewCell.self])
+        nearCollectionView.register(cells: [CharityCollectionViewCell.self])
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case priorityCollectionView:
@@ -26,7 +33,7 @@ extension HomeViewController: CollectionViewConfig {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == priorityCollectionView{
+        if collectionView == priorityCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
             cell.setCaseData(priority: priorityArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
             cell.donationNowAction = { [weak self] in
@@ -40,13 +47,12 @@ extension HomeViewController: CollectionViewConfig {
         }
     }
     
-    func setCollectionView(){
-        [priorityCollectionView, nearCollectionView].forEach { $0?.delegate = self }
-        [priorityCollectionView, nearCollectionView].forEach { $0?.dataSource = self }
-        priorityCollectionView.register(cells: [DonationCaseCollectionViewCell.self])
-        nearCollectionView.register(cells: [CharityCollectionViewCell.self])
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == nearCollectionView {
+            let vc = CharityProfileViewController(nibName: "CharityProfileViewController", bundle: nil)
+            push(vc: vc)
+        }
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
