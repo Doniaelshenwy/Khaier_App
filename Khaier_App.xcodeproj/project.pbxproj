@@ -147,6 +147,9 @@
 		FC92AABB29BC9E380031838B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92AABA29BC9E380031838B /* CustomView.swift */; };
 		FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98F2CE299BDB09002A4E8B /* TabBarController.swift */; };
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
+		FCB319692A0F02CE0025B79A /* DoneCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */; };
+		FCB3196A2A0F02CE0025B79A /* DoneCreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */; };
+		FCB3196D2A0F04650025B79A /* DoneCreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */; };
 		FCBCB3EC29EA00E600108335 /* DonationCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */; };
 		FCBCB3ED29EA00E600108335 /* DonationCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */; };
 		FCC03353299DD2080055AEF6 /* CharityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */; };
@@ -345,6 +348,9 @@
 		FC92AABA29BC9E380031838B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		FC98F2CE299BDB09002A4E8B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountViewController.swift; sourceTree = "<group>"; };
+		FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneCreateAccountViewController.xib; sourceTree = "<group>"; };
+		FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountProtocol.swift; sourceTree = "<group>"; };
 		FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationCaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -870,9 +876,9 @@
 		FC926008299D123E00B6EB4F /* Change Password */ = {
 			isa = PBXGroup;
 			children = (
+				FC92600D299D536700B6EB4F /* Protocol */,
 				FC926009299D127200B6EB4F /* ChangePasswordViewController.swift */,
 				FC92600A299D127200B6EB4F /* ChangePasswordViewController.xib */,
-				FC92600D299D536700B6EB4F /* Protocol */,
 			);
 			path = "Change Password";
 			sourceTree = "<group>";
@@ -951,6 +957,24 @@
 				FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		FCB319662A0F02960025B79A /* DoneCreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3196B2A0F04450025B79A /* Protocol */,
+				FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */,
+				FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */,
+			);
+			path = DoneCreateAccount;
+			sourceTree = "<group>";
+		};
+		FCB3196B2A0F04450025B79A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		FCC0334B299DD11E0055AEF6 /* CaseDonationCollectionView */ = {
@@ -1105,6 +1129,7 @@
 				FC69EBA429913522008E404A /* Sign Up */,
 				FC4AD9FD299310BF006B9F70 /* OTP SignUp */,
 				FC9B54DC299336B90035F33A /* CreateAccount */,
+				FCB319662A0F02960025B79A /* DoneCreateAccount */,
 				FC606883299286F700BB7978 /* Forget Password */,
 				FC34AB99299940E600B2B7C2 /* OTP Forget Password */,
 				FCC629962996E8F3001406CE /* Reset Password */,
@@ -1423,6 +1448,7 @@
 				FC33F3AE29AD550D003ACDC4 /* MyDonationTableViewCell.xib in Resources */,
 				FC92600C299D127200B6EB4F /* ChangePasswordViewController.xib in Resources */,
 				FCEA5A3629BD21A100E8D84E /* EditProfileViewController.xib in Resources */,
+				FCB3196A2A0F02CE0025B79A /* DoneCreateAccountViewController.xib in Resources */,
 				FC2DAECA29A3F8DD0069E3F2 /* BookmarkViewController.xib in Resources */,
 				FCE6324A29A536DD00ED2040 /* CategoriesCollectionViewCell.xib in Resources */,
 				FC69EBAA29913551008E404A /* SignUpViewController.xib in Resources */,
@@ -1638,6 +1664,7 @@
 				FC48AE7E29C09BBB00C195FE /* ReminderTableViewCell.swift in Sources */,
 				FCE415EB299FB5D8003A991D /* CharityModel.swift in Sources */,
 				FCF50C4F29B013EF0051F142 /* Notification.swift in Sources */,
+				FCB3196D2A0F04650025B79A /* DoneCreateAccountProtocol.swift in Sources */,
 				FC92600B299D127200B6EB4F /* ChangePasswordViewController.swift in Sources */,
 				FCD6D0B5298544E00084FE76 /* AppDelegate.swift in Sources */,
 				FCD6D0B7298544E00084FE76 /* SceneDelegate.swift in Sources */,
@@ -1663,6 +1690,7 @@
 				FC92601A299D602200B6EB4F /* ProfileViewController.swift in Sources */,
 				FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */,
 				FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */,
+				FCB319692A0F02CE0025B79A /* DoneCreateAccountViewController.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,
 				FC33F3B129AD5528003ACDC4 /* FollowDonationTableViewCell.swift in Sources */,
 				FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */,

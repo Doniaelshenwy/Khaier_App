@@ -63,6 +63,11 @@ class AccountViewController: UIViewController {
         cityRegisterRequest()
     }
     
+    func moveToDoneCreateAccount() {
+        let vc = DoneCreateAccountViewController(delegate: self)
+        customPresent(vc, animated: false)
+    }
+    
     func registerRequest(model: RegisterRequestModel) {
         apiRequest.registerRequest(model: model) { [weak self] response in
             switch response {
@@ -72,9 +77,9 @@ class AccountViewController: UIViewController {
                 } else if let error = data?.errors?.username?[0] {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
+//                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم انشاء حساب جديد👏🏻")
                     UserDefault.saveUserName(data?.user?.username ?? "")
-                    self?.moveToHomeVC()
+                    self?.moveToDoneCreateAccount()
                 }
             case .failure(_):
                 break
@@ -194,5 +199,10 @@ extension AccountViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             break
         }
     }
-    
+}
+
+extension AccountViewController : DoneCreateAccountProtocol {
+    func movetoLoginVCFromCreateAccount() {
+        moveToLoginVC()
+    }
 }

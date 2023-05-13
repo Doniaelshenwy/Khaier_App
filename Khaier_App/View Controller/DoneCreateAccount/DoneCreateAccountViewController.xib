@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoneCreateAccountViewController" customModule="Khaier_App" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezZ-Pp-l0W">
+                    <rect key="frame" x="40" y="244" width="295" height="324"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoneAccount" translatesAutoresizingMaskIntoConstraints="NO" id="CJd-JC-1eo">
+                            <rect key="frame" x="88" y="38.333333333333321" width="119" height="118.66666666666669"/>
+                            <color key="backgroundColor" name="WhiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="118.73999999999999" id="HgW-Xn-J9t"/>
+                                <constraint firstAttribute="width" constant="118.73999999999999" id="UCv-z5-gco"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم انشاء الحساب بنجاح" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-w3-fUA">
+                            <rect key="frame" x="64" y="173" width="167" height="27"/>
+                            <color key="backgroundColor" name="WhiteColor"/>
+                            <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8p-XT-TIN">
+                            <rect key="frame" x="44" y="240" width="207" height="40"/>
+                            <color key="backgroundColor" name="AppColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="207" id="OPQ-sP-awo"/>
+                                <constraint firstAttribute="height" constant="40" id="Wfp-N3-1eL"/>
+                            </constraints>
+                            <color key="tintColor" name="WhiteColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="استمرار">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="continueButton:" destination="-1" eventType="touchUpInside" id="S15-dk-Uku"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="WhiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="324" id="0bR-g6-EdS"/>
+                        <constraint firstItem="b8p-XT-TIN" firstAttribute="centerX" secondItem="ezZ-Pp-l0W" secondAttribute="centerX" id="5ri-Z4-q3m"/>
+                        <constraint firstAttribute="width" constant="295" id="I2N-wY-OSt"/>
+                        <constraint firstItem="CJd-JC-1eo" firstAttribute="top" secondItem="ezZ-Pp-l0W" secondAttribute="top" constant="38.259999999999998" id="KnB-R5-Zw3"/>
+                        <constraint firstItem="b8p-XT-TIN" firstAttribute="top" secondItem="0uk-w3-fUA" secondAttribute="bottom" constant="40" id="OVF-T0-F6v"/>
+                        <constraint firstItem="0uk-w3-fUA" firstAttribute="leading" secondItem="ezZ-Pp-l0W" secondAttribute="leading" constant="64" id="bng-Q9-wyA"/>
+                        <constraint firstItem="0uk-w3-fUA" firstAttribute="top" secondItem="CJd-JC-1eo" secondAttribute="bottom" constant="16" id="k4p-OY-gdZ"/>
+                        <constraint firstItem="CJd-JC-1eo" firstAttribute="centerX" secondItem="ezZ-Pp-l0W" secondAttribute="centerX" id="k9E-Fo-6zw"/>
+                        <constraint firstAttribute="trailing" secondItem="0uk-w3-fUA" secondAttribute="trailing" constant="64" id="m13-lg-uS4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.10209029241902939" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ezZ-Pp-l0W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jWF-US-BHa"/>
+                <constraint firstItem="ezZ-Pp-l0W" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yTx-Hv-G5f"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="48"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DoneAccount" width="113" height="113"/>
+        <namedColor name="AppColor">
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
