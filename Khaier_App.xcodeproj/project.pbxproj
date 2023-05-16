@@ -61,6 +61,9 @@
 		FC39AFEE29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39AFEC29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.swift */; };
 		FC39AFEF29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC39AFED29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.xib */; };
 		FC3DCC8F29AE907B00DEDFFA /* ViewWithAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DCC8E29AE907B00DEDFFA /* ViewWithAction.swift */; };
+		FC4008092A14412D00A5D0A8 /* ProfileResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4008082A14412D00A5D0A8 /* ProfileResponseModel.swift */; };
+		FC40080D2A1441E200A5D0A8 /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40080C2A1441E200A5D0A8 /* ProfileNetwork.swift */; };
+		FC40080F2A1441F100A5D0A8 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40080E2A1441F100A5D0A8 /* ProfileAPI.swift */; };
 		FC400FAA29A55F560030AD2B /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC400FA829A55F560030AD2B /* OneCategoryViewController.swift */; };
 		FC400FAB29A55F560030AD2B /* OneCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC400FA929A55F560030AD2B /* OneCategoryViewController.xib */; };
 		FC47817829B69C0A009C5139 /* CalculateZakatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47817629B69C0A009C5139 /* CalculateZakatViewController.swift */; };
@@ -280,6 +283,9 @@
 		FC39AFEC29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC39AFED29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationsCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC3DCC8E29AE907B00DEDFFA /* ViewWithAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithAction.swift; sourceTree = "<group>"; };
+		FC4008082A14412D00A5D0A8 /* ProfileResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseModel.swift; sourceTree = "<group>"; };
+		FC40080C2A1441E200A5D0A8 /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
+		FC40080E2A1441F100A5D0A8 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
 		FC400FA829A55F560030AD2B /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		FC400FA929A55F560030AD2B /* OneCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneCategoryViewController.xib; sourceTree = "<group>"; };
 		FC47817629B69C0A009C5139 /* CalculateZakatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateZakatViewController.swift; sourceTree = "<group>"; };
@@ -640,6 +646,23 @@
 			path = "Donations Category Cell";
 			sourceTree = "<group>";
 		};
+		FC40080A2A1441AC00A5D0A8 /* ProfileGenericNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				FC40080B2A1441CA00A5D0A8 /* Network */,
+			);
+			path = ProfileGenericNetwork;
+			sourceTree = "<group>";
+		};
+		FC40080B2A1441CA00A5D0A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC40080C2A1441E200A5D0A8 /* ProfileNetwork.swift */,
+				FC40080E2A1441F100A5D0A8 /* ProfileAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FC400FA729A55F2A0030AD2B /* One Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +778,7 @@
 				FC5AD38A29ED76D8008A31FA /* AuthResponseModel.swift */,
 				FC10D40F29FF3F26002A194E /* HomeResponseModel.swift */,
 				FC71BE8B2A0B093800212733 /* BookmarkResponseModel.swift */,
+				FC4008082A14412D00A5D0A8 /* ProfileResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1042,6 +1066,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0576512A0080EF00490688 /* NetworkLayer */,
+				FC40080A2A1441AC00A5D0A8 /* ProfileGenericNetwork */,
 				FC71BE852A0B06BA00212733 /* BookmarkGenericNetwork */,
 				FC10D41129FF4120002A194E /* HomeGenericNetwork */,
 				FC5AD37E29ED74EA008A31FA /* Auth Generic Network */,
@@ -1641,6 +1666,7 @@
 				FC671D9D29854FED00236031 /* UIImageView+Extension.swift in Sources */,
 				FC71BE8C2A0B093800212733 /* BookmarkResponseModel.swift in Sources */,
 				FC926022299D604D00B6EB4F /* DonationViewController.swift in Sources */,
+				FC40080D2A1441E200A5D0A8 /* ProfileNetwork.swift in Sources */,
 				FCE6324929A536DD00ED2040 /* CategoriesCollectionViewCell.swift in Sources */,
 				FCC629992996E971001406CE /* ResetPasswordViewController.swift in Sources */,
 				FCDEC9702993E01B00E355F1 /* AuthManger.swift in Sources */,
@@ -1655,6 +1681,7 @@
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
 				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
 				FCFA5EBA29A2DF3B0045B9AB /* FilterAddressViewController.swift in Sources */,
+				FC40080F2A1441F100A5D0A8 /* ProfileAPI.swift in Sources */,
 				FCE6324D29A53FB900ED2040 /* CategoriesModel.swift in Sources */,
 				FC307ADB29B943C600DFAE60 /* ReminderViewController.swift in Sources */,
 				FCE4980629E4B65F00B0DDA9 /* DonationInViewController.swift in Sources */,
@@ -1725,6 +1752,7 @@
 				FC19ABDE29EC3C2100401A72 /* PaymentMethodViewController.swift in Sources */,
 				FC71BE8A2A0B070600212733 /* BookmarkAPI.swift in Sources */,
 				FC6068862992872100BB7978 /* ForgetPasswordViewController.swift in Sources */,
+				FC4008092A14412D00A5D0A8 /* ProfileResponseModel.swift in Sources */,
 				FC71BE882A0B06F200212733 /* BookmarkNetwork.swift in Sources */,
 				FC2DAEC929A3F8DD0069E3F2 /* BookmarkViewController.swift in Sources */,
 				FCD6D0BF298544E00084FE76 /* Khaier_App.xcdatamodeld in Sources */,

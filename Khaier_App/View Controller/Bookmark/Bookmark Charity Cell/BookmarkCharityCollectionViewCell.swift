@@ -18,6 +18,7 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saveCharityButtonConstrain: UIButton!
     
     var isRememberCharity = false
+    var saveDonationAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     var bookmarkId : Int?
 
@@ -26,6 +27,7 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
     }
     
     func setCharityData(charity: Charity) {
+        saveCharityButtonConstrain.setImage("save-fill")
         charityImage.image = UIImage(named: "charityBookmark")
         title.text = charity.name
         addressLabel.text = charity.address
@@ -33,25 +35,8 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
         bookmarkId = charity.bookmarkID
     }
     
-    func deleteCharityBookmarkRequest(bookmarkId: Int) {
-        apiRequest.deleteCharityBookmarkRequest(id: bookmarkId) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(let data):
-                if let message = data?.message {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
-                    self.saveCharityButtonConstrain.setImage("save")
-                } else {
-                    print("not delete")
-                }
-            case .failure(_):
-                break
-            }
-        }
-    }
-
     @IBAction func saveCharityButton(_ sender: Any) {
-        deleteCharityBookmarkRequest(bookmarkId: bookmarkId ?? 0)
+        saveDonationAction?()
     }
 }
 

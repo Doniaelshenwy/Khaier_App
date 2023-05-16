@@ -40,12 +40,11 @@ class BookmarkViewController: UIViewController {
             case .success(let data):
                 if let cases = data?.caseBookmarks {
                     self.donationArray = cases
-                    self.bookmarkCollectionView.reloadData()
-                    self.isHidenEmptyViewDonationArray()
-                    print("count = \(self.donationArray.count)")
                 } else {
-                    self.isHidenEmptyViewDonationArray()
+                    self.donationArray = []
                 }
+                self.bookmarkCollectionView.reloadData()
+                self.isHidenEmptyViewDonationArray()
             case .failure(_):
                 break
             }
@@ -59,11 +58,11 @@ class BookmarkViewController: UIViewController {
             case .success(let data):
                 if let charities = data?.charityBookmarks {
                     self.charityArray = charities
-                    self.bookmarkCollectionView.reloadData()
-                    self.isHidenEmptyViewCharityArray()
                 } else {
-                    self.isHidenEmptyViewCharityArray()
+                    self.charityArray = []
                 }
+                self.isHidenEmptyViewCharityArray()
+                self.bookmarkCollectionView.reloadData()
             case .failure(_):
                 break
             }
@@ -128,10 +127,8 @@ extension BookmarkViewController: CollectionViewConfig {
         switch bookmarkType {
         case .donation:
             bookmarkCollectionView.register(cells: [BookmarkDonationCollectionViewCell.self])
-            bookmarkCollectionView.reloadData()
         case .charity:
             bookmarkCollectionView.register(cells: [BookmarkCharityCollectionViewCell.self])
-            bookmarkCollectionView.reloadData()
         }
     }
     
@@ -157,10 +154,20 @@ extension BookmarkViewController: CollectionViewConfig {
             cell.donationNowAction = { [weak self] in
                 self?.moveToDonationInVC()
             }
+            cell.saveBookmarkAction = { [weak self] in
+                guard let self = self else{ return }
+                self.deletecaseBookmarkRequest(bookmarkId: self.donationArray[indexPath.row].bookmarkID ?? 0,
+                                               button: cell.saveCaseButtonConstrain)
+            }
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkCharityCollectionViewCell.identifierCell, for: indexPath) as! BookmarkCharityCollectionViewCell
             cell.setCharityData(charity: charityArray[indexPath.row])
+            cell.saveDonationAction = { [weak self] in
+                self?.deleteCharityBookmarkRequest(bookmarkId: self?.charityArray[indexPath.row].bookmarkID ?? 0,
+                                                   button: cell.saveCharityButtonConstrain)
+            }
             return cell
         }
     }
@@ -171,6 +178,44 @@ extension BookmarkViewController: CollectionViewConfig {
             push(vc: vc)
         }
     }
+    
+    func deletecaseBookmarkRequest(bookmarkId: Int, button: UIButton) {
+        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    button.setImage("save")
+                    self.casesRequest()
+                } else {
+                    print("not delete")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    
+    func deleteCharityBookmarkRequest(bookmarkId: Int, button: UIButton) {
+        apiRequest.deleteCharityBookmarkRequest(id: bookmarkId) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    button.setImage("save")
+                    self.charitiesRequest()
+                } else {
+                    print("not delete")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+
 }
 
 extension BookmarkViewController: UICollectionViewDelegateFlowLayout {

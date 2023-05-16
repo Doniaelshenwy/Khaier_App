@@ -9,13 +9,35 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var profileImage: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    
+    let apiRequest: ProfileAPIProtocol = ProfileAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        profileRequest()
+    }
+    
+    private func profileRequest() {
+        apiRequest.profileRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let profileData = data?.user {
+                    self.nameLabel.text = profileData.name
+                    self.phoneLabel.text = profileData.phoneNumber
+                    self.profileImage.setImageKF(urlImage: profileData.thumbnail)
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     private func moveToEditPasswordVC() {
@@ -61,13 +83,10 @@ class ProfileViewController: UIViewController {
         let vc = ExitViewController(delegate: self)
         customPresent(vc, animated: false)
     }
-    
 }
 
 extension ProfileViewController: LogoutProtocol {
-    
     func movetoLoginVCFromExitVC() {
         moveToLoginVC()
     }
-    
 }

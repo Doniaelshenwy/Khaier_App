@@ -20,6 +20,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saveCaseButtonConstrain: UIButton!
     
     var donationNowAction: (() -> ())?
+    var saveBookmarkAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     var bookmarkId : Int?
 
@@ -28,6 +29,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     }
     
     func setDonationData(donation: Case){
+        saveCaseButtonConstrain.setImage("save-fill")
         imageCase.image = UIImage(named: "caseSearch")
         titleCaseLabel.text = donation.title
         typeDonationLabel.text = donation.category
@@ -37,29 +39,11 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         bookmarkId = donation.bookmarkID
     }
     
-    func deletecaseBookmarkRequest(bookmarkId: Int) {
-        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(let data):
-                if let message = data?.message {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
-                    self.saveCaseButtonConstrain.setImage("save")
-                } else {
-                    print("not delete")
-                }
-            case .failure(_):
-                break
-            }
-        }
-    }
-    
     @IBAction func saveButton(_ sender: Any) {
-        deletecaseBookmarkRequest(bookmarkId: bookmarkId ?? 0)
+        saveBookmarkAction?()
     }
     
     @IBAction func donateNowButton(_ sender: Any) {
         donationNowAction?()
     }
-
 }

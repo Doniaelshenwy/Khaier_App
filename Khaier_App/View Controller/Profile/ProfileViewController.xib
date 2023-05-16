@@ -21,7 +21,7 @@
             <connections>
                 <outlet property="nameLabel" destination="22K-id-aGh" id="ei8-1R-KNG"/>
                 <outlet property="phoneLabel" destination="wTk-zI-GS1" id="i0p-jc-Gcj"/>
-                <outlet property="profileImage" destination="wbJ-o8-cX2" id="FvZ-Te-Js9"/>
+                <outlet property="profileImage" destination="aFd-Kq-hfl" id="eGY-00-7RR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,6 +48,7 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoProfile" translatesAutoresizingMaskIntoConstraints="NO" id="aFd-Kq-hfl">
                                     <rect key="frame" x="127.66666666666669" y="113" width="120" height="120"/>
                                     <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="K6a-fy-8do"/>
                                         <constraint firstAttribute="height" constant="120" id="PtG-Wh-Qf2"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -398,14 +399,13 @@
                                 <constraint firstItem="wTk-zI-GS1" firstAttribute="top" secondItem="22K-id-aGh" secondAttribute="bottom" id="LYN-rn-eV7"/>
                                 <constraint firstAttribute="height" constant="812" id="Ncs-nn-Fjh"/>
                                 <constraint firstItem="3PM-fX-dLM" firstAttribute="leading" secondItem="cAQ-mn-lq8" secondAttribute="leading" constant="89.5" id="NpB-eu-Iel"/>
+                                <constraint firstItem="aFd-Kq-hfl" firstAttribute="centerX" secondItem="cAQ-mn-lq8" secondAttribute="centerX" id="UxI-24-mdP"/>
                                 <constraint firstAttribute="trailing" secondItem="3PM-fX-dLM" secondAttribute="trailing" constant="89.5" id="Wpm-pe-qcZ"/>
                                 <constraint firstItem="22K-id-aGh" firstAttribute="leading" secondItem="cAQ-mn-lq8" secondAttribute="leading" constant="20" id="ZeT-ZV-034"/>
                                 <constraint firstAttribute="trailing" secondItem="wTk-zI-GS1" secondAttribute="trailing" constant="20" id="bf1-eP-Q07"/>
-                                <constraint firstAttribute="trailing" secondItem="aFd-Kq-hfl" secondAttribute="trailing" constant="127.5" id="eV1-mU-dGD"/>
                                 <constraint firstItem="c4j-ZE-4Nt" firstAttribute="top" secondItem="3PM-fX-dLM" secondAttribute="bottom" constant="31" id="fV5-u2-fth"/>
                                 <constraint firstAttribute="trailing" secondItem="22K-id-aGh" secondAttribute="trailing" constant="20" id="gtq-EZ-L1M"/>
                                 <constraint firstItem="c4j-ZE-4Nt" firstAttribute="leading" secondItem="cAQ-mn-lq8" secondAttribute="leading" constant="16" id="pYH-2L-RTy"/>
-                                <constraint firstItem="aFd-Kq-hfl" firstAttribute="leading" secondItem="cAQ-mn-lq8" secondAttribute="leading" constant="127.5" id="pkZ-Aj-izd"/>
                                 <constraint firstItem="22K-id-aGh" firstAttribute="top" secondItem="aFd-Kq-hfl" secondAttribute="bottom" constant="8" id="u3e-Ow-emh"/>
                                 <constraint firstItem="wTk-zI-GS1" firstAttribute="leading" secondItem="cAQ-mn-lq8" secondAttribute="leading" constant="20" id="vUe-2P-Fof"/>
                             </constraints>
