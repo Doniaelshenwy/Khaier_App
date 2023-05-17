@@ -17,26 +17,6 @@ extension AccountViewController: UITextFieldDelegate {
         checkRegionView(textField: regionTextField, view: regionView, label: regionInvalidLabel, height: regionHeightInvalidLabel)
     }
     
-    func checkCityView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
-        if textField.text == "اختر المدينة" {
-            setGrayColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        } else {
-            setAppColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        }
-    }
-    
-    func checkRegionView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
-        if textField.text == "اختر المنطقة" {
-            setGrayColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        } else {
-            setAppColorView(view)
-            hideLabel(heightInvalidLabel: height, invalidLabel: label)
-        }
-    }
-    
     func setDelegateTextField(){
         let textFieldDelegate = [userNameTextField, nameTextField, passwordTextField, confirmPasswordTextField]
         textFieldDelegate.forEach { $0?.delegate = self}

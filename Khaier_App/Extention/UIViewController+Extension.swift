@@ -173,6 +173,26 @@ extension UIViewController {
         }
     }
     
+    func checkCityView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+        if textField.text == "اختر المدينة" {
+            setGrayColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        } else {
+            setAppColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        }
+    }
+    
+    func checkRegionView(textField: UITextField, view: UIView, label: UILabel, height: NSLayoutConstraint) {
+        if textField.text == "اختر المنطقة" {
+            setGrayColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        } else {
+            setAppColorView(view)
+            hideLabel(heightInvalidLabel: height, invalidLabel: label)
+        }
+    }
+    
 }
 
 // call function if user check box of remember or accept condition or not
