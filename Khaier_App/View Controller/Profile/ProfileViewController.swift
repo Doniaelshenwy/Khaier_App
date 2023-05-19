@@ -13,6 +13,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    var userId = 0
+    
     let apiRequest: ProfileAPIProtocol = ProfileAPI()
     
     override func viewDidLoad() {
@@ -32,7 +34,8 @@ class ProfileViewController: UIViewController {
                 if let profileData = data?.user {
                     self.nameLabel.text = profileData.name
                     self.phoneLabel.text = profileData.phoneNumber
-                    self.profileImage.setImageKF(urlImage: profileData.thumbnail)
+                    self.profileImage.setImageKF(urlImage: profileData.thumbnail ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+                    self.userId = profileData.id ?? 0
                 }
             case .failure(_):
                 break
@@ -55,6 +58,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func editProfileButton(_ sender: Any) {
         let vc = EditProfileViewController()
+        vc.userId = userId
         push(vc: vc)
     }
     

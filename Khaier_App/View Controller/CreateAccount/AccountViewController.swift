@@ -144,7 +144,6 @@ class AccountViewController: UIViewController {
         if isRemember == true{
             let model = RegisterRequestModel(userName: userName, name: name, phone: phone , password: password, passwordConfirmation: confirmPassword, cityId: cityId, districtId: regionId)
             registerRequest(model: model)
-            print(cityId)
         }
     }
 }

@@ -21,10 +21,16 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var regionView: UIView!
     @IBOutlet weak var regionHeightInvalidLabel: NSLayoutConstraint!
+    @IBOutlet weak var phoneTextField: UITextField!
     
-    private let pickerView = UIPickerView()
-    
-    let data = ["المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا","المنصورة", "القاهرة", "دهب","ميت غمر","بنها","طلخا"]
+    private let cityPickerView = UIPickerView()
+    private let regionPickerView = UIPickerView()
+    var cityData : [City] = []
+    var regionData : [District] = []
+    let apiRequest: ProfileAPIProtocol = ProfileAPI()
+    var cityId = 0
+    var regionId = 0
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +39,10 @@ class EditProfileViewController: UIViewController {
         hideInvalidLabel()
         setTextFieldDelegate()
         setupPickerView()
-        setTextFieldImage(nameImage: "down")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showProfileDataRequest()
     }
     
     func hideInvalidLabel() {
@@ -41,11 +50,42 @@ class EditProfileViewController: UIViewController {
         hideLabel(heightInvalidLabel: cityHeightInvalidLabel, invalidLabel: cityInvalidLabel)
         hideLabel(heightInvalidLabel: regionHeightInvalidLabel, invalidLabel: regionInvalidLabel)
     }
-
-    @IBAction func backToProfileVCButton(_ sender: Any) {
-        pop(isTabBarHide: false)
+    
+   private func showProfileDataRequest() {
+        apiRequest.editProfileRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                guard let unwrappedData = data else { return }
+                self.cityData = unwrappedData.cities ?? []
+                self.regionData = unwrappedData.districts ?? []
+                self.nameTextField.text = unwrappedData.user?.name
+                self.phoneTextField.text = unwrappedData.user?.phoneNumber
+                self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+            case .failure(_):
+                break
+            }
+        }
     }
     
+    private func updateProfileDataRequest(userId: Int, model: UpdateProfileRequestModel) {
+        apiRequest.updateProfileRequest(id: userId, model: model) { [weak self] response in
+            guard let self = self else { return }
+            print(response)
+            switch response {
+            case .success(let data):
+                if let unwrappedData = data {
+                    print("sucesss")
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تعديل البيانات بنجاح")
+                    self.pop(isTabBarHide: false)
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "error")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
     func setData() {
         guard let name = nameTextField.text, name != "" else {
             checkTextFieldIsEmpty(textField: nameTextField, height: nameHeightInvalidLabel, label: nameInvalidLabel)
@@ -59,8 +99,12 @@ class EditProfileViewController: UIViewController {
             checkViewIsEmpty(view: regionView, height: regionHeightInvalidLabel, label: regionInvalidLabel)
             return
         }
-        
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تعديل البيانات بنجاح")
+        let model = UpdateProfileRequestModel(name: name, cityId: cityId, districtId: regionId, thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        updateProfileDataRequest(userId: userId, model: model)
+    }
+
+    @IBAction func backToProfileVCButton(_ sender: Any) {
+        pop(isTabBarHide: false)
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -97,17 +141,20 @@ extension EditProfileViewController: UITextFieldDelegate {
 extension EditProfileViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     private func setupPickerView() {
-        cityTextField.delegate = self
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        cityTextField.inputView = pickerView
+        [cityTextField, regionTextField].forEach({ $0?.delegate = self })
+        [cityPickerView, regionPickerView].forEach({$0.delegate = self })
+        [cityPickerView, regionPickerView].forEach({$0.dataSource = self })
+        cityTextField.inputView = cityPickerView
+        regionTextField.inputView = regionPickerView
+        setTextFieldImage(nameImage: "down", textField: cityTextField)
+        setTextFieldImage(nameImage: "down", textField: regionTextField)
     }
     
-    private func setTextFieldImage(nameImage: String) {
+    private func setTextFieldImage(nameImage: String, textField: UITextField) {
         let image = UIImageView()
         image.image = UIImage(named: nameImage)
-        cityTextField.leftViewMode = .always
-        cityTextField.leftView = image
+        textField.leftViewMode = .always
+        textField.leftView = image
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -115,19 +162,43 @@ extension EditProfileViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        switch pickerView {
+        case cityPickerView:
+            return cityData.count
+        case regionPickerView:
+            return regionData.filter({$0.cityID == self.cityId}).count
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        switch pickerView {
+        case cityPickerView:
+            return cityData[row].name
+        case regionPickerView:
+            return regionData.filter({$0.cityID == cityId})[row].name
+        default:
+            return ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        cityTextField.text = data[row]
-        cityTextField.resignFirstResponder()
-        setAppColorView(cityView)
+        switch pickerView {
+        case cityPickerView:
+            cityTextField.text = cityData[row].name
+            cityTextField.resignFirstResponder()
+            cityId = cityData[row].id
+            setAppColorView(cityView)
+        case regionPickerView:
+            regionTextField.text = regionData[row].name
+            regionTextField.resignFirstResponder()
+            regionId = regionData[row].id
+            setAppColorView(regionView)
+        default:
+            break
+        }
     }
-    
 }
 
 extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

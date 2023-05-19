@@ -8,11 +8,14 @@
 import Foundation
 
 struct ProfileResponseModel: Codable {
-    let user: User
+    let user: User?
+    let cities: [City]?
+    let districts: [District]?
 }
 
 struct User: Codable {
-    let id: Int
-    let name, phoneNumber: String
-    let thumbnail: String
+    let id: Int?
+    let name, phoneNumber: String?
+    let thumbnail: String?
 }
+

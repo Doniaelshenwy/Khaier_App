@@ -7,30 +7,34 @@
 
 import Foundation
 
-//struct AddCaseRequestModel {
-//    var userId: Int?
-//    var caseId: Int?
-//}
-//
-//struct AddCharityRequestModel {
-//    var userId: Int?
-//    var charityId: Int?
-//}
+struct UpdateProfileRequestModel {
+    var name: String
+    var cityId: Int
+    var districtId: Int
+    var thumbnail: String
+}
 
 protocol ProfileAPIProtocol {
     func profileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
-//    func casesBookmarkRequest(completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-//    func charitiesBookmarkRequest(completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-//    func addCaseBookmarkRequest(model: AddCaseRequestModel, completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-//    func deleteCaseBookmarkRequest(id: Int, completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-//    func addCharityBookmarkRequest(model: AddCharityRequestModel, completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-//    func deleteCharityBookmarkRequest(id: Int, completion: @escaping (Result<BookmarkResponseModel?, NSError>) -> Void)
-
+    func editProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
+    func updateProfileRequest(id: Int, model: UpdateProfileRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
 }
 
 class ProfileAPI : BaseAPI<ProfileNetwork>, ProfileAPIProtocol {
     func profileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
         fetchData(target: .profile, responseClass: ProfileResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func editProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
+        fetchData(target: .editProfile, responseClass: ProfileResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func updateProfileRequest(id: Int, model: UpdateProfileRequestModel, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
+        fetchData(target: .updateProfile(id: id, model: model), responseClass: ProfileResponseModel.self) { result in
             completion(result)
         }
     }

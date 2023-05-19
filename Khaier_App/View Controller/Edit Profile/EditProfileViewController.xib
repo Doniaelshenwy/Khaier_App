@@ -26,6 +26,7 @@
                 <outlet property="nameHeightInvalidLabel" destination="kDu-tR-9JA" id="jCM-mP-lgz"/>
                 <outlet property="nameInvalidLabel" destination="ozZ-J2-1hK" id="YOV-4f-7Fd"/>
                 <outlet property="nameTextField" destination="hER-LG-S6M" id="jiD-3Q-Sha"/>
+                <outlet property="phoneTextField" destination="FNy-tr-aEc" id="fey-KK-ITC"/>
                 <outlet property="profileImage" destination="N5W-Dy-kk2" id="Nxb-J7-gtn"/>
                 <outlet property="regionHeightInvalidLabel" destination="JbZ-Mf-Ja5" id="Eo3-pi-TdQ"/>
                 <outlet property="regionInvalidLabel" destination="gH2-Mz-I9p" id="OHM-iQ-xRV"/>
@@ -92,21 +93,16 @@
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ادخل رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNy-tr-aEc">
                                                     <rect key="frame" x="0.0" y="29" width="343" height="48"/>
+                                                    <color key="backgroundColor" name="textfieldColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="wQm-i9-A57"/>
                                                     </constraints>
-                                                    <color key="textColor" name="BlackColor"/>
+                                                    <color key="textColor" name="NeutralColor"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="1.5"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
                                                             <real key="value" value="4"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" name="disapleColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -132,12 +128,12 @@
                                     </constraints>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="غير مسموح تعديل رقم الهاتف" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ce-2q-knc">
-                                    <rect key="frame" x="239" y="306" width="120" height="20"/>
+                                    <rect key="frame" x="206.33333333333337" y="306" width="152.66666666666663" height="20"/>
                                     <color key="backgroundColor" name="WhiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="Xo1-tZ-Nfa"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="11"/>
+                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                     <color key="textColor" name="NeutralColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -464,6 +460,9 @@
         </namedColor>
         <namedColor name="disapleColor">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textfieldColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
