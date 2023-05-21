@@ -13,6 +13,8 @@ class ZakatValueViewController: UIViewController {
     
     private weak var delegate: DonateNowProtocol!
     
+    var zakatAmount = ""
+    
     init(delegate: DonateNowProtocol){
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
@@ -24,7 +26,7 @@ class ZakatValueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        valueLabel.text = zakatAmount
     }
 
     @IBAction func donateNowButton(_ sender: Any) {

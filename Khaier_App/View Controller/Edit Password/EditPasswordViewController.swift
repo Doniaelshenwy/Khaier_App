@@ -61,13 +61,14 @@ class EditPasswordViewController: UIViewController {
             print(userId)
             switch response {
             case .success(let data):
-                if let message = data?.message {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
-                    self.pop(isTabBarHide: false)
-                } else if let password = data?.errors?.password?[0]{
+                if let password = data?.errors?.password?[0]{
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: password)
                 } else if let oldPassword = data?.errors?.oldPassword?[0]{
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: oldPassword)
+                }
+                else if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.pop(isTabBarHide: false)
                 }
             case .failure(_):
                 break

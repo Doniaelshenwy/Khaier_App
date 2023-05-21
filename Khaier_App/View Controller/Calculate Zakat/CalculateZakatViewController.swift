@@ -13,6 +13,8 @@ class CalculateZakatViewController: UIViewController {
     @IBOutlet weak var enterAmountInvalidLabel: UILabel!
     @IBOutlet weak var enterAmountInvalidHeightLabel: NSLayoutConstraint!
     
+    var zakatAmount = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
@@ -28,6 +30,7 @@ class CalculateZakatViewController: UIViewController {
     
     func moveToZakatValueVC(){
         let vc = ZakatValueViewController(delegate: self)
+        vc.zakatAmount = zakatAmount
         customPresent(vc, animated: false)
     }
     
@@ -36,6 +39,7 @@ class CalculateZakatViewController: UIViewController {
             checkTextFieldIsEmpty(textField: enterAmountTextField, height: enterAmountInvalidHeightLabel, label: enterAmountInvalidLabel)
             return
         }
+        zakatAmount = String(Double(amount)! / 40)
         moveToZakatValueVC()
     }
 
