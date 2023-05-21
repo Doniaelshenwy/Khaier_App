@@ -150,6 +150,7 @@
 		FC92AABB29BC9E380031838B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92AABA29BC9E380031838B /* CustomView.swift */; };
 		FC98F2CF299BDB09002A4E8B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98F2CE299BDB09002A4E8B /* TabBarController.swift */; };
 		FC9B640A299524F40026326B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B6409299524F40026326B /* ProgressHUD.swift */; };
+		FCB07CA62A1A1E0A00BEAB0F /* DeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07CA52A1A1E0A00BEAB0F /* DeleteProtocol.swift */; };
 		FCB319692A0F02CE0025B79A /* DoneCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */; };
 		FCB3196A2A0F02CE0025B79A /* DoneCreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */; };
 		FCB3196D2A0F04650025B79A /* DoneCreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */; };
@@ -354,6 +355,7 @@
 		FC92AABA29BC9E380031838B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		FC98F2CE299BDB09002A4E8B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC9B6409299524F40026326B /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		FCB07CA52A1A1E0A00BEAB0F /* DeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProtocol.swift; sourceTree = "<group>"; };
 		FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountViewController.swift; sourceTree = "<group>"; };
 		FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneCreateAccountViewController.xib; sourceTree = "<group>"; };
 		FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountProtocol.swift; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 		FC2BF40429BF662000490A46 /* Delete Account */ = {
 			isa = PBXGroup;
 			children = (
+				FCB07CA42A1A1DE700BEAB0F /* DeleteProtocol */,
 				FC2BF40529BF665700490A46 /* DeleteAccountViewController.swift */,
 				FC2BF40629BF665700490A46 /* DeleteAccountViewController.xib */,
 			);
@@ -981,6 +984,14 @@
 				FC349C542999635B0006265B /* AccountVC+ExtensionUITextFieldDelegate.swift */,
 			);
 			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		FCB07CA42A1A1DE700BEAB0F /* DeleteProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				FCB07CA52A1A1E0A00BEAB0F /* DeleteProtocol.swift */,
+			);
+			path = DeleteProtocol;
 			sourceTree = "<group>";
 		};
 		FCB319662A0F02960025B79A /* DoneCreateAccount */ = {
@@ -1734,6 +1745,7 @@
 				FC671DA6298564AF00236031 /* OnboardingViewController.swift in Sources */,
 				FC39AFEE29E9A57200BC1B56 /* DonationsCategoryCollectionViewCell.swift in Sources */,
 				FC3DCC8F29AE907B00DEDFFA /* ViewWithAction.swift in Sources */,
+				FCB07CA62A1A1E0A00BEAB0F /* DeleteProtocol.swift in Sources */,
 				FC69EBA729913551008E404A /* SignUpViewController.swift in Sources */,
 				FC5AD38629ED75C1008A31FA /* Target Type.swift in Sources */,
 				FC2DAED629A42C330069E3F2 /* UICollectionViewCell+Extension.swift in Sources */,

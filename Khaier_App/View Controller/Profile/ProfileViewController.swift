@@ -45,6 +45,7 @@ class ProfileViewController: UIViewController {
     
     private func moveToEditPasswordVC() {
         let vc = EditPasswordViewController()
+        vc.userId = userId
         push(vc: vc)
     }
     
@@ -79,7 +80,8 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func deleteAccountView(_ sender: Any) {
-        let vc = DeleteAccountViewController()
+        let vc = DeleteAccountViewController(delegate: self)
+        vc.userId = userId
         customPresent(vc, animated: false)
     }
     
@@ -93,4 +95,11 @@ extension ProfileViewController: LogoutProtocol {
     func movetoLoginVCFromExitVC() {
         moveToLoginVC()
     }
+}
+
+extension ProfileViewController: DeleteProtocol {
+    func movetoSignUpVCFromDeleteAccountVC() {
+        moveToSignUpVC()
+    }
+    
 }

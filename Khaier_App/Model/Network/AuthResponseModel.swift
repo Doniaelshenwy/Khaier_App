@@ -61,7 +61,7 @@ struct UpdatePasswordResponseModel: Codable {
 }
 
 struct Errors: Codable {
-    let username, phoneNumber, password: [String]?
+    let username, phoneNumber, oldPassword, password: [String]?
     let login: String?
     let userID: [String]?
     let myCaseID: [String]?
@@ -69,6 +69,7 @@ struct Errors: Codable {
 
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
+        case oldPassword = "old_password"
         case password
         case username
         case login

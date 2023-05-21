@@ -31,6 +31,8 @@ class EditPasswordViewController: UIViewController {
     var secureOldPasswordTextField: SecureTextField?
     var secureNewPasswordTextField: SecureTextField?
     var secureConfirmNewPasswordTextField: SecureTextField?
+    let apiRequest: ProfileAPIProtocol = ProfileAPI()
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +55,51 @@ class EditPasswordViewController: UIViewController {
         secureConfirmNewPasswordTextField = SecureTextField(button: isEyeConfirmNewPassword, textField: confirmNewPasswordTextField)
     }
     
+    private func updateProfilePasswordRequest(userId: Int, model: UpdateProfilePasswordRequestModel) {
+        apiRequest.updateProfilePasswordRequest(id: userId, model: model) { [weak self] response in
+            guard let self = self else { return }
+            print(userId)
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.pop(isTabBarHide: false)
+                } else if let password = data?.errors?.password?[0]{
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: password)
+                } else if let oldPassword = data?.errors?.oldPassword?[0]{
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: oldPassword)
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func checkFillDataOfTextField(){
-        guard let oldPassword = oldPasswordTextField.text, oldPassword != ""  else {
-            checkViewIsEmpty(view: oldPasswordView, height: oldPasswordInvalidHeightLabel, label: oldPasswordInvalidLabel)
+        guard let oldPassword = oldPasswordTextField.text,
+              !(oldPassword.isEmpty)  else {
+            checkViewIsEmpty(view: oldPasswordView,
+                             height: oldPasswordInvalidHeightLabel,
+                             label: oldPasswordInvalidLabel)
             return
         }
-        guard let newPassword = newPasswordTextField.text, newPassword != "" else {
-            checkViewIsEmpty(view: newPasswordView, height: newPasswordInvalidheightLabel, label: newPasswordInvalidLabel)
+        guard let newPassword = newPasswordTextField.text,
+              !(newPassword.isEmpty) else {
+            checkViewIsEmpty(view: newPasswordView,
+                             height: newPasswordInvalidheightLabel,
+                             label: newPasswordInvalidLabel)
             return
         }
-        guard let confirmNewPassword = confirmNewPasswordTextField.text, confirmNewPassword != "" else {
-            checkViewIsEmpty(view: confirmNewPasswordView, height: confirmNewPasswordInvalidheightLabel, label: confirmNewPasswordInvalidLabel)
+        guard let confirmNewPassword = confirmNewPasswordTextField.text, !(confirmNewPassword.isEmpty) else {
+            checkViewIsEmpty(view: confirmNewPasswordView,
+                             height: confirmNewPasswordInvalidheightLabel,
+                             label: confirmNewPasswordInvalidLabel)
             return
         }
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغيير كلمة المرور")
+        let model = UpdateProfilePasswordRequestModel(oldPassword: oldPassword,
+                                                      password: newPassword,
+                                                      passwordConfirmation: confirmNewPassword)
+        updateProfilePasswordRequest(userId: userId, model: model)
     }
     
     @IBAction func isEyeOldPassword(_ sender: Any) {

@@ -11,7 +11,9 @@ import Alamofire
 enum ProfileNetwork{
     case profile
     case editProfile
-    case updateProfile(id : Int, model: UpdateProfileRequestModel?)
+    case updateProfile(id: Int, model: UpdateProfileRequestModel)
+    case updateProfilePassword(id : Int, model: UpdateProfilePasswordRequestModel)
+    case deleteProfile(id: Int)
 }
 
 extension ProfileNetwork : TargetType {
@@ -28,8 +30,12 @@ extension ProfileNetwork : TargetType {
             return "profile"
         case .editProfile:
             return "profile/edit"
-        case .updateProfile(let id):
+        case .updateProfile(let id, _):
             return "profile/update/\(id)"
+        case .updateProfilePassword(let id, _):
+            return "profile/update/password/\(id)"
+        case .deleteProfile(let id):
+            return "profile/delete/\(id)"
         }
     }
     var method: HTTPMethod {
@@ -40,6 +46,10 @@ extension ProfileNetwork : TargetType {
             return .get
         case .updateProfile:
             return .post
+        case .updateProfilePassword:
+            return .post
+        case .deleteProfile:
+            return .delete
         }
     }
         
@@ -49,8 +59,19 @@ extension ProfileNetwork : TargetType {
             return .requestPlain
         case .editProfile:
             return .requestPlain
-        case .updateProfile(let data, let model):
-            return .requestParameter(paramter: ["name" : model?.name ?? "", "city_id" : model?.cityId ?? 0, "district_id" : model?.districtId ?? 0, "thumbnail" : model?.thumbnail ?? ""], encoding: JSONEncoding.default)
+        case .updateProfile(_ , let model):
+            return .requestParameter(paramter: ["name" : model.name,
+                                                "city_id" : model.cityId,
+                                                "district_id" : model.districtId,
+                                                "thumbnail" : model.thumbnail],
+                                     encoding: JSONEncoding.default)
+        case .updateProfilePassword(_ , let model):
+            return .requestParameter(paramter: ["old_password" : model.oldPassword,
+                                                "password" : model.password ,
+                                                "password_confirmation" : model.passwordConfirmation],
+                                     encoding: JSONEncoding.default)
+        case .deleteProfile:
+            return .requestPlain
         }
     }
         
@@ -58,7 +79,12 @@ extension ProfileNetwork : TargetType {
         switch self {
         case .updateProfile:
             return ["Authorization": "Bearer \(UserDefault.getToken())",
-                    "Accept" : "application/json", "Content-Type" : "application/json"]
+                    "Accept" : "application/json",
+                    "Content-Type" : "application/json"]
+        case .updateProfilePassword:
+            return ["Authorization": "Bearer \(UserDefault.getToken())",
+                    "Accept" : "application/json",
+                    "Content-Type" : "application/json"]
         default:
             return ["Authorization": "Bearer \(UserDefault.getToken())"]
         }

@@ -61,6 +61,8 @@ class EditProfileViewController: UIViewController {
                 self.regionData = unwrappedData.districts ?? []
                 self.nameTextField.text = unwrappedData.user?.name
                 self.phoneTextField.text = unwrappedData.user?.phoneNumber
+                self.cityTextField.text = unwrappedData.address?.city
+                self.regionTextField.text = unwrappedData.address?.district
                 self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
             case .failure(_):
                 break
@@ -74,9 +76,9 @@ class EditProfileViewController: UIViewController {
             print(response)
             switch response {
             case .success(let data):
-                if let unwrappedData = data {
+                if let message = data?.message {
                     print("sucesss")
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تعديل البيانات بنجاح")
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
                     self.pop(isTabBarHide: false)
                 } else {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "error")
@@ -86,6 +88,7 @@ class EditProfileViewController: UIViewController {
             }
         }
     }
+    
     func setData() {
         guard let name = nameTextField.text, name != "" else {
             checkTextFieldIsEmpty(textField: nameTextField, height: nameHeightInvalidLabel, label: nameInvalidLabel)
