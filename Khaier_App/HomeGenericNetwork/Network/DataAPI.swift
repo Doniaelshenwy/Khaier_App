@@ -18,6 +18,7 @@ protocol DataAPIProtocol {
     func homeRequest(completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
     func searchRequest(search: String, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
     func filterRequest(model: FilterRequestModel, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void)
+    func casesRequest(id: Int, completion: @escaping (Result<CaseResponseModel?, NSError>) -> Void)
 }
 
 class DataAPI : BaseAPI<DataNetwork>, DataAPIProtocol {
@@ -35,6 +36,12 @@ class DataAPI : BaseAPI<DataNetwork>, DataAPIProtocol {
     
     func filterRequest(model: FilterRequestModel, completion: @escaping (Result<HomeResponseModel?, NSError>) -> Void) {
         fetchData(target: .filter(model: model), responseClass: HomeResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func casesRequest(id: Int, completion: @escaping (Result<CaseResponseModel?, NSError>) -> Void) {
+        fetchData(target: .cases(id: id), responseClass: CaseResponseModel.self) { result in
             completion(result)
         }
     }

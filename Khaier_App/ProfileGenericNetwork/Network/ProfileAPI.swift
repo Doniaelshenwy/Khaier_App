@@ -8,10 +8,10 @@
 import Foundation
 
 struct UpdateProfileRequestModel {
-    var name: String
-    var cityId: Int
-    var districtId: Int
-    var thumbnail: String
+    var name: String?
+    var cityId: Int?
+    var districtId: Int?
+    var thumbnail: String?
 }
 
 struct UpdateProfilePasswordRequestModel {
@@ -26,6 +26,7 @@ protocol ProfileAPIProtocol {
     func updateProfileRequest(id: Int, model: UpdateProfileRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
     func updateProfilePasswordRequest(id: Int, model: UpdateProfilePasswordRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
     func deleteProfileRequest(id: Int, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
+    func logoutProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
 }
 
 class ProfileAPI : BaseAPI<ProfileNetwork>, ProfileAPIProtocol {
@@ -55,6 +56,12 @@ class ProfileAPI : BaseAPI<ProfileNetwork>, ProfileAPIProtocol {
     
     func deleteProfileRequest(id: Int, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
         fetchData(target: .deleteProfile(id: id), responseClass: ProfileResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func logoutProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
+        fetchData(target: .logoutProfile, responseClass: ProfileResponseModel.self) { result in
             completion(result)
         }
     }

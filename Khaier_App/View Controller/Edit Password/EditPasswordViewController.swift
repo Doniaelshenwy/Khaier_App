@@ -58,7 +58,6 @@ class EditPasswordViewController: UIViewController {
     private func updateProfilePasswordRequest(userId: Int, model: UpdateProfilePasswordRequestModel) {
         apiRequest.updateProfilePasswordRequest(id: userId, model: model) { [weak self] response in
             guard let self = self else { return }
-            print(userId)
             switch response {
             case .success(let data):
                 if let password = data?.errors?.password?[0]{

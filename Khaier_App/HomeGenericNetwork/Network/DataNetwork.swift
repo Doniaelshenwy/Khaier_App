@@ -12,6 +12,7 @@ enum DataNetwork{
     case home
     case search(search: String)
     case filter(model: FilterRequestModel)
+    case cases(id: Int)
 }
 
 extension DataNetwork : TargetType {
@@ -24,6 +25,8 @@ extension DataNetwork : TargetType {
     
     var path: String {
         switch self{
+        case .cases(let id):
+            return "my_cases/\(id)"
         default:
             return "home"
         }
@@ -43,6 +46,8 @@ extension DataNetwork : TargetType {
             return .requestParameter(paramter: ["search" : search], encoding: URLEncoding.default)
         case .filter(model: let model):
             return.requestParameter(paramter: ["search" : model.search, "city" : model.city ?? "", "district" : model.district ?? "", "location" : model.location ?? ""], encoding: URLEncoding.default)
+        case .cases:
+            return .requestPlain
         }
     }
         

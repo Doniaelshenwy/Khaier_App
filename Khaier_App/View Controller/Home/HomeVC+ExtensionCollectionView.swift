@@ -11,6 +11,7 @@ import UIKit
 extension HomeViewController: CollectionViewConfig {
     func moveToDonationInVC() {
         let vc = DonationInViewController()
+        vc.id = id
         push(vc: vc)
     }
     
@@ -36,9 +37,11 @@ extension HomeViewController: CollectionViewConfig {
         if collectionView == priorityCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DonationCaseCollectionViewCell.identifierCell, for: indexPath) as! DonationCaseCollectionViewCell
             cell.setCaseData(priority: priorityArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
-            cell.donationNowAction = { [weak self] in
-                self?.moveToDonationInVC()
-            }
+            self.id = self.priorityArray[indexPath.row].id ?? 0
+            print("id home = \(id)")
+//            cell.donationNowAction = { [weak self] in
+//                self?.moveToDonationInVC()
+//            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharityCollectionViewCell.identifierCell, for: indexPath) as! CharityCollectionViewCell
@@ -50,6 +53,10 @@ extension HomeViewController: CollectionViewConfig {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == nearCollectionView {
             let vc = CharityProfileViewController(nibName: "CharityProfileViewController", bundle: nil)
+            push(vc: vc)
+        } else if collectionView == priorityCollectionView {
+            let vc = DonationInViewController(nibName: "DonationInViewController", bundle: nil)
+            vc.id = priorityArray[indexPath.row].id ?? 0
             push(vc: vc)
         }
     }

@@ -28,7 +28,8 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
     
     func setCharityData(charity: Charity) {
         saveCharityButtonConstrain.setImage("save-fill")
-        charityImage.image = UIImage(named: "charityBookmark")
+        //charityImage.image = UIImage(named: "charityBookmark")
+        charityImage.setImageKF(urlImage: charity.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/charity/sXXIK4hmvwE58LVD3rWQ6YXj4jctlE33HcfGDYzO.jpg")
         title.text = charity.name
         addressLabel.text = charity.address
         colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")

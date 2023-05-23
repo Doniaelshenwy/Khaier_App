@@ -32,7 +32,8 @@ class CharityCollectionViewCell: UICollectionViewCell {
     }
     
     func setCharityData(near charity: Charity){
-        image.image = UIImage(named: "Charities")
+        //image.image = UIImage(named: "Charities")
+        image.setImageKF(urlImage: charity.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/charity/sXXIK4hmvwE58LVD3rWQ6YXj4jctlE33HcfGDYzO.jpg")
         title.text = charity.name
         addressLabel.text = charity.address
         colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")

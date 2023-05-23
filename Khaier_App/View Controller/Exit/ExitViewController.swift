@@ -10,6 +10,7 @@ import UIKit
 class ExitViewController: UIViewController {
     
     private weak var delegate: LogoutProtocol!
+    let apiRequest: ProfileAPIProtocol = ProfileAPI()
     
     init(delegate: LogoutProtocol){
         self.delegate = delegate
@@ -26,16 +27,31 @@ class ExitViewController: UIViewController {
         isTabBarHidden(true)
     }
     
+    private func logoutRequest() {
+        apiRequest.logoutProfileRequest { response in
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "فشل في تسجيل الخروج")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func logout() {
+        logoutRequest()
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
-            keyWindow?.rootViewController = LoginViewController()
+            keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
             UIView.transition(with: keyWindow!, duration: 0.5, options: .curveEaseIn, animations: nil, completion: nil)
         }
     }
 
     @IBAction func exitButton(_ sender: Any) {
-        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تسجيل الخروج")
         dismiss(animated: true)
         //delegate.movetoLoginVCFromExitVC()
         UserDefault.clearUserDefaults()

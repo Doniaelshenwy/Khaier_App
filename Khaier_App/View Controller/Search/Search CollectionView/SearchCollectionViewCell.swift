@@ -35,7 +35,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
     
     func setSearchData(search: Case) {
-        imageCase.image = UIImage(named: "caseSearch")
+        //imageCase.image = UIImage(named: "caseSearch")
+        imageCase.setImageKF(urlImage: search.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/case/YEjHxNIOf7mi2V8wv7tmErcf8gPChzao5X5ndfiB.png")
         titleCaseLabel.text = search.title
         typeDonationLabel.text = search.category
         remainDaysLabel.text = "متبقي \(search.remainingDays ?? 0) يوم"

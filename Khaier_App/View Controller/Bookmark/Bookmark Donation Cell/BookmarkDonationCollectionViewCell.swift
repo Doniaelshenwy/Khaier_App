@@ -30,7 +30,8 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     
     func setDonationData(donation: Case){
         saveCaseButtonConstrain.setImage("save-fill")
-        imageCase.image = UIImage(named: "caseSearch")
+        //imageCase.image = UIImage(named: "caseSearch")
+        imageCase.setImageKF(urlImage: donation.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/case/YEjHxNIOf7mi2V8wv7tmErcf8gPChzao5X5ndfiB.png")
         titleCaseLabel.text = donation.title
         typeDonationLabel.text = donation.category
         remainDaysLabel.text = "متبقي \(donation.remainingDays ?? 0) يوم"

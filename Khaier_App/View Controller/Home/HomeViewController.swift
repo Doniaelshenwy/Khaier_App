@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     var priorityArray: [Case] = []
     var nearArray: [Charity] = []
     let apiRequest: DataAPIProtocol = DataAPI()
+    var id = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class HomeViewController: UIViewController {
         homeRequest()
     }
     
-    func homeRequest() {
+    private func homeRequest() {
         apiRequest.homeRequest() { [weak self] response in
             guard let self = self else { return }
             switch response {

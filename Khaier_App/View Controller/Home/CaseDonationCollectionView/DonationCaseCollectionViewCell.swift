@@ -19,7 +19,7 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saveCaseButtonConstrain: UIButton!
     @IBOutlet weak var accessRatioLabel: UILabel!
     @IBOutlet weak var donationDoneImage: UIImageView!
-    @IBOutlet weak var donateNowOutlet: UIButton!
+    @IBOutlet weak var donateNowOutlet: UILabel!
     
     var donationNowAction: (() -> ())?
     var isRememberCase = false
@@ -37,7 +37,8 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     }
 
     func setCaseData(priority: Case, isHidedonationDone: Bool, isEnabledDonateNow: Bool){
-        imageCase.image = UIImage(named: "casePriority")
+        //imageCase.image = UIImage(named: "casePriority")
+        imageCase.setImageKF(urlImage: priority.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/case/YEjHxNIOf7mi2V8wv7tmErcf8gPChzao5X5ndfiB.png")
         titleCaseLabel.text = priority.title
         typeDonationLabel.text = priority.category
         remainDaysLabel.text = "متبقي \(priority.remainingDays ?? 0) يوم"
@@ -55,7 +56,7 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     func changeBackgroundColor(isEnabledButton: Bool) {
         if !(isEnabledButton) {
             donateNowOutlet.backgroundColor = UIColor(named: "DisableColor")
-            donateNowOutlet.setTitleColor(.white, for: .disabled)
+            //donateNowOutlet.setTitleColor(.white, for: .disabled)
             remainDaysLabel.text = "تم بحمد الله"
         }
     }

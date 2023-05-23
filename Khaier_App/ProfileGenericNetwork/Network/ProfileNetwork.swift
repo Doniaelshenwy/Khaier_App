@@ -14,6 +14,7 @@ enum ProfileNetwork{
     case updateProfile(id: Int, model: UpdateProfileRequestModel)
     case updateProfilePassword(id : Int, model: UpdateProfilePasswordRequestModel)
     case deleteProfile(id: Int)
+    case logoutProfile
 }
 
 extension ProfileNetwork : TargetType {
@@ -36,6 +37,8 @@ extension ProfileNetwork : TargetType {
             return "profile/update/password/\(id)"
         case .deleteProfile(let id):
             return "profile/delete/\(id)"
+        case .logoutProfile:
+            return "logout"
         }
     }
     var method: HTTPMethod {
@@ -50,6 +53,8 @@ extension ProfileNetwork : TargetType {
             return .post
         case .deleteProfile:
             return .delete
+        case .logoutProfile:
+            return .post
         }
     }
         
@@ -60,10 +65,10 @@ extension ProfileNetwork : TargetType {
         case .editProfile:
             return .requestPlain
         case .updateProfile(_ , let model):
-            return .requestParameter(paramter: ["name" : model.name,
-                                                "city_id" : model.cityId,
-                                                "district_id" : model.districtId,
-                                                "thumbnail" : model.thumbnail],
+            return .requestParameter(paramter: ["name" : model.name ?? "",
+                                                "city_id" : model.cityId ?? 0,
+                                                "district_id" : model.districtId ?? 0,
+                                                "thumbnail" : model.thumbnail ?? ""],
                                      encoding: JSONEncoding.default)
         case .updateProfilePassword(_ , let model):
             return .requestParameter(paramter: ["old_password" : model.oldPassword,
@@ -71,6 +76,8 @@ extension ProfileNetwork : TargetType {
                                                 "password_confirmation" : model.passwordConfirmation],
                                      encoding: JSONEncoding.default)
         case .deleteProfile:
+            return .requestPlain
+        case .logoutProfile:
             return .requestPlain
         }
     }

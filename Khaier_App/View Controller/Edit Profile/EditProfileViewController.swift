@@ -63,7 +63,7 @@ class EditProfileViewController: UIViewController {
                 self.phoneTextField.text = unwrappedData.user?.phoneNumber
                 self.cityTextField.text = unwrappedData.address?.city
                 self.regionTextField.text = unwrappedData.address?.district
-                self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+                self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/avatar/2ZowtjVV4I8QSwLqY3OLMY0nxoTZqNFP6WqFzrNA.png")
             case .failure(_):
                 break
             }
@@ -77,7 +77,6 @@ class EditProfileViewController: UIViewController {
             switch response {
             case .success(let data):
                 if let message = data?.message {
-                    print("sucesss")
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
                     self.pop(isTabBarHide: false)
                 } else {
@@ -102,7 +101,7 @@ class EditProfileViewController: UIViewController {
             checkViewIsEmpty(view: regionView, height: regionHeightInvalidLabel, label: regionInvalidLabel)
             return
         }
-        let model = UpdateProfileRequestModel(name: name, cityId: cityId, districtId: regionId, thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let model = UpdateProfileRequestModel(name: name, cityId: cityId, districtId: regionId, thumbnail: "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/avatar/2ZowtjVV4I8QSwLqY3OLMY0nxoTZqNFP6WqFzrNA.png")
         updateProfileDataRequest(userId: userId, model: model)
     }
 

@@ -154,6 +154,7 @@
 		FCB319692A0F02CE0025B79A /* DoneCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */; };
 		FCB3196A2A0F02CE0025B79A /* DoneCreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */; };
 		FCB3196D2A0F04650025B79A /* DoneCreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */; };
+		FCB828832A1C33A3006E0775 /* CaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB828822A1C33A3006E0775 /* CaseResponseModel.swift */; };
 		FCBCB3EC29EA00E600108335 /* DonationCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */; };
 		FCBCB3ED29EA00E600108335 /* DonationCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */; };
 		FCC03353299DD2080055AEF6 /* CharityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */; };
@@ -359,6 +360,7 @@
 		FCB319672A0F02CE0025B79A /* DoneCreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountViewController.swift; sourceTree = "<group>"; };
 		FCB319682A0F02CE0025B79A /* DoneCreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneCreateAccountViewController.xib; sourceTree = "<group>"; };
 		FCB3196C2A0F04650025B79A /* DoneCreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateAccountProtocol.swift; sourceTree = "<group>"; };
+		FCB828822A1C33A3006E0775 /* CaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseResponseModel.swift; sourceTree = "<group>"; };
 		FCBCB3EA29EA00E600108335 /* DonationCaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCBCB3EB29EA00E600108335 /* DonationCaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationCaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCC03351299DD2080055AEF6 /* CharityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -782,6 +784,7 @@
 				FC10D40F29FF3F26002A194E /* HomeResponseModel.swift */,
 				FC71BE8B2A0B093800212733 /* BookmarkResponseModel.swift */,
 				FC4008082A14412D00A5D0A8 /* ProfileResponseModel.swift */,
+				FCB828822A1C33A3006E0775 /* CaseResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1735,6 +1738,7 @@
 				FC5AD38B29ED76D8008A31FA /* AuthResponseModel.swift in Sources */,
 				FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */,
 				FCE6324429A533E000ED2040 /* CategoriesViewController.swift in Sources */,
+				FCB828832A1C33A3006E0775 /* CaseResponseModel.swift in Sources */,
 				FC1931C72998662000736EF9 /* OTPSignUPVC+Extension.swift in Sources */,
 				FC1931CB2998741500736EF9 /* ResetPasswordVC+ExtensionUITextFieldDelegate.swift in Sources */,
 				FC1931C329985EF100736EF9 /* SignUPVC+ExtensionUITextFieldDelegate.swift in Sources */,

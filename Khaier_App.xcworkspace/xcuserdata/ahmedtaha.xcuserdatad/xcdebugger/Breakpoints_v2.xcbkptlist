@@ -125,8 +125,8 @@
             filePath = "Khaier_App/View Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "deletecaseBookmarkRequest(bookmarkId:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
                 if let profileData = data?.user {
                     self.nameLabel.text = profileData.name
                     self.phoneLabel.text = profileData.phoneNumber
-                    self.profileImage.setImageKF(urlImage: profileData.thumbnail ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+                    self.profileImage.setImageKF(urlImage: profileData.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/avatar/2ZowtjVV4I8QSwLqY3OLMY0nxoTZqNFP6WqFzrNA.png")
                     self.userId = profileData.id ?? 0
                 }
             case .failure(_):
