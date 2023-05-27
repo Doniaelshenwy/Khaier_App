@@ -16,6 +16,7 @@ struct DonatedCase: Codable {
     let colorStatus: Int
     let date, startTime, endTime, address: String
     let deliveryStatus: Int
+    var isPressed: Bool? = false
 
     enum CodingKeys: String, CodingKey {
         case title

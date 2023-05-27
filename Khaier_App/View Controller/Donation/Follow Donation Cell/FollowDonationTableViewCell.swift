@@ -42,26 +42,61 @@ class FollowDonationTableViewCell: UITableViewCell {
         }
     }
 
-    func setFollowDonationData(donation: FollowDonation) {
+    private func setFollowDonationData(donation: DonatedCase) {
         titleCaseLabel.text = donation.title
-        deliverytimeFirstLabel.text = donation.deliveryTime
-        deliveryTimeSecondLabel.text = donation.deliveryTime
-        caseFollowDonationLabel.text = donation.caseFollowDonation
-        deliveryDateLbel.text = donation.deliveryDate
+        deliverytimeFirstLabel.text = "\(donation.startTime) to \(donation.endTime)"
+        deliveryTimeSecondLabel.text = "\(donation.startTime) to \(donation.endTime)"
+        deliveryDateLbel.text = donation.date
         addressLabel.text = donation.address
         isViewSelected(isSelected: donation.isPressed!)
+        caseDonation(colorStatus: donation.colorStatus)
+        donationTrack(deliveryStatus: donation.deliveryStatus)
         titleCaseLabel.underline()
-        checkCaseFollowDonation(caseDonation: donation.caseFollowDonation)
     }
     
-    func checkCaseFollowDonation(caseDonation: String) {
-        if caseDonation == "قيد الانتظار" {
-            caseFollowDonationLabel.backgroundColor = UIColor(named: "OrangeBack")
-            caseFollowDonationLabel.textColor = UIColor(named: "orangeTint")
-        } else {
+    private func caseDonation(colorStatus: Int) {
+        if colorStatus == 2 {
+            caseFollowDonationLabel.text = "تم التوصيل"
             caseFollowDonationLabel.backgroundColor = UIColor(named: "greenBack")
             caseFollowDonationLabel.textColor = UIColor(named: "greenTint")
+        } else if colorStatus == 3 {
+            caseFollowDonationLabel.text = "قيد الانتظار"
+            caseFollowDonationLabel.backgroundColor = UIColor(named: "OrangeBack")
+            caseFollowDonationLabel.textColor = UIColor(named: "orangeTint")
         }
     }
     
+    private func donationTrack(deliveryStatus: Int) {
+        if deliveryStatus == 1{
+            sendImage.image = UIImage(named: "SendB")
+            confirmImage.image = UIImage(named: "ConfirmW")
+            truckImage.image = UIImage(named: "TrackW")
+            doneImage.image = UIImage(named: "DoneW")
+            deliveredImage.image = UIImage(named: "DeleviredW")
+        } else if deliveryStatus == 2 {
+            sendImage.image = UIImage(named: "SendW")
+            confirmImage.image = UIImage(named: "ConfirmB")
+            truckImage.image = UIImage(named: "TrackW")
+            doneImage.image = UIImage(named: "DoneW")
+            deliveredImage.image = UIImage(named: "DeleviredW")
+        } else if deliveryStatus == 3 {
+            sendImage.image = UIImage(named: "SendW")
+            confirmImage.image = UIImage(named: "ConfirmW")
+            truckImage.image = UIImage(named: "TrackB")
+            doneImage.image = UIImage(named: "DoneW")
+            deliveredImage.image = UIImage(named: "DeleviredW")
+        } else if deliveryStatus == 4 {
+            sendImage.image = UIImage(named: "SendW")
+            confirmImage.image = UIImage(named: "ConfirmW")
+            truckImage.image = UIImage(named: "TrackW")
+            doneImage.image = UIImage(named: "DoneB")
+            deliveredImage.image = UIImage(named: "DeleviredW")
+        } else if deliveryStatus == 5 {
+            sendImage.image = UIImage(named: "SendW")
+            confirmImage.image = UIImage(named: "ConfirmW")
+            truckImage.image = UIImage(named: "TrackW")
+            doneImage.image = UIImage(named: "DoneW")
+            deliveredImage.image = UIImage(named: "DeleviredB")
+        }
+    }
 }

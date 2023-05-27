@@ -16,19 +16,20 @@ class DonationViewController: UIViewController {
     @IBOutlet weak var emptyView: UIView!
     
     var myDonationArray: [MyDonation] = []
-    var followDonationArray: [FollowDonation] = []
+    var followDonationArray: [DonatedCase] = []
     var donationType: DonationType = .myDonation
+    let apiRequest: DonationTrackingAPIProtocol = DonationTrackingAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
         //setDataOfMyDonationArray()
         setDonationTableView()
-        //setDataOfFollowDonationArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         isHidenEmptyViewMyDonationArray()
+        donationTrackingRequest()
     }
     
     func isHidenEmptyViewMyDonationArray() {
@@ -49,6 +50,21 @@ class DonationViewController: UIViewController {
         }
     }
     
+    private func donationTrackingRequest() {
+        apiRequest.donationDetailsRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let donationTracking = data?.donatedCases {
+                    self.followDonationArray = donationTracking
+                    self.donationTableView.reloadData()
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func setDataOfMyDonationArray(){
         myDonationArray = [
         MyDonation(titleCase: "ساعد ساره في العلاجساعد ساره في العلاج....", remainDays: "12", donationPercentage: "60"),
@@ -57,17 +73,6 @@ class DonationViewController: UIViewController {
         MyDonation(titleCase: "ساعد ساره في العلاج..", remainDays: "12", donationPercentage: "100"),
         MyDonation(titleCase: "ساعد ساره في العلاج..", remainDays: "12", donationPercentage: "70")
         ]
-    }
-    
-    func setDataOfFollowDonationArray(){
-        followDonationArray = [
-        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "تم التوصيل", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
-        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
-        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
-        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "قيد الانتظار", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false),
-        FollowDonation(title: "ساعد سارة في العلاج..", deliveryTime: "10:00م الي 10:30م", caseFollowDonation: "تم التوصيل", deliveryDate: "25/2/2023", address: "المنصوره ، ش الجمهورية", isPressed: false)
-        ]
-        
     }
 
     @IBAction func myDonationButton(_ sender: Any) {
@@ -89,7 +94,6 @@ class DonationViewController: UIViewController {
     @IBAction func moveToHomeVcButton(_ sender: Any) {
         moveToHomeVC()
     }
-    
 }
 
 extension DonationViewController: TableViewConfig {
