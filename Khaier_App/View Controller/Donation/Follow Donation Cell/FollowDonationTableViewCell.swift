@@ -41,8 +41,8 @@ class FollowDonationTableViewCell: UITableViewCell {
             followDonationStackView.borderWidth = 1.5
         }
     }
-
-    private func setFollowDonationData(donation: DonatedCase) {
+    
+    func setFollowDonationData(donation: DonatedCase) {
         titleCaseLabel.text = donation.title
         deliverytimeFirstLabel.text = "\(donation.startTime) to \(donation.endTime)"
         deliveryTimeSecondLabel.text = "\(donation.startTime) to \(donation.endTime)"
