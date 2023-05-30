@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class DonationViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class DonationViewController: UIViewController {
     @IBOutlet weak var emptyImage: UIImageView!
     @IBOutlet weak var emptyView: UIView!
     
-    var myDonationArray: [MyDonation] = []
+    var myDonationArray: [OldCase] = []
     var followDonationArray: [DonatedCase] = []
     var donationType: DonationType = .myDonation
     let apiRequest: DonationTrackingAPIProtocol = DonationTrackingAPI()
@@ -23,16 +24,21 @@ class DonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
-        //setDataOfMyDonationArray()
         setDonationTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        isHidenEmptyViewMyDonationArray()
         donationTrackingRequest()
+        myDonationRequest()
     }
     
-    func isHidenEmptyViewMyDonationArray() {
+    private func moveToDonationInVC(id: Int) {
+        let vc = DonationInViewController()
+        vc.id = id
+        push(vc: vc)
+    }
+    
+    private func isHidenEmptyViewMyDonationArray() {
         if myDonationArray.count == 0 {
             emptyView.isHidden = false
             emptyImage.image = UIImage(named: "My Donation")
@@ -41,7 +47,7 @@ class DonationViewController: UIViewController {
         }
     }
     
-    func isHidenEmptyViewFollowDonationArray() {
+    private func isHidenEmptyViewFollowDonationArray() {
         if followDonationArray.count == 0 {
             emptyView.isHidden = false
             emptyImage.image = UIImage(named: "follow Donation")
@@ -65,16 +71,22 @@ class DonationViewController: UIViewController {
         }
     }
     
-    func setDataOfMyDonationArray(){
-        myDonationArray = [
-        MyDonation(titleCase: "ساعد ساره في العلاجساعد ساره في العلاج....", remainDays: "12", donationPercentage: "60"),
-        MyDonation(titleCase: "ساعد ساره في العلاج ..", remainDays: "12", donationPercentage: "50"),
-        MyDonation(titleCase: "ساعد ساره في العلاج..", remainDays: "12", donationPercentage: "10"),
-        MyDonation(titleCase: "ساعد ساره في العلاج..", remainDays: "12", donationPercentage: "100"),
-        MyDonation(titleCase: "ساعد ساره في العلاج..", remainDays: "12", donationPercentage: "70")
-        ]
+    private func myDonationRequest() {
+        apiRequest.myDonationRequest { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let mydonation = data?.donatedCases {
+                    self.myDonationArray = mydonation
+                    self.isHidenEmptyViewMyDonationArray()
+                    self.donationTableView.reloadData()
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
-
+    
     @IBAction func myDonationButton(_ sender: Any) {
         donationType = .myDonation
         changeColorOfSelectedButton(isSelectedButton: mydonationBtnConstrain)
@@ -115,6 +127,9 @@ extension DonationViewController: TableViewConfig {
         if donationType == .myDonation{
             let cell = tableView.dequeueReusableCell(withIdentifier: MyDonationTableViewCell.identifierCell, for: indexPath) as! MyDonationTableViewCell
             cell.setMyDonationData(donation: myDonationArray[indexPath.row])
+            cell.donationAgainAction = { [weak self] in
+                self?.moveToDonationInVC(id: self?.myDonationArray[indexPath.row].id ?? 0)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: FollowDonationTableViewCell.identifierCell, for: indexPath) as! FollowDonationTableViewCell
@@ -153,7 +168,7 @@ extension DonationViewController: TableViewConfig {
         
         switch donationType {
         case .myDonation:
-            return 110
+            return 160
         case .followDonation:
             let height = followDonationArray[indexPath.row].isPressed
             if height == true {

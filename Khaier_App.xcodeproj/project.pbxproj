@@ -31,7 +31,7 @@
 		FC19ABDE29EC3C2100401A72 /* PaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19ABDC29EC3C2100401A72 /* PaymentMethodViewController.swift */; };
 		FC19ABDF29EC3C2100401A72 /* PaymentMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC19ABDD29EC3C2100401A72 /* PaymentMethodViewController.xib */; };
 		FC1E42CE2A1EEA09009681F3 /* DonationTrackingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E42CD2A1EEA09009681F3 /* DonationTrackingResponseModel.swift */; };
-		FC1E42D22A1EEA7F009681F3 /* DonationTrackingNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E42D12A1EEA7F009681F3 /* DonationTrackingNetwork.swift */; };
+		FC1E42D22A1EEA7F009681F3 /* DonationNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E42D12A1EEA7F009681F3 /* DonationNetwork.swift */; };
 		FC1E42D42A1EEA9A009681F3 /* DonationTrackingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E42D32A1EEA9A009681F3 /* DonationTrackingAPI.swift */; };
 		FC27ABEC2991AA7A00E92AC2 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */; };
 		FC2BF40729BF665700490A46 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BF40529BF665700490A46 /* DeleteAccountViewController.swift */; };
@@ -196,6 +196,7 @@
 		FCE74D4C29F620DC001ECF6B /* ThanksDonationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE74D4B29F620DC001ECF6B /* ThanksDonationProtocol.swift */; };
 		FCEA5A3529BD21A100E8D84E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA5A3329BD21A100E8D84E /* EditProfileViewController.swift */; };
 		FCEA5A3629BD21A100E8D84E /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEA5A3429BD21A100E8D84E /* EditProfileViewController.xib */; };
+		FCF07B3F2A258E0500A9CC97 /* MyDonationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF07B3E2A258E0500A9CC97 /* MyDonationResponseModel.swift */; };
 		FCF0BC3A29B4F55F008EDDAD /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0BC3829B4F55F008EDDAD /* EditPasswordViewController.swift */; };
 		FCF0BC3B29B4F55F008EDDAD /* EditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF0BC3929B4F55F008EDDAD /* EditPasswordViewController.xib */; };
 		FCF0BC3D29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0BC3C29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift */; };
@@ -257,7 +258,7 @@
 		FC19ABDC29EC3C2100401A72 /* PaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewController.swift; sourceTree = "<group>"; };
 		FC19ABDD29EC3C2100401A72 /* PaymentMethodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodViewController.xib; sourceTree = "<group>"; };
 		FC1E42CD2A1EEA09009681F3 /* DonationTrackingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTrackingResponseModel.swift; sourceTree = "<group>"; };
-		FC1E42D12A1EEA7F009681F3 /* DonationTrackingNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTrackingNetwork.swift; sourceTree = "<group>"; };
+		FC1E42D12A1EEA7F009681F3 /* DonationNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationNetwork.swift; sourceTree = "<group>"; };
 		FC1E42D32A1EEA9A009681F3 /* DonationTrackingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTrackingAPI.swift; sourceTree = "<group>"; };
 		FC27ABEB2991AA7A00E92AC2 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		FC2BF40529BF665700490A46 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +410,7 @@
 		FCE74D4B29F620DC001ECF6B /* ThanksDonationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksDonationProtocol.swift; sourceTree = "<group>"; };
 		FCEA5A3329BD21A100E8D84E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		FCEA5A3429BD21A100E8D84E /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		FCF07B3E2A258E0500A9CC97 /* MyDonationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonationResponseModel.swift; sourceTree = "<group>"; };
 		FCF0BC3829B4F55F008EDDAD /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		FCF0BC3929B4F55F008EDDAD /* EditPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPasswordViewController.xib; sourceTree = "<group>"; };
 		FCF0BC3C29B5211B008EDDAD /* EditPasswordVC+ExtentionUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPasswordVC+ExtentionUITextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -554,7 +556,7 @@
 		FC1E42D02A1EEA63009681F3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FC1E42D12A1EEA7F009681F3 /* DonationTrackingNetwork.swift */,
+				FC1E42D12A1EEA7F009681F3 /* DonationNetwork.swift */,
 				FC1E42D32A1EEA9A009681F3 /* DonationTrackingAPI.swift */,
 			);
 			path = Network;
@@ -809,6 +811,7 @@
 				FC4008082A14412D00A5D0A8 /* ProfileResponseModel.swift */,
 				FCB828822A1C33A3006E0775 /* CaseResponseModel.swift */,
 				FC1E42CD2A1EEA09009681F3 /* DonationTrackingResponseModel.swift */,
+				FCF07B3E2A258E0500A9CC97 /* MyDonationResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1716,6 +1719,7 @@
 				FC2DAECF29A402BB0069E3F2 /* BookmarkDonationCollectionViewCell.swift in Sources */,
 				FC2DAED929A42D520069E3F2 /* BookmarkType.swift in Sources */,
 				FC34AB9C2999412A00B2B7C2 /* OTPForgetPasswordViewController.swift in Sources */,
+				FCF07B3F2A258E0500A9CC97 /* MyDonationResponseModel.swift in Sources */,
 				FC671DB12985840E00236031 /* OnboardingModel.swift in Sources */,
 				FC926013299D5CE100B6EB4F /* HomeViewController.swift in Sources */,
 				FC2BF40F29BF710600490A46 /* LogoutProtocol.swift in Sources */,
@@ -1757,7 +1761,7 @@
 				FC2BF40729BF665700490A46 /* DeleteAccountViewController.swift in Sources */,
 				FC92601A299D602200B6EB4F /* ProfileViewController.swift in Sources */,
 				FC65C67529A8FA6B00F497C8 /* UILabel+Extension.swift in Sources */,
-				FC1E42D22A1EEA7F009681F3 /* DonationTrackingNetwork.swift in Sources */,
+				FC1E42D22A1EEA7F009681F3 /* DonationNetwork.swift in Sources */,
 				FC6A711A299A76D600A638D0 /* SplashViewController.swift in Sources */,
 				FCB319692A0F02CE0025B79A /* DoneCreateAccountViewController.swift in Sources */,
 				FC671DB32985897600236031 /* OnboardingVC + Extension.swift in Sources */,

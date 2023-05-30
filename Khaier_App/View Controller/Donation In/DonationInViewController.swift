@@ -10,7 +10,6 @@ import UIKit
 
 class DonationInViewController: UIViewController {
     
-    
     @IBOutlet weak var caseTitleLabel: UILabel!
     @IBOutlet weak var charityDescriptionLabel: UILabel!
     @IBOutlet weak var descriptionView: UIControl!

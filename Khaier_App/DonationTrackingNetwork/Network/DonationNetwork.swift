@@ -9,11 +9,12 @@ import Foundation
 
 import Alamofire
 
-enum DonationTrackingNetwork{
+enum DonationNetwork{
     case donationDetails
+    case myDonation
 }
 
-extension DonationTrackingNetwork : TargetType {
+extension DonationNetwork : TargetType {
     var baseURL: String {
         switch self {
         default:
@@ -26,18 +27,20 @@ extension DonationTrackingNetwork : TargetType {
         case .donationDetails:
             return "donation/details"
 
+        case .myDonation:
+            return "donation/old/cases"
         }
     }
     var method: HTTPMethod {
         switch self {
-        case .donationDetails:
+        default:
             return .get
         }
     }
         
     var task: Task {
         switch self {
-        case .donationDetails:
+        default:
             return .requestPlain
         }
     }

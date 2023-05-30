@@ -7,27 +7,20 @@
 
 import Foundation
 
-
-//struct UpdateProfileRequestModel {
-//    var name: String?
-//    var cityId: Int?
-//    var districtId: Int?
-//    var thumbnail: String?
-//}
-//
-//struct UpdateProfilePasswordRequestModel {
-//    var oldPassword: String
-//    var password: String
-//    var passwordConfirmation: String
-//}
-
 protocol DonationTrackingAPIProtocol {
     func donationDetailsRequest(completion: @escaping (Result<DonationTrackingResponseModel?, NSError>) -> Void)
+    func myDonationRequest(completion: @escaping (Result<MyDonationResponseModel?, NSError>) -> Void)
 }
 
-class DonationTrackingAPI : BaseAPI<DonationTrackingNetwork>, DonationTrackingAPIProtocol {
+class DonationTrackingAPI : BaseAPI<DonationNetwork>, DonationTrackingAPIProtocol {
     func donationDetailsRequest(completion: @escaping (Result<DonationTrackingResponseModel?, NSError>) -> Void) {
         fetchData(target: .donationDetails, responseClass: DonationTrackingResponseModel.self) { result in
+            completion(result)
+        }
+    }
+    
+    func myDonationRequest(completion: @escaping (Result<MyDonationResponseModel?, NSError>) -> Void) {
+        fetchData(target: .myDonation, responseClass: MyDonationResponseModel.self) { result in
             completion(result)
         }
     }

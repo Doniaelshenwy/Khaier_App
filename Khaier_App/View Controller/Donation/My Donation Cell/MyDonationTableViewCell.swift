@@ -16,29 +16,34 @@ class MyDonationTableViewCell: UITableViewCell {
     @IBOutlet weak var donationPercentageLabel: UILabel!
     @IBOutlet weak var donationAgainButtonConstrain: UIButton!
     @IBOutlet weak var donationPercentageStackView: UIStackView!
-
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    var donationAgainAction: (() -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
     
-    func checkDonationPercentage(percentage: MyDonation){
-        if percentage.donationPercentage == "100"{
+    private func checkDonationPercentage(percentage: OldCase){
+        if percentage.percentage == 100 {
             donationAgainButtonConstrain.setDisable()
             donationPercentageStackView.isHidden = true
         } else {
-            donationPercentageLabel.text = "%\(percentage.donationPercentage)"
+            donationPercentageLabel.text = "%\(percentage.percentage ?? 0)"
         }
     }
     
-    func setMyDonationData(donation: MyDonation){
+    func setMyDonationData(donation: OldCase){
         titleCaseLabel.underline()
-        titleCaseLabel.text = donation.titleCase
-        remainDaysLabel.text = "متبقي \(donation.remainDays) يوم"
+        titleCaseLabel.text = donation.title
+        remainDaysLabel.text = "متبقي \(donation.remainingDays ?? 0) يوم"
+        progressView.progress = Float(donation.percentage ?? 0) / 100
         checkDonationPercentage(percentage: donation)
     }
 
     @IBAction func donationAgainButton(_ sender: Any) {
+        donationAgainAction?()
     }
     
 }
