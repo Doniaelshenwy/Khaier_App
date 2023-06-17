@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct CategoriesModel{
-    
-    var imageCategories: String
-    var nameCategories: String
-    
+struct CategoriesModel {
+    var id: Int
+    var image: String
+    var name: String
 }
