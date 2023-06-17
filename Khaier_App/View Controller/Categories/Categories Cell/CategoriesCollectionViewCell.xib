@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="Khaier_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-nP-jVa">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="121"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlR-y5-d8A">
+                                <rect key="frame" x="0.0" y="0.0" width="164" height="121"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloth" translatesAutoresizingMaskIntoConstraints="NO" id="6N4-HM-jBe">
+                                        <rect key="frame" x="55" y="16" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="ag8-Qv-0bm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ملابس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qci-oe-WED">
+                                        <rect key="frame" x="62.5" y="78" width="39.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="18"/>
+                                        <color key="textColor" name="BlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="CategoriesColor"/>
+                                <constraints>
+                                    <constraint firstItem="6N4-HM-jBe" firstAttribute="leading" secondItem="NlR-y5-d8A" secondAttribute="leading" constant="55" id="0bc-cd-MfC"/>
+                                    <constraint firstItem="qci-oe-WED" firstAttribute="top" secondItem="6N4-HM-jBe" secondAttribute="bottom" constant="8" id="4d8-bc-UBu"/>
+                                    <constraint firstItem="6N4-HM-jBe" firstAttribute="top" secondItem="NlR-y5-d8A" secondAttribute="top" constant="16" id="7ab-lA-pMu"/>
+                                    <constraint firstAttribute="trailing" secondItem="6N4-HM-jBe" secondAttribute="trailing" constant="55" id="Lye-ni-IJY"/>
+                                    <constraint firstItem="qci-oe-WED" firstAttribute="centerX" secondItem="NlR-y5-d8A" secondAttribute="centerX" id="wbs-3L-F9Z"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="DcG-nP-jVa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6FA-dZ-D62"/>
+                <constraint firstAttribute="trailing" secondItem="DcG-nP-jVa" secondAttribute="trailing" id="S3S-wy-2pd"/>
+                <constraint firstItem="DcG-nP-jVa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dYg-Kr-iZA"/>
+                <constraint firstAttribute="bottom" secondItem="DcG-nP-jVa" secondAttribute="bottom" id="vDM-w7-fWk"/>
+            </constraints>
+            <size key="customSize" width="164" height="121"/>
+            <connections>
+                <outlet property="categoryImage" destination="6N4-HM-jBe" id="SE2-Es-WTG"/>
+                <outlet property="categoryName" destination="qci-oe-WED" id="7aw-fe-Qrt"/>
+            </connections>
+            <point key="canvasLocation" x="220.28985507246378" y="83.370535714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Cloth" width="40" height="40"/>
+        <namedColor name="BlackColor">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CategoriesColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
