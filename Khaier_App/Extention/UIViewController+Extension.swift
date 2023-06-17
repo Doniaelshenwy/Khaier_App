@@ -7,6 +7,12 @@
 
 import UIKit
 
+extension UIViewController {
+    func goToHome() {
+        tabBarController?.selectedIndex = 0
+    }
+}
+
 // set border color for textfield and view and remove border
 extension UIViewController{
     
