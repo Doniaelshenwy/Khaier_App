@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSansArabic-Medium.ttf">
+            <string>IBMPlexSansArabic-Medium</string>
+        </array>
+        <array key="IBMPlexSansArabic-Regular.ttf">
+            <string>IBMPlexSansArabic-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookmarkViewController" customModule="Khaier_App" customModuleProvider="target">
+            <connections>
+                <outlet property="bookmarkCollectionView" destination="9S4-iY-P6d" id="lHh-nF-xYj"/>
+                <outlet property="charityButtonConstrain" destination="CJq-xZ-ebC" id="ysu-0r-1uu"/>
+                <outlet property="descriptionEmptyViewLabel" destination="QoN-fj-Shr" id="rJO-t9-Osj"/>
+                <outlet property="donationButtonConstrain" destination="QOS-OB-XaS" id="avM-cB-Hgh"/>
+                <outlet property="emptyView" destination="KfL-7u-a9D" id="CzT-v5-GZC"/>
+                <outlet property="titleEmptyViewLabel" destination="kBE-qD-VJo" id="Q9f-dF-Vj1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المحفوظات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHG-e4-Cvw">
+                    <rect key="frame" x="148.33333333333334" y="59" width="78.666666666666657" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7KC-uF-hIt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="20"/>
+                    <color key="textColor" name="BlackColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agh-bq-IfR">
+                    <rect key="frame" x="335" y="62" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Ajo-r2-RDo"/>
+                        <constraint firstAttribute="width" constant="24" id="tDg-YJ-tFj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Back"/>
+                    <connections>
+                        <action selector="backToHomeVCButton:" destination="-1" eventType="touchUpInside" id="r2M-d3-1QI"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-5C-BHp">
+                    <rect key="frame" x="16" y="113" width="343" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-OB-XaS">
+                            <rect key="frame" x="171.66666666666663" y="4" width="167.33333333333337" height="32"/>
+                            <color key="backgroundColor" name="AppColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="0Ce-l7-UQJ"/>
+                                <constraint firstAttribute="width" constant="167.5" id="lWk-CR-eEE"/>
+                            </constraints>
+                            <color key="tintColor" name="WhiteColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="التبرعات">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="donationButtonAction:" destination="-1" eventType="touchUpInside" id="BFf-6T-JsT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJq-xZ-ebC">
+                            <rect key="frame" x="4" y="4" width="167.66666666666666" height="32"/>
+                            <color key="backgroundColor" name="WhiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167.5" id="HGP-jp-Iah"/>
+                                <constraint firstAttribute="width" constant="167.5" id="mq6-Pb-ivX"/>
+                                <constraint firstAttribute="height" constant="32" id="y5Z-qE-Aa1"/>
+                            </constraints>
+                            <color key="tintColor" name="BlackColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="الجمعيات الخيرية">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="charityButtonAction:" destination="-1" eventType="touchUpInside" id="iLq-JU-v4e"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QOS-OB-XaS" secondAttribute="trailing" constant="4" id="LUk-kO-4KC"/>
+                        <constraint firstAttribute="bottom" secondItem="QOS-OB-XaS" secondAttribute="bottom" constant="4" id="M4S-WJ-mwm"/>
+                        <constraint firstItem="CJq-xZ-ebC" firstAttribute="leading" secondItem="EvY-5C-BHp" secondAttribute="leading" constant="4" id="VB6-Lv-MTi"/>
+                        <constraint firstAttribute="height" constant="40" id="cKf-Xp-VeZ"/>
+                        <constraint firstItem="CJq-xZ-ebC" firstAttribute="top" secondItem="EvY-5C-BHp" secondAttribute="top" constant="4" id="qY5-jc-wbF"/>
+                        <constraint firstItem="QOS-OB-XaS" firstAttribute="top" secondItem="EvY-5C-BHp" secondAttribute="top" constant="4" id="yD2-rY-qDt"/>
+                        <constraint firstAttribute="bottom" secondItem="CJq-xZ-ebC" secondAttribute="bottom" constant="4" id="zAf-oa-U6A"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="disapleColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9S4-iY-P6d">
+                    <rect key="frame" x="16" y="177" width="343" height="601"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="16" id="Y9j-vr-Lka">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfL-7u-a9D">
+                    <rect key="frame" x="77.666666666666686" y="299" width="220" height="356.33333333333326"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book mark" translatesAutoresizingMaskIntoConstraints="NO" id="Mk3-2o-Vap">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="185.33333333333334"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="185.18000000000001" id="gXM-da-L59"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-qZ-y9f">
+                            <rect key="frame" x="14" y="225.33333333333337" width="192" height="56"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لم تقم بحفظ اي حالة تبرع بعد !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBE-qD-VJo">
+                                    <rect key="frame" x="2" y="0.0" width="188" height="24"/>
+                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Medium" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    <color key="textColor" name="BlackColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تصفح الان حالات التبرع" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoN-fj-Shr">
+                                    <rect key="frame" x="27.666666666666657" y="32" width="136.66666666666666" height="24"/>
+                                    <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                                    <color key="textColor" name="NeutralColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EA-dU-Vuh">
+                            <rect key="frame" x="26" y="313.33333333333337" width="168" height="40"/>
+                            <color key="backgroundColor" name="AppColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="168" id="3Hk-T6-1eE"/>
+                                <constraint firstAttribute="height" constant="40" id="Hgj-jI-vPa"/>
+                            </constraints>
+                            <color key="tintColor" name="WhiteColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="الرجوع للصفحة الرئيسية">
+                                <fontDescription key="titleFontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="moveToHomeVCButton:" destination="-1" eventType="touchUpInside" id="ZuU-Xi-D9e"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3EA-dU-Vuh" firstAttribute="top" secondItem="IKG-qZ-y9f" secondAttribute="bottom" constant="32" id="0Lf-PF-DS4"/>
+                        <constraint firstAttribute="height" constant="356.18000000000001" id="1ol-V3-3pv"/>
+                        <constraint firstAttribute="width" constant="220" id="30e-hd-IpC"/>
+                        <constraint firstAttribute="trailing" secondItem="IKG-qZ-y9f" secondAttribute="trailing" constant="14" id="99T-na-GSs"/>
+                        <constraint firstItem="3EA-dU-Vuh" firstAttribute="leading" secondItem="KfL-7u-a9D" secondAttribute="leading" constant="26" id="9Zs-9s-XgI"/>
+                        <constraint firstItem="IKG-qZ-y9f" firstAttribute="top" secondItem="Mk3-2o-Vap" secondAttribute="bottom" constant="40" id="Jdb-VV-wnO"/>
+                        <constraint firstAttribute="trailing" secondItem="Mk3-2o-Vap" secondAttribute="trailing" id="Q4l-5R-HPz"/>
+                        <constraint firstItem="Mk3-2o-Vap" firstAttribute="top" secondItem="KfL-7u-a9D" secondAttribute="top" id="XEN-DW-XJ7"/>
+                        <constraint firstItem="IKG-qZ-y9f" firstAttribute="leading" secondItem="KfL-7u-a9D" secondAttribute="leading" constant="14" id="rPM-dE-qKO"/>
+                        <constraint firstAttribute="trailing" secondItem="3EA-dU-Vuh" secondAttribute="trailing" constant="26" id="tPC-Db-d9S"/>
+                        <constraint firstItem="Mk3-2o-Vap" firstAttribute="leading" secondItem="KfL-7u-a9D" secondAttribute="leading" id="vdW-2a-7xQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KfL-7u-a9D" firstAttribute="top" secondItem="EvY-5C-BHp" secondAttribute="bottom" constant="146" id="2Qf-Kd-iLT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9S4-iY-P6d" secondAttribute="trailing" constant="16" id="C9U-M0-CNl"/>
+                <constraint firstItem="9S4-iY-P6d" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CSR-ld-wsd"/>
+                <constraint firstItem="9S4-iY-P6d" firstAttribute="top" secondItem="EvY-5C-BHp" secondAttribute="bottom" constant="24" id="D7s-6d-QCz"/>
+                <constraint firstItem="agh-bq-IfR" firstAttribute="centerY" secondItem="fHG-e4-Cvw" secondAttribute="centerY" id="M5q-gR-9xd"/>
+                <constraint firstItem="9S4-iY-P6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PjF-BT-gET"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EvY-5C-BHp" secondAttribute="trailing" constant="16" id="SLZ-av-wyJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="agh-bq-IfR" secondAttribute="trailing" constant="16" id="nZp-DF-xRx"/>
+                <constraint firstItem="fHG-e4-Cvw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="rvg-IE-Ikl"/>
+                <constraint firstItem="KfL-7u-a9D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s6Q-13-vb1"/>
+                <constraint firstItem="EvY-5C-BHp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="u8I-7t-euG"/>
+                <constraint firstItem="EvY-5C-BHp" firstAttribute="top" secondItem="fHG-e4-Cvw" secondAttribute="bottom" constant="24" id="v8r-vI-bYJ"/>
+                <constraint firstItem="fHG-e4-Cvw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xqh-fC-sGd"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="59.852216748768477"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="7.6666665077209473" height="14"/>
+        <image name="Book mark" width="220" height="186.33332824707031"/>
+        <namedColor name="AppColor">
+            <color red="0.097999997437000275" green="0.37299999594688416" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BlackColor">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralColor">
+            <color red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="disapleColor">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
