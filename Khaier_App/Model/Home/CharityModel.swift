@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharityModel{
+struct CharityModel {
     var image: String
     var title: String
     var address: String
