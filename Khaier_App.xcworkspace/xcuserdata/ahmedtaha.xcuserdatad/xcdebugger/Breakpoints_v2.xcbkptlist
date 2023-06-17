@@ -70,38 +70,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4BCE9526-4D9C-499C-85D2-06B61FEDE834"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Khaier_App/View Controller/Categories/CategoriesVC+ExtensionCollectionView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FE3FF35F-2288-42B9-BB9E-62E4E9453DAF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Khaier_App/View Controller/Categories/CategoriesVC+ExtensionCollectionView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E6BA40AD-48D5-44ED-BBAE-124784B94F59"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -112,22 +80,6 @@
             startingLineNumber = "178"
             endingLineNumber = "178"
             landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "991F82F4-022B-48DE-B7B4-DB7BA2FE3D85"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Khaier_App/View Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "deletecaseBookmarkRequest(bookmarkId:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -145,6 +97,54 @@
             endingLineNumber = "77"
             landmarkName = "updateProfileDataRequest(userId:model:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Khaier_App/View Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "addcaseBookmarkRequest(model:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C - 4360bb7e310db068"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Khaier_App.DonationCaseCollectionViewCell.addcaseBookmarkRequest(model: Khaier_App.AddCaseRequestModel) -&gt; ()"
+                  moduleName = "Khaier_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/View%20Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C - 8134281f4a9b3d53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Khaier_App.BookmarkResponseModel&gt;, __C.NSError&gt;) -&gt; () in Khaier_App.DonationCaseCollectionViewCell.addcaseBookmarkRequest(model: Khaier_App.AddCaseRequestModel) -&gt; ()"
+                  moduleName = "Khaier_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/View%20Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "143">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
