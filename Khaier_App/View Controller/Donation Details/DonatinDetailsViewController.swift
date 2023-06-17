@@ -34,12 +34,23 @@ class DonatinDetailsViewController: UIViewController {
     @IBOutlet weak var addImageInvalidLabel: UILabel!
     @IBOutlet weak var numberOfCharacterOfCommentLabel: UILabel!
     
+    private let apiRequest: DonationTrackingAPIProtocol = DonationTrackingAPI()
     private let datePicker = UIDatePicker()
     private let fromTimePicker = UIDatePicker()
     private let toTimePicker = UIDatePicker()
+    private var id: Int
     
     var isChooseImageDonation = false
     var maxLength = 10
+    
+    init(id: Int) {
+        self.id = id
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,32 +88,40 @@ class DonatinDetailsViewController: UIViewController {
     }
     
     func setData() {
-        guard let descriptionDonation = descriptionDonationTextField.text, descriptionDonation != "" else {
+        guard let description = descriptionDonationTextField.text, !description.isEmpty else {
             checkTextFieldIsEmpty(textField: descriptionDonationTextField, height: descriptionDonationHeightInvalidLabel, label: descriptionDonationInvalidLabel)
             return
         }
-        guard let quantityOfDonation = quantityOfDonationTextField.text, quantityOfDonation != "" else {
+        guard let quantity = quantityOfDonationTextField.text, !quantity.isEmpty else {
             checkTextFieldIsEmpty(textField: quantityOfDonationTextField, height: quantityOfDonationHeightInvalidLabel, label: quantityOfDonationInvalidLabel)
             return
         }
-        guard let date = dateTextFiled.text, date != "" else {
+        guard let date = dateTextFiled.text, !date.isEmpty else {
             checkViewIsEmpty(view: dateView, height: dateHeightInvalidLabel, label: dateInvalidLabel)
             return
         }
-        guard let fromTime = fromTimeTextField.text, fromTime != "" else {
+        guard let fromTime = fromTimeTextField.text, !fromTime.isEmpty else {
             checkTextFieldIsEmpty(textField: fromTimeTextField, height: timeHeightInvalidLabel, label: timeInvalidLabel)
             return
         }
-        guard let toTime = toTimeTextField.text, toTime != "" else {
+        guard let toTime = toTimeTextField.text, !toTime.isEmpty else {
             checkTextFieldIsEmpty(textField: toTimeTextField, height: timeHeightInvalidLabel, label: timeInvalidLabel)
             return
         }
-        guard let address = addressTextFiled.text, address != "" else {
+        guard let address = addressTextFiled.text, !address.isEmpty else {
             checkTextFieldIsEmpty(textField: addressTextFiled, height: addressHeightInvalidLabel, label: addressInvalidLabel)
             return
         }
         if isChooseImageDonation {
-            moveToThanksDonationVC()
+            let model = AddDonationRequestModel(id: id,
+                                                description: description,
+                                                quantity: Int(quantity) ?? 0,
+                                                pickUpDate: date,
+                                                pickUpStartTime: fromTime,
+                                                pickUpEndTime: toTime,
+                                                pickUpAddress: address,
+                                                thrumbnail: "")
+            addDonationReques(model: model)
         } else {
             checkViewIsEmpty(view: imageView, height: addImageHeightInvalidLabel, label: addImageInvalidLabel)
         }
@@ -147,6 +166,26 @@ extension DonatinDetailsViewController: UITextFieldDelegate {
     }
 }
 
+extension DonatinDetailsViewController {
+    
+    private func addDonationReques(model: AddDonationRequestModel) {
+        apiRequest.addDonationRequest(model: model) { [weak self] response in
+            guard let self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    self.moveToThanksDonationVC()
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
+                }
+            case .failure:
+                break
+            }
+        }
+    }
+}
+
 extension DonatinDetailsViewController: UITextViewDelegate {
     
     func checkColorBorderOfTextView(textView: UITextView) {
@@ -174,15 +213,6 @@ extension DonatinDetailsViewController: UITextViewDelegate {
         UserDefaults.standard.set(updatedText.count, forKey: "NumbetOfCharacter")
         return updatedText.count <= 50 // Change limit based on your requirement.
     }
-    
-//    func textView(_ textView: UITextView, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        if textView == commentTextView{
-//          let currentString: NSString = textView.text! as NSString
-//          let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
-//          return newString.length <= maxLength
-//        }
-//        return true
-//      }
 }
 
 extension DonatinDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -213,7 +243,7 @@ extension DonatinDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSo
         toTimeTextField.inputAccessoryView = toolbarToTime
         fromTimeTextField.inputAccessoryView = toolbarFromTime
         timePickerArray.forEach { $0.preferredDatePickerStyle = .wheels }
-        timePickerArray.forEach { $0.locale = Locale(identifier: "ar") }
+        timePickerArray.forEach { $0.locale = Locale(identifier: "en") }
         toTimeTextField.inputView = toTimePicker
         fromTimeTextField.inputView = fromTimePicker
         timePickerArray.forEach { $0.datePickerMode = .time }
@@ -221,16 +251,16 @@ extension DonatinDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSo
     
     @objc func doneFromTimePressed() {
         let formatter = DateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
-        formatter.dateFormat = "hh:mm a"
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale
+        formatter.dateFormat = "hh:mma"
         fromTimeTextField.text = formatter.string(from: fromTimePicker.date)
         self.view.endEditing(true)
     }
     
     @objc func doneToTimePressed() {
         let formatter = DateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
-        formatter.dateFormat = "hh:mm a"
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale
+        formatter.dateFormat = "hh:mma"
         toTimeTextField.text = formatter.string(from: toTimePicker.date)
         self.view.endEditing(true)
     }
@@ -242,7 +272,7 @@ extension DonatinDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSo
         toolbar.setItems([doneBtn], animated: true)
         dateTextFiled.inputAccessoryView = toolbar
         datePicker.preferredDatePickerStyle = .wheels
-        datePicker.locale = Locale(identifier: "ar")
+        datePicker.locale = Locale(identifier: "en")
         dateTextFiled.inputView = datePicker
         datePicker.datePickerMode = .date
     }
@@ -251,8 +281,8 @@ extension DonatinDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSo
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
-        formatter.dateFormat = "d MMM yyyy"
-        formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+        formatter.dateFormat = "d/M/yyyy"
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale
         dateTextFiled.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
