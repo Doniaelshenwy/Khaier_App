@@ -70,22 +70,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E6BA40AD-48D5-44ED-BBAE-124784B94F59"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Khaier_App/View Controller/charity Profile/CharityProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5FEE5D1F-773A-444E-85D3-ADBE3D61752D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -97,54 +81,6 @@
             endingLineNumber = "77"
             landmarkName = "updateProfileDataRequest(userId:model:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Khaier_App/View Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "addcaseBookmarkRequest(model:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C - 4360bb7e310db068"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Khaier_App.DonationCaseCollectionViewCell.addcaseBookmarkRequest(model: Khaier_App.AddCaseRequestModel) -&gt; ()"
-                  moduleName = "Khaier_App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/View%20Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "125">
-               </Location>
-               <Location
-                  uuid = "DD15A5E5-B163-4BF0-A4AC-B338EBBC117C - 8134281f4a9b3d53"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Khaier_App.BookmarkResponseModel&gt;, __C.NSError&gt;) -&gt; () in Khaier_App.DonationCaseCollectionViewCell.addcaseBookmarkRequest(model: Khaier_App.AddCaseRequestModel) -&gt; ()"
-                  moduleName = "Khaier_App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedtaha/Documents/My%20Projects/Khaier_App/Khaier_App/View%20Controller/Home/CaseDonationCollectionView/DonationCaseCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "143">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

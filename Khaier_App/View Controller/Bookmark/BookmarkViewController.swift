@@ -154,8 +154,8 @@ extension BookmarkViewController: CollectionViewConfig {
             }
             cell.saveBookmarkAction = { [weak self] in
                 guard let self = self else{ return }
-                self.deletecaseBookmarkRequest(bookmarkId: self.donationArray[indexPath.row].bookmarkID ?? 0,
-                                               button: cell.saveCaseButtonConstrain)
+                self.editCaseBookmarkRequest(id: self.donationArray[indexPath.row].id ?? 0,
+                                             button: cell.saveCaseButtonConstrain)
             }
             
             return cell
@@ -163,8 +163,9 @@ extension BookmarkViewController: CollectionViewConfig {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkCharityCollectionViewCell.identifierCell, for: indexPath) as! BookmarkCharityCollectionViewCell
             cell.setCharityData(charity: charityArray[indexPath.row])
             cell.saveDonationAction = { [weak self] in
-                self?.deleteCharityBookmarkRequest(bookmarkId: self?.charityArray[indexPath.row].bookmarkID ?? 0,
-                                                   button: cell.saveCharityButtonConstrain)
+                guard let self = self else{ return }
+                self.editCharityBookmarkRequest(id: self.charityArray[indexPath.row].id ?? 0,
+                                                button: cell.saveCharityButtonConstrain)
             }
             return cell
         }
@@ -177,8 +178,8 @@ extension BookmarkViewController: CollectionViewConfig {
         }
     }
     
-    func deletecaseBookmarkRequest(bookmarkId: Int, button: UIButton) {
-        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
+    func editCaseBookmarkRequest(id: Int, button: UIButton) {
+        apiRequest.editCaseBookmarkRequest(id: id) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let data):
@@ -187,7 +188,7 @@ extension BookmarkViewController: CollectionViewConfig {
                     button.setImage("save")
                     self.casesRequest()
                 } else {
-                    print("not delete")
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
                 }
             case .failure(_):
                 break
@@ -195,9 +196,8 @@ extension BookmarkViewController: CollectionViewConfig {
         }
     }
     
-    
-    func deleteCharityBookmarkRequest(bookmarkId: Int, button: UIButton) {
-        apiRequest.deleteCharityBookmarkRequest(id: bookmarkId) { [weak self] response in
+    func editCharityBookmarkRequest(id: Int, button: UIButton) {
+        apiRequest.editCharityBookmarkRequest(id: id) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let data):
@@ -206,14 +206,13 @@ extension BookmarkViewController: CollectionViewConfig {
                     button.setImage("save")
                     self.charitiesRequest()
                 } else {
-                    print("not delete")
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
                 }
             case .failure(_):
                 break
             }
         }
     }
-
 }
 
 extension BookmarkViewController: UICollectionViewDelegateFlowLayout {

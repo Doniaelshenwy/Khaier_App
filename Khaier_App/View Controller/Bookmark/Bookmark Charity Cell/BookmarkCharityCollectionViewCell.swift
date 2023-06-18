@@ -20,7 +20,7 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
     var isRememberCharity = false
     var saveDonationAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
-    var bookmarkId : Int?
+    var bookmarkId : Bool?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +33,7 @@ class BookmarkCharityCollectionViewCell: UICollectionViewCell {
         title.text = charity.name
         addressLabel.text = charity.address
         colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")
-        bookmarkId = charity.bookmarkID
+        bookmarkId = charity.bookmarked
     }
     
     @IBAction func saveCharityButton(_ sender: Any) {

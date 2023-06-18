@@ -55,7 +55,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
     func moveToSearchVC() {
          push(vc: SearchViewController())
     }

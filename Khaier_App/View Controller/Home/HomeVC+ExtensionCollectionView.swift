@@ -62,9 +62,10 @@ extension HomeViewController: SkeletonCollectionViewDelegate, SkeletonCollection
             cell.setCaseData(priority: priorityArray[indexPath.row], isHidedonationDone: true, isEnabledDonateNow: true)
             self.id = self.priorityArray[indexPath.row].id ?? 0
             //MARK: reload date after tapping on the fav button
-//            cell.favAction = { [weak self] in
-//                self?.homeRequest(withSkeleton: false)
-//            }
+            cell.favAction = { [weak self] in
+                guard let self = self else { return }
+                //self.homeRequest(withSkeleton: false)
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharityCollectionViewCell.identifierCell, for: indexPath) as! CharityCollectionViewCell

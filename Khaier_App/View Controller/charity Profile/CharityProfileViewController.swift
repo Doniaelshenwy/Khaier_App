@@ -88,7 +88,7 @@ class CharityProfileViewController: UIViewController {
         caseDonationArray = data.cases ?? []
         caseDonationCollectionView.reloadData()
         setUrgentCasesData(data: data.urgentCases)
-        setAchievementsData(data: data.doneCases)
+      //  setAchievementsData(data: data.doneCases)
     }
     
     private func getCharities() {

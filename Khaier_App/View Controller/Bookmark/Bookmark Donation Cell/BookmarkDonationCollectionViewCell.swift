@@ -22,7 +22,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     var donationNowAction: (() -> ())?
     var saveBookmarkAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
-    var bookmarkId : Int?
+    var bookmarkId : Bool?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +37,7 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         remainDaysLabel.text = "متبقي \(donation.remainingDays ?? 0) يوم"
         accessRatioLabel.text = "%\(donation.percentage ?? 0)"
         progressView.progress = Float(donation.percentage ?? 0) / 100
-        bookmarkId = donation.bookmarkID
+        bookmarkId = donation.bookmarked
     }
     
     @IBAction func saveButton(_ sender: Any) {

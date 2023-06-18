@@ -9,5 +9,6 @@ import Foundation
 
 struct CharitiesResponseModel: Codable {
     let charity: Charity?
-    let cases, urgentCases, doneCases: [Case]?
+    let cases, urgentCases: [Case]?
+    //let doneCases: [Case]?
 }

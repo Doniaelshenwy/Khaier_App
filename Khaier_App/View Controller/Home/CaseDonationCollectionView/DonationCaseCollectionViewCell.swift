@@ -25,7 +25,7 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     var favAction: (() -> ())?
     var isRememberCase = false
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
-    var bookmarkId : Int?
+    var bookmarkId : Bool?
     var userId : Int?
     var caseId : Int?
 
@@ -33,8 +33,8 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func checkBookmark(bookmarkId: Int) {
-        bookmarkId == 0 ? saveCaseButtonConstrain.setImage("save") : saveCaseButtonConstrain.setImage("save-fill")
+    func checkBookmark(bookmarkId: Bool) {
+        bookmarkId == false ? saveCaseButtonConstrain.setImage("save") : saveCaseButtonConstrain.setImage("save-fill")
     }
 
     func setCaseData(priority: Case, isHidedonationDone: Bool, isEnabledDonateNow: Bool){
@@ -47,8 +47,8 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
         donationDoneImage.isHidden = isHidedonationDone
         donateNowOutlet.isEnabled = isEnabledDonateNow
         changeBackgroundColor(isEnabledButton: isEnabledDonateNow)
-        checkBookmark(bookmarkId: priority.bookmarkID ?? 0)
-        bookmarkId = priority.bookmarkID
+        checkBookmark(bookmarkId: priority.bookmarked ?? false)
+        bookmarkId = priority.bookmarked
         userId = priority.userID
         caseId = priority.id
     }
@@ -61,39 +61,20 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func addcaseBookmarkRequest(model: AddCaseRequestModel) {
-        
-        apiRequest.addCaseBookmarkRequest(model: model) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(let data):
-                if let errorUserId = data?.errors?.userID?[0] {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorUserId)
-                } else if let errorCaseId = data?.errors?.myCaseID?[0] {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorCaseId)
-                } else {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: data?.message ?? "")
-                    self.saveCaseButtonConstrain.setImage("save-fill")
-                    self.favAction?()
-                }
-            case .failure(_):
-                break
-            }
-        }
-    }
-    
-    func deletecaseBookmarkRequest(bookmarkId: Int) {
-        
-        apiRequest.deleteCaseBookmarkRequest(id: bookmarkId) { [weak self] response in
+    func editCaseBookmarkRequest(id: Int) {
+        apiRequest.editCaseBookmarkRequest(id: id) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let data):
                 if let message = data?.message {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
-                    self.saveCaseButtonConstrain.setImage("save")
-                    self.favAction?()
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)           
+                    if message.contains("اضافة") {
+                        self.saveCaseButtonConstrain.setImage("save-fill")
+                    } else {
+                        self.saveCaseButtonConstrain.setImage("save")
+                    }
                 } else {
-                    print("not delete")
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
                 }
             case .failure(_):
                 break
@@ -102,8 +83,7 @@ class DonationCaseCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func saveCaseButton(_ sender: Any) {
-        let model = AddCaseRequestModel(userId: userId, caseId: caseId)
-        bookmarkId == 0 ? addcaseBookmarkRequest(model: model) : deletecaseBookmarkRequest(bookmarkId: bookmarkId ?? 0)
+        editCaseBookmarkRequest(id: caseId ?? 0)
     }
     
     @IBAction func donateNowButton(_ sender: Any) {

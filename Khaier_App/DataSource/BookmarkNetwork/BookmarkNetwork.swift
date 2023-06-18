@@ -8,13 +8,11 @@
 import Foundation
 import Alamofire
 
-enum BookmarkNetwork{
+enum BookmarkNetwork {
     case cases
     case charity
-    case addCase(model: AddCaseRequestModel)
-    case deleteCase(id: Int)
-    case addCharity(model: AddCharityRequestModel)
-    case deleteCharity(id: Int)
+    case editCharity(id: Int)
+    case editCase(id: Int)
 }
 
 extension BookmarkNetwork : TargetType {
@@ -31,30 +29,23 @@ extension BookmarkNetwork : TargetType {
             return "bookmarks/cases"
         case .charity:
             return "bookmarks/charities"
-        case .addCase:
-            return "bookmarks/cases"
-        case .deleteCase(let id):
-            return "bookmarks/cases/\(id)"
-        case .addCharity:
+        case .editCharity:
             return "bookmarks/charities"
-        case .deleteCharity(let id):
-            return "bookmarks/charities/\(id)"
+        case .editCase:
+            return "bookmarks/cases"
         }
     }
+    
     var method: HTTPMethod {
         switch self {
         case .cases:
             return .get
         case .charity:
             return .get
-        case .addCase:
+        case .editCharity:
             return .post
-        case .deleteCase:
-            return .delete
-        case .addCharity:
+        case .editCase:
             return .post
-        case .deleteCharity:
-            return .delete
         }
     }
         
@@ -64,29 +55,19 @@ extension BookmarkNetwork : TargetType {
             return .requestPlain
         case .charity:
             return .requestPlain
-        case .addCase(let model):
-            return.requestParameter(paramter: ["user_id" : model.userId ?? 0, "my_case_id" : model.caseId ?? 0], encoding: JSONEncoding.default)
-        case .deleteCase:
-            return .requestPlain
-        case .addCharity(let model):
-            return.requestParameter(paramter: ["user_id" : model.userId ?? 0, "charity_id" : model.charityId ?? 0], encoding: JSONEncoding.default)
-        case .deleteCharity:
-            return .requestPlain
+        case .editCharity(let id):
+            return .requestParameter(paramter: ["charity_id" : id], encoding: JSONEncoding.default)
+        case .editCase(let id):
+            return .requestParameter(paramter: ["my_case_id" : id], encoding: JSONEncoding.default)
         }
     }
         
     var header: [String : String] {
         switch self {
-        case .addCase:
-            return ["Authorization": "Bearer \(UserDefault.getToken())",
-                    "Accept" : "application/json", "Content-Type" : "application/json"]
-        case .deleteCase:
+        case .editCharity:
             return ["Authorization": "Bearer \(UserDefault.getToken())",
                     "Content-Type" : "application/json"]
-        case .addCharity:
-            return ["Authorization": "Bearer \(UserDefault.getToken())",
-                    "Accept" : "application/json", "Content-Type" : "application/json"]
-        case .deleteCharity:
+        case .editCase:
             return ["Authorization": "Bearer \(UserDefault.getToken())",
                     "Content-Type" : "application/json"]
         default:

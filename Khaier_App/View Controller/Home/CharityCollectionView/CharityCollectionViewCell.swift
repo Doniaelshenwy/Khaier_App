@@ -18,12 +18,12 @@ class CharityCollectionViewCell: UICollectionViewCell {
 
     var isRememberCharity = false
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
-    var bookmarkId : Int?
+    var bookmarkId : Bool?
     var userId : Int?
     var charityId : Int?
     
-    func checkBookmark(bookmarkId: Int) {
-        bookmarkId == 0 ? saveCharityButtonConstrain.setImage("save") : saveCharityButtonConstrain.setImage("save-fill")
+    func checkBookmark(bookmarkId: Bool) {
+        bookmarkId == false ? saveCharityButtonConstrain.setImage("save") : saveCharityButtonConstrain.setImage("save-fill")
     }
     
     func setCharityData(near charity: Charity){
@@ -32,41 +32,26 @@ class CharityCollectionViewCell: UICollectionViewCell {
         title.text = charity.name
         addressLabel.text = charity.address
         colorOfLabelText(label: descriptionLabel, description: charity.excerpt ?? "")
-        checkBookmark(bookmarkId: charity.bookmarkID ?? 0)
-        bookmarkId = charity.bookmarkID
+        checkBookmark(bookmarkId: charity.bookmarked ?? false )
+        bookmarkId = charity.bookmarked
         userId = charity.userID
         charityId = charity.id
     }
     
-    func addCharityBookmarkRequest(model: AddCharityRequestModel) {
-        apiRequest.addCharityBookmarkRequest(model: model) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(let data):
-                if let errorUserId = data?.errors?.userID?[0] {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorUserId)
-                } else if let errorCharityId = data?.errors?.charityID?[0] {
-                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: errorCharityId)
-                } else {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: data?.message ?? "")
-                    self.saveCharityButtonConstrain.setImage("save-fill")
-                }
-            case .failure(_):
-                break
-            }
-        }
-    }
-    
-    func deleteCharityBookmarkRequest(bookmarkId: Int) {
-        apiRequest.deleteCharityBookmarkRequest(id: bookmarkId) { [weak self] response in
+    func editCharityBookmarkRequest(id: Int) {
+        apiRequest.editCharityBookmarkRequest(id: id) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let data):
                 if let message = data?.message {
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
-                    self.saveCharityButtonConstrain.setImage("save")
+                    if message.contains("اضافة") {
+                        self.saveCharityButtonConstrain.setImage("save-fill")
+                    } else {
+                        self.saveCharityButtonConstrain.setImage("save")
+                    }
                 } else {
-                    print("not delete")
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
                 }
             case .failure(_):
                 break
@@ -75,7 +60,6 @@ class CharityCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func saveCharityButton(_ sender: Any) {
-        let model = AddCharityRequestModel(userId: userId, charityId: charityId)
-        bookmarkId == 0 ? addCharityBookmarkRequest(model: model) : deleteCharityBookmarkRequest(bookmarkId: bookmarkId ?? 0)
+        editCharityBookmarkRequest(id: charityId ?? 0)
     }
 }
