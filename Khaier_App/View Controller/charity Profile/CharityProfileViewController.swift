@@ -22,8 +22,11 @@ class CharityProfileViewController: UIViewController {
     @IBOutlet weak var urgentCasesCollectionView: UICollectionView!
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     @IBOutlet weak var caseDonationCollectionViewHeightConstrain: NSLayoutConstraint!
+    @IBOutlet weak var saveCharityButtonConstrain: UIButton!
     
     private let apiRequest: CharitiesRequestProtocol = CharitiesRequest()
+    private let apiBookmarkRequest: BookmarkAPIProtocol = BookmarkAPI()
+    var bookmarkId : Bool?
     private var id: Int
     private var showMore = false
     private var donationsCategoryId: Int?
@@ -57,6 +60,7 @@ class CharityProfileViewController: UIViewController {
         charityImage.setImageKF(urlImage: data?.thumbnail ?? Constant.placeHolder)
         charityNameLabel.text = data?.name
         charityAddressLabel.text = data?.address
+        checkBookmark(bookmarkId: data?.bookmarked ?? false) 
         setupCharityDesciption()
     }
     
@@ -162,6 +166,37 @@ class CharityProfileViewController: UIViewController {
     @IBAction func didTapReadMore(_ sender: Any) {
         showMore.toggle()
         setupCharityDesciption()
+    }
+}
+
+extension CharityProfileViewController {
+    func checkBookmark(bookmarkId: Bool) {
+        bookmarkId == false ? saveCharityButtonConstrain.setImage("save") : saveCharityButtonConstrain.setImage("save-fill")
+    }
+    
+    func editCharityBookmarkRequest(id: Int) {
+        apiBookmarkRequest.editCharityBookmarkRequest(id: id) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    if message.contains("اضافة") {
+                        self.saveCharityButtonConstrain.setImage("save-fill")
+                    } else {
+                        self.saveCharityButtonConstrain.setImage("save")
+                    }
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+
+    @IBAction func saveCharityButton(_ sender: Any) {
+        editCharityBookmarkRequest(id: id ?? 0)
     }
 }
 

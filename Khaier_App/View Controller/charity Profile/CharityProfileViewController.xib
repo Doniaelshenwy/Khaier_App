@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -33,6 +33,7 @@
                 <outlet property="charityNameLabel" destination="55c-bt-Ne6" id="AiU-Yj-o84"/>
                 <outlet property="descriptionView" destination="Pyc-h9-gBc" id="rVV-un-Thb"/>
                 <outlet property="donationsCategoryCollectionView" destination="HLt-KK-SoM" id="HGw-jq-TM5"/>
+                <outlet property="saveCharityButtonConstrain" destination="CUr-5O-8ps" id="vZ2-ET-dla"/>
                 <outlet property="urgentCasesCollectionView" destination="jOk-Nd-IhX" id="HdZ-tQ-Vaz"/>
                 <outlet property="urgentCasesHeaderLabel" destination="nyl-6O-bbE" id="FEA-BG-ytF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,7 +48,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGz-ls-e6b">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="5690"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="5692.333333333333"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-qE-vtO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
@@ -91,6 +92,9 @@
                                                     <rect key="frame" x="-3.6666666666666679" y="-0.33333333333334281" width="39.333333333333343" height="32.666666666666664"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="save"/>
+                                                    <connections>
+                                                        <action selector="saveCharityButton:" destination="-1" eventType="touchUpInside" id="4s7-dg-5oT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="Light"/>
@@ -173,13 +177,13 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-5O-F8r">
-                                    <rect key="frame" x="16" y="320" width="343" height="5370"/>
+                                    <rect key="frame" x="16" y="320" width="343" height="5372.333333333333"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-h9-gBc" customClass="UIControl">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="65.333333333333329"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mf-PP-uoK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="65.333333333333329"/>
                                                     <string key="text">جمعية الأمل نشأت في ظل الظروف الراهنة والصعبة كما هي حال الطــــــــــبي الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيري الخــــيري الطــــــــــبي الخــــيريالخــــيري الطــــــــــبي الخــــيري...المزيد</string>
                                                     <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -198,7 +202,7 @@
                                             </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlZ-Y3-Yfa">
-                                            <rect key="frame" x="0.0" y="63" width="343" height="5307"/>
+                                            <rect key="frame" x="0.0" y="65.333333333333485" width="343" height="5307"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqP-nh-qaR">
                                                     <rect key="frame" x="0.0" y="32" width="343" height="48"/>
@@ -224,7 +228,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-KK-SoM">
-                                                    <rect key="frame" x="0.0" y="147" width="343" height="32"/>
+                                                    <rect key="frame" x="0.0" y="147.00000000000006" width="343" height="32"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="GZk-gv-oFs"/>
@@ -237,7 +241,7 @@
                                                     </collectionViewFlowLayout>
                                                 </collectionView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PAD-WP-2Fr">
-                                                    <rect key="frame" x="0.0" y="195" width="343" height="268"/>
+                                                    <rect key="frame" x="0.0" y="195.00000000000006" width="343" height="268"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="268" id="XuK-Kh-kBp"/>
@@ -305,7 +309,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-Xm-INc">
-                                                                    <rect key="frame" x="-2.3333333333333428" y="4.3333333333330284" width="45" height="31.333333333333329"/>
+                                                                    <rect key="frame" x="-2.3333333333333428" y="4.3333333333339379" width="45" height="31.333333333333329"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="twitter"/>
                                                                 </button>
