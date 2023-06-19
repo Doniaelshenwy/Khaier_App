@@ -35,6 +35,9 @@ class AddReminderViewController: UIViewController {
     private let datePicker = UIDatePicker()
     private let timePicker = UIDatePicker()
     
+    var delegate: AddReminderProtocol?
+    private var timeReminder: String? = nil
+    
     let reminderData = ["قبل 15 دقيقة", " قبل 30 دقيقة","  قبل 45 دقيقة","  قبل ساعة","  قبل ساعتين","  قبل يوم"," قبل يومين"]
     let repeatData = ["تكرار","كل يوم","كل أسبوع","كل شهر","كل سنة"]
     
@@ -82,6 +85,7 @@ class AddReminderViewController: UIViewController {
             checkTextFieldIsEmpty(textField: timeTextField, height: timeHeightInvalidLabel, label: timeInvalidLabel)
             return
         }
+            timeReminder = time
         }
         guard let reminder = reminderTextField.text, reminder != "" else {
             checkViewIsEmpty(view: reminderView, height: reminderHeightInvalidLabel, label: reminderInvalidLabel)
@@ -92,6 +96,8 @@ class AddReminderViewController: UIViewController {
             return
         }
         ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم اضافه تذكير")
+        let reminderObject = Reminder(address: address, date: date, time: timeReminder ?? "طول اليوم", reminderDay: reminder, repeatReminder: repeatReminder)
+        delegate?.addReminder(reminder: reminderObject)
     }
     
     @IBAction func backToReminderVCButton(_ sender: Any) {
@@ -105,6 +111,7 @@ class AddReminderViewController: UIViewController {
     
     @IBAction func addReminderButton(_ sender: Any) {
         setData()
+        pop(isTabBarHide: true)
     }
 }
 
@@ -253,4 +260,8 @@ extension AddReminderViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
+}
+
+protocol AddReminderProtocol {
+    func addReminder(reminder: Reminder)
 }

@@ -21,7 +21,7 @@ class ReminderTableViewCell: UITableViewCell {
     
     func setDataOfReminder(reminder: Reminder) {
         donateDayLabel.text = reminder.address
-        donateDateLabel.text = "\(reminder.time), \(reminder.date)"
+        donateDateLabel.text = "\(reminder.date), \(reminder.time)"
         }
     
 }

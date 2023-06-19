@@ -19,7 +19,7 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
-        //setDataOfNotificationArray()
+        setDataOfNotificationArray()
         setNotificationTableView()
         isTabBarHidden(false)
     }

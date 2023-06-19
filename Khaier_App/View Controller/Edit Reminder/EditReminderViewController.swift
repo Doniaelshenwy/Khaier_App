@@ -27,6 +27,7 @@ class EditReminderViewController: UIViewController {
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var reminderView: UIView!
     @IBOutlet weak var repeatView: UIView!
+    @IBOutlet weak var showReminderAllDayButtonConstrain: UISwitch!
     
     var allDayReminder = false
     
@@ -34,6 +35,12 @@ class EditReminderViewController: UIViewController {
     private let repeatPickerView = UIPickerView()
     private let datePicker = UIDatePicker()
     private let timePicker = UIDatePicker()
+    
+    var address = ""
+    var date = ""
+    var time = ""
+    var reminder = ""
+    var repeatReminder = ""
     
     let reminderData = ["قبل 15 دقيقة", " قبل 30 دقيقة","  قبل 45 دقيقة","  قبل ساعة","  قبل ساعتين","  قبل يوم"," قبل يومين"]
     let repeatData = ["تكرار","كل يوم","كل أسبوع","كل شهر","كل سنة"]
@@ -44,9 +51,31 @@ class EditReminderViewController: UIViewController {
         hideInvalidLabel()
         setTextFieldDelegate()
         setupPickerView()
+        setEditData()
+        setColorTextField()
         setReminderTextFieldImage(nameImage: "down")
         setRepeatTextFieldImage(nameImage: "down")
         setTimeTextFieldImage(nameImage: "down")
+    }
+    
+    private func setEditData() {
+        addressTextField.text = address
+        dateTextField.text = date
+        reminderTextField.text = reminder
+        repeatTextField.text = repeatReminder
+        checkTime()
+    }
+    
+    private func checkTime() {
+        if time == "طول اليوم" {
+            allDayReminder = true
+            showReminderAllDayButtonConstrain.setOn(true, animated: false)
+            timeTextField.text = ""
+            setGrayColorTF(addressTextField)
+        } else {
+            timeTextField.text = time
+            setAppColorTF(timeTextField)
+        }
     }
 
     func hideInvalidLabel() {
@@ -55,6 +84,13 @@ class EditReminderViewController: UIViewController {
         hideLabel(heightInvalidLabel: timeHeightInvalidLabel, invalidLabel: timeInvalidLabel)
         hideLabel(heightInvalidLabel: reminderHeightInvalidLabel, invalidLabel: reminderInvalidLabel)
         hideLabel(heightInvalidLabel: repeatHeightInvalidLabel, invalidLabel: repeatInvalidLabel)
+    }
+    
+    private func setColorTextField() {
+        setAppColorTF(addressTextField)
+        setAppColorView(dateView)
+        setAppColorView(reminderView)
+        setAppColorView(repeatView)
     }
     
     func isAllDayReminder() {
@@ -92,6 +128,7 @@ class EditReminderViewController: UIViewController {
             return
         }
         ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم حفظ التعديل")
+        pop(isTabBarHide: true)
     }
     
     @IBAction func backToReminderVCButton(_ sender: Any) {

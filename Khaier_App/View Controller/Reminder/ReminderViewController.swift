@@ -51,11 +51,10 @@ class ReminderViewController: UIViewController {
     }
     
     @IBAction func addReminderButton(_ sender: Any) {
-        print("sss")
         let vc = AddReminderViewController()
+        vc.delegate = self
         push(vc: vc)
     }
-    
 }
 
 extension ReminderViewController: TableViewConfig {
@@ -66,19 +65,30 @@ extension ReminderViewController: TableViewConfig {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReminderTableViewCell.identifierCell) as! ReminderTableViewCell
-        //cell.setDataOfReminder(reminder: reminderArray[indexPath.row])
+        cell.setDataOfReminder(reminder: reminderArray[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = EditReminderViewController()
+        vc.address = reminderArray[indexPath.row].address
+        vc.time = reminderArray[indexPath.row].time
+        vc.date = reminderArray[indexPath.row].date
+        vc.reminder = reminderArray[indexPath.row].reminderDay
+        vc.repeatReminder = reminderArray[indexPath.row].repeatReminder
         push(vc: vc)
     }
 
-    func setReminderTableView() {
+    private func setReminderTableView() {
         reminderTableView.delegate = self
         reminderTableView.dataSource = self
         reminderTableView.registerCellNib(cellClass: ReminderTableViewCell.self)
     }
+}
 
+extension ReminderViewController : AddReminderProtocol {
+    func addReminder(reminder: Reminder) {
+        reminderArray.append(reminder)
+        reminderTableView.reloadData()
+    }
 }
