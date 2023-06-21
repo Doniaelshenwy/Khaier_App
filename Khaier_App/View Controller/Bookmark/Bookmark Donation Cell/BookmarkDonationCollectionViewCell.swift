@@ -23,6 +23,8 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
     var saveBookmarkAction: (() -> ())?
     let apiRequest: BookmarkAPIProtocol = BookmarkAPI()
     var bookmarkId : Bool?
+    var userId : Int?
+    var caseId : Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,10 +40,40 @@ class BookmarkDonationCollectionViewCell: UICollectionViewCell {
         accessRatioLabel.text = "%\(donation.percentage ?? 0)"
         progressView.progress = Float(donation.percentage ?? 0) / 100
         bookmarkId = donation.bookmarked
+        checkBookmark(bookmarkId: donation.bookmarked ?? false)
+        bookmarkId = donation.bookmarked
+        userId = donation.userID
+        caseId = donation.id
+    }
+    
+    func checkBookmark(bookmarkId: Bool) {
+        bookmarkId == false ? saveCaseButtonConstrain.setImage("save") : saveCaseButtonConstrain.setImage("save-fill")
+    }
+    
+    func editCaseBookmarkRequest(id: Int) {
+        apiRequest.editCaseBookmarkRequest(id: id) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let data):
+                if let message = data?.message {
+                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    if message.contains("اضافة") {
+                        self.saveCaseButtonConstrain.setImage("save-fill")
+                    } else {
+                        self.saveCaseButtonConstrain.setImage("save")
+                    }
+                } else {
+                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        saveBookmarkAction?()
+        //saveBookmarkAction?()
+        editCaseBookmarkRequest(id: caseId ?? 0)
     }
     
     @IBAction func donateNowButton(_ sender: Any) {

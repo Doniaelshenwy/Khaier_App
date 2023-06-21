@@ -5,13 +5,13 @@
 //  Created by Donia Elshenawy on 17/05/2023.
 //
 
-import Foundation
+import UIKit
 
 struct UpdateProfileRequestModel {
     var name: String?
     var cityId: Int?
     var districtId: Int?
-    var thumbnail: String?
+//    var thumbnail: String?
 }
 
 struct UpdateProfilePasswordRequestModel {
@@ -23,7 +23,8 @@ struct UpdateProfilePasswordRequestModel {
 protocol ProfileAPIProtocol {
     func profileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
     func editProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
-    func updateProfileRequest(id: Int, model: UpdateProfileRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
+//    func updateProfileRequest(id: Int, model: UpdateProfileRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
+    func updateProfileRequest(image: UIImage, id: Int, model: UpdateProfileRequestModel ,completion: @escaping (Result<ProfileResponseModel, Error>) -> Void)
     func updateProfilePasswordRequest(id: Int, model: UpdateProfilePasswordRequestModel ,completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
     func deleteProfileRequest(id: Int, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
     func logoutProfileRequest(completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
@@ -42,8 +43,8 @@ class ProfileAPI : BaseAPI<ProfileNetwork>, ProfileAPIProtocol {
         }
     }
     
-    func updateProfileRequest(id: Int, model: UpdateProfileRequestModel, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
-        fetchData(target: .updateProfile(id: id, model: model), responseClass: ProfileResponseModel.self) { result in
+    func updateProfileRequest(image: UIImage, id: Int, model: UpdateProfileRequestModel, completion: @escaping (Result<ProfileResponseModel, Error>) -> Void) {
+        uploadMultiPartFormData(imagesData: [image.jpegData(compressionQuality: 0.7)!], imageParamaterName: "", target: .updateProfile(id: id, model: model), responseClass: ProfileResponseModel.self) { result in
             completion(result)
         }
     }

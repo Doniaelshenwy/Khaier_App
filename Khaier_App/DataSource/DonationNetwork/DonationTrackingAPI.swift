@@ -5,7 +5,7 @@
 //  Created by Donia Elshenawy on 25/05/2023.
 //
 
-import Foundation
+import UIKit
 
 struct AddDonationRequestModel {
     var id: Int
@@ -15,13 +15,13 @@ struct AddDonationRequestModel {
     var pickUpStartTime: String
     var pickUpEndTime: String
     var pickUpAddress: String
-    var thrumbnail: String
+//    var thrumbnail: String
 }
 
 protocol DonationTrackingAPIProtocol {
     func donationDetailsRequest(completion: @escaping (Result<DonationTrackingResponseModel?, NSError>) -> Void)
     func myDonationRequest(completion: @escaping (Result<MyDonationResponseModel?, NSError>) -> Void)
-    func addDonationRequest(model: AddDonationRequestModel, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void)
+    func addDonationRequest(image: UIImage, model: AddDonationRequestModel, completion: @escaping (Result<ProfileResponseModel, Error>) -> Void)
 }
 
 class DonationTrackingAPI : BaseAPI<DonationNetwork>, DonationTrackingAPIProtocol {
@@ -37,8 +37,11 @@ class DonationTrackingAPI : BaseAPI<DonationNetwork>, DonationTrackingAPIProtoco
         }
     }
     
-    func addDonationRequest(model: AddDonationRequestModel, completion: @escaping (Result<ProfileResponseModel?, NSError>) -> Void) {
-        fetchData(target: .addDonation(model: model), responseClass: ProfileResponseModel.self) { result in
+    func addDonationRequest(image: UIImage, model: AddDonationRequestModel, completion: @escaping (Result<ProfileResponseModel, Error>) -> Void) {
+        //        fetchData(target: .addDonation(model: model), responseClass: ProfileResponseModel.self) { result in
+        //            completion(result)
+        //        }
+        uploadMultiPartFormData(imagesData: [image.jpegData(compressionQuality: 0.7)!], imageParamaterName: "", target: .addDonation(model: model), responseClass: ProfileResponseModel.self) { result in
             completion(result)
         }
     }

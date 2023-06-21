@@ -32,6 +32,8 @@ class EditProfileViewController: UIViewController {
     var regionId = 0
     var userId = 0
     
+    var imageGallery : UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         isNavigationHidden(true)
@@ -63,20 +65,19 @@ class EditProfileViewController: UIViewController {
                 self.phoneTextField.text = unwrappedData.user?.phoneNumber
                 self.cityTextField.text = unwrappedData.address?.city
                 self.regionTextField.text = unwrappedData.address?.district
-                self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/avatar/2ZowtjVV4I8QSwLqY3OLMY0nxoTZqNFP6WqFzrNA.png")
+                self.profileImage.setImageKF(urlImage: unwrappedData.user?.thumbnail ?? "")
             case .failure(_):
                 break
             }
         }
     }
-    
-    private func updateProfileDataRequest(userId: Int, model: UpdateProfileRequestModel) {
-        apiRequest.updateProfileRequest(id: userId, model: model) { [weak self] response in
+    private func updateProfileDataRequest(image: UIImage, userId: Int, model: UpdateProfileRequestModel) {
+        apiRequest.updateProfileRequest(image: image, id: userId, model: model) { [weak self] response in
             guard let self = self else { return }
             print(response)
             switch response {
             case .success(let data):
-                if let message = data?.message {
+                if let message = data.message {
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
                     self.pop(isTabBarHide: false)
                 } else {
@@ -87,6 +88,24 @@ class EditProfileViewController: UIViewController {
             }
         }
     }
+    
+//    private func updateProfileDataRequest(userId: Int, model: UpdateProfileRequestModel) {
+//        apiRequest.updateProfileRequest(id: userId, model: model) { [weak self] response in
+//            guard let self = self else { return }
+//            print(response)
+//            switch response {
+//            case .success(let data):
+//                if let message = data?.message {
+//                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+//                    self.pop(isTabBarHide: false)
+//                } else {
+//                    ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "error")
+//                }
+//            case .failure(_):
+//                break
+//            }
+//        }
+//    }
     
     func setData() {
         guard let name = nameTextField.text, name != "" else {
@@ -101,8 +120,8 @@ class EditProfileViewController: UIViewController {
             checkViewIsEmpty(view: regionView, height: regionHeightInvalidLabel, label: regionInvalidLabel)
             return
         }
-        let model = UpdateProfileRequestModel(name: name, cityId: cityId, districtId: regionId, thumbnail: "http://khaier-env.eba-ik9m9yfd.eu-north-1.elasticbeanstalk.com/storage/thumbnails/avatar/2ZowtjVV4I8QSwLqY3OLMY0nxoTZqNFP6WqFzrNA.png")
-        updateProfileDataRequest(userId: userId, model: model)
+        let model = UpdateProfileRequestModel(name: name, cityId: cityId, districtId: regionId)
+        updateProfileDataRequest(image: imageGallery ?? UIImage(named: "photoProfile")!, userId: userId, model: model)
     }
 
     @IBAction func backToProfileVCButton(_ sender: Any) {
@@ -207,6 +226,7 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageGallery = image
             profileImage.image = image
         }
         picker.dismiss(animated: true, completion: nil)

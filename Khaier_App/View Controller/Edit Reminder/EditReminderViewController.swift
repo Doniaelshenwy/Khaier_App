@@ -29,7 +29,7 @@ class EditReminderViewController: UIViewController {
     @IBOutlet weak var repeatView: UIView!
     @IBOutlet weak var showReminderAllDayButtonConstrain: UISwitch!
     
-    var allDayReminder = false
+    private var allDayReminder = false
     
     private let reminderPickerView = UIPickerView()
     private let repeatPickerView = UIPickerView()
@@ -93,7 +93,7 @@ class EditReminderViewController: UIViewController {
         setAppColorView(repeatView)
     }
     
-    func isAllDayReminder() {
+    private func isAllDayReminder() {
         if allDayReminder {
             checkColorBoderOfTextField(textfield: timeTextField, label: timeInvalidLabel, height: timeHeightInvalidLabel)
             timeTextField.isUserInteractionEnabled = false
@@ -104,7 +104,7 @@ class EditReminderViewController: UIViewController {
         }
     }
     
-    func setData() {
+    private func setData() {
         guard let address = addressTextField.text, address != "" else {
             checkTextFieldIsEmpty(textField: addressTextField, height: addressHeightInvalidLabel, label: addressInvalidLabel)
             return

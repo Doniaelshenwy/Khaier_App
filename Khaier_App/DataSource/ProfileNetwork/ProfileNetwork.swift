@@ -67,8 +67,7 @@ extension ProfileNetwork : TargetType {
         case .updateProfile(_ , let model):
             return .requestParameter(paramter: ["name" : model.name ?? "",
                                                 "city_id" : model.cityId ?? 0,
-                                                "district_id" : model.districtId ?? 0,
-                                                "thumbnail" : model.thumbnail ?? ""],
+                                                "district_id" : model.districtId ?? 0],
                                      encoding: JSONEncoding.default)
         case .updateProfilePassword(_ , let model):
             return .requestParameter(paramter: ["old_password" : model.oldPassword,

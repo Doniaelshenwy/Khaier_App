@@ -43,6 +43,8 @@ class DonatinDetailsViewController: UIViewController {
     var isChooseImageDonation = false
     var maxLength = 10
     
+    var imageGallery : UIImage?
+    
     init(id: Int) {
         self.id = id
         super.init(nibName: nil, bundle: nil)
@@ -119,9 +121,8 @@ class DonatinDetailsViewController: UIViewController {
                                                 pickUpDate: date,
                                                 pickUpStartTime: fromTime,
                                                 pickUpEndTime: toTime,
-                                                pickUpAddress: address,
-                                                thrumbnail: "")
-            addDonationReques(model: model)
+                                                pickUpAddress: address)
+            addDonationReques(image: imageGallery ?? UIImage(named: "photoProfile")!, model: model)
         } else {
             checkViewIsEmpty(view: imageView, height: addImageHeightInvalidLabel, label: addImageInvalidLabel)
         }
@@ -168,12 +169,12 @@ extension DonatinDetailsViewController: UITextFieldDelegate {
 
 extension DonatinDetailsViewController {
     
-    private func addDonationReques(model: AddDonationRequestModel) {
-        apiRequest.addDonationRequest(model: model) { [weak self] response in
+    private func addDonationReques(image: UIImage, model: AddDonationRequestModel) {
+        apiRequest.addDonationRequest(image: image, model: model) { [weak self] response in
             guard let self else { return }
             switch response {
             case .success(let data):
-                if let message = data?.message {
+                if let message = data.message {
                     ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
                     self.moveToThanksDonationVC()
                 } else {
@@ -299,6 +300,7 @@ extension DonatinDetailsViewController: UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageGallery = image
             imageDonation.image = image
         }
         picker.dismiss(animated: true, completion: nil)

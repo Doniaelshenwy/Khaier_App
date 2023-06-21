@@ -52,9 +52,8 @@ extension DonationNetwork : TargetType {
                 "pickup_date": model.pickUpDate,
                 "pickup_time_start": model.pickUpStartTime,
                 "pickup_time_end": model.pickUpEndTime,
-                "pickup_address": model.pickUpAddress,
-                "thrumbnail": model.thrumbnail
-            ], encoding: JSONEncoding.default)
+                "pickup_address": model.pickUpAddress],
+                                     encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }

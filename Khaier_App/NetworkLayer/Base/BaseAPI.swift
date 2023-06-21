@@ -10,7 +10,7 @@ import Alamofire
 
 
 class BaseAPI<T : TargetType>{
-    
+
     func fetchData<M : Codable>(target: T, responseClass: M.Type, completion: @escaping (Result<M?, NSError>)-> Void){
         let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let header = Alamofire.HTTPHeaders(target.header)
@@ -20,7 +20,7 @@ class BaseAPI<T : TargetType>{
             guard let data = dataResponse.data else { return }
             guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
             completion(.success(jsonDecoder))
-            
+
 //            if statusCode >= 200 && statusCode <= 300{ // success
 ////                guard let jsonResponse = try? dataResponse.result.get() else { return }
 ////                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonResponse, options: []) else { return }
@@ -33,6 +33,36 @@ class BaseAPI<T : TargetType>{
         }
     }
     
+    func uploadMultiPartFormData<M: Codable>(imagesData:[Data],imageParamaterName:String ,target: T, responseClass: M.Type, completion: @escaping(Result<M,Error>)-> Void) {
+
+        let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
+        let headers = Alamofire.HTTPHeaders(target.header)
+        let params = buildParamters(task: target.task)
+        let url = target.baseURL + target.path
+
+        let imageParamName = "thumbnail"
+
+        AF.upload(multipartFormData: { multipartFormData in
+                    // import image to request
+            for imageData in imagesData {
+                        multipartFormData.append(imageData, withName: "\(imageParamName)", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
+            }
+            for (key, value) in params.0 {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+
+            }
+                }, to: url,
+                  method: method,
+                  headers: headers
+        ).response { dataResponse in
+
+            guard let statusCode = dataResponse.response?.statusCode else { return }
+            guard let data = dataResponse.data else { return }
+            guard let jsonDecoder = try? JSONDecoder().decode(M.self, from: data) else { return }
+            completion(.success(jsonDecoder))
+        }
+    }
+
     func buildParamters(task: Task)->([String: Any], ParameterEncoding){
         switch task {
         case .requestPlain:
@@ -43,6 +73,10 @@ class BaseAPI<T : TargetType>{
     }
 }
 
+
+
+
+//
 //
 //class BaseAPI<T: TargetType> {
 //
@@ -51,14 +85,14 @@ class BaseAPI<T : TargetType>{
 //    func fetchData<M: Codable>(target: T, responseClass: M.Type, completion: @escaping(Result<M,Error>)-> Void){
 //
 //        let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
-//        let headers = target.headers
+//        let headers = Alamofire.HTTPHeaders(target.header)
 //        let params = buildParams(task: target.task)
 //
-//        guard ReachabilityManager.shared.reachability?.connection != Reachability.Connection.none else {
-//            ReachabilityManager.shared.multicastDelegate.invokeDelegates({$0.connectionChanged(status: .none)})
-//            completion(.failure(CustomError(title: "No Connection", description: "Internet Connection is Unavailable", code: 1000)))
-//            return
-//        }
+////        guard ReachabilityManager.shared.reachability?.connection != Reachability.Connection.none else {
+////            ReachabilityManager.shared.multicastDelegate.invokeDelegates({$0.connectionChanged(status: .none)})
+////            completion(.failure(CustomError(title: "No Connection", description: "Internet Connection is Unavailable", code: 1000)))
+////            return
+////        }
 //
 //        AF.request(target.baseURL + target.pathURL, method: method, parameters: params.0, encoding: params.1, headers: headers).validate(statusCode: acceptableStatusCodes ).response { (response ) in
 //
@@ -94,9 +128,9 @@ class BaseAPI<T : TargetType>{
 //
 //
 //        let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
-//        let headers = target.headers
+//        let headers = Alamofire.HTTPHeaders(target.header)
 //        let params = buildParams(task: target.task)
-//        let url = target.baseURL + target.pathURL
+//        let url = target.baseURL + target.path
 //
 //        AF.upload(multipartFormData: { multipartFormData in
 //                multipartFormData
@@ -126,9 +160,9 @@ class BaseAPI<T : TargetType>{
 //    func uploadMultiPartFormData<M: Codable>(imagesData:[Data],imageParamaterName:ImageUploadParamterName,target: T, responseClass: M.Type, completion: @escaping(Result<M,Error>)-> Void) {
 //
 //        let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
-//        let headers = target.headers
+//        let headers = Alamofire.HTTPHeaders(target.header)
 //        let params = buildParams(task: target.task)
-//        let url = target.baseURL + target.pathURL
+//        let url = target.baseURL + target.path
 //
 //        let imageParamName = imageParamaterName.rawValue
 //
@@ -176,8 +210,8 @@ class BaseAPI<T : TargetType>{
 //        switch task {
 //        case .requestPlain:
 //            return ([:], URLEncoding.default)
-//        case .requestParameters(parameters: let parameters, encoding: let encoding):
-//            return (parameters, encoding)
+//        case .requestParameter(let paramter, let encoding):
+//            return (paramter, encoding)
 //        }
 //    }
 //}
