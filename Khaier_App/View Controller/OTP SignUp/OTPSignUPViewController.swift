@@ -94,8 +94,8 @@ class OTPSignUPViewController: UIViewController {
     
     @IBAction func continueBtn(_ sender: Any) {
         let code = isEmptyCodeInTextField().convertedDigitsToLocale(Locale(identifier: "EN"))
-      // callVerifyCode(code: code) // fireBase
-        moveToAccountVC()  // test
+        callVerifyCode(code: code) // fireBase
+       // moveToAccountVC()  // test
     }
     
     @IBAction func repeatSendCodeBtn(_ sender: Any) {

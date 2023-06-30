@@ -167,6 +167,12 @@ class CharityProfileViewController: UIViewController {
         showMore.toggle()
         setupCharityDesciption()
     }
+    
+    
+    @IBAction func donationNowButton(_ sender: Any) {
+        let vc = PaymentMethodViewController()
+        push(vc: vc)
+    }
 }
 
 extension CharityProfileViewController {
@@ -198,6 +204,8 @@ extension CharityProfileViewController {
     @IBAction func saveCharityButton(_ sender: Any) {
         editCharityBookmarkRequest(id: id ?? 0)
     }
+    
+    
 }
 
 extension CharityProfileViewController: CollectionViewConfig{

@@ -55,11 +55,11 @@ class FollowDonationTableViewCell: UITableViewCell {
     }
     
     private func caseDonation(colorStatus: Int) {
-        if colorStatus == 2 {
+        if colorStatus == 3 {
             caseFollowDonationLabel.text = "تم التوصيل"
             caseFollowDonationLabel.backgroundColor = UIColor(named: "greenBack")
             caseFollowDonationLabel.textColor = UIColor(named: "greenTint")
-        } else if colorStatus == 3 {
+        } else if colorStatus == 2 {
             caseFollowDonationLabel.text = "قيد الانتظار"
             caseFollowDonationLabel.backgroundColor = UIColor(named: "OrangeBack")
             caseFollowDonationLabel.textColor = UIColor(named: "orangeTint")
@@ -68,14 +68,14 @@ class FollowDonationTableViewCell: UITableViewCell {
     
     private func donationTrack(deliveryStatus: Int) {
         if deliveryStatus == 1{
-            sendImage.image = UIImage(named: "SendB")
+            sendImage.image = UIImage(named: "sendB")
             confirmImage.image = UIImage(named: "ConfirmW")
             truckImage.image = UIImage(named: "TrackW")
             doneImage.image = UIImage(named: "DoneW")
             deliveredImage.image = UIImage(named: "DeleviredW")
         } else if deliveryStatus == 2 {
             sendImage.image = UIImage(named: "SendW")
-            confirmImage.image = UIImage(named: "ConfirmB")
+            confirmImage.image = UIImage(named: "confirmB")
             truckImage.image = UIImage(named: "TrackW")
             doneImage.image = UIImage(named: "DoneW")
             deliveredImage.image = UIImage(named: "DeleviredW")

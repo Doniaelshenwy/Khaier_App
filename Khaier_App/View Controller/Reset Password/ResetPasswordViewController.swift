@@ -68,7 +68,7 @@ class ResetPasswordViewController: UIViewController, ChangePasswordProtocol {
         }
         print("password \(password), \(confirmPassword)")
         let model = AuthRequestModel(phoneNumber: phone, password: password, confirmPassword: confirmPassword)
-            updatePasswordRequest(model: model)
+        updatePasswordRequest(model: model)
         //moveToChangePasswordVC()
         
 //        ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تغير رقم المرور")

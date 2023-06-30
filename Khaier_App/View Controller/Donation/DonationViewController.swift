@@ -36,6 +36,7 @@ class DonationViewController: UIViewController {
         if myDonationArray.count == 0 {
             emptyView.isHidden = false
             emptyImage.image = UIImage(named: "My Donation")
+            donationTableView.backgroundColor = UIColor(named: "ClearColor")
         } else {
             emptyView.isHidden = true
         }
@@ -45,6 +46,7 @@ class DonationViewController: UIViewController {
         if followDonationArray.count == 0 {
             emptyView.isHidden = false
             emptyImage.image = UIImage(named: "follow Donation")
+            donationTableView.backgroundColor = UIColor(named: "ClearColor")
         } else {
             emptyView.isHidden = true
         }

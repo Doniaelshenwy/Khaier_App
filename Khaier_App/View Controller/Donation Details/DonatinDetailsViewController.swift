@@ -175,7 +175,7 @@ extension DonatinDetailsViewController {
             switch response {
             case .success(let data):
                 if let message = data.message {
-                    ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
+                    //ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: message)
                     self.moveToThanksDonationVC()
                 } else {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: "هناك خطأ ما")

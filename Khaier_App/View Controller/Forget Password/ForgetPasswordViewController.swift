@@ -61,9 +61,9 @@ class ForgetPasswordViewController: UIViewController {
             checkTextFieldIsEmpty(textField: phoneTextField, height: repeatEnterPhoneLabelConstrain, label: repeatEnterPhoneLabel)
             return
         }
-        verifyPhoneForgetPasswordRequest(phoneNumber: phone)
+        //verifyPhoneForgetPasswordRequest(phoneNumber: phone)
         //moveToOTPForgetPasswordVC(phone: phone)    // test
-        //callSendCode(phone: phone)   // use firebase
+        callSendCode(phone: phone)   // use firebase
     }
 
     @IBAction func sendCodeBtn(_ sender: Any) {

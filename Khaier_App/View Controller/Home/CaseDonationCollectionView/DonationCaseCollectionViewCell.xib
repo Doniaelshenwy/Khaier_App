@@ -72,7 +72,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعد سارة في العلاج.." textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-44-6jd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعد سارة في العلاج.." textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-44-6jd">
                                 <rect key="frame" x="108.5" y="120" width="99.5" height="24"/>
                                 <color key="backgroundColor" name="WhiteColor"/>
                                 <constraints>
@@ -145,10 +145,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0G-vK-gDe">
-                                <rect key="frame" x="12" y="120" width="43" height="24"/>
+                                <rect key="frame" x="12" y="120" width="45" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أدوية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eg-uP-KEz">
-                                        <rect key="frame" x="10" y="0.0" width="23" height="24"/>
+                                        <rect key="frame" x="5" y="0.0" width="35" height="24"/>
                                         <color key="backgroundColor" name="WhiteColor"/>
                                         <fontDescription key="fontDescription" name="IBMPlexSansArabic-Regular" family="IBM Plex Sans Arabic" pointSize="12"/>
                                         <color key="textColor" name="AppColor"/>
@@ -163,11 +163,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="DNd-bL-3BP"/>
                                     <constraint firstItem="9eg-uP-KEz" firstAttribute="top" secondItem="x0G-vK-gDe" secondAttribute="top" id="Hqu-5Z-mgS"/>
                                     <constraint firstAttribute="bottom" secondItem="9eg-uP-KEz" secondAttribute="bottom" id="MN9-ta-ccF"/>
                                     <constraint firstAttribute="height" constant="24" id="QQ7-9X-2da"/>
-                                    <constraint firstItem="9eg-uP-KEz" firstAttribute="leading" secondItem="x0G-vK-gDe" secondAttribute="leading" constant="10" id="l1v-iA-Gq5"/>
-                                    <constraint firstAttribute="trailing" secondItem="9eg-uP-KEz" secondAttribute="trailing" constant="10" id="rPd-EB-sfG"/>
+                                    <constraint firstItem="9eg-uP-KEz" firstAttribute="leading" secondItem="x0G-vK-gDe" secondAttribute="leading" constant="5" id="l1v-iA-Gq5"/>
+                                    <constraint firstAttribute="trailing" secondItem="9eg-uP-KEz" secondAttribute="trailing" constant="5" id="rPd-EB-sfG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="CornerRedius">
@@ -215,7 +216,7 @@
                             <constraint firstItem="CGA-aj-JoK" firstAttribute="leading" secondItem="Ga7-bU-utP" secondAttribute="leading" constant="12" id="BbR-tv-5bn"/>
                             <constraint firstItem="kUP-bD-wBK" firstAttribute="top" secondItem="Tlz-44-6jd" secondAttribute="bottom" constant="8" id="Bsg-37-7ZL"/>
                             <constraint firstItem="jM2-BC-oCN" firstAttribute="trailing" secondItem="cde-Kc-w3V" secondAttribute="trailing" id="DHb-nF-b0m"/>
-                            <constraint firstItem="Tlz-44-6jd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x0G-vK-gDe" secondAttribute="trailing" constant="30" id="Hde-AU-axd"/>
+                            <constraint firstItem="Tlz-44-6jd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x0G-vK-gDe" secondAttribute="trailing" constant="5" id="Hde-AU-axd"/>
                             <constraint firstAttribute="trailing" secondItem="Tlz-44-6jd" secondAttribute="trailing" constant="12" id="IU3-1B-v4S"/>
                             <constraint firstItem="jM2-BC-oCN" firstAttribute="leading" secondItem="cde-Kc-w3V" secondAttribute="leading" id="Ifd-pb-Ho9"/>
                             <constraint firstItem="jJ4-ye-U5h" firstAttribute="leading" secondItem="Ga7-bU-utP" secondAttribute="leading" constant="20" id="QtW-ak-Lnt"/>

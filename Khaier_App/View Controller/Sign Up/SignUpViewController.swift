@@ -33,8 +33,8 @@ class SignUpViewController: UIViewController {
                 if let error = data?.error?.phoneNumber?[0] {
                     ProgressHUDIndicator.showLoadingIndicatorIsFailed(withErrorMessage: error)
                 } else {
-                    self.moveToOTPSignUPVC(phone: phoneNumber)
-                    //self.callSendCode(phone: phoneNumber)
+                   // self.moveToOTPSignUPVC(phone: phoneNumber)
+                    self.callSendCode(phone: phoneNumber)
                 }
             case .failure(_):
                 break
