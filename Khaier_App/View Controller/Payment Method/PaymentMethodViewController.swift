@@ -70,6 +70,7 @@ class PaymentMethodViewController: UIViewController {
             return
         }
         ProgressHUDIndicator.showLoadingIndicatorISSuccessfull(withMessage: "تم تأكيد الدفع")
+        moveToHomeVC()
     }
     
 
